@@ -1,0 +1,41 @@
+data:
+  fasta_path: ${KF_DATA}/soil/ntv2_data/nt_soil_train_50M.fa
+  labels_path: ${KF_DATA}/soil/ntv2_data/nt_soil_train_50M_labels.tsv
+  max_token_length: 32
+  rc_augment: false
+  seed: 42
+  task: genus
+  val_ratio: 0.05
+  split_strategy: stratified
+model:
+  backbone: InstaDeepAI/nucleotide-transformer-v2-500m-multi-species
+  head_config:
+    dropout: 0.15
+    hidden_dim: 512
+    num_attention_heads: 4
+  head_type: attention_pool
+  max_seq_len: 128
+  shallow_config:
+    d_ff: 512
+    d_model: 128
+    dropout: 0.1
+    nhead: 2
+    num_layers: 29
+  type: shallow_transformer
+output:
+  dir: ${KF_OUT}/soil/kmerformer_L29_50M
+training:
+  amp: true
+  backbone_lr: 0.0005
+  batch_size: 384
+  checkpoint_every_steps: 2000
+  early_stopping_patience: 5
+  eval_batch_size: 768
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0005
+  max_grad_norm: 5.0
+  num_epochs: 15
+  num_workers: 2
+  warmup_ratio: 0.05
+  weight_decay: 0.02
+  seed: null

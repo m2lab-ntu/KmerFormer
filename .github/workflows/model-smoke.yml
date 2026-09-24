@@ -1,0 +1,19 @@
+name: Released model example
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'torch>=2.13,<3' --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install .
+      - run: kmerformer-model download kmerformer-6mer-l29-50m --output models/6mer
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: python scripts/check_model_example.py --model models/6mer

@@ -1,0 +1,16 @@
+{
+  "purpose": "Untrained random tiny NT-v2 compatibility reference, not scientific predictions or released weights",
+  "source_runtime": {
+    "torch": "2.6.0",
+    "transformers": "4.46.3"
+  },
+  "upstream_revision": "06615c1660c892fc199840c18123f8385b3542a8",
+  "config_changes": {
+    "hidden_size": 32,
+    "num_hidden_layers": 2,
+    "num_attention_heads": 2,
+    "intermediate_size": 64,
+    "tie_word_embeddings": false
+  },
+  "sha256": "2947cd097baeaa624745458869009b3bdc97c76692eb4ec15f26a7daacacb2ec"
+}

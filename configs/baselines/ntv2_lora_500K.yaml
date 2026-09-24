@@ -1,0 +1,52 @@
+# RESULT: closed-set 100K genus Top-1 54.72%
+# Configuration and recorded result: docs/RESULTS.md.
+# Historical rationale is preserved at source revision 5a9870d.
+model:
+  backbone: "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species"
+  head_type: "attention_pool"
+  head_config:
+    hidden_dim: 512
+    num_attention_heads: 4
+    dropout: 0.15
+  freeze_backbone: false
+  use_lora: true
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_target_modules: ["query", "key", "value"]
+  gradient_checkpointing: true
+
+# ===== Data =====
+data:
+  split_strategy: stratified
+  fasta_path: "${KF_DATA}/balanced_500000/reads.fa"
+  labels_path: "${KF_DATA}/balanced_500000/labels.tsv"
+  val_ratio: 0.1
+  seed: 42
+  max_token_length: 32
+  task: "genus"
+  rc_augment: true
+
+# ===== Training =====
+training:
+  seed: null  # Historical initialization was unseeded; data.seed controls the split.
+  batch_size: 256
+  eval_batch_size: 512
+  gradient_accumulation_steps: 1
+  num_epochs: 30
+  learning_rate: 5.0e-4
+  backbone_lr: 3.0e-5
+  weight_decay: 0.02
+  warmup_ratio: 0.05
+  amp: true
+  max_grad_norm: 5.0
+  early_stopping_patience: 5
+  num_workers: 4
+  label_smoothing: 0.0
+  class_weights: false
+  max_class_weight: 10.0
+  phase1_epochs: 0
+
+# ===== Output =====
+output:
+  dir: "${KF_OUT}/ntv2_lora_500K"

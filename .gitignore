@@ -1,0 +1,100 @@
+# ---------------------------------------------------------------------------
+# Model weights.
+#
+# weights/ is where `scripts/weights/collect_weights.sh` assembles the release
+# bundle, and it is deliberately untracked: the two exact-13-mer checkpoints are
+# 8 GiB each because 99.99% of their parameters are the embedding table. They are
+# distributed through the archive named in weights/README.md, which stays tracked.
+# ---------------------------------------------------------------------------
+weights/*
+!weights/README.md
+!weights/ZENODO.md
+!weights/.gitkeep
+
+*.pt
+*.ckpt
+*.pth
+*.safetensors
+
+# Vocabularies and their cached lookup tables. vocab_13mer.txt is 480 MB and its
+# int32 lookup table is 256 MiB; both are rebuildable and are distributed with
+# the data, not the code. See docs/DATA.md.
+vocab_*.txt
+*.table_k*.npy
+
+# Reads, reference genomes, label tables. All of it is data, none of it is code.
+*.fa
+*.fna
+*.fasta
+*.fq
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.tsv
+*.npz
+!docs/**/*.tsv
+# The prediction arrays behind docs/RESULTS.md's abundance-vs-detection
+# table. Kept (preds + labels only, ~220 KB each) because they are what
+# makes that table checkable without re-running a 2.1B-parameter model,
+# and because two 100K pools agree on 8% of labels -- the stored label
+# vector is the only thing that says which pool a row is on.
+!docs/assets/*.npz
+!examples/*.fa
+!examples/*.tsv
+!tests/fixtures/*.json
+!tests/fixtures/*.npz
+!reproduction/**/*.npz
+!reproduction/**/*.tsv
+
+# Run outputs: KF_OUT should point outside the repo, but catch it if it does not.
+runs/
+outputs/
+out/
+eval_*/
+training_history.csv
+*.log
+
+# Archives
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Experiment trackers
+wandb/
+lightning_logs/
+
+# Operational handoff briefs for agents on the training machines. They name
+# internal cluster paths and an account name -- useful on those boxes, useless to
+# anyone else -- so they stay on disk and out of the repository.
+docs/agent_prompts/
+
+# Downloaded inference bundles and derived training indexes
+models/
+*.idx.npy
+*.idx.npy.meta.json
+
+# machine-specific source paths for scripts/fetch and scripts/weights
+scripts/local_paths.sh

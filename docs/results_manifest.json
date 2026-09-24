@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scope": "Paper-reported percentages; array and inference precision differences remain documented in RESULTS.md",
+  "pool": {"id": "gut_primary_100k", "reads": 100000, "genera": 120},
+  "readme_rows": [
+    {"model": "KmerFormer 6-mer, 29 layers", "model_id": "kmerformer-6mer-l29-50m", "reported_percent": 69.52, "evaluation": "RC-TTA", "config": "configs/6mer/L29_50M.yaml", "prediction_asset": "docs/assets/KmerFormer_6mer_L29_50M_preds_clean_common.npz"},
+    {"model": "NT-v2 500M + LoRA, 6-mer", "reported_percent": 67.08, "evaluation": "RC-TTA", "config": "configs/baselines/ntv2_lora_50M.yaml", "prediction_asset": "docs/assets/NTv2_6mer_LoRA_50M_preds_clean_common.npz"},
+    {"model": "KmerFormer exact 13-mer, 1 layer", "model_id": "kmerformer-exact13-1l-50m", "reported_percent": 91.15, "evaluation": "RC-TTA", "config": "configs/13mer/exact_1L_50M_meanpool.yaml", "prediction_asset": "docs/assets/KmerFormer_exact13mer_1L_50M_preds_clean_common.npz"},
+    {"model": "MetaTransformer 13-mer, 1 layer", "reported_percent": 87.46, "evaluation": "Forward-only", "config": null, "prediction_asset": "docs/assets/MetaTransformer_13mer_50M_preds_clean_common.npz", "source_percent": 87.458, "note": "87.47 belongs to the recovered 99,742-read series and is not the primary 100K value."}
+  ],
+  "preserved_distinctions": [
+    "The 99,742-read NT-v2 scaling series is separate from the primary 100K arrays.",
+    "Exact/hashed contrasts are complete-configuration trade-offs, not bounds on hashing alone.",
+    "The far rung means no reliable same-genus hit under the skani protocol.",
+    "Hashed 13-mer RC-TTA gains and the 49,640,347 distinct training strings remain reported.",
+    "The four-run 0.12-point standard deviation applies to the scratch 6-mer 16-layer 5M configuration."
+  ]
+}

@@ -1,0 +1,1536 @@
+species_class,species_name,genus_class,genus_name,reference_type
+76,20287_6_4,0,Achromobacter,MAG
+288,GCF_000411395,1,Acidaminococcus,RefSeq assembly
+350,GCF_900095825,1,Acidaminococcus,RefSeq assembly
+779,UMGS1727,1,Acidaminococcus,MAG
+1028,UMGS254,1,Acidaminococcus,MAG
+1060,UMGS3,1,Acidaminococcus,MAG
+1194,UMGS457,1,Acidaminococcus,MAG
+1337,UMGS667,1,Acidaminococcus,MAG
+65,17138_5_74,2,Acinetobacter,MAG
+196,GCF_000162075,2,Acinetobacter,RefSeq assembly
+197,GCF_000162115,2,Acinetobacter,RefSeq assembly
+1106,UMGS347,2,Acinetobacter,MAG
+99,20298_3_21,3,Actinomyces,MAG
+265,GCF_000308055,3,Actinomyces,RefSeq assembly
+289,GCF_000411415,3,Actinomyces,RefSeq assembly
+315,GCF_000820725,3,Actinomyces,RefSeq assembly
+336,GCF_001457875,3,Actinomyces,RefSeq assembly
+670,UMGS1548,3,Actinomyces,MAG
+774,UMGS1719,3,Actinomyces,MAG
+782,UMGS1731,3,Actinomyces,MAG
+909,UMGS1934,3,Actinomyces,MAG
+959,UMGS2009,3,Actinomyces,MAG
+1001,UMGS2071,3,Actinomyces,MAG
+1021,UMGS242,3,Actinomyces,MAG
+1026,UMGS252,3,Actinomyces,MAG
+1153,UMGS402,3,Actinomyces,MAG
+1214,UMGS492,3,Actinomyces,MAG
+1238,UMGS520,3,Actinomyces,MAG
+1433,UMGS822,3,Actinomyces,MAG
+1506,UMGS956,3,Actinomyces,MAG
+1207,UMGS479,4,Adlercreutzia,MAG
+987,UMGS205,5,Aeromonas,MAG
+425,UMGS1128,6,Akkermansia,MAG
+578,UMGS141,6,Akkermansia,MAG
+832,UMGS181,6,Akkermansia,MAG
+1385,UMGS750,6,Akkermansia,MAG
+2,11861_6_61,7,Alistipes,MAG
+3,11861_6_63,7,Alistipes,MAG
+48,14207_6_12,7,Alistipes,MAG
+57,14207_7_70,7,Alistipes,MAG
+112,20298_3_63,7,Alistipes,MAG
+147,GCF_000154465,7,Alistipes,RefSeq assembly
+239,GCF_000231275,7,Alistipes,RefSeq assembly
+268,GCF_000311925,7,Alistipes,RefSeq assembly
+270,GCF_000312145,7,Alistipes,RefSeq assembly
+277,GCF_000321205,7,Alistipes,RefSeq assembly
+344,GCF_900083545,7,Alistipes,RefSeq assembly
+355,GCF_900107675,7,Alistipes,RefSeq assembly
+390,UMGS1065,7,Alistipes,MAG
+448,UMGS1168,7,Alistipes,MAG
+464,UMGS120,7,Alistipes,MAG
+473,UMGS1210,7,Alistipes,MAG
+509,UMGS1280,7,Alistipes,MAG
+517,UMGS1292,7,Alistipes,MAG
+542,UMGS1342,7,Alistipes,MAG
+677,UMGS1559,7,Alistipes,MAG
+695,UMGS1587,7,Alistipes,MAG
+710,UMGS162,7,Alistipes,MAG
+849,UMGS1837,7,Alistipes,MAG
+995,UMGS206,7,Alistipes,MAG
+1119,UMGS368,7,Alistipes,MAG
+1123,UMGS372,7,Alistipes,MAG
+1197,UMGS465,7,Alistipes,MAG
+1208,UMGS480,7,Alistipes,MAG
+1219,UMGS50,7,Alistipes,MAG
+1259,UMGS559,7,Alistipes,MAG
+1273,UMGS579,7,Alistipes,MAG
+1322,UMGS648,7,Alistipes,MAG
+1328,UMGS654,7,Alistipes,MAG
+1330,UMGS657,7,Alistipes,MAG
+1392,UMGS763,7,Alistipes,MAG
+1440,UMGS840,7,Alistipes,MAG
+1441,UMGS842,7,Alistipes,MAG
+1454,UMGS857,7,Alistipes,MAG
+211,GCF_000173355,8,Anaerococcus,RefSeq assembly
+274,GCF_000321005,8,Anaerococcus,RefSeq assembly
+326,GCF_001182725,8,Anaerococcus,RefSeq assembly
+338,GCF_001487145,8,Anaerococcus,RefSeq assembly
+512,UMGS1286,8,Anaerococcus,MAG
+555,UMGS1364,8,Anaerococcus,MAG
+926,UMGS1965,8,Anaerococcus,MAG
+1103,UMGS343,8,Anaerococcus,MAG
+1284,UMGS594,8,Anaerococcus,MAG
+480,UMGS1233,9,Anaerofustis,MAG
+1011,UMGS220,10,Anaeromassilibacillus,MAG
+1157,UMGS41,10,Anaeromassilibacillus,MAG
+1497,UMGS939,10,Anaeromassilibacillus,MAG
+1494,UMGS935,11,Anaerosporobacter,MAG
+499,UMGS1268,12,Anaerostipes,MAG
+673,UMGS1552,13,Anaerotignum,MAG
+385,UMGS1055,14,Anaerotruncus,MAG
+795,UMGS175,14,Anaerotruncus,MAG
+810,UMGS177,14,Anaerotruncus,MAG
+934,UMGS1974,14,Anaerotruncus,MAG
+458,UMGS1189,15,Atopobium,MAG
+835,UMGS1817,15,Atopobium,MAG
+980,UMGS2041,15,Atopobium,MAG
+627,UMGS148,16,Azospirillum,MAG
+634,UMGS149,16,Azospirillum,MAG
+1013,UMGS223,16,Azospirillum,MAG
+1163,UMGS418,16,Azospirillum,MAG
+1306,UMGS63,16,Azospirillum,MAG
+1324,UMGS65,16,Azospirillum,MAG
+10,12718_7_24,17,Bacillus,MAG
+66,17138_5_75,17,Bacillus,MAG
+129,21673_4_91,17,Bacillus,MAG
+246,GCF_000238655,17,Bacillus,RefSeq assembly
+259,GCF_000285535,17,Bacillus,RefSeq assembly
+266,GCF_000311725,17,Bacillus,RefSeq assembly
+276,GCF_000321185,17,Bacillus,RefSeq assembly
+309,GCF_000612625,17,Bacillus,RefSeq assembly
+312,GCF_000752035,17,Bacillus,RefSeq assembly
+316,GCF_000821085,17,Bacillus,RefSeq assembly
+328,GCF_001243895,17,Bacillus,RefSeq assembly
+11,12718_7_29,18,Bacteroides,MAG
+29,13414_6_24,18,Bacteroides,MAG
+39,13470_2_62,18,Bacteroides,MAG
+40,13470_2_64,18,Bacteroides,MAG
+41,13470_2_65,18,Bacteroides,MAG
+49,14207_6_13,18,Bacteroides,MAG
+50,14207_6_9,18,Bacteroides,MAG
+52,14207_7_23,18,Bacteroides,MAG
+77,20287_6_53,18,Bacteroides,MAG
+79,20287_6_9,18,Bacteroides,MAG
+83,20298_2_23,18,Bacteroides,MAG
+91,20298_2_7,18,Bacteroides,MAG
+122,21673_4_46,18,Bacteroides,MAG
+148,GCF_000154845,18,Bacteroides,RefSeq assembly
+156,GCF_000155815,18,Bacteroides,RefSeq assembly
+164,GCF_000157015,18,Bacteroides,RefSeq assembly
+165,GCF_000157915,18,Bacteroides,RefSeq assembly
+189,GCF_000159855,18,Bacteroides,RefSeq assembly
+198,GCF_000162155,18,Bacteroides,RefSeq assembly
+199,GCF_000162215,18,Bacteroides,RefSeq assembly
+208,GCF_000169015,18,Bacteroides,RefSeq assembly
+210,GCF_000172175,18,Bacteroides,RefSeq assembly
+220,GCF_000187895,18,Bacteroides,RefSeq assembly
+225,GCF_000195635,18,Bacteroides,RefSeq assembly
+232,GCF_000218325,18,Bacteroides,RefSeq assembly
+272,GCF_000315485,18,Bacteroides,RefSeq assembly
+281,GCF_000381365,18,Bacteroides,RefSeq assembly
+282,GCF_000382465,18,Bacteroides,RefSeq assembly
+302,GCF_000499785,18,Bacteroides,RefSeq assembly
+408,UMGS1093,18,Bacteroides,MAG
+468,UMGS1205,18,Bacteroides,MAG
+474,UMGS1213,18,Bacteroides,MAG
+482,UMGS1236,18,Bacteroides,MAG
+498,UMGS1265,18,Bacteroides,MAG
+546,UMGS1352,18,Bacteroides,MAG
+570,UMGS1399,18,Bacteroides,MAG
+582,UMGS1416,18,Bacteroides,MAG
+611,UMGS1450,18,Bacteroides,MAG
+623,UMGS1473,18,Bacteroides,MAG
+640,UMGS1504,18,Bacteroides,MAG
+641,UMGS1505,18,Bacteroides,MAG
+661,UMGS1534,18,Bacteroides,MAG
+698,UMGS1595,18,Bacteroides,MAG
+730,UMGS1646,18,Bacteroides,MAG
+731,UMGS1647,18,Bacteroides,MAG
+736,UMGS1654,18,Bacteroides,MAG
+761,UMGS1697,18,Bacteroides,MAG
+768,UMGS1710,18,Bacteroides,MAG
+837,UMGS182,18,Bacteroides,MAG
+855,UMGS1845,18,Bacteroides,MAG
+868,UMGS1869,18,Bacteroides,MAG
+890,UMGS1909,18,Bacteroides,MAG
+923,UMGS1954,18,Bacteroides,MAG
+937,UMGS1980,18,Bacteroides,MAG
+958,UMGS2007,18,Bacteroides,MAG
+981,UMGS2042,18,Bacteroides,MAG
+1003,UMGS2075,18,Bacteroides,MAG
+1007,UMGS212,18,Bacteroides,MAG
+1009,UMGS218,18,Bacteroides,MAG
+1010,UMGS219,18,Bacteroides,MAG
+1040,UMGS277,18,Bacteroides,MAG
+1047,UMGS288,18,Bacteroides,MAG
+1090,UMGS328,18,Bacteroides,MAG
+1092,UMGS331,18,Bacteroides,MAG
+1111,UMGS355,18,Bacteroides,MAG
+1168,UMGS422,18,Bacteroides,MAG
+1239,UMGS523,18,Bacteroides,MAG
+1248,UMGS540,18,Bacteroides,MAG
+1256,UMGS552,18,Bacteroides,MAG
+1300,UMGS622,18,Bacteroides,MAG
+1302,UMGS624,18,Bacteroides,MAG
+1307,UMGS630,18,Bacteroides,MAG
+1351,UMGS698,18,Bacteroides,MAG
+1443,UMGS845,18,Bacteroides,MAG
+1460,UMGS871,18,Bacteroides,MAG
+1477,UMGS901,18,Bacteroides,MAG
+1493,UMGS933,18,Bacteroides,MAG
+1512,UMGS963,18,Bacteroides,MAG
+1521,UMGS980,18,Bacteroides,MAG
+123,21673_4_5,19,Barnesiella,MAG
+1014,UMGS227,19,Barnesiella,MAG
+1428,UMGS816,19,Barnesiella,MAG
+68,18048_1_93,20,Bifidobacterium,MAG
+73,18391_1_7,20,Bifidobacterium,MAG
+98,20298_3_2,20,Bifidobacterium,MAG
+138,GCF_000020425,20,Bifidobacterium,RefSeq assembly
+209,GCF_000172135,20,Bifidobacterium,RefSeq assembly
+258,GCF_000273525,20,Bifidobacterium,RefSeq assembly
+310,GCF_000741205,20,Bifidobacterium,RefSeq assembly
+320,GCF_001025155,20,Bifidobacterium,RefSeq assembly
+321,GCF_001025175,20,Bifidobacterium,RefSeq assembly
+322,GCF_001025195,20,Bifidobacterium,RefSeq assembly
+575,UMGS1405,20,Bifidobacterium,MAG
+656,UMGS1527,20,Bifidobacterium,MAG
+1289,UMGS603,20,Bifidobacterium,MAG
+1379,UMGS74,20,Bifidobacterium,MAG
+308,GCF_000582785,21,Blastococcus,RefSeq assembly
+1,11861_6_58,22,Blautia,MAG
+28,13414_6_20,22,Blautia,MAG
+30,13414_6_32,22,Blautia,MAG
+32,13414_6_41,22,Blautia,MAG
+37,13414_6_66,22,Blautia,MAG
+47,13470_2_81,22,Blautia,MAG
+67,18048_1_72,22,Blautia,MAG
+69,18048_2_67,22,Blautia,MAG
+105,20298_3_35,22,Blautia,MAG
+109,20298_3_48,22,Blautia,MAG
+114,20298_3_81,22,Blautia,MAG
+117,21673_4_19,22,Blautia,MAG
+120,21673_4_38,22,Blautia,MAG
+124,21673_4_53,22,Blautia,MAG
+130,8080_1_72,22,Blautia,MAG
+191,GCF_000159975,22,Blautia,RefSeq assembly
+228,GCF_000209425,22,Blautia,RefSeq assembly
+363,UMGS1010,22,Blautia,MAG
+387,UMGS1061,22,Blautia,MAG
+431,UMGS1138,22,Blautia,MAG
+440,UMGS1156,22,Blautia,MAG
+459,UMGS119,22,Blautia,MAG
+550,UMGS1357,22,Blautia,MAG
+551,UMGS1359,22,Blautia,MAG
+557,UMGS1369,22,Blautia,MAG
+581,UMGS1415,22,Blautia,MAG
+584,UMGS1419,22,Blautia,MAG
+593,UMGS143,22,Blautia,MAG
+598,UMGS1434,22,Blautia,MAG
+599,UMGS1436,22,Blautia,MAG
+622,UMGS1472,22,Blautia,MAG
+711,UMGS1622,22,Blautia,MAG
+818,UMGS1786,22,Blautia,MAG
+918,UMGS1944,22,Blautia,MAG
+1005,UMGS2079,22,Blautia,MAG
+1039,UMGS276,22,Blautia,MAG
+1096,UMGS335,22,Blautia,MAG
+1115,UMGS36,22,Blautia,MAG
+1154,UMGS406,22,Blautia,MAG
+1160,UMGS412,22,Blautia,MAG
+1167,UMGS421,22,Blautia,MAG
+1290,UMGS604,22,Blautia,MAG
+1446,UMGS848,22,Blautia,MAG
+1514,UMGS967,22,Blautia,MAG
+1516,UMGS97,22,Blautia,MAG
+1533,UMGS997,22,Blautia,MAG
+1399,UMGS776,23,Brachyspira,MAG
+261,GCF_000285835,24,Brevibacterium,RefSeq assembly
+533,UMGS1328,25,Butyricicoccus,MAG
+723,UMGS1639,25,Butyricicoccus,MAG
+842,UMGS1825,25,Butyricicoccus,MAG
+973,UMGS2030,25,Butyricicoccus,MAG
+1109,UMGS351,25,Butyricicoccus,MAG
+1345,UMGS682,25,Butyricicoccus,MAG
+1510,UMGS961,25,Butyricicoccus,MAG
+13,12718_7_37,26,Butyricimonas,MAG
+346,GCF_900091675,26,Butyricimonas,RefSeq assembly
+428,UMGS1130,26,Butyricimonas,MAG
+884,UMGS1896,26,Butyricimonas,MAG
+1049,UMGS29,26,Butyricimonas,MAG
+1518,UMGS971,26,Butyricimonas,MAG
+755,UMGS1687,27,Butyrivibrio,MAG
+1151,UMGS4,27,Butyrivibrio,MAG
+1488,UMGS920,27,Butyrivibrio,MAG
+143,GCF_000146835,28,Campylobacter,RefSeq assembly
+214,GCF_000185345,28,Campylobacter,RefSeq assembly
+248,GCF_000238755,28,Campylobacter,RefSeq assembly
+427,UMGS113,28,Campylobacter,MAG
+585,UMGS142,28,Campylobacter,MAG
+637,UMGS15,29,Catenibacterium,MAG
+1034,UMGS269,29,Catenibacterium,MAG
+1035,UMGS270,29,Catenibacterium,MAG
+269,GCF_000312005,30,Cellulomonas,RefSeq assembly
+96,20298_3_17,31,Citrobacter,MAG
+108,20298_3_4,31,Citrobacter,MAG
+247,GCF_000238735,31,Citrobacter,RefSeq assembly
+1349,UMGS691,32,Cloacibacillus,MAG
+1427,UMGS813,32,Cloacibacillus,MAG
+0,11861_6_55,33,Clostridium,MAG
+4,12718_7_10,33,Clostridium,MAG
+14,12718_7_39,33,Clostridium,MAG
+23,12718_7_9,33,Clostridium,MAG
+24,12718_7_92,33,Clostridium,MAG
+31,13414_6_34,33,Clostridium,MAG
+38,13414_6_73,33,Clostridium,MAG
+44,13470_2_75,33,Clostridium,MAG
+45,13470_2_77,33,Clostridium,MAG
+46,13470_2_78,33,Clostridium,MAG
+53,14207_7_27,33,Clostridium,MAG
+54,14207_7_30,33,Clostridium,MAG
+58,14207_7_75,33,Clostridium,MAG
+63,15841_8_64,33,Clostridium,MAG
+70,18048_2_85,33,Clostridium,MAG
+86,20298_2_47,33,Clostridium,MAG
+88,20298_2_5,33,Clostridium,MAG
+102,20298_3_26,33,Clostridium,MAG
+110,20298_3_52,33,Clostridium,MAG
+111,20298_3_62,33,Clostridium,MAG
+125,21673_4_71,33,Clostridium,MAG
+126,21673_4_77,33,Clostridium,MAG
+127,21673_4_80,33,Clostridium,MAG
+131,8080_1_73,33,Clostridium,MAG
+132,8080_1_77,33,Clostridium,MAG
+133,8080_1_78,33,Clostridium,MAG
+135,8080_1_81,33,Clostridium,MAG
+136,8080_1_83,33,Clostridium,MAG
+151,GCF_000155085,33,Clostridium,RefSeq assembly
+153,GCF_000155435,33,Clostridium,RefSeq assembly
+169,GCF_000158075,33,Clostridium,RefSeq assembly
+176,GCF_000158375,33,Clostridium,RefSeq assembly
+181,GCF_000159055,33,Clostridium,RefSeq assembly
+221,GCF_000189615,33,Clostridium,RefSeq assembly
+240,GCF_000233455,33,Clostridium,RefSeq assembly
+243,GCF_000234155,33,Clostridium,RefSeq assembly
+244,GCF_000235505,33,Clostridium,RefSeq assembly
+260,GCF_000285575,33,Clostridium,RefSeq assembly
+273,GCF_000320405,33,Clostridium,RefSeq assembly
+301,GCF_000499525,33,Clostridium,RefSeq assembly
+311,GCF_000751675,33,Clostridium,RefSeq assembly
+313,GCF_000753355,33,Clostridium,RefSeq assembly
+314,GCF_000820705,33,Clostridium,RefSeq assembly
+324,GCF_001078425,33,Clostridium,RefSeq assembly
+327,GCF_001243045,33,Clostridium,RefSeq assembly
+330,GCF_001403635,33,Clostridium,RefSeq assembly
+339,GCF_001517625,33,Clostridium,RefSeq assembly
+347,GCF_900091705,33,Clostridium,RefSeq assembly
+359,UMGS1006,33,Clostridium,MAG
+362,UMGS101,33,Clostridium,MAG
+365,UMGS1015,33,Clostridium,MAG
+372,UMGS1027,33,Clostridium,MAG
+404,UMGS1088,33,Clostridium,MAG
+449,UMGS1169,33,Clostridium,MAG
+483,UMGS1238,33,Clostridium,MAG
+487,UMGS1244,33,Clostridium,MAG
+488,UMGS125,33,Clostridium,MAG
+508,UMGS128,33,Clostridium,MAG
+513,UMGS1287,33,Clostridium,MAG
+514,UMGS1288,33,Clostridium,MAG
+515,UMGS129,33,Clostridium,MAG
+521,UMGS1306,33,Clostridium,MAG
+526,UMGS1314,33,Clostridium,MAG
+549,UMGS1356,33,Clostridium,MAG
+558,UMGS1370,33,Clostridium,MAG
+560,UMGS1373,33,Clostridium,MAG
+563,UMGS138,33,Clostridium,MAG
+576,UMGS1406,33,Clostridium,MAG
+588,UMGS1423,33,Clostridium,MAG
+590,UMGS1425,33,Clostridium,MAG
+601,UMGS1438,33,Clostridium,MAG
+604,UMGS1440,33,Clostridium,MAG
+625,UMGS1476,33,Clostridium,MAG
+645,UMGS1510,33,Clostridium,MAG
+648,UMGS1516,33,Clostridium,MAG
+649,UMGS152,33,Clostridium,MAG
+659,UMGS1531,33,Clostridium,MAG
+662,UMGS1537,33,Clostridium,MAG
+666,UMGS1543,33,Clostridium,MAG
+674,UMGS1553,33,Clostridium,MAG
+682,UMGS1563,33,Clostridium,MAG
+686,UMGS1570,33,Clostridium,MAG
+687,UMGS1576,33,Clostridium,MAG
+689,UMGS158,33,Clostridium,MAG
+697,UMGS1594,33,Clostridium,MAG
+703,UMGS1604,33,Clostridium,MAG
+706,UMGS1609,33,Clostridium,MAG
+707,UMGS1612,33,Clostridium,MAG
+708,UMGS1616,33,Clostridium,MAG
+709,UMGS1619,33,Clostridium,MAG
+713,UMGS1625,33,Clostridium,MAG
+717,UMGS1630,33,Clostridium,MAG
+725,UMGS1640,33,Clostridium,MAG
+727,UMGS1642,33,Clostridium,MAG
+732,UMGS1649,33,Clostridium,MAG
+733,UMGS1650,33,Clostridium,MAG
+734,UMGS1652,33,Clostridium,MAG
+739,UMGS1660,33,Clostridium,MAG
+741,UMGS1663,33,Clostridium,MAG
+742,UMGS1666,33,Clostridium,MAG
+744,UMGS1669,33,Clostridium,MAG
+745,UMGS1672,33,Clostridium,MAG
+746,UMGS1673,33,Clostridium,MAG
+748,UMGS1675,33,Clostridium,MAG
+749,UMGS1677,33,Clostridium,MAG
+752,UMGS1681,33,Clostridium,MAG
+756,UMGS1689,33,Clostridium,MAG
+757,UMGS169,33,Clostridium,MAG
+762,UMGS1699,33,Clostridium,MAG
+763,UMGS17,33,Clostridium,MAG
+766,UMGS1705,33,Clostridium,MAG
+769,UMGS1711,33,Clostridium,MAG
+785,UMGS1734,33,Clostridium,MAG
+788,UMGS1740,33,Clostridium,MAG
+798,UMGS1754,33,Clostridium,MAG
+803,UMGS1761,33,Clostridium,MAG
+815,UMGS1781,33,Clostridium,MAG
+816,UMGS1782,33,Clostridium,MAG
+817,UMGS1784,33,Clostridium,MAG
+820,UMGS1788,33,Clostridium,MAG
+823,UMGS1795,33,Clostridium,MAG
+824,UMGS1796,33,Clostridium,MAG
+830,UMGS1808,33,Clostridium,MAG
+853,UMGS1843,33,Clostridium,MAG
+859,UMGS1851,33,Clostridium,MAG
+860,UMGS1852,33,Clostridium,MAG
+867,UMGS1864,33,Clostridium,MAG
+873,UMGS1875,33,Clostridium,MAG
+875,UMGS188,33,Clostridium,MAG
+877,UMGS1884,33,Clostridium,MAG
+885,UMGS1897,33,Clostridium,MAG
+887,UMGS1901,33,Clostridium,MAG
+894,UMGS1914,33,Clostridium,MAG
+895,UMGS1917,33,Clostridium,MAG
+902,UMGS1923,33,Clostridium,MAG
+903,UMGS1925,33,Clostridium,MAG
+908,UMGS1933,33,Clostridium,MAG
+929,UMGS1968,33,Clostridium,MAG
+939,UMGS1983,33,Clostridium,MAG
+943,UMGS1988,33,Clostridium,MAG
+946,UMGS1992,33,Clostridium,MAG
+947,UMGS1994,33,Clostridium,MAG
+948,UMGS1995,33,Clostridium,MAG
+962,UMGS2011,33,Clostridium,MAG
+963,UMGS2014,33,Clostridium,MAG
+964,UMGS2019,33,Clostridium,MAG
+991,UMGS2053,33,Clostridium,MAG
+992,UMGS2056,33,Clostridium,MAG
+1012,UMGS222,33,Clostridium,MAG
+1015,UMGS228,33,Clostridium,MAG
+1016,UMGS229,33,Clostridium,MAG
+1020,UMGS240,33,Clostridium,MAG
+1024,UMGS249,33,Clostridium,MAG
+1038,UMGS275,33,Clostridium,MAG
+1097,UMGS337,33,Clostridium,MAG
+1100,UMGS34,33,Clostridium,MAG
+1102,UMGS341,33,Clostridium,MAG
+1108,UMGS35,33,Clostridium,MAG
+1110,UMGS353,33,Clostridium,MAG
+1166,UMGS420,33,Clostridium,MAG
+1179,UMGS438,33,Clostridium,MAG
+1192,UMGS453,33,Clostridium,MAG
+1237,UMGS52,33,Clostridium,MAG
+1243,UMGS53,33,Clostridium,MAG
+1250,UMGS542,33,Clostridium,MAG
+1255,UMGS55,33,Clostridium,MAG
+1258,UMGS558,33,Clostridium,MAG
+1272,UMGS578,33,Clostridium,MAG
+1283,UMGS593,33,Clostridium,MAG
+1287,UMGS600,33,Clostridium,MAG
+1295,UMGS615,33,Clostridium,MAG
+1299,UMGS620,33,Clostridium,MAG
+1309,UMGS632,33,Clostridium,MAG
+1344,UMGS681,33,Clostridium,MAG
+1352,UMGS699,33,Clostridium,MAG
+1371,UMGS725,33,Clostridium,MAG
+1374,UMGS73,33,Clostridium,MAG
+1406,UMGS786,33,Clostridium,MAG
+1410,UMGS79,33,Clostridium,MAG
+1416,UMGS797,33,Clostridium,MAG
+1419,UMGS80,33,Clostridium,MAG
+1421,UMGS803,33,Clostridium,MAG
+1431,UMGS82,33,Clostridium,MAG
+1436,UMGS826,33,Clostridium,MAG
+1447,UMGS849,33,Clostridium,MAG
+1456,UMGS866,33,Clostridium,MAG
+1464,UMGS88,33,Clostridium,MAG
+1501,UMGS944,33,Clostridium,MAG
+1502,UMGS945,33,Clostridium,MAG
+1509,UMGS960,33,Clostridium,MAG
+1529,UMGS990,33,Clostridium,MAG
+159,GCF_000156175,34,Collinsella,RefSeq assembly
+160,GCF_000156215,34,Collinsella,RefSeq assembly
+236,GCF_000225705,34,Collinsella,RefSeq assembly
+361,UMGS1009,34,Collinsella,MAG
+364,UMGS1013,34,Collinsella,MAG
+369,UMGS1022,34,Collinsella,MAG
+370,UMGS1023,34,Collinsella,MAG
+371,UMGS1026,34,Collinsella,MAG
+375,UMGS1030,34,Collinsella,MAG
+376,UMGS1031,34,Collinsella,MAG
+379,UMGS104,34,Collinsella,MAG
+381,UMGS1047,34,Collinsella,MAG
+396,UMGS1074,34,Collinsella,MAG
+397,UMGS1075,34,Collinsella,MAG
+398,UMGS1077,34,Collinsella,MAG
+400,UMGS1082,34,Collinsella,MAG
+401,UMGS1083,34,Collinsella,MAG
+403,UMGS1086,34,Collinsella,MAG
+405,UMGS1089,34,Collinsella,MAG
+409,UMGS1094,34,Collinsella,MAG
+410,UMGS1095,34,Collinsella,MAG
+413,UMGS1100,34,Collinsella,MAG
+417,UMGS1112,34,Collinsella,MAG
+419,UMGS1117,34,Collinsella,MAG
+429,UMGS1131,34,Collinsella,MAG
+432,UMGS1139,34,Collinsella,MAG
+436,UMGS1146,34,Collinsella,MAG
+437,UMGS1152,34,Collinsella,MAG
+438,UMGS1154,34,Collinsella,MAG
+442,UMGS1160,34,Collinsella,MAG
+443,UMGS1161,34,Collinsella,MAG
+446,UMGS1165,34,Collinsella,MAG
+447,UMGS1166,34,Collinsella,MAG
+451,UMGS1173,34,Collinsella,MAG
+452,UMGS1174,34,Collinsella,MAG
+455,UMGS1183,34,Collinsella,MAG
+456,UMGS1184,34,Collinsella,MAG
+457,UMGS1186,34,Collinsella,MAG
+460,UMGS1190,34,Collinsella,MAG
+465,UMGS1200,34,Collinsella,MAG
+467,UMGS1203,34,Collinsella,MAG
+469,UMGS1207,34,Collinsella,MAG
+471,UMGS1209,34,Collinsella,MAG
+475,UMGS1219,34,Collinsella,MAG
+477,UMGS1220,34,Collinsella,MAG
+485,UMGS1242,34,Collinsella,MAG
+490,UMGS1252,34,Collinsella,MAG
+497,UMGS1262,34,Collinsella,MAG
+502,UMGS1270,34,Collinsella,MAG
+504,UMGS1274,34,Collinsella,MAG
+506,UMGS1277,34,Collinsella,MAG
+507,UMGS1278,34,Collinsella,MAG
+510,UMGS1282,34,Collinsella,MAG
+520,UMGS1300,34,Collinsella,MAG
+523,UMGS1309,34,Collinsella,MAG
+527,UMGS1319,34,Collinsella,MAG
+529,UMGS1321,34,Collinsella,MAG
+536,UMGS1333,34,Collinsella,MAG
+538,UMGS1336,34,Collinsella,MAG
+539,UMGS1339,34,Collinsella,MAG
+541,UMGS1341,34,Collinsella,MAG
+544,UMGS1349,34,Collinsella,MAG
+547,UMGS1354,34,Collinsella,MAG
+561,UMGS1376,34,Collinsella,MAG
+562,UMGS1378,34,Collinsella,MAG
+564,UMGS1380,34,Collinsella,MAG
+567,UMGS1386,34,Collinsella,MAG
+572,UMGS1401,34,Collinsella,MAG
+577,UMGS1409,34,Collinsella,MAG
+583,UMGS1417,34,Collinsella,MAG
+586,UMGS1420,34,Collinsella,MAG
+587,UMGS1421,34,Collinsella,MAG
+589,UMGS1424,34,Collinsella,MAG
+596,UMGS1432,34,Collinsella,MAG
+602,UMGS1439,34,Collinsella,MAG
+606,UMGS1442,34,Collinsella,MAG
+608,UMGS1444,34,Collinsella,MAG
+617,UMGS1465,34,Collinsella,MAG
+624,UMGS1475,34,Collinsella,MAG
+628,UMGS1480,34,Collinsella,MAG
+630,UMGS1482,34,Collinsella,MAG
+631,UMGS1483,34,Collinsella,MAG
+633,UMGS1489,34,Collinsella,MAG
+635,UMGS1497,34,Collinsella,MAG
+636,UMGS1499,34,Collinsella,MAG
+639,UMGS1501,34,Collinsella,MAG
+643,UMGS1508,34,Collinsella,MAG
+658,UMGS1530,34,Collinsella,MAG
+665,UMGS1542,34,Collinsella,MAG
+667,UMGS1545,34,Collinsella,MAG
+668,UMGS1546,34,Collinsella,MAG
+671,UMGS1549,34,Collinsella,MAG
+676,UMGS1558,34,Collinsella,MAG
+683,UMGS1565,34,Collinsella,MAG
+684,UMGS1567,34,Collinsella,MAG
+694,UMGS1586,34,Collinsella,MAG
+696,UMGS1589,34,Collinsella,MAG
+699,UMGS1597,34,Collinsella,MAG
+704,UMGS1606,34,Collinsella,MAG
+705,UMGS1608,34,Collinsella,MAG
+714,UMGS1627,34,Collinsella,MAG
+718,UMGS1631,34,Collinsella,MAG
+722,UMGS1638,34,Collinsella,MAG
+724,UMGS164,34,Collinsella,MAG
+743,UMGS1667,34,Collinsella,MAG
+751,UMGS1680,34,Collinsella,MAG
+753,UMGS1683,34,Collinsella,MAG
+760,UMGS1695,34,Collinsella,MAG
+765,UMGS1701,34,Collinsella,MAG
+767,UMGS1706,34,Collinsella,MAG
+775,UMGS1720,34,Collinsella,MAG
+776,UMGS1721,34,Collinsella,MAG
+777,UMGS1724,34,Collinsella,MAG
+778,UMGS1726,34,Collinsella,MAG
+780,UMGS1729,34,Collinsella,MAG
+783,UMGS1732,34,Collinsella,MAG
+790,UMGS1742,34,Collinsella,MAG
+791,UMGS1743,34,Collinsella,MAG
+793,UMGS1747,34,Collinsella,MAG
+799,UMGS1755,34,Collinsella,MAG
+805,UMGS1763,34,Collinsella,MAG
+808,UMGS1767,34,Collinsella,MAG
+813,UMGS1779,34,Collinsella,MAG
+821,UMGS1790,34,Collinsella,MAG
+826,UMGS1800,34,Collinsella,MAG
+834,UMGS1816,34,Collinsella,MAG
+846,UMGS1834,34,Collinsella,MAG
+847,UMGS1835,34,Collinsella,MAG
+848,UMGS1836,34,Collinsella,MAG
+851,UMGS1841,34,Collinsella,MAG
+852,UMGS1842,34,Collinsella,MAG
+861,UMGS1853,34,Collinsella,MAG
+866,UMGS1862,34,Collinsella,MAG
+871,UMGS1873,34,Collinsella,MAG
+872,UMGS1874,34,Collinsella,MAG
+874,UMGS1879,34,Collinsella,MAG
+889,UMGS1905,34,Collinsella,MAG
+891,UMGS1910,34,Collinsella,MAG
+893,UMGS1913,34,Collinsella,MAG
+897,UMGS1919,34,Collinsella,MAG
+899,UMGS1920,34,Collinsella,MAG
+900,UMGS1921,34,Collinsella,MAG
+905,UMGS1928,34,Collinsella,MAG
+910,UMGS1935,34,Collinsella,MAG
+911,UMGS1936,34,Collinsella,MAG
+912,UMGS1937,34,Collinsella,MAG
+917,UMGS1943,34,Collinsella,MAG
+921,UMGS1949,34,Collinsella,MAG
+928,UMGS1967,34,Collinsella,MAG
+930,UMGS1969,34,Collinsella,MAG
+932,UMGS1970,34,Collinsella,MAG
+938,UMGS1982,34,Collinsella,MAG
+941,UMGS1985,34,Collinsella,MAG
+954,UMGS2002,34,Collinsella,MAG
+957,UMGS2006,34,Collinsella,MAG
+966,UMGS2021,34,Collinsella,MAG
+972,UMGS2029,34,Collinsella,MAG
+978,UMGS204,34,Collinsella,MAG
+982,UMGS2043,34,Collinsella,MAG
+984,UMGS2047,34,Collinsella,MAG
+988,UMGS2050,34,Collinsella,MAG
+990,UMGS2052,34,Collinsella,MAG
+993,UMGS2058,34,Collinsella,MAG
+994,UMGS2059,34,Collinsella,MAG
+998,UMGS2064,34,Collinsella,MAG
+999,UMGS2066,34,Collinsella,MAG
+1030,UMGS256,34,Collinsella,MAG
+1045,UMGS284,34,Collinsella,MAG
+1048,UMGS289,34,Collinsella,MAG
+1050,UMGS290,34,Collinsella,MAG
+1051,UMGS291,34,Collinsella,MAG
+1052,UMGS292,34,Collinsella,MAG
+1053,UMGS293,34,Collinsella,MAG
+1054,UMGS294,34,Collinsella,MAG
+1055,UMGS295,34,Collinsella,MAG
+1056,UMGS296,34,Collinsella,MAG
+1057,UMGS297,34,Collinsella,MAG
+1058,UMGS298,34,Collinsella,MAG
+1059,UMGS299,34,Collinsella,MAG
+1061,UMGS300,34,Collinsella,MAG
+1062,UMGS301,34,Collinsella,MAG
+1063,UMGS302,34,Collinsella,MAG
+1064,UMGS303,34,Collinsella,MAG
+1066,UMGS305,34,Collinsella,MAG
+1067,UMGS306,34,Collinsella,MAG
+1068,UMGS307,34,Collinsella,MAG
+1069,UMGS308,34,Collinsella,MAG
+1070,UMGS309,34,Collinsella,MAG
+1072,UMGS310,34,Collinsella,MAG
+1073,UMGS311,34,Collinsella,MAG
+1074,UMGS312,34,Collinsella,MAG
+1075,UMGS313,34,Collinsella,MAG
+1076,UMGS314,34,Collinsella,MAG
+1077,UMGS315,34,Collinsella,MAG
+1078,UMGS316,34,Collinsella,MAG
+1079,UMGS317,34,Collinsella,MAG
+1080,UMGS318,34,Collinsella,MAG
+1081,UMGS319,34,Collinsella,MAG
+1082,UMGS320,34,Collinsella,MAG
+1083,UMGS321,34,Collinsella,MAG
+1084,UMGS322,34,Collinsella,MAG
+1085,UMGS323,34,Collinsella,MAG
+1086,UMGS324,34,Collinsella,MAG
+1087,UMGS325,34,Collinsella,MAG
+1088,UMGS326,34,Collinsella,MAG
+1089,UMGS327,34,Collinsella,MAG
+1095,UMGS334,34,Collinsella,MAG
+1113,UMGS358,34,Collinsella,MAG
+1125,UMGS375,34,Collinsella,MAG
+1126,UMGS376,34,Collinsella,MAG
+1127,UMGS377,34,Collinsella,MAG
+1128,UMGS378,34,Collinsella,MAG
+1129,UMGS379,34,Collinsella,MAG
+1132,UMGS381,34,Collinsella,MAG
+1133,UMGS382,34,Collinsella,MAG
+1134,UMGS383,34,Collinsella,MAG
+1135,UMGS384,34,Collinsella,MAG
+1136,UMGS385,34,Collinsella,MAG
+1137,UMGS386,34,Collinsella,MAG
+1138,UMGS387,34,Collinsella,MAG
+1139,UMGS388,34,Collinsella,MAG
+1140,UMGS389,34,Collinsella,MAG
+1142,UMGS390,34,Collinsella,MAG
+1143,UMGS391,34,Collinsella,MAG
+1144,UMGS393,34,Collinsella,MAG
+1145,UMGS394,34,Collinsella,MAG
+1146,UMGS395,34,Collinsella,MAG
+1147,UMGS396,34,Collinsella,MAG
+1148,UMGS397,34,Collinsella,MAG
+1149,UMGS398,34,Collinsella,MAG
+1150,UMGS399,34,Collinsella,MAG
+1161,UMGS414,34,Collinsella,MAG
+1169,UMGS425,34,Collinsella,MAG
+1171,UMGS427,34,Collinsella,MAG
+1172,UMGS428,34,Collinsella,MAG
+1173,UMGS429,34,Collinsella,MAG
+1175,UMGS430,34,Collinsella,MAG
+1182,UMGS441,34,Collinsella,MAG
+1183,UMGS442,34,Collinsella,MAG
+1184,UMGS443,34,Collinsella,MAG
+1185,UMGS445,34,Collinsella,MAG
+1186,UMGS446,34,Collinsella,MAG
+1187,UMGS447,34,Collinsella,MAG
+1188,UMGS448,34,Collinsella,MAG
+1189,UMGS449,34,Collinsella,MAG
+1191,UMGS450,34,Collinsella,MAG
+1198,UMGS466,34,Collinsella,MAG
+1199,UMGS467,34,Collinsella,MAG
+1209,UMGS481,34,Collinsella,MAG
+1210,UMGS485,34,Collinsella,MAG
+1211,UMGS487,34,Collinsella,MAG
+1217,UMGS498,34,Collinsella,MAG
+1224,UMGS506,34,Collinsella,MAG
+1226,UMGS51,34,Collinsella,MAG
+1227,UMGS510,34,Collinsella,MAG
+1228,UMGS511,34,Collinsella,MAG
+1229,UMGS512,34,Collinsella,MAG
+1230,UMGS513,34,Collinsella,MAG
+1231,UMGS514,34,Collinsella,MAG
+1232,UMGS515,34,Collinsella,MAG
+1233,UMGS516,34,Collinsella,MAG
+1234,UMGS517,34,Collinsella,MAG
+1235,UMGS518,34,Collinsella,MAG
+1236,UMGS519,34,Collinsella,MAG
+1252,UMGS545,34,Collinsella,MAG
+1275,UMGS582,34,Collinsella,MAG
+1276,UMGS585,34,Collinsella,MAG
+1277,UMGS586,34,Collinsella,MAG
+1278,UMGS587,34,Collinsella,MAG
+1279,UMGS588,34,Collinsella,MAG
+1280,UMGS589,34,Collinsella,MAG
+1282,UMGS590,34,Collinsella,MAG
+1285,UMGS595,34,Collinsella,MAG
+1286,UMGS6,34,Collinsella,MAG
+1296,UMGS616,34,Collinsella,MAG
+1301,UMGS623,34,Collinsella,MAG
+1310,UMGS633,34,Collinsella,MAG
+1313,UMGS639,34,Collinsella,MAG
+1314,UMGS640,34,Collinsella,MAG
+1315,UMGS641,34,Collinsella,MAG
+1316,UMGS642,34,Collinsella,MAG
+1317,UMGS643,34,Collinsella,MAG
+1318,UMGS644,34,Collinsella,MAG
+1319,UMGS645,34,Collinsella,MAG
+1323,UMGS649,34,Collinsella,MAG
+1325,UMGS651,34,Collinsella,MAG
+1326,UMGS652,34,Collinsella,MAG
+1327,UMGS653,34,Collinsella,MAG
+1336,UMGS666,34,Collinsella,MAG
+1340,UMGS674,34,Collinsella,MAG
+1347,UMGS684,34,Collinsella,MAG
+1354,UMGS701,34,Collinsella,MAG
+1355,UMGS704,34,Collinsella,MAG
+1361,UMGS714,34,Collinsella,MAG
+1362,UMGS716,34,Collinsella,MAG
+1365,UMGS719,34,Collinsella,MAG
+1366,UMGS720,34,Collinsella,MAG
+1367,UMGS721,34,Collinsella,MAG
+1368,UMGS722,34,Collinsella,MAG
+1369,UMGS723,34,Collinsella,MAG
+1370,UMGS724,34,Collinsella,MAG
+1372,UMGS727,34,Collinsella,MAG
+1380,UMGS741,34,Collinsella,MAG
+1381,UMGS742,34,Collinsella,MAG
+1383,UMGS745,34,Collinsella,MAG
+1386,UMGS751,34,Collinsella,MAG
+1387,UMGS753,34,Collinsella,MAG
+1400,UMGS779,34,Collinsella,MAG
+1404,UMGS783,34,Collinsella,MAG
+1405,UMGS784,34,Collinsella,MAG
+1407,UMGS787,34,Collinsella,MAG
+1408,UMGS788,34,Collinsella,MAG
+1409,UMGS789,34,Collinsella,MAG
+1411,UMGS790,34,Collinsella,MAG
+1420,UMGS801,34,Collinsella,MAG
+1422,UMGS804,34,Collinsella,MAG
+1424,UMGS806,34,Collinsella,MAG
+1429,UMGS817,34,Collinsella,MAG
+1430,UMGS819,34,Collinsella,MAG
+1432,UMGS820,34,Collinsella,MAG
+1435,UMGS825,34,Collinsella,MAG
+1438,UMGS833,34,Collinsella,MAG
+1442,UMGS844,34,Collinsella,MAG
+1449,UMGS850,34,Collinsella,MAG
+1450,UMGS851,34,Collinsella,MAG
+1451,UMGS852,34,Collinsella,MAG
+1452,UMGS853,34,Collinsella,MAG
+1461,UMGS876,34,Collinsella,MAG
+1462,UMGS877,34,Collinsella,MAG
+1463,UMGS878,34,Collinsella,MAG
+1467,UMGS888,34,Collinsella,MAG
+1471,UMGS892,34,Collinsella,MAG
+1483,UMGS909,34,Collinsella,MAG
+1485,UMGS912,34,Collinsella,MAG
+1486,UMGS919,34,Collinsella,MAG
+1489,UMGS921,34,Collinsella,MAG
+1491,UMGS925,34,Collinsella,MAG
+1496,UMGS938,34,Collinsella,MAG
+1498,UMGS94,34,Collinsella,MAG
+1500,UMGS943,34,Collinsella,MAG
+1505,UMGS955,34,Collinsella,MAG
+1508,UMGS959,34,Collinsella,MAG
+1511,UMGS962,34,Collinsella,MAG
+1515,UMGS969,34,Collinsella,MAG
+1519,UMGS972,34,Collinsella,MAG
+1527,UMGS988,34,Collinsella,MAG
+1528,UMGS989,34,Collinsella,MAG
+1531,UMGS994,34,Collinsella,MAG
+1532,UMGS996,34,Collinsella,MAG
+255,GCF_000244855,35,Coprobacillus,RefSeq assembly
+287,GCF_000411335,36,Coprococcus,RefSeq assembly
+386,UMGS1059,36,Coprococcus,MAG
+392,UMGS1067,36,Coprococcus,MAG
+424,UMGS1127,36,Coprococcus,MAG
+974,UMGS2033,36,Coprococcus,MAG
+1174,UMGS43,36,Coprococcus,MAG
+64,15841_8_88,37,Corynebacterium,MAG
+283,GCF_000403725,37,Corynebacterium,RefSeq assembly
+284,GCF_000411235,37,Corynebacterium,RefSeq assembly
+341,GCF_001941425,37,Corynebacterium,RefSeq assembly
+342,GCF_900049755,37,Corynebacterium,RefSeq assembly
+343,GCF_900078305,37,Corynebacterium,RefSeq assembly
+348,GCF_900092335,37,Corynebacterium,RefSeq assembly
+915,UMGS194,37,Corynebacterium,MAG
+1260,UMGS56,37,Corynebacterium,MAG
+792,UMGS1745,38,Cryptobacterium,MAG
+1492,UMGS93,38,Cryptobacterium,MAG
+141,GCF_000145315,39,Desulfovibrio,RefSeq assembly
+161,GCF_000156375,39,Desulfovibrio,RefSeq assembly
+215,GCF_000185705,39,Desulfovibrio,RefSeq assembly
+426,UMGS1129,39,Desulfovibrio,MAG
+535,UMGS1330,39,Desulfovibrio,MAG
+591,UMGS1427,39,Desulfovibrio,MAG
+690,UMGS1580,39,Desulfovibrio,MAG
+692,UMGS1582,39,Desulfovibrio,MAG
+838,UMGS1821,39,Desulfovibrio,MAG
+881,UMGS1890,39,Desulfovibrio,MAG
+927,UMGS1966,39,Desulfovibrio,MAG
+1025,UMGS250,39,Desulfovibrio,MAG
+1071,UMGS31,39,Desulfovibrio,MAG
+1104,UMGS344,39,Desulfovibrio,MAG
+1265,UMGS567,39,Desulfovibrio,MAG
+1403,UMGS781,39,Desulfovibrio,MAG
+1445,UMGS847,39,Desulfovibrio,MAG
+1534,UMGS998,39,Desulfovibrio,MAG
+252,GCF_000242435,40,Dialister,RefSeq assembly
+368,UMGS1019,40,Dialister,MAG
+383,UMGS1051,40,Dialister,MAG
+629,UMGS1481,40,Dialister,MAG
+638,UMGS1500,40,Dialister,MAG
+759,UMGS1694,40,Dialister,MAG
+829,UMGS1807,40,Dialister,MAG
+977,UMGS2039,40,Dialister,MAG
+1008,UMGS215,40,Dialister,MAG
+1114,UMGS359,40,Dialister,MAG
+1122,UMGS370,40,Dialister,MAG
+1177,UMGS433,40,Dialister,MAG
+1251,UMGS543,40,Dialister,MAG
+1268,UMGS571,40,Dialister,MAG
+1293,UMGS61,40,Dialister,MAG
+1393,UMGS766,40,Dialister,MAG
+1417,UMGS799,40,Dialister,MAG
+35,13414_6_50,41,Dorea,MAG
+55,14207_7_37,41,Dorea,MAG
+128,21673_4_87,41,Dorea,MAG
+537,UMGS1335,41,Dorea,MAG
+1212,UMGS488,41,Dorea,MAG
+1264,UMGS566,41,Dorea,MAG
+1524,UMGS985,41,Dorea,MAG
+230,GCF_000213555,42,Dysgonomonas,RefSeq assembly
+231,GCF_000213575,42,Dysgonomonas,RefSeq assembly
+913,UMGS1938,42,Dysgonomonas,MAG
+950,UMGS2,42,Dysgonomonas,MAG
+205,GCF_000163955,43,Edwardsiella,RefSeq assembly
+249,GCF_000239255,43,Edwardsiella,RefSeq assembly
+223,GCF_000191845,44,Eggerthella,RefSeq assembly
+380,UMGS1046,44,Eggerthella,MAG
+435,UMGS1142,44,Eggerthella,MAG
+559,UMGS1371,44,Eggerthella,MAG
+565,UMGS1381,44,Eggerthella,MAG
+719,UMGS1632,44,Eggerthella,MAG
+865,UMGS1861,44,Eggerthella,MAG
+886,UMGS190,44,Eggerthella,MAG
+920,UMGS1948,44,Eggerthella,MAG
+925,UMGS1963,44,Eggerthella,MAG
+945,UMGS1991,44,Eggerthella,MAG
+1017,UMGS235,44,Eggerthella,MAG
+1033,UMGS26,44,Eggerthella,MAG
+1037,UMGS272,44,Eggerthella,MAG
+1091,UMGS33,44,Eggerthella,MAG
+1162,UMGS417,44,Eggerthella,MAG
+1176,UMGS431,44,Eggerthella,MAG
+1200,UMGS468,44,Eggerthella,MAG
+1341,UMGS675,44,Eggerthella,MAG
+1453,UMGS854,44,Eggerthella,MAG
+12,12718_7_3,45,Enterobacter,MAG
+15,12718_7_49,45,Enterobacter,MAG
+16,12718_7_50,45,Enterobacter,MAG
+20,12718_7_7,45,Enterobacter,MAG
+158,GCF_000155995,45,Enterobacter,RefSeq assembly
+960,UMGS201,45,Enterobacter,MAG
+61,14670_1_61,46,Enterococcus,MAG
+85,20298_2_33,46,Enterococcus,MAG
+93,20298_3_11,46,Enterococcus,MAG
+94,20298_3_12,46,Enterococcus,MAG
+121,21673_4_43,46,Enterococcus,MAG
+187,GCF_000159675,46,Enterococcus,RefSeq assembly
+323,GCF_001050095,46,Enterococcus,RefSeq assembly
+556,UMGS1367,46,Enterococcus,MAG
+922,UMGS1952,46,Enterococcus,MAG
+411,UMGS1096,47,Eubacterium,MAG
+441,UMGS1157,47,Eubacterium,MAG
+493,UMGS1258,47,Eubacterium,MAG
+500,UMGS1269,47,Eubacterium,MAG
+501,UMGS127,47,Eubacterium,MAG
+600,UMGS1437,47,Eubacterium,MAG
+605,UMGS1441,47,Eubacterium,MAG
+615,UMGS1462,47,Eubacterium,MAG
+632,UMGS1488,47,Eubacterium,MAG
+657,UMGS1529,47,Eubacterium,MAG
+672,UMGS1550,47,Eubacterium,MAG
+721,UMGS1637,47,Eubacterium,MAG
+781,UMGS173,47,Eubacterium,MAG
+839,UMGS1822,47,Eubacterium,MAG
+864,UMGS1860,47,Eubacterium,MAG
+898,UMGS192,47,Eubacterium,MAG
+1141,UMGS39,47,Eubacterium,MAG
+1195,UMGS458,47,Eubacterium,MAG
+1225,UMGS508,47,Eubacterium,MAG
+1262,UMGS562,47,Eubacterium,MAG
+1271,UMGS574,47,Eubacterium,MAG
+1281,UMGS59,47,Eubacterium,MAG
+1308,UMGS631,47,Eubacterium,MAG
+1331,UMGS660,47,Eubacterium,MAG
+1389,UMGS758,47,Eubacterium,MAG
+1425,UMGS809,47,Eubacterium,MAG
+1426,UMGS812,47,Eubacterium,MAG
+1470,UMGS891,47,Eubacterium,MAG
+1513,UMGS965,47,Eubacterium,MAG
+62,14672_4_4,48,Exiguobacterium,MAG
+103,20298_3_28,48,Exiguobacterium,MAG
+36,13414_6_53,49,Faecalibacterium,MAG
+145,GCF_000154385,49,Faecalibacterium,RefSeq assembly
+207,GCF_000166035,49,Faecalibacterium,RefSeq assembly
+574,UMGS1404,49,Faecalibacterium,MAG
+787,UMGS1738,49,Faecalibacterium,MAG
+800,UMGS1756,49,Faecalibacterium,MAG
+843,UMGS183,49,Faecalibacterium,MAG
+850,UMGS184,49,Faecalibacterium,MAG
+1000,UMGS2067,49,Faecalibacterium,MAG
+1027,UMGS253,49,Faecalibacterium,MAG
+1196,UMGS463,49,Faecalibacterium,MAG
+1476,UMGS90,49,Faecalibacterium,MAG
+1526,UMGS987,49,Faecalibacterium,MAG
+137,GCF_000010185,50,Finegoldia,RefSeq assembly
+146,GCF_000154405,50,Finegoldia,RefSeq assembly
+331,GCF_001407835,50,Finegoldia,RefSeq assembly
+1292,UMGS607,51,Flavobacterium,MAG
+1004,UMGS2076,52,Franconibacter,MAG
+170,GCF_000158195,53,Fusobacterium,RefSeq assembly
+171,GCF_000158215,53,Fusobacterium,RefSeq assembly
+172,GCF_000158235,53,Fusobacterium,RefSeq assembly
+173,GCF_000158275,53,Fusobacterium,RefSeq assembly
+174,GCF_000158295,53,Fusobacterium,RefSeq assembly
+175,GCF_000158315,53,Fusobacterium,RefSeq assembly
+190,GCF_000159915,53,Fusobacterium,RefSeq assembly
+200,GCF_000162235,53,Fusobacterium,RefSeq assembly
+204,GCF_000163935,53,Fusobacterium,RefSeq assembly
+299,GCF_000479045,53,Fusobacterium,RefSeq assembly
+300,GCF_000479265,53,Fusobacterium,RefSeq assembly
+305,GCF_000523555,53,Fusobacterium,RefSeq assembly
+349,GCF_900095705,53,Fusobacterium,RefSeq assembly
+393,UMGS1068,53,Fusobacterium,MAG
+462,UMGS1197,53,Fusobacterium,MAG
+771,UMGS1716,53,Fusobacterium,MAG
+807,UMGS1765,53,Fusobacterium,MAG
+831,UMGS1809,53,Fusobacterium,MAG
+841,UMGS1824,53,Fusobacterium,MAG
+870,UMGS1871,53,Fusobacterium,MAG
+1112,UMGS356,53,Fusobacterium,MAG
+1206,UMGS478,53,Fusobacterium,MAG
+1246,UMGS539,53,Fusobacterium,MAG
+1254,UMGS548,53,Fusobacterium,MAG
+1288,UMGS602,53,Fusobacterium,MAG
+1376,UMGS734,53,Fusobacterium,MAG
+862,UMGS1857,54,Garciella,MAG
+882,UMGS1894,55,Gemella,MAG
+1222,UMGS504,56,Gemmiger,MAG
+453,UMGS118,57,Granulicatella,MAG
+580,UMGS1414,57,Granulicatella,MAG
+901,UMGS1922,57,Granulicatella,MAG
+461,UMGS1196,58,Halomonas,MAG
+154,GCF_000155495,59,Helicobacter,RefSeq assembly
+177,GCF_000158435,59,Helicobacter,RefSeq assembly
+178,GCF_000158455,59,Helicobacter,RefSeq assembly
+201,GCF_000162575,59,Helicobacter,RefSeq assembly
+213,GCF_000178935,59,Helicobacter,RefSeq assembly
+279,GCF_000345485,59,Helicobacter,RefSeq assembly
+280,GCF_000349975,59,Helicobacter,RefSeq assembly
+303,GCF_000507845,59,Helicobacter,RefSeq assembly
+304,GCF_000507865,59,Helicobacter,RefSeq assembly
+78,20287_6_6,60,Klebsiella,MAG
+90,20298_2_67,60,Klebsiella,MAG
+95,20298_3_13,60,Klebsiella,MAG
+107,20298_3_37,60,Klebsiella,MAG
+202,GCF_000163075,60,Klebsiella,RefSeq assembly
+492,UMGS1256,60,Klebsiella,MAG
+33,13414_6_44,61,Lachnobacterium,MAG
+34,13414_6_47,61,Lachnobacterium,MAG
+116,20427_4_25,61,Lachnobacterium,MAG
+366,UMGS1016,61,Lachnobacterium,MAG
+421,UMGS1119,61,Lachnobacterium,MAG
+484,UMGS1239,61,Lachnobacterium,MAG
+524,UMGS1310,61,Lachnobacterium,MAG
+540,UMGS1340,61,Lachnobacterium,MAG
+618,UMGS1467,61,Lachnobacterium,MAG
+691,UMGS1581,61,Lachnobacterium,MAG
+961,UMGS2010,61,Lachnobacterium,MAG
+1267,UMGS570,61,Lachnobacterium,MAG
+1479,UMGS904,61,Lachnobacterium,MAG
+1263,UMGS564,62,Lachnoclostridium,MAG
+51,14207_7_1,63,Lachnospira,MAG
+60,14207_7_9,63,Lachnospira,MAG
+1031,UMGS257,63,Lachnospira,MAG
+1121,UMGS37,63,Lachnospira,MAG
+1165,UMGS42,63,Lachnospira,MAG
+1448,UMGS85,63,Lachnospira,MAG
+6,12718_7_14,64,Lactobacillus,MAG
+7,12718_7_15,64,Lactobacillus,MAG
+8,12718_7_17,64,Lactobacillus,MAG
+18,12718_7_56,64,Lactobacillus,MAG
+19,12718_7_59,64,Lactobacillus,MAG
+80,20298_2_1,64,Lactobacillus,MAG
+89,20298_2_53,64,Lactobacillus,MAG
+115,20427_4_22,64,Lactobacillus,MAG
+139,GCF_000026505,64,Lactobacillus,RefSeq assembly
+155,GCF_000155515,64,Lactobacillus,RefSeq assembly
+182,GCF_000159175,64,Lactobacillus,RefSeq assembly
+183,GCF_000159215,64,Lactobacillus,RefSeq assembly
+184,GCF_000159375,64,Lactobacillus,RefSeq assembly
+185,GCF_000159415,64,Lactobacillus,RefSeq assembly
+186,GCF_000159455,64,Lactobacillus,RefSeq assembly
+188,GCF_000159715,64,Lactobacillus,RefSeq assembly
+194,GCF_000160855,64,Lactobacillus,RefSeq assembly
+224,GCF_000192165,64,Lactobacillus,RefSeq assembly
+237,GCF_000227195,64,Lactobacillus,RefSeq assembly
+332,GCF_001433855,64,Lactobacillus,RefSeq assembly
+333,GCF_001435475,64,Lactobacillus,RefSeq assembly
+334,GCF_001435665,64,Lactobacillus,RefSeq assembly
+967,UMGS2022,64,Lactobacillus,MAG
+1032,UMGS258,64,Lactobacillus,MAG
+1473,UMGS896,64,Lactobacillus,MAG
+82,20298_2_19,65,Leuconostoc,MAG
+193,GCF_000160595,65,Leuconostoc,RefSeq assembly
+797,UMGS1753,65,Leuconostoc,MAG
+250,GCF_000241405,66,Listeria,RefSeq assembly
+534,UMGS1329,67,Marvinbryantia,MAG
+378,UMGS1038,68,Massiliomicrobiota,MAG
+256,GCF_000245775,69,Megamonas,RefSeq assembly
+806,UMGS1764,69,Megamonas,MAG
+924,UMGS1959,69,Megamonas,MAG
+43,13470_2_73,70,Megasphaera,MAG
+353,GCF_900095855,70,Megasphaera,RefSeq assembly
+354,GCF_900095875,70,Megasphaera,RefSeq assembly
+416,UMGS111,70,Megasphaera,MAG
+418,UMGS1114,70,Megasphaera,MAG
+454,UMGS1181,70,Megasphaera,MAG
+571,UMGS14,70,Megasphaera,MAG
+716,UMGS163,70,Megasphaera,MAG
+758,UMGS1693,70,Megasphaera,MAG
+951,UMGS20,70,Megasphaera,MAG
+1019,UMGS24,70,Megasphaera,MAG
+1042,UMGS281,70,Megasphaera,MAG
+1348,UMGS69,70,Megasphaera,MAG
+1439,UMGS836,71,Morganella,MAG
+1390,UMGS760,72,Negativicoccus,MAG
+235,GCF_000220865,73,Neisseria,RefSeq assembly
+295,GCF_000455245,74,Nesterenkonia,RefSeq assembly
+71,18048_2_90,75,Odoribacter,MAG
+254,GCF_000243215,75,Odoribacter,RefSeq assembly
+345,GCF_900091655,75,Odoribacter,RefSeq assembly
+382,UMGS1049,75,Odoribacter,MAG
+955,UMGS2004,75,Odoribacter,MAG
+1105,UMGS346,75,Odoribacter,MAG
+1305,UMGS628,75,Odoribacter,MAG
+335,GCF_001457795,76,Olsenella,RefSeq assembly
+399,UMGS1080,76,Olsenella,MAG
+423,UMGS1121,76,Olsenella,MAG
+715,UMGS1629,76,Olsenella,MAG
+879,UMGS1887,76,Olsenella,MAG
+1065,UMGS304,76,Olsenella,MAG
+1131,UMGS380,76,Olsenella,MAG
+1311,UMGS634,76,Olsenella,MAG
+1343,UMGS68,76,Olsenella,MAG
+1525,UMGS986,77,Oribacterium,MAG
+406,UMGS1091,78,Oscillibacter,MAG
+495,UMGS126,78,Oscillibacter,MAG
+503,UMGS1273,78,Oscillibacter,MAG
+522,UMGS1308,78,Oscillibacter,MAG
+531,UMGS1325,78,Oscillibacter,MAG
+609,UMGS1448,78,Oscillibacter,MAG
+772,UMGS1717,78,Oscillibacter,MAG
+942,UMGS1987,78,Oscillibacter,MAG
+1170,UMGS426,78,Oscillibacter,MAG
+1312,UMGS638,78,Oscillibacter,MAG
+1346,UMGS683,78,Oscillibacter,MAG
+1357,UMGS709,78,Oscillibacter,MAG
+1373,UMGS728,78,Oscillibacter,MAG
+1377,UMGS737,78,Oscillibacter,MAG
+1480,UMGS906,78,Oscillibacter,MAG
+179,GCF_000158475,79,Oxalobacter,RefSeq assembly
+180,GCF_000158495,79,Oxalobacter,RefSeq assembly
+285,GCF_000411255,80,Paenibacillus,RefSeq assembly
+476,UMGS122,80,Paenibacillus,MAG
+883,UMGS1895,81,Pantoea,MAG
+1201,UMGS47,81,Pantoea,MAG
+1247,UMGS54,81,Pantoea,MAG
+1517,UMGS970,81,Pantoea,MAG
+42,13470_2_67,82,Parabacteroides,MAG
+119,21673_4_33,82,Parabacteroides,MAG
+318,GCF_000969835,82,Parabacteroides,RefSeq assembly
+319,GCF_000969845,82,Parabacteroides,RefSeq assembly
+358,UMGS1005,82,Parabacteroides,MAG
+389,UMGS1064,82,Parabacteroides,MAG
+430,UMGS1137,82,Parabacteroides,MAG
+466,UMGS1201,82,Parabacteroides,MAG
+646,UMGS1511,82,Parabacteroides,MAG
+647,UMGS1514,82,Parabacteroides,MAG
+1006,UMGS208,82,Parabacteroides,MAG
+1043,UMGS282,82,Parabacteroides,MAG
+1093,UMGS332,82,Parabacteroides,MAG
+1155,UMGS407,82,Parabacteroides,MAG
+1321,UMGS647,82,Parabacteroides,MAG
+1523,UMGS984,82,Parabacteroides,MAG
+226,GCF_000205165,83,Paraprevotella,RefSeq assembly
+242,GCF_000233955,83,Paraprevotella,RefSeq assembly
+395,UMGS1073,83,Paraprevotella,MAG
+1482,UMGS908,83,Paraprevotella,MAG
+142,GCF_000146325,84,Pediococcus,RefSeq assembly
+496,UMGS1260,85,Pelosinus,MAG
+1216,UMGS495,85,Pelosinus,MAG
+106,20298_3_36,86,Peptoniphilus,MAG
+113,20298_3_66,86,Peptoniphilus,MAG
+267,GCF_000311865,86,Peptoniphilus,RefSeq assembly
+275,GCF_000321025,86,Peptoniphilus,RefSeq assembly
+340,GCF_001517665,86,Peptoniphilus,RefSeq assembly
+1181,UMGS44,86,Peptoniphilus,MAG
+1190,UMGS45,86,Peptoniphilus,MAG
+1298,UMGS62,86,Peptoniphilus,MAG
+1487,UMGS92,86,Peptoniphilus,MAG
+1382,UMGS744,87,Peptostreptococcus,MAG
+566,UMGS1385,88,Phascolarctobacterium,MAG
+595,UMGS1431,88,Phascolarctobacterium,MAG
+613,UMGS1456,88,Phascolarctobacterium,MAG
+675,UMGS1554,88,Phascolarctobacterium,MAG
+685,UMGS1568,88,Phascolarctobacterium,MAG
+770,UMGS1712,88,Phascolarctobacterium,MAG
+953,UMGS2001,88,Phascolarctobacterium,MAG
+968,UMGS2024,88,Phascolarctobacterium,MAG
+1029,UMGS255,88,Phascolarctobacterium,MAG
+1159,UMGS411,88,Phascolarctobacterium,MAG
+1202,UMGS470,88,Phascolarctobacterium,MAG
+1356,UMGS706,88,Phascolarctobacterium,MAG
+1363,UMGS717,88,Phascolarctobacterium,MAG
+1375,UMGS733,88,Phascolarctobacterium,MAG
+1412,UMGS791,88,Phascolarctobacterium,MAG
+1522,UMGS983,88,Phascolarctobacterium,MAG
+764,UMGS170,89,Phyllobacterium,MAG
+394,UMGS107,90,Porphyromonas,MAG
+402,UMGS1085,90,Porphyromonas,MAG
+612,UMGS1452,90,Porphyromonas,MAG
+738,UMGS166,90,Porphyromonas,MAG
+809,UMGS1769,90,Porphyromonas,MAG
+825,UMGS18,90,Porphyromonas,MAG
+965,UMGS2020,90,Porphyromonas,MAG
+979,UMGS2040,90,Porphyromonas,MAG
+1098,UMGS338,90,Porphyromonas,MAG
+1253,UMGS547,90,Porphyromonas,MAG
+1360,UMGS713,90,Porphyromonas,MAG
+1481,UMGS907,90,Porphyromonas,MAG
+166,GCF_000157935,91,Prevotella,RefSeq assembly
+216,GCF_000185845,91,Prevotella,RefSeq assembly
+245,GCF_000235885,91,Prevotella,RefSeq assembly
+294,GCF_000413355,91,Prevotella,RefSeq assembly
+351,GCF_900095835,91,Prevotella,RefSeq assembly
+357,UMGS1003,91,Prevotella,MAG
+360,UMGS1007,91,Prevotella,MAG
+377,UMGS1036,91,Prevotella,MAG
+388,UMGS1063,91,Prevotella,MAG
+414,UMGS1103,91,Prevotella,MAG
+415,UMGS1105,91,Prevotella,MAG
+420,UMGS1118,91,Prevotella,MAG
+422,UMGS1120,91,Prevotella,MAG
+439,UMGS1155,91,Prevotella,MAG
+444,UMGS1162,91,Prevotella,MAG
+445,UMGS1164,91,Prevotella,MAG
+470,UMGS1208,91,Prevotella,MAG
+489,UMGS1250,91,Prevotella,MAG
+505,UMGS1276,91,Prevotella,MAG
+511,UMGS1285,91,Prevotella,MAG
+518,UMGS1294,91,Prevotella,MAG
+525,UMGS1311,91,Prevotella,MAG
+528,UMGS1320,91,Prevotella,MAG
+553,UMGS1360,91,Prevotella,MAG
+568,UMGS1390,91,Prevotella,MAG
+592,UMGS1428,91,Prevotella,MAG
+594,UMGS1430,91,Prevotella,MAG
+597,UMGS1433,91,Prevotella,MAG
+607,UMGS1443,91,Prevotella,MAG
+610,UMGS145,91,Prevotella,MAG
+616,UMGS1464,91,Prevotella,MAG
+650,UMGS1520,91,Prevotella,MAG
+653,UMGS1524,91,Prevotella,MAG
+655,UMGS1526,91,Prevotella,MAG
+678,UMGS156,91,Prevotella,MAG
+680,UMGS1561,91,Prevotella,MAG
+693,UMGS1584,91,Prevotella,MAG
+700,UMGS1598,91,Prevotella,MAG
+712,UMGS1624,91,Prevotella,MAG
+720,UMGS1635,91,Prevotella,MAG
+729,UMGS1645,91,Prevotella,MAG
+747,UMGS1674,91,Prevotella,MAG
+754,UMGS1684,91,Prevotella,MAG
+784,UMGS1733,91,Prevotella,MAG
+789,UMGS1741,91,Prevotella,MAG
+804,UMGS1762,91,Prevotella,MAG
+814,UMGS178,91,Prevotella,MAG
+819,UMGS1787,91,Prevotella,MAG
+827,UMGS1801,91,Prevotella,MAG
+857,UMGS1847,91,Prevotella,MAG
+896,UMGS1918,91,Prevotella,MAG
+904,UMGS1927,91,Prevotella,MAG
+906,UMGS1929,91,Prevotella,MAG
+919,UMGS1946,91,Prevotella,MAG
+933,UMGS1972,91,Prevotella,MAG
+935,UMGS1977,91,Prevotella,MAG
+949,UMGS1996,91,Prevotella,MAG
+970,UMGS2027,91,Prevotella,MAG
+975,UMGS2034,91,Prevotella,MAG
+989,UMGS2051,91,Prevotella,MAG
+1018,UMGS239,91,Prevotella,MAG
+1022,UMGS244,91,Prevotella,MAG
+1041,UMGS278,91,Prevotella,MAG
+1046,UMGS287,91,Prevotella,MAG
+1094,UMGS333,91,Prevotella,MAG
+1124,UMGS373,91,Prevotella,MAG
+1205,UMGS476,91,Prevotella,MAG
+1213,UMGS490,91,Prevotella,MAG
+1215,UMGS493,91,Prevotella,MAG
+1218,UMGS499,91,Prevotella,MAG
+1249,UMGS541,91,Prevotella,MAG
+1266,UMGS569,91,Prevotella,MAG
+1274,UMGS580,91,Prevotella,MAG
+1297,UMGS617,91,Prevotella,MAG
+1303,UMGS626,91,Prevotella,MAG
+1342,UMGS678,91,Prevotella,MAG
+1359,UMGS712,91,Prevotella,MAG
+1395,UMGS769,91,Prevotella,MAG
+1396,UMGS770,91,Prevotella,MAG
+1402,UMGS780,91,Prevotella,MAG
+1415,UMGS796,91,Prevotella,MAG
+1437,UMGS832,91,Prevotella,MAG
+1444,UMGS846,91,Prevotella,MAG
+1458,UMGS868,91,Prevotella,MAG
+1468,UMGS889,91,Prevotella,MAG
+1474,UMGS899,91,Prevotella,MAG
+1478,UMGS903,91,Prevotella,MAG
+1495,UMGS937,91,Prevotella,MAG
+1503,UMGS950,91,Prevotella,MAG
+1504,UMGS954,91,Prevotella,MAG
+1520,UMGS978,91,Prevotella,MAG
+92,20298_3_1,92,Propionibacterium,MAG
+293,GCF_000413335,92,Propionibacterium,RefSeq assembly
+84,20298_2_29,93,Propionimicrobium,MAG
+264,GCF_000297815,94,Proteus,RefSeq assembly
+149,GCF_000154865,95,Providencia,RefSeq assembly
+162,GCF_000156395,95,Providencia,RefSeq assembly
+168,GCF_000158055,95,Providencia,RefSeq assembly
+306,GCF_000527275,95,Providencia,RefSeq assembly
+307,GCF_000527295,95,Providencia,RefSeq assembly
+1413,UMGS793,96,Pseudobutyrivibrio,MAG
+1465,UMGS881,96,Pseudobutyrivibrio,MAG
+241,GCF_000233495,97,Pseudomonas,RefSeq assembly
+298,GCF_000478505,97,Pseudomonas,RefSeq assembly
+317,GCF_000826105,97,Pseudomonas,RefSeq assembly
+836,UMGS1818,97,Pseudomonas,MAG
+238,GCF_000227255,98,Ralstonia,RefSeq assembly
+644,UMGS151,99,Robinsoniella,MAG
+845,UMGS1833,99,Robinsoniella,MAG
+1023,UMGS248,99,Robinsoniella,MAG
+1036,UMGS271,99,Robinsoniella,MAG
+59,14207_7_83,100,Roseburia,MAG
+212,GCF_000174195,100,Roseburia,RefSeq assembly
+384,UMGS1053,100,Roseburia,MAG
+391,UMGS1066,100,Roseburia,MAG
+545,UMGS1351,100,Roseburia,MAG
+621,UMGS147,100,Roseburia,MAG
+651,UMGS1521,100,Roseburia,MAG
+660,UMGS1533,100,Roseburia,MAG
+801,UMGS1759,100,Roseburia,MAG
+828,UMGS1806,100,Roseburia,MAG
+969,UMGS2025,100,Roseburia,MAG
+1203,UMGS472,100,Roseburia,MAG
+1270,UMGS573,100,Roseburia,MAG
+1401,UMGS78,100,Roseburia,MAG
+1469,UMGS89,100,Roseburia,MAG
+1398,UMGS774,101,Rothia,MAG
+17,12718_7_51,102,Ruminococcus,MAG
+27,13414_6_17,102,Ruminococcus,MAG
+56,14207_7_57,102,Ruminococcus,MAG
+74,20287_6_22,102,Ruminococcus,MAG
+75,20287_6_33,102,Ruminococcus,MAG
+118,21673_4_22,102,Ruminococcus,MAG
+152,GCF_000155205,102,Ruminococcus,RefSeq assembly
+222,GCF_000190355,102,Ruminococcus,RefSeq assembly
+227,GCF_000209405,102,Ruminococcus,RefSeq assembly
+229,GCF_000210095,102,Ruminococcus,RefSeq assembly
+233,GCF_000218385,102,Ruminococcus,RefSeq assembly
+234,GCF_000218465,102,Ruminococcus,RefSeq assembly
+296,GCF_000468015,102,Ruminococcus,RefSeq assembly
+329,GCF_001244405,102,Ruminococcus,RefSeq assembly
+337,GCF_001487105,102,Ruminococcus,RefSeq assembly
+486,UMGS1243,102,Ruminococcus,MAG
+532,UMGS1327,102,Ruminococcus,MAG
+548,UMGS1355,102,Ruminococcus,MAG
+552,UMGS136,102,Ruminococcus,MAG
+554,UMGS1362,102,Ruminococcus,MAG
+579,UMGS1413,102,Ruminococcus,MAG
+663,UMGS1538,102,Ruminococcus,MAG
+702,UMGS1601,102,Ruminococcus,MAG
+726,UMGS1641,102,Ruminococcus,MAG
+737,UMGS1659,102,Ruminococcus,MAG
+740,UMGS1662,102,Ruminococcus,MAG
+802,UMGS176,102,Ruminococcus,MAG
+811,UMGS1771,102,Ruminococcus,MAG
+812,UMGS1778,102,Ruminococcus,MAG
+833,UMGS1811,102,Ruminococcus,MAG
+840,UMGS1823,102,Ruminococcus,MAG
+856,UMGS1846,102,Ruminococcus,MAG
+858,UMGS185,102,Ruminococcus,MAG
+863,UMGS186,102,Ruminococcus,MAG
+869,UMGS1870,102,Ruminococcus,MAG
+876,UMGS1882,102,Ruminococcus,MAG
+878,UMGS1886,102,Ruminococcus,MAG
+880,UMGS1889,102,Ruminococcus,MAG
+888,UMGS1903,102,Ruminococcus,MAG
+931,UMGS197,102,Ruminococcus,MAG
+944,UMGS199,102,Ruminococcus,MAG
+952,UMGS200,102,Ruminococcus,MAG
+956,UMGS2005,102,Ruminococcus,MAG
+1044,UMGS283,102,Ruminococcus,MAG
+1101,UMGS340,102,Ruminococcus,MAG
+1116,UMGS362,102,Ruminococcus,MAG
+1117,UMGS363,102,Ruminococcus,MAG
+1130,UMGS38,102,Ruminococcus,MAG
+1152,UMGS40,102,Ruminococcus,MAG
+1193,UMGS456,102,Ruminococcus,MAG
+1223,UMGS505,102,Ruminococcus,MAG
+1242,UMGS526,102,Ruminococcus,MAG
+1244,UMGS533,102,Ruminococcus,MAG
+1245,UMGS536,102,Ruminococcus,MAG
+1257,UMGS556,102,Ruminococcus,MAG
+1291,UMGS605,102,Ruminococcus,MAG
+1320,UMGS646,102,Ruminococcus,MAG
+1338,UMGS669,102,Ruminococcus,MAG
+1378,UMGS739,102,Ruminococcus,MAG
+1391,UMGS761,102,Ruminococcus,MAG
+1397,UMGS771,102,Ruminococcus,MAG
+1484,UMGS91,102,Ruminococcus,MAG
+1490,UMGS923,102,Ruminococcus,MAG
+1530,UMGS992,102,Ruminococcus,MAG
+1269,UMGS572,103,Sanguibacteroides,MAG
+26,13414_6_12,104,Selenomonas,MAG
+157,GCF_000155955,104,Selenomonas,RefSeq assembly
+530,UMGS1324,104,Selenomonas,MAG
+652,UMGS1522,104,Selenomonas,MAG
+750,UMGS1678,104,Selenomonas,MAG
+262,GCF_000296445,105,Slackia,RefSeq assembly
+412,UMGS11,105,Slackia,MAG
+728,UMGS1644,105,Slackia,MAG
+735,UMGS1653,105,Slackia,MAG
+844,UMGS1832,105,Slackia,MAG
+916,UMGS1942,105,Slackia,MAG
+1178,UMGS437,106,Sneathia,MAG
+134,8080_1_80,107,Solobacterium,MAG
+144,GCF_000154285,107,Solobacterium,RefSeq assembly
+163,GCF_000156655,107,Solobacterium,RefSeq assembly
+167,GCF_000157995,107,Solobacterium,RefSeq assembly
+206,GCF_000165065,107,Solobacterium,RefSeq assembly
+251,GCF_000242175,107,Solobacterium,RefSeq assembly
+253,GCF_000242955,107,Solobacterium,RefSeq assembly
+271,GCF_000313565,107,Solobacterium,RefSeq assembly
+278,GCF_000327285,107,Solobacterium,RefSeq assembly
+297,GCF_000469305,107,Solobacterium,RefSeq assembly
+356,UMGS1,107,Solobacterium,MAG
+367,UMGS1017,107,Solobacterium,MAG
+373,UMGS1028,107,Solobacterium,MAG
+374,UMGS1029,107,Solobacterium,MAG
+433,UMGS1140,107,Solobacterium,MAG
+434,UMGS1141,107,Solobacterium,MAG
+491,UMGS1255,107,Solobacterium,MAG
+569,UMGS1391,107,Solobacterium,MAG
+619,UMGS1468,107,Solobacterium,MAG
+620,UMGS1469,107,Solobacterium,MAG
+786,UMGS1737,107,Solobacterium,MAG
+796,UMGS1752,107,Solobacterium,MAG
+854,UMGS1844,107,Solobacterium,MAG
+907,UMGS193,107,Solobacterium,MAG
+914,UMGS1939,107,Solobacterium,MAG
+940,UMGS1984,107,Solobacterium,MAG
+985,UMGS2048,107,Solobacterium,MAG
+986,UMGS2049,107,Solobacterium,MAG
+1099,UMGS339,107,Solobacterium,MAG
+1118,UMGS367,107,Solobacterium,MAG
+1221,UMGS503,107,Solobacterium,MAG
+1240,UMGS524,107,Solobacterium,MAG
+1350,UMGS695,107,Solobacterium,MAG
+1455,UMGS864,107,Solobacterium,MAG
+1459,UMGS869,107,Solobacterium,MAG
+1466,UMGS886,107,Solobacterium,MAG
+1261,UMGS561,108,Sporolactobacillus,MAG
+5,12718_7_13,109,Staphylococcus,MAG
+9,12718_7_23,109,Staphylococcus,MAG
+25,13154_4_43,109,Staphylococcus,MAG
+104,20298_3_3,109,Staphylococcus,MAG
+286,GCF_000411275,109,Staphylococcus,RefSeq assembly
+21,12718_7_70,110,Streptococcus,MAG
+22,12718_7_87,110,Streptococcus,MAG
+72,18391_1_11,110,Streptococcus,MAG
+81,20298_2_10,110,Streptococcus,MAG
+87,20298_2_49,110,Streptococcus,MAG
+97,20298_3_18,110,Streptococcus,MAG
+100,20298_3_24,110,Streptococcus,MAG
+101,20298_3_25,110,Streptococcus,MAG
+150,GCF_000154985,110,Streptococcus,RefSeq assembly
+195,GCF_000161955,110,Streptococcus,RefSeq assembly
+218,GCF_000186545,110,Streptococcus,RefSeq assembly
+219,GCF_000187265,110,Streptococcus,RefSeq assembly
+290,GCF_000411475,110,Streptococcus,RefSeq assembly
+352,GCF_900095845,110,Streptococcus,RefSeq assembly
+543,UMGS1347,110,Streptococcus,MAG
+614,UMGS146,110,Streptococcus,MAG
+822,UMGS1794,110,Streptococcus,MAG
+971,UMGS2028,110,Streptococcus,MAG
+996,UMGS2062,110,Streptococcus,MAG
+1241,UMGS525,110,Streptococcus,MAG
+1457,UMGS867,110,Streptococcus,MAG
+291,GCF_000411495,111,Streptomyces,RefSeq assembly
+573,UMGS1403,112,Subdoligranulum,MAG
+1204,UMGS475,112,Subdoligranulum,MAG
+1414,UMGS795,112,Subdoligranulum,MAG
+407,UMGS1092,113,Succinatimonas,MAG
+603,UMGS144,113,Succinatimonas,MAG
+679,UMGS1560,113,Succinatimonas,MAG
+472,UMGS121,114,Succiniclasticum,MAG
+478,UMGS1228,114,Succiniclasticum,MAG
+1120,UMGS369,114,Succiniclasticum,MAG
+1334,UMGS663,114,Succiniclasticum,MAG
+140,GCF_000144975,115,Sutterella,RefSeq assembly
+217,GCF_000186505,115,Sutterella,RefSeq assembly
+257,GCF_000250875,115,Sutterella,RefSeq assembly
+263,GCF_000297775,115,Sutterella,RefSeq assembly
+325,GCF_001182045,115,Sutterella,RefSeq assembly
+450,UMGS117,115,Sutterella,MAG
+463,UMGS12,115,Sutterella,MAG
+626,UMGS1479,115,Sutterella,MAG
+654,UMGS1525,115,Sutterella,MAG
+681,UMGS1562,115,Sutterella,MAG
+688,UMGS1579,115,Sutterella,MAG
+773,UMGS1718,115,Sutterella,MAG
+794,UMGS1749,115,Sutterella,MAG
+997,UMGS2063,115,Sutterella,MAG
+1107,UMGS349,115,Sutterella,MAG
+1180,UMGS439,115,Sutterella,MAG
+1220,UMGS500,115,Sutterella,MAG
+1294,UMGS613,115,Sutterella,MAG
+1329,UMGS655,115,Sutterella,MAG
+1332,UMGS661,115,Sutterella,MAG
+1333,UMGS662,115,Sutterella,MAG
+1335,UMGS665,115,Sutterella,MAG
+1353,UMGS70,115,Sutterella,MAG
+1358,UMGS71,115,Sutterella,MAG
+1364,UMGS718,115,Sutterella,MAG
+1388,UMGS757,115,Sutterella,MAG
+1394,UMGS767,115,Sutterella,MAG
+1499,UMGS941,115,Sutterella,MAG
+1156,UMGS408,116,Treponema,MAG
+1164,UMGS419,116,Treponema,MAG
+1423,UMGS805,116,Treponema,MAG
+1472,UMGS895,116,Treponema,MAG
+203,GCF_000163735,117,Veillonella,RefSeq assembly
+292,GCF_000411535,117,Veillonella,RefSeq assembly
+479,UMGS1231,117,Veillonella,MAG
+481,UMGS1235,117,Veillonella,MAG
+494,UMGS1259,117,Veillonella,MAG
+516,UMGS1291,117,Veillonella,MAG
+519,UMGS13,117,Veillonella,MAG
+642,UMGS1506,117,Veillonella,MAG
+664,UMGS1539,117,Veillonella,MAG
+669,UMGS1547,117,Veillonella,MAG
+701,UMGS16,117,Veillonella,MAG
+936,UMGS1979,117,Veillonella,MAG
+976,UMGS2035,117,Veillonella,MAG
+983,UMGS2044,117,Veillonella,MAG
+1002,UMGS2074,117,Veillonella,MAG
+1304,UMGS627,117,Veillonella,MAG
+1339,UMGS672,117,Veillonella,MAG
+1384,UMGS749,117,Veillonella,MAG
+1418,UMGS8,117,Veillonella,MAG
+1434,UMGS823,117,Veillonella,MAG
+1475,UMGS9,117,Veillonella,MAG
+1507,UMGS958,117,Veillonella,MAG
+192,GCF_000160575,118,Weissella,RefSeq assembly
+892,UMGS1912,119,Xylanibacter,MAG
+1158,UMGS410,119,Xylanibacter,MAG

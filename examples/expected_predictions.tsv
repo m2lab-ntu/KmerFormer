@@ -1,0 +1,17 @@
+read_id	class_id	taxon_name	rank	score	model_id
+lbl|1985|UMGS505|102|Ruminococcus-3878/1	102	Ruminococcus	genus	0.4986952245235443	kmerformer-6mer-l29-50m
+lbl|1098|UMGS152|33|Clostridium-80/2	33	Clostridium	genus	0.34513312578201294	kmerformer-6mer-l29-50m
+lbl|2386|UMGS89|100|Roseburia-5736/2	100	Roseburia	genus	0.5299899578094482	kmerformer-6mer-l29-50m
+lbl|765|UMGS12|115|Sutterella-6723/2	115	Sutterella	genus	0.940144956111908	kmerformer-6mer-l29-50m
+lbl|1332|UMGS1740|33|Clostridium-1746/1	33	Clostridium	genus	0.3911203145980835	kmerformer-6mer-l29-50m
+lbl|2308|UMGS816|19|Barnesiella-35/1	19	Barnesiella	genus	0.6049477458000183	kmerformer-6mer-l29-50m
+lbl|550|GCF_900095875|70|Megasphaera-16216/2	117	Veillonella	genus	0.7060328722000122	kmerformer-6mer-l29-50m
+lbl|473|GCF_000969835|82|Parabacteroides-36234/1	40	Dialister	genus	0.4482426643371582	kmerformer-6mer-l29-50m
+lbl|1594|UMGS2|42|Dysgonomonas-41044/2	18	Bacteroides	genus	0.46487170457839966	kmerformer-6mer-l29-50m
+lbl|216|21673_4_91|17|Bacillus-2564/2	40	Dialister	genus	0.5172198414802551	kmerformer-6mer-l29-50m
+lbl|993|UMGS1419|22|Blautia-27/2	22	Blautia	genus	0.8743880391120911	kmerformer-6mer-l29-50m
+lbl|2384|UMGS888|34|Collinsella-984/1	34	Collinsella	genus	0.9957948923110962	kmerformer-6mer-l29-50m
+lbl|2403|UMGS904|61|Lachnobacterium-4584/2	33	Clostridium	genus	0.17260193824768066	kmerformer-6mer-l29-50m
+lbl|1804|UMGS33|44|Eggerthella-12617/2	44	Eggerthella	genus	0.6296128630638123	kmerformer-6mer-l29-50m
+lbl|2167|UMGS683|78|Oscillibacter-634/2	40	Dialister	genus	0.24679002165794373	kmerformer-6mer-l29-50m
+lbl|333|GCF_000189615|33|Clostridium-6101/1	33	Clostridium	genus	0.509721040725708	kmerformer-6mer-l29-50m

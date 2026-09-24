@@ -1,0 +1,12 @@
+{
+  "input_file": "reads_50M.fa",
+  "file_bytes": 9591149441,
+  "records": 50000000,
+  "unique_sequence_hashes_128bit": 49640347,
+  "duplicate_occurrences": 359653,
+  "duplication_factor": 1.0072451749783295,
+  "min_sequence_length": 150,
+  "max_sequence_length": 150,
+  "method": "BLAKE2b 128-bit of concatenated, stripped FASTA sequence lines; case and orientation preserved; headers excluded; in-memory sort",
+  "seconds": 85.58361060381867
+}

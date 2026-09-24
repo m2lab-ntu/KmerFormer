@@ -1,0 +1,64 @@
+# RESULT: both together reach 90.17% -- parameter-identical to MetaTransformer
+# Configuration and recorded result: docs/RESULTS.md.
+# Historical rationale is preserved at source revision 5a9870d.
+model:
+  type: "shallow_transformer"
+  backbone: "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species"  # tokenizer only
+  vocab_size: 33545102
+  pad_id: 0
+  head_type: "unmasked_mean_linear"
+  head_config:
+    hidden_dim: 512
+    num_attention_heads: 4
+    dropout: 0.15
+  max_seq_len: 150
+  shallow_config:
+    d_model: 64
+    nhead: 2
+    d_ff: 512
+    num_layers: 1
+    dropout: 0.1
+    sparse_embedding: true
+    pos_encoding: "sinusoidal"   # MetaTransformer's PositionalEncoding2
+    norm_first: false            # post-norm
+    activation: "relu"
+    embed_scale: "sqrt_d"        # x sqrt(d) instead of a LayerNorm
+    final_norm: true             # LayerNorm after the stack, which we lack
+data:
+  split_strategy: random
+  fasta_path: "${KF_DATA}/balanced_50M/reads_50M.fa"
+  labels_path: "${KF_DATA}/balanced_50M/labels_50M.tsv"
+  lazy: true
+  val_ratio: 0.1
+  seed: 42
+  max_token_length: 140
+  task: "genus"
+  tokenizer:
+    type: "exact_kmer"
+    k: 13
+    stride: 1
+    vocab_path: "${KF_VOCAB}/vocab_13mer.txt"
+    canonical: true
+  rc_augment: false
+training:
+  seed: null  # Historical initialization was unseeded; data.seed controls the split.
+  batch_size: 512
+  eval_batch_size: 512
+  gradient_accumulation_steps: 4
+  num_epochs: 15
+  learning_rate: 1.0e-3
+  backbone_lr: 1.0e-3
+  weight_decay: 0.0
+  warmup_ratio: 0.0
+  lr_schedule: "none"
+  amp: true
+  amp_dtype: "fp16"
+  max_grad_norm: 1000000000.0
+  early_stopping_patience: 5
+  periodic_save_interval: 40000
+  num_workers: 4
+  label_smoothing: 0.0
+  class_weights: false
+  phase1_epochs: 0
+output:
+  dir: "${KF_OUT}/mt_direction_both"

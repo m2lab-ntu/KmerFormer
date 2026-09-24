@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kmerformer"
+version = "0.2.0rc1"
+description = "A from-scratch k-mer transformer for short-read metagenomic taxonomic classification"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [
+    { name = "Ming-Ju Yang", email = "r13945009@ntu.edu.tw" },
+    { name = "TING-YU YEN" },
+    { name = "Chien-Yu Chen" },
+    { name = "Joyce Tzu-Yu Liu", email = "joyliu@ntu.edu.tw" },
+]
+keywords = [
+    "metagenomics", "taxonomic classification", "short-read sequencing",
+    "genomic foundation models", "transformer", "k-mer tokenization",
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "torch>=2.13,<3",
+    "safetensors>=0.8,<1",
+    "numpy>=2.0,<3",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "scipy>=1.14",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+    "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+# Only the foundation-model baselines need LoRA.
+baselines = ["transformers>=5.10,<6", "peft>=0.20,<0.21"]
+# evaluate.py writes confusion-matrix figures.
+plots = ["matplotlib>=3.9", "seaborn>=0.13"]
+review = ["pytest>=7.4"]
+
+[project.urls]
+Repository = "https://github.com/m2lab-ntu/KmerFormer"
+Issues = "https://github.com/m2lab-ntu/KmerFormer/issues"
+
+[project.scripts]
+kmerformer-train = "kmerformer.train:main"
+kmerformer-eval = "kmerformer.evaluate:main"
+kmerformer-predict = "kmerformer.predict:main"
+kmerformer-model = "kmerformer.bundle:main"
+
+[tool.setuptools]
+packages = ["kmerformer"]
+
+[tool.setuptools.package-data]
+kmerformer = ["assets/*.json", "assets/*.md", "assets/licences/*.txt", "assets/licences/*.md"]

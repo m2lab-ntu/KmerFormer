@@ -1,0 +1,602 @@
+genus,genus_class,accession,organism_name,named_species,assembly_level,total_length,max_ani_same_genus,align_frac_query_same_genus,closest_training_ref_same_genus,level,cross_genus_leak,keep,max_ani_any_genus,closest_training_ref_any_genus,closest_training_genus_any,audit_ani_same_genus_minaf0,audit_align_frac_minaf0
+Achromobacter,0,GCF_002812705.1,Achromobacter spanius,True,Complete Genome,6425783,84.56,24.57,20287_6_4,L2_species,0,1,84.56,20287_6_4,Achromobacter,84.56,24.57
+Achromobacter,0,GCF_013267355.1,Achromobacter pestifer,True,Complete Genome,7177303,86.12,28.26,20287_6_4,L2_species,0,1,86.12,20287_6_4,Achromobacter,86.12,28.26
+Achromobacter,0,GCF_013267395.1,Achromobacter denitrificans,True,Complete Genome,6736870,86.0,29.04,20287_6_4,L2_species,0,1,86.0,20287_6_4,Achromobacter,86.0,29.04
+Achromobacter,0,GCF_016728825.1,Achromobacter xylosoxidans,True,Complete Genome,6901970,98.47,87.51,20287_6_4,L1_strain,0,1,98.47,20287_6_4,Achromobacter,98.47,87.51
+Achromobacter,0,GCF_029866465.1,Achromobacter mucicolens,True,Complete Genome,5682553,85.67,29.53,20287_6_4,L2_species,0,1,85.67,20287_6_4,Achromobacter,85.67,29.53
+Achromobacter,0,GCF_030864005.1,Achromobacter seleniivolatilans,True,Complete Genome,6862680,83.06,15.73,20287_6_4,L2_species,0,1,83.06,20287_6_4,Achromobacter,83.06,15.73
+Achromobacter,0,GCF_037619525.1,Achromobacter veterisilvae,True,Complete Genome,6549044,86.1,30.21,20287_6_4,L2_species,0,1,86.1,20287_6_4,Achromobacter,86.1,30.21
+Achromobacter,0,GCF_900637265.1,Achromobacter insolitus,True,Complete Genome,6472476,84.67,25.07,20287_6_4,L2_species,0,1,84.67,20287_6_4,Achromobacter,84.67,25.07
+Acidaminococcus,1,GCF_000025305.1,Acidaminococcus fermentans DSM 20731,True,Complete Genome,2329769,89.68,54.22,UMGS457,L2_species,0,1,89.68,UMGS457,Acidaminococcus,89.68,54.22
+Acidaminococcus,1,GCF_025144545.1,Acidaminococcus intestini,True,Complete Genome,2305309,99.93,92.49,GCF_000411395,L0_dup,0,0,99.93,GCF_000411395,Acidaminococcus,99.93,92.49
+Acidaminococcus,1,GCF_047834495.1,Acidaminococcus timonensis,True,Chromosome,2286639,97.41,67.74,UMGS254,L1_strain,0,1,97.41,UMGS254,Acidaminococcus,97.41,67.74
+Acinetobacter,2,GCF_000196795.1,Acinetobacter oleivorans DR1,True,Complete Genome,4152543,,,,L2_far,0,1,,,,82.26,2.2
+Acinetobacter,2,GCF_002370525.2,Acinetobacter guillouiae,True,Complete Genome,4648418,,,,L2_far,0,1,,,,82.85,1.12
+Acinetobacter,2,GCF_009035845.1,Acinetobacter baumannii,True,Complete Genome,3999136,,,,L2_far,0,1,,,,82.77,1.91
+Acinetobacter,2,GCF_009884975.1,Acinetobacter dispersus,True,Complete Genome,4024840,82.86,13.17,GCF_000162075,L2_species,0,1,82.86,GCF_000162075,Acinetobacter,82.86,13.17
+Acinetobacter,2,GCF_013122135.1,Acinetobacter lactucae,True,Complete Genome,3973648,,,,L2_far,0,1,,,,82.25,1.98
+Acinetobacter,2,GCF_016064815.1,Acinetobacter seifertii,True,Complete Genome,4070688,,,,L2_far,0,1,,,,82.45,1.94
+Acinetobacter,2,GCF_016576965.1,Acinetobacter bereziniae,True,Complete Genome,4729151,,,,L2_far,0,1,,,,81.85,1.44
+Acinetobacter,2,GCF_041021905.1,Acinetobacter nosocomialis,True,Complete Genome,4101087,,,,L2_far,0,1,,,,84.31,2.19
+Actinomyces,3,GCF_004102025.1,Actinomyces qiguomingii,True,Complete Genome,3988549,,,,L2_far,0,1,,,,93.81,0.09
+Actinomyces,3,GCF_004798665.1,Actinomyces procaprae,True,Complete Genome,3600355,,,,L2_far,0,1,,,,93.51,0.1
+Actinomyces,3,GCF_016127855.1,Actinomyces naeslundii,True,Complete Genome,3152123,90.16,58.25,20298_3_21,L2_species,0,1,90.16,20298_3_21,Actinomyces,98.79,0.09
+Actinomyces,3,GCF_016127955.1,Actinomyces oris,True,Complete Genome,3190396,88.33,44.63,20298_3_21,L2_species,0,1,88.33,20298_3_21,Actinomyces,98.1,0.05
+Actinomyces,3,GCF_019974135.1,Actinomyces capricornis,True,Complete Genome,3170963,,,,L2_far,0,1,,,,96.65,0.05
+Actinomyces,3,GCF_030253495.1,Actinomyces israelii,True,Complete Genome,3980311,,,,L2_far,0,1,,,,90.58,0.05
+Actinomyces,3,GCF_900637295.1,Actinomyces slackii,True,Complete Genome,3220508,,,,L2_far,0,1,,,,93.71,0.11
+Actinomyces,3,GCF_900637975.1,Actinomyces viscosus,True,Complete Genome,3491241,90.02,51.97,20298_3_21,L2_species,0,1,90.02,20298_3_21,Actinomyces,93.99,0.1
+Adlercreutzia,4,GCF_000478885.1,Adlercreutzia equolifaciens DSM 19450,True,Complete Genome,2862526,93.93,59.97,UMGS479,L2_species,0,1,93.93,UMGS479,Adlercreutzia,93.93,59.97
+Adlercreutzia,4,GCF_011405655.2,Adlercreutzia hattorii,True,Complete Genome,2908404,96.07,66.26,UMGS479,L1_strain,0,1,96.07,UMGS479,Adlercreutzia,96.07,66.26
+Aeromonas,5,GCF_000014805.1,Aeromonas hydrophila subsp. hydrophila ATCC 7966,True,Complete Genome,4744448,89.19,48.16,UMGS205,L2_species,0,1,89.19,UMGS205,Aeromonas,89.19,48.16
+Aeromonas,5,GCF_002285935.1,Aeromonas dhakensis,True,Complete Genome,4868053,89.02,47.08,UMGS205,L2_species,0,1,89.02,UMGS205,Aeromonas,89.02,47.08
+Aeromonas,5,GCF_028355655.1,Aeromonas salmonicida,True,Complete Genome,4954811,85.83,30.61,UMGS205,L2_species,0,1,85.83,UMGS205,Aeromonas,85.83,30.61
+Aeromonas,5,GCF_028751155.1,Aeromonas bestiarum,True,Complete Genome,4751295,87.05,39.74,UMGS205,L2_species,0,1,87.05,UMGS205,Aeromonas,87.05,39.74
+Aeromonas,5,GCF_037818705.1,Aeromonas popoffii,True,Complete Genome,4889561,85.45,29.34,UMGS205,L2_species,0,1,85.45,UMGS205,Aeromonas,85.45,29.34
+Aeromonas,5,GCF_044336385.1,Aeromonas mytilicola subsp. aquatica,True,Complete Genome,4681979,89.7,60.03,UMGS205,L2_species,0,1,89.7,UMGS205,Aeromonas,89.7,60.03
+Aeromonas,5,GCF_049665575.1,Aeromonas oralensis,True,Complete Genome,4784854,88.81,47.37,UMGS205,L2_species,0,1,88.81,UMGS205,Aeromonas,88.81,47.37
+Aeromonas,5,GCF_053714435.1,Aeromonas piscicola,True,Complete Genome,5137694,86.74,34.6,UMGS205,L2_species,0,1,86.74,UMGS205,Aeromonas,86.74,34.6
+Akkermansia,6,GCF_009731575.1,Akkermansia muciniphila,True,Complete Genome,2878459,81.95,15.34,UMGS181,L2_species,0,1,81.95,UMGS181,Akkermansia,81.95,15.34
+Akkermansia,6,GCF_018847195.1,Akkermansia massiliensis,True,Complete Genome,3309705,84.36,25.38,UMGS181,L2_species,0,1,84.36,UMGS181,Akkermansia,97.29,0.62
+Akkermansia,6,GCF_026072915.1,Akkermansia biwaensis,True,Complete Genome,3175525,99.97,92.73,UMGS181,L0_dup,0,0,99.97,UMGS181,Akkermansia,99.97,92.73
+Akkermansia,6,GCF_029854705.2,Akkermansia sp. N21116,False,Complete Genome,3497179,99.98,92.63,UMGS750,L0_dup,0,0,99.98,UMGS750,Akkermansia,99.98,92.63
+Akkermansia,6,GCF_031344955.1,Akkermansia sp. EB-AMDK43,False,Complete Genome,3208499,84.37,26.16,UMGS181,L2_species,0,1,84.37,UMGS181,Akkermansia,97.29,0.64
+Akkermansia,6,GCF_036417355.1,Akkermansia sp. RCC_12PD,False,Complete Genome,3168262,99.18,90.96,UMGS141,L0_dup,0,0,99.18,UMGS141,Akkermansia,99.18,90.96
+Akkermansia,6,GCF_049262625.1,Akkermansia sp. JRP_AM1,False,Complete Genome,3239103,84.44,25.82,UMGS181,L2_species,0,1,84.44,UMGS181,Akkermansia,97.23,0.63
+Akkermansia,6,GCF_900097105.1,Akkermansia glycaniphila,True,Complete Genome,3074078,,,,L2_far,0,1,,,,79.71,0.45
+Alistipes,7,GCF_006542645.1,Alistipes onderdonkii subsp. vulgaris,True,Complete Genome,3507492,97.97,78.53,14207_7_70,L1_strain,0,1,97.97,14207_7_70,Alistipes,97.97,78.53
+Alistipes,7,GCF_006542665.1,Alistipes communis,True,Complete Genome,3301347,98.74,82.47,GCF_000311925,L1_strain,0,1,98.74,GCF_000311925,Alistipes,98.74,82.47
+Alistipes,7,GCF_006542685.1,Alistipes dispar,True,Complete Genome,2962376,99.08,87.23,UMGS50,L0_dup,0,0,99.08,UMGS50,Alistipes,99.08,87.23
+Alistipes,7,GCF_020735725.1,Alistipes senegalensis,True,Complete Genome,4023294,100.0,99.59,GCF_000312145,L0_dup,0,0,100.0,GCF_000312145,Alistipes,100.0,99.59
+Alistipes,7,GCF_022846055.1,Alistipes finegoldii,True,Complete Genome,4117255,84.67,13.82,11861_6_63,L2_species,0,1,84.67,11861_6_63,Alistipes,99.69,0.28
+Alistipes,7,GCF_025144665.1,Alistipes ihumii AP11,True,Complete Genome,2780015,100.0,98.97,GCF_000321205,L0_dup,0,0,100.0,GCF_000321205,Alistipes,100.0,98.97
+Alistipes,7,GCF_025144995.1,Alistipes indistinctus YIT 12060,True,Complete Genome,2857445,100.0,99.91,GCF_000231275,L0_dup,0,0,100.0,GCF_000231275,Alistipes,100.0,99.91
+Alistipes,7,GCF_025145845.1,Alistipes shahii WAL 8301,True,Complete Genome,3809618,98.52,67.08,11861_6_63,L1_strain,0,1,98.52,11861_6_63,Alistipes,100.0,0.03
+Anaerococcus,8,GCF_000024105.1,Anaerococcus prevotii DSM 20548,True,Complete Genome,1998633,,,,L2_far,0,1,,,,88.67,0.47
+Anaerococcus,8,GCF_016127475.1,Anaerococcus vaginalis,True,Complete Genome,1893964,90.45,24.66,UMGS1965,L2_species,0,1,90.45,UMGS1965,Anaerococcus,95.48,0.22
+Anaerococcus,8,GCF_016599815.1,Anaerococcus obesiensis,True,Complete Genome,1894618,90.51,25.11,UMGS1965,L2_species,0,1,90.51,UMGS1965,Anaerococcus,90.51,25.11
+Anaerococcus,8,GCF_040364225.1,Anaerococcus nagyae,True,Complete Genome,1891834,99.0,81.54,UMGS594,L0_dup,0,0,99.0,UMGS594,Anaerococcus,99.0,81.54
+Anaerococcus,8,GCF_043187475.1,Anaerococcus cruorum,True,Complete Genome,1641602,85.23,35.48,UMGS343,L2_species,0,1,85.23,UMGS343,Anaerococcus,88.74,0.08
+Anaerococcus,8,GCF_043187485.1,Anaerococcus martiniensis,True,Complete Genome,1616208,88.77,55.03,UMGS343,L2_species,0,1,88.77,UMGS343,Anaerococcus,88.77,55.03
+Anaerococcus,8,GCF_058182085.1,Anaerococcus octavius,True,Complete Genome,1855969,84.05,25.04,UMGS343,L2_species,0,1,84.05,UMGS343,Anaerococcus,90.71,0.23
+Anaerococcus,8,GCF_949769285.1,Anaerococcus sp. Marseille-Q7828,False,Complete Genome,1946085,,,,L2_far,0,1,,,,88.78,2.62
+Anaerofustis,9,GCF_000154825.1,Anaerofustis stercorihominis DSM 17244,True,Scaffold,2284703,89.73,59.24,UMGS1233,L2_species,0,1,89.73,UMGS1233,Anaerofustis,89.73,59.24
+Anaeromassilibacillus,10,GCF_001261775.1,Anaeromassilibacillus senegalensis,True,Scaffold,3511751,,,,L2_far,0,1,,,,95.72,0.08
+Anaeromassilibacillus,10,GCF_015554745.1,Anaeromassilibacillus sp. 1001302B_160321_C8,False,Scaffold,3007086,98.82,80.88,UMGS41,L1_strain,0,1,98.82,UMGS41,Anaeromassilibacillus,98.82,80.88
+Anaeromassilibacillus,10,GCF_015558525.1,Anaeromassilibacillus sp. D41t1_190614_C2,False,Scaffold,3107887,98.77,80.02,UMGS41,L1_strain,0,1,98.77,UMGS41,Anaeromassilibacillus,98.77,80.02
+Anaeromassilibacillus,10,GCF_900169665.1,Anaeromassilibacillus sp. Marseille-P3371,False,Scaffold,3545090,99.23,72.42,UMGS220,L0_dup,0,0,99.23,UMGS220,Anaeromassilibacillus,99.23,72.42
+Anaerosporobacter,11,GCF_900142955.1,Anaerosporobacter mobilis DSM 15930,True,Scaffold,5217774,95.16,74.03,UMGS935,L1_strain,0,1,95.16,UMGS935,Anaerosporobacter,95.16,74.03
+Anaerostipes,12,GCF_005280655.1,Anaerostipes rhamnosivorans,True,Complete Genome,3588860,99.95,90.9,UMGS1268,L0_dup,0,0,99.95,UMGS1268,Anaerostipes,99.95,90.9
+Anaerostipes,12,GCF_020181435.1,Anaerostipes caccae,True,Complete Genome,3284789,83.5,15.31,UMGS1268,L2_species,0,1,83.5,UMGS1268,Anaerostipes,83.5,15.31
+Anaerostipes,12,GCF_030864025.1,Anaerostipes hadrus,True,Complete Genome,2946270,,,,L2_far,0,1,,,,79.38,0.16
+Anaerotignum,13,GCF_001561955.1,Anaerotignum propionicum DSM 1682,True,Complete Genome,3120417,,,,L2_far,0,1,,,,,
+Anaerotignum,13,GCF_030908465.1,Anaerotignum sp. MB30-C6,False,Complete Genome,3104838,,,,L2_far,0,1,,,,87.32,0.19
+Anaerotruncus,14,GCF_025146135.1,Anaerotruncus colihominis,True,Complete Genome,3563916,,,,L2_far,0,1,,,,79.86,0.91
+Atopobium,15,GCF_000364325.1,Atopobium minutum 10063974,True,Scaffold,1706966,,,,L2_far,0,1,,,,,
+Atopobium,15,GCF_000411555.1,Atopobium sp. oral taxon 199 str. F0494,False,Scaffold,1665560,,,,L2_far,0,1,,,,86.22,0.63
+Atopobium,15,GCF_000466405.1,Atopobium sp. oral taxon 810 str. F0209,False,Scaffold,1947547,,,,L2_far,0,1,,,,,
+Atopobium,15,GCF_000483125.1,Atopobium fossor DSM 15642,True,Scaffold,1657369,,,,L2_far,0,1,,,,,
+Atopobium,15,GCF_001552785.1,Atopobium deltae,True,Scaffold,1452105,,,,L2_far,0,1,,,,99.83,0.33
+Atopobium,15,GCF_018128285.1,Atopobium sp. oral taxon 416,False,Complete Genome,3004013,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_000632475.1,Azospirillum argentinense,True,Complete Genome,7391279,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_001305595.1,Azospirillum thiophilum,True,Complete Genome,7609458,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_003130795.1,Azospirillum thermophilum,True,Complete Genome,6776313,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_003233655.1,Azospirillum ramasamyi,True,Complete Genome,6316263,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_013347285.1,Azospirillum oryzae,True,Complete Genome,6809363,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_022023855.1,Azospirillum brasilense,True,Complete Genome,7389817,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_040500525.1,Azospirillum formosense,True,Complete Genome,6104586,,,,L2_far,0,1,,,,,
+Azospirillum,16,GCF_054959005.1,Azospirillum doebereinerae,True,Complete Genome,7501717,,,,L2_far,0,1,,,,,
+Bacillus,17,GCF_006094295.1,Bacillus cereus ATCC 14579,True,Complete Genome,5431377,97.4,85.46,GCF_000238655,L1_strain,0,1,97.4,GCF_000238655,Bacillus,98.3,0.11
+Bacillus,17,GCF_008807735.1,Bacillus wiedmannii,True,Complete Genome,5585953,91.6,64.94,GCF_000238655,L2_species,0,1,91.6,GCF_000238655,Bacillus,99.29,0.09
+Bacillus,17,GCF_016605985.1,Bacillus toyonensis,True,Complete Genome,5787787,91.6,64.46,GCF_000238655,L2_species,0,1,91.6,GCF_000238655,Bacillus,99.29,0.08
+Bacillus,17,GCF_020861345.1,Bacillus pacificus,True,Complete Genome,5594640,91.54,61.78,GCF_000238655,L2_species,0,1,91.54,GCF_000238655,Bacillus,98.26,0.07
+Bacillus,17,GCF_030292135.1,Bacillus albus,True,Complete Genome,5889853,91.65,62.63,GCF_000238655,L2_species,0,1,91.65,GCF_000238655,Bacillus,99.29,0.08
+Bacillus,17,GCF_031357045.1,Bacillus tropicus,True,Complete Genome,5319187,92.05,69.7,GCF_000238655,L2_species,0,1,92.05,GCF_000238655,Bacillus,99.29,0.09
+Bacillus,17,GCF_038096195.1,Bacillus paramobilis,True,Complete Genome,5286002,91.5,66.13,GCF_000238655,L2_species,0,1,91.5,GCF_000238655,Bacillus,99.29,0.1
+Bacillus,17,GCF_052947655.1,Bacillus pretiosus,True,Complete Genome,5686534,91.65,65.8,GCF_000238655,L2_species,0,1,91.65,GCF_000238655,Bacillus,99.29,0.09
+Bacteroides,18,GCF_001314995.1,Bacteroides ovatus,True,Complete Genome,6472489,97.23,71.17,GCF_000218325,L1_strain,0,1,97.23,GCF_000218325,Bacteroides,100.0,0.04
+Bacteroides,18,GCF_012113595.1,Bacteroides faecium,True,Complete Genome,6782182,88.98,27.94,14207_6_13,L2_species,0,1,88.98,14207_6_13,Bacteroides,91.17,0.09
+Bacteroides,18,GCF_014131755.1,Bacteroides thetaiotaomicron,True,Complete Genome,6304193,98.36,79.93,20287_6_53,L1_strain,0,1,98.36,20287_6_53,Bacteroides,100.0,0.04
+Bacteroides,18,GCF_018289135.1,Bacteroides xylanisolvens,True,Complete Genome,6558523,98.18,71.01,GCF_000162155,L1_strain,0,1,98.18,GCF_000162155,Bacteroides,100.0,0.11
+Bacteroides,18,GCF_018292125.1,Bacteroides cellulosilyticus,True,Complete Genome,7271073,98.23,66.03,UMGS1869,L1_strain,0,1,98.23,UMGS1869,Bacteroides,100.0,0.1
+Bacteroides,18,GCF_020091505.1,Bacteroides faecis,True,Complete Genome,6352228,99.9,90.12,13470_2_65,L0_dup,0,0,99.9,13470_2_65,Bacteroides,99.9,90.12
+Bacteroides,18,GCF_034654355.2,Bacteroides mucinivorans,True,Complete Genome,6061704,95.61,43.37,UMGS2075,L1_strain,0,1,95.61,UMGS2075,Bacteroides,99.82,0.75
+Bacteroides,18,GCF_036416795.1,Bacteroides maternus,True,Complete Genome,6440948,95.1,61.21,UMGS1504,L1_strain,0,1,95.1,UMGS1504,Bacteroides,96.16,0.3
+Barnesiella,19,GCF_000512915.1,Barnesiella viscericola DSM 18177,True,Complete Genome,3076856,86.26,33.85,UMGS227,L2_species,0,1,86.26,UMGS227,Barnesiella,86.26,33.85
+Barnesiella,19,GCF_046603765.1,Barnesiella intestinihominis,True,Complete Genome,3260079,98.8,94.38,21673_4_5,L1_strain,0,1,98.8,21673_4_5,Barnesiella,98.8,94.38
+Barnesiella,19,GCF_963931395.1,Barnesiella sp. An22,False,Complete Genome,3443102,98.7,73.47,UMGS816,L1_strain,0,1,98.7,UMGS816,Barnesiella,98.7,73.47
+Bifidobacterium,20,GCF_000196555.1,Bifidobacterium longum subsp. longum JCM 1217,True,Complete Genome,2385164,95.05,65.9,GCF_000020425,L1_strain,0,1,95.05,GCF_000020425,Bifidobacterium,95.05,65.9
+Bifidobacterium,20,GCF_001042595.1,Bifidobacterium dentium JCM 1195 = DSM 20436,True,Complete Genome,2635669,99.97,99.91,GCF_000172135,L0_dup,0,0,99.97,GCF_000172135,Bifidobacterium,99.97,99.91
+Bifidobacterium,20,GCF_001042635.1,Bifidobacterium scardovii JCM 12489 = DSM 13734,True,Complete Genome,3158347,,,,L2_far,0,1,,,,83.32,5.57
+Bifidobacterium,20,GCF_014898155.1,Bifidobacterium eulemuris,True,Complete Genome,2920839,,,,L2_far,0,1,,,,82.21,0.91
+Bifidobacterium,20,GCF_014898175.1,Bifidobacterium lemurum,True,Complete Genome,2965103,,,,L2_far,0,1,,,,82.57,3.75
+Bifidobacterium,20,GCF_014898195.1,Bifidobacterium subtile,True,Complete Genome,2822354,,,,L2_far,0,1,,,,90.3,0.11
+Bifidobacterium,20,GCF_041080795.1,Bifidobacterium aquikefiricola,True,Complete Genome,2359920,,,,L2_far,0,1,,,,96.59,0.38
+Bifidobacterium,20,GCF_041080835.1,Bifidobacterium fermentum,True,Complete Genome,2470594,,,,L2_far,0,1,,,,95.93,0.18
+Blastococcus,21,GCF_000284015.1,Blastococcus saxobsidens DD2,True,Complete Genome,4875340,,,,L2_far,0,1,,,,82.98,9.93
+Blastococcus,21,GCF_023016265.1,Blastococcus sp. PRF04-17,False,Complete Genome,4585415,,,,L2_far,0,1,,,,82.79,10.17
+Blastococcus,21,GCF_035320885.1,Blastococcus brunescens,True,Complete Genome,4901425,,,,L2_far,0,1,,,,82.96,10.06
+Blastococcus,21,GCF_039679125.1,Blastococcus montanus,True,Complete Genome,4297415,,,,L2_far,0,1,,,,83.13,10.74
+Blastococcus,21,GCF_039729015.1,Blastococcus sp. HT6-30,False,Complete Genome,3701696,,,,L2_far,0,1,,,,83.33,12.65
+Blautia,22,GCF_001689125.2,Blautia pseudococcoides,True,Complete Genome,5128746,93.86,62.31,UMGS967,L2_species,0,1,93.86,UMGS967,Blautia,97.78,0.04
+Blautia,22,GCF_010669205.1,Blautia producta ATCC 27340 = DSM 2950,True,Complete Genome,6197116,97.63,74.21,8080_1_72,L1_strain,0,1,97.63,8080_1_72,Blautia,98.98,0.06
+Blautia,22,GCF_015159595.1,Blautia liquoris,True,Complete Genome,3518434,,,,L2_far,0,1,,,,98.98,0.03
+Blautia,22,GCF_020215665.1,Blautia parvula,True,Complete Genome,6247046,98.93,79.03,20298_3_48,L1_strain,0,1,98.93,20298_3_48,Blautia,100.0,0.02
+Blautia,22,GCF_025147765.1,Blautia obeum ATCC 29174,True,Complete Genome,3649956,98.67,77.57,18048_1_72,L1_strain,0,1,98.67,18048_1_72,Blautia,98.67,77.57
+Blautia,22,GCF_025148125.1,Blautia wexlerae DSM 19850,True,Complete Genome,4685728,98.13,64.08,GCF_000159975,L1_strain,0,1,98.13,GCF_000159975,Blautia,98.97,0.12
+Blautia,22,GCF_033096465.1,Blautia luti,True,Complete Genome,3741599,88.59,22.69,GCF_000159975,L2_species,0,1,88.59,GCF_000159975,Blautia,96.52,1.28
+Blautia,22,GCF_034356035.1,Blautia hydrogenotrophica DSM 10507,True,Complete Genome,3597785,99.48,90.93,13414_6_41,L0_dup,0,0,99.48,13414_6_41,Blautia,99.48,90.93
+Brachyspira,23,GCF_000092845.1,Brachyspira murdochii DSM 12563,True,Complete Genome,3241804,,,,L2_far,0,1,,,,82.98,0.22
+Brachyspira,23,GCF_000143725.1,Brachyspira pilosicoli 95/1000,True,Complete Genome,2586443,,,,L2_far,0,1,,,,81.26,0.46
+Brachyspira,23,GCF_000223215.1,Brachyspira intermedia PWS/A,True,Complete Genome,3308048,,,,L2_far,0,1,,,,80.28,0.37
+Brachyspira,23,GCF_001676785.2,Brachyspira hyodysenteriae ATCC 27164,True,Complete Genome,3074045,,,,L2_far,0,1,,,,81.87,0.28
+Brachyspira,23,GCF_002214805.1,Brachyspira hampsonii,True,Complete Genome,3189639,,,,L2_far,0,1,,,,79.24,0.79
+Brevibacterium,24,GCF_003932995.1,Brevibacterium aurantiacum,True,Complete Genome,4038634,,,,L2_far,0,1,,,,80.36,0.53
+Brevibacterium,24,GCF_011617245.1,Brevibacterium atlanticum,True,Complete Genome,4156794,,,,L2_far,0,1,,,,80.04,0.8
+Brevibacterium,24,GCF_011617465.1,Brevibacterium pigmentatum,True,Complete Genome,3913130,,,,L2_far,0,1,,,,80.11,0.67
+Brevibacterium,24,GCF_011617705.1,Brevibacterium limosum,True,Complete Genome,4253182,,,,L2_far,0,1,,,,79.82,0.67
+Brevibacterium,24,GCF_016026595.1,Brevibacterium casei,True,Complete Genome,3866591,,,,L2_far,0,1,,,,81.95,0.85
+Brevibacterium,24,GCF_017948325.1,Brevibacterium oceani,True,Complete Genome,4304299,,,,L2_far,0,1,,,,79.24,0.61
+Brevibacterium,24,GCF_021117425.1,Brevibacterium zhoupengii,True,Complete Genome,4408116,,,,L2_far,0,1,,,,80.9,0.4
+Brevibacterium,24,GCF_026168515.1,Brevibacterium spongiae,True,Complete Genome,4217721,,,,L2_far,0,1,,,,80.91,0.54
+Butyricicoccus,25,GCF_051246315.1,Butyricicoccus porcorum,True,Complete Genome,2990647,,,,L2_far,0,1,,,,84.99,0.11
+Butyricicoccus,25,GCF_056644235.1,Butyricicoccus intestinisimiae,True,Complete Genome,2538360,97.99,72.84,UMGS1328,L1_strain,0,1,97.99,UMGS1328,Butyricicoccus,97.99,72.84
+Butyricimonas,26,GCF_003991565.1,Butyricimonas faecalis,True,Complete Genome,4976422,99.93,72.74,UMGS1130,L0_dup,0,0,99.93,UMGS1130,Butyricimonas,99.93,72.74
+Butyricimonas,26,GCF_025148635.1,Butyricimonas virosa,True,Complete Genome,4813254,98.73,80.01,12718_7_37,L1_strain,0,1,98.73,12718_7_37,Butyricimonas,98.73,80.01
+Butyricimonas,26,GCF_032878895.1,Butyricimonas faecihominis,True,Complete Genome,4851713,94.5,63.95,UMGS29,L2_species,0,1,94.5,UMGS29,Butyricimonas,94.5,63.95
+Butyrivibrio,27,GCF_000145035.1,Butyrivibrio proteoclasticus B316,True,Complete Genome,4404886,,,,L2_far,0,1,,,,,
+Butyrivibrio,27,GCF_001858005.1,Butyrivibrio hungatei,True,Complete Genome,3386314,,,,L2_far,0,1,,,,,
+Butyrivibrio,27,GCF_037113525.1,Butyrivibrio fibrisolvens,True,Complete Genome,4934347,,,,L2_far,0,1,,,,,
+Butyrivibrio,27,GCF_045999815.1,Butyrivibrio sp. NATIVEDY162,False,Complete Genome,4136620,,,,L2_far,0,1,,,,87.43,0.02
+Campylobacter,28,GCF_001190745.1,Campylobacter gracilis,True,Complete Genome,2281652,94.01,73.36,UMGS142,L2_species,0,1,94.01,UMGS142,Campylobacter,98.35,0.13
+Campylobacter,28,GCF_002104335.1,Campylobacter cuniculorum DSM 23162 = LMG 24588,True,Complete Genome,1937768,,,,L2_far,0,1,,,,94.59,0.16
+Campylobacter,28,GCF_004803795.1,Campylobacter rectus,True,Complete Genome,2571679,,,,L2_far,0,1,,,,97.61,0.11
+Campylobacter,28,GCF_004803815.1,Campylobacter showae,True,Complete Genome,2097887,,,,L2_far,0,1,,,,97.83,0.14
+Campylobacter,28,GCF_013177655.1,Campylobacter canadensis,True,Complete Genome,1923009,,,,L2_far,0,1,,,,93.05,0.14
+Campylobacter,28,GCF_013201685.1,Campylobacter geochelonis,True,Complete Genome,2167961,,,,L2_far,0,1,,,,98.24,0.14
+Campylobacter,28,GCF_013201895.1,Campylobacter blaseri,True,Complete Genome,1891678,,,,L2_far,0,1,,,,98.61,0.16
+Campylobacter,28,GCF_013372125.1,Campylobacter curvus,True,Complete Genome,1974918,,,,L2_far,0,1,,,,97.86,0.15
+Catenibacterium,29,GCF_025148785.1,Catenibacterium mitsuokai,True,Complete Genome,2650196,94.27,63.11,UMGS15,L2_species,0,1,94.27,UMGS15,Catenibacterium,94.27,63.11
+Catenibacterium,29,GCF_905186165.1,Catenibacterium sp. co_0103,False,Complete Genome,2528270,96.84,69.78,UMGS15,L1_strain,0,1,96.84,UMGS15,Catenibacterium,96.84,69.78
+Cellulomonas,30,GCF_000092865.1,Cellulomonas flavigena DSM 20109,True,Complete Genome,4123179,,,,L2_far,0,1,,,,81.45,4.63
+Cellulomonas,30,GCF_000212695.1,Cellulomonas fimi ATCC 484,True,Complete Genome,4266344,,,,L2_far,0,1,,,,82.3,6.69
+Cellulomonas,30,GCF_018388445.1,Cellulomonas wangleii,True,Complete Genome,4076825,,,,L2_far,0,1,,,,81.51,4.28
+Cellulomonas,30,GCF_018388465.1,Cellulomonas fengjieae,True,Complete Genome,3989908,,,,L2_far,0,1,,,,81.43,3.65
+Cellulomonas,30,GCF_024508275.1,Cellulomonas wangsupingiae,True,Complete Genome,4118098,,,,L2_far,0,1,,,,81.74,4.15
+Cellulomonas,30,GCF_024508315.1,Cellulomonas xiejunii,True,Complete Genome,4190910,,,,L2_far,0,1,,,,81.4,3.54
+Cellulomonas,30,GCF_055379345.1,Cellulomonas chitinilytica JCM 16927,True,Complete Genome,4915601,,,,L2_far,0,1,,,,82.09,5.39
+Cellulomonas,30,GCF_055396485.1,Cellulomonas pakistanensis,True,Complete Genome,4028508,,,,L2_far,0,1,,,,81.42,3.86
+Citrobacter,31,GCF_004353845.1,Citrobacter arsenatis,True,Complete Genome,5370228,92.68,74.94,GCF_000238735,L2_species,0,1,92.68,GCF_000238735,Citrobacter,92.68,74.94
+Citrobacter,31,GCF_008693645.1,Citrobacter werkmanii,True,Complete Genome,5049303,90.95,71.01,GCF_000238735,L2_species,0,1,90.95,GCF_000238735,Citrobacter,90.95,71.01
+Citrobacter,31,GCF_009648935.1,Citrobacter braakii,True,Complete Genome,4917491,92.24,76.67,20298_3_17,L2_species,0,1,92.24,20298_3_17,Citrobacter,92.24,76.67
+Citrobacter,31,GCF_019047765.1,Citrobacter pasteurii,True,Complete Genome,5021319,99.48,92.42,20298_3_4,L0_dup,0,0,99.48,20298_3_4,Citrobacter,99.48,92.42
+Citrobacter,31,GCF_021278985.1,Citrobacter rodentium NBRC 105723 = DSM 16636,True,Complete Genome,5381137,82.99,15.57,GCF_000238735,L2_species,0,1,82.99,GCF_000238735,Citrobacter,82.99,15.57
+Citrobacter,31,GCF_023374935.1,Citrobacter portucalensis,True,Complete Genome,5358657,97.15,81.52,GCF_000238735,L1_strain,0,1,97.15,GCF_000238735,Citrobacter,97.15,81.52
+Citrobacter,31,GCF_037482245.1,Citrobacter europaeus,True,Complete Genome,5194170,92.93,74.64,20298_3_17,L2_species,0,1,92.93,20298_3_17,Citrobacter,92.93,74.64
+Citrobacter,31,GCF_041320245.1,Citrobacter meridianamericanus,True,Complete Genome,5773871,92.72,65.15,20298_3_17,L2_species,0,1,92.72,20298_3_17,Citrobacter,92.72,65.15
+Cloacibacillus,32,GCF_001701045.1,Cloacibacillus porcorum,True,Complete Genome,3585187,,,,L2_far,0,1,,,,84.33,1.26
+Cloacibacillus,32,GCF_043172115.1,Cloacibacillus evryensis,True,Complete Genome,3451651,,,,L2_far,0,1,,,,83.06,1.55
+Clostridium,33,GCF_000340885.1,Clostridium saccharoperbutylacetonicum N1-4(HMT),True,Complete Genome,6666445,,,,L2_far,0,1,,,,97.03,0.02
+Clostridium,33,GCF_000968375.1,Clostridium scatologenes,True,Complete Genome,5749410,,,,L2_far,0,1,,,,98.52,0.02
+Clostridium,33,GCF_001038625.1,Clostridium carboxidivorans P7,True,Complete Genome,5752782,,,,L2_far,0,1,,,,97.72,0.05
+Clostridium,33,GCF_004015185.1,Clostridium manihotivorum,True,Complete Genome,6364326,,,,L2_far,0,1,,,,95.33,0.07
+Clostridium,33,GCF_008705175.1,Clostridium diolis,True,Complete Genome,5940808,,,,L2_far,0,1,,,,94.02,0.07
+Clostridium,33,GCF_018223745.1,Clostridium beijerinckii,True,Complete Genome,5950247,,,,L2_far,0,1,,,,94.02,0.07
+Clostridium,33,GCF_019977655.1,Clostridium gelidum,True,Complete Genome,6041432,,,,L2_far,0,1,,,,94.26,0.07
+Clostridium,33,GCF_055391695.1,Clostridium nitrophenolicum,True,Complete Genome,5767678,,,,L2_far,0,1,,,,98.43,0.05
+Collinsella,34,GCF_010509075.1,Collinsella aerofaciens ATCC 25986,True,Complete Genome,2455328,95.02,70.08,UMGS297,L1_strain,0,1,95.02,UMGS297,Collinsella,95.02,70.08
+Collinsella,34,GCF_018889955.1,Collinsella sp. zg1085,False,Complete Genome,1720218,,,,L2_far,0,1,,,,97.21,0.17
+Collinsella,34,GCF_025149625.1,Collinsella stercoris,True,Complete Genome,2460746,99.98,99.0,GCF_000156215,L0_dup,0,0,99.98,GCF_000156215,Collinsella,99.98,99.0
+Collinsella,34,GCF_042851345.1,Collinsella sp. i05-0019-G5,False,Complete Genome,2536697,94.99,68.41,UMGS319,L2_species,0,1,94.99,UMGS319,Collinsella,96.47,0.07
+Coprobacillus,35,GCF_003475785.1,Coprobacillus sp. AF33-1AC,False,Scaffold,2174314,,,,L2_far,0,1,,,,80.6,2.69
+Coprobacillus,35,GCF_055397375.1,Coprobacillus cateniformis JCM 10604,True,Complete Genome,3669259,,,,L2_far,0,1,,,,84.94,1.8
+Coprococcus,36,GCF_025149915.1,Coprococcus eutactus,True,Complete Genome,3112919,92.97,34.47,UMGS2033,L2_species,0,1,92.97,UMGS2033,Coprococcus,96.04,0.72
+Corynebacterium,37,GCF_000011305.1,Corynebacterium efficiens YS-314,True,Complete Genome,3219505,,,,L2_far,0,1,,,,87.03,1.22
+Corynebacterium,37,GCF_000011325.1,Corynebacterium glutamicum ATCC 13032,True,Complete Genome,3309401,,,,L2_far,0,1,,,,88.78,0.35
+Corynebacterium,37,GCF_000341345.1,Corynebacterium halotolerans YIM 70093 = DSM 44683,True,Complete Genome,3222008,,,,L2_far,0,1,,,,96.38,0.16
+Corynebacterium,37,GCF_000626675.1,Corynebacterium glyciniphilum AJ 3170,True,Complete Genome,3568218,,,,L2_far,0,1,,,,96.38,0.15
+Corynebacterium,37,GCF_001020985.1,Corynebacterium mustelae,True,Complete Genome,3474226,,,,L2_far,0,1,,,,96.98,0.43
+Corynebacterium,37,GCF_002355155.1,Corynebacterium suranareeae,True,Complete Genome,3537507,,,,L2_far,0,1,,,,97.18,0.44
+Corynebacterium,37,GCF_007970465.1,Corynebacterium nuruki S6-4,True,Complete Genome,3173955,,,,L2_far,0,1,,,,83.61,0.31
+Corynebacterium,37,GCF_030408755.1,Corynebacterium felinum,True,Complete Genome,3236025,,,,L2_far,0,1,,,,85.44,0.59
+Cryptobacterium,38,GCF_000023845.1,Cryptobacterium curtum DSM 15641,True,Complete Genome,1617804,,,,L2_far,0,1,,,,,
+Desulfovibrio,39,GCF_001553605.1,Desulfovibrio fairfieldensis,True,Complete Genome,3699310,97.43,77.08,GCF_000145315,L1_strain,0,1,97.43,GCF_000145315,Desulfovibrio,97.43,77.08
+Desulfovibrio,39,GCF_003966735.1,Desulfovibrio ferrophilus,True,Complete Genome,3720107,,,,L2_far,0,1,,,,98.52,0.03
+Desulfovibrio,39,GCF_017815575.1,Desulfovibrio desulfuricans,True,Complete Genome,3554892,95.34,80.45,UMGS31,L1_strain,0,1,95.34,UMGS31,Desulfovibrio,97.65,0.03
+Desulfovibrio,39,GCF_026230175.1,Desulfovibrio mangrovi,True,Complete Genome,3947083,,,,L2_far,0,1,,,,95.48,0.02
+Desulfovibrio,39,GCF_027558435.1,Desulfovibrio subterraneus,True,Complete Genome,4076412,,,,L2_far,0,1,,,,86.19,0.42
+Desulfovibrio,39,GCF_055387835.1,Desulfovibrio simplex,True,Complete Genome,3802826,,,,L2_far,0,1,,,,96.92,0.03
+Desulfovibrio,39,GCF_055388615.1,Desulfovibrio biadhensis,True,Complete Genome,5182856,,,,L2_far,0,1,,,,94.45,0.04
+Desulfovibrio,39,GCF_900243745.1,Desulfovibrio falkowii,True,Complete Genome,3416440,,,,L2_far,0,1,,,,98.52,0.03
+Dialister,40,GCF_007164725.1,Dialister hominis,True,Complete Genome,2407548,99.35,56.53,UMGS1051,L0_dup,0,0,99.35,UMGS1051,Dialister,99.35,56.53
+Dialister,40,GCF_059553655.1,Dialister pneumosintes,True,Complete Genome,1362589,99.36,54.08,UMGS1694,L0_dup,0,0,99.36,UMGS1694,Dialister,99.36,54.08
+Dialister,40,GCF_928721695.1,Dialister succinatiphilus,True,Complete Genome,2486895,96.92,76.45,GCF_000242435,L1_strain,0,1,96.92,GCF_000242435,Dialister,100.0,0.05
+Dorea,41,GCF_025150085.1,Dorea longicatena,True,Complete Genome,2919963,98.79,79.96,13414_6_50,L1_strain,0,1,98.79,13414_6_50,Dorea,98.79,79.96
+Dorea,41,GCF_025150245.1,Dorea formicigenerans,True,Complete Genome,3188304,98.7,81.77,21673_4_87,L1_strain,0,1,98.7,21673_4_87,Dorea,98.7,81.77
+Dorea,41,GCF_051625625.1,Dorea amylophila,True,Complete Genome,3598408,97.15,59.96,14207_7_37,L1_strain,0,1,97.15,14207_7_37,Dorea,97.15,59.96
+Dysgonomonas,42,GCF_011299335.1,Dysgonomonas sp. HDW5B,False,Complete Genome,4402003,,,,L2_far,0,1,,,,82.94,0.49
+Dysgonomonas,42,GCF_011299555.1,Dysgonomonas sp. HDW5A,False,Complete Genome,4298355,,,,L2_far,0,1,,,,82.67,0.45
+Edwardsiella,43,GCF_000264765.2,Edwardsiella anguillarum ET080813,True,Complete Genome,4329652,84.99,23.55,GCF_000163955,L2_species,0,1,84.99,GCF_000163955,Edwardsiella,84.99,23.55
+Edwardsiella,43,GCF_000800725.1,Edwardsiella sp. EA181011,False,Complete Genome,3934167,84.99,24.72,GCF_000163955,L2_species,0,1,84.99,GCF_000163955,Edwardsiella,84.99,24.72
+Edwardsiella,43,GCF_001186215.2,Edwardsiella sp. LADL05-105,False,Complete Genome,4157225,84.89,24.03,GCF_000163955,L2_species,0,1,84.89,GCF_000163955,Edwardsiella,84.89,24.03
+Edwardsiella,43,GCF_003074995.2,Edwardsiella ictaluri,True,Complete Genome,3844237,84.26,19.76,GCF_000163955,L2_species,0,1,84.26,GCF_000163955,Edwardsiella,84.26,19.76
+Edwardsiella,43,GCF_003113475.3,Edwardsiella tarda,True,Complete Genome,3936473,99.15,85.0,GCF_000163955,L0_dup,0,0,99.15,GCF_000163955,Edwardsiella,99.15,85.0
+Edwardsiella,43,GCF_016026395.1,Edwardsiella hoshinae,True,Complete Genome,3817113,89.1,55.1,GCF_000163955,L2_species,0,1,89.1,GCF_000163955,Edwardsiella,89.1,55.1
+Edwardsiella,43,GCF_021733145.1,Edwardsiella piscicida,True,Complete Genome,3819771,84.81,25.11,GCF_000163955,L2_species,0,1,84.81,GCF_000163955,Edwardsiella,84.81,25.11
+Eggerthella,44,GCF_000270285.1,Eggerthella sp. YY7918,False,Complete Genome,3123671,,,,L2_far,0,1,,,,100.0,0.08
+Eggerthella,44,GCF_009834925.2,Eggerthella guodeyinii,True,Complete Genome,4175177,89.76,34.63,GCF_000191845,L2_species,0,1,89.76,GCF_000191845,Eggerthella,89.76,34.63
+Eggerthella,44,GCF_021378605.1,Eggerthella lenta,True,Complete Genome,3467966,98.86,85.24,GCF_000191845,L1_strain,0,1,98.86,GCF_000191845,Eggerthella,98.86,85.24
+Enterobacter,45,GCF_000224675.1,Enterobacter soli,True,Complete Genome,5012132,87.57,45.58,12718_7_3,L2_species,0,1,87.57,12718_7_3,Enterobacter,87.57,45.58
+Enterobacter,45,GCF_001729805.1,Enterobacter roggenkampii,True,Complete Genome,4899997,90.33,65.49,12718_7_3,L2_species,0,1,90.33,12718_7_3,Enterobacter,90.33,65.49
+Enterobacter,45,GCF_001750725.1,Enterobacter ludwigii,True,Complete Genome,4952770,98.92,89.74,12718_7_50,L1_strain,0,1,98.92,12718_7_50,Enterobacter,98.92,89.74
+Enterobacter,45,GCF_001984825.2,Enterobacter chengduensis,True,Complete Genome,5218125,90.16,61.18,12718_7_3,L2_species,0,1,90.16,12718_7_3,Enterobacter,90.16,61.18
+Enterobacter,45,GCF_003594935.2,Enterobacter huaxiensis,True,Complete Genome,5037746,90.51,66.05,12718_7_3,L2_species,0,1,90.51,12718_7_3,Enterobacter,90.51,66.05
+Enterobacter,45,GCF_019047785.1,Enterobacter cancerogenus,True,Complete Genome,4821734,98.81,90.53,GCF_000155995,L1_strain,0,1,98.81,GCF_000155995,Enterobacter,98.81,90.53
+Enterobacter,45,GCF_035835995.1,Enterobacter wuhouensis,True,Complete Genome,4821649,90.53,66.2,12718_7_3,L2_species,0,1,90.53,12718_7_3,Enterobacter,90.53,66.2
+Enterobacter,45,GCF_905331265.2,Enterobacter cloacae,True,Complete Genome,5023439,88.72,56.02,12718_7_50,L2_species,0,1,88.72,12718_7_50,Enterobacter,88.72,56.02
+Enterococcus,46,GCF_002197645.1,Enterococcus wangshanyuanii,True,Complete Genome,4155954,,,,L2_far,0,1,,,,88.82,0.3
+Enterococcus,46,GCF_002277935.1,Enterococcus durans,True,Complete Genome,2988928,98.34,84.71,21673_4_43,L1_strain,0,1,98.34,21673_4_43,Enterococcus,98.34,84.71
+Enterococcus,46,GCF_002813755.1,Enterococcus mundtii,True,Complete Genome,3504528,,,,L2_far,0,1,,,,85.97,0.56
+Enterococcus,46,GCF_019175485.1,Enterococcus raffinosus,True,Complete Genome,4255835,,,,L2_far,0,1,,,,92.32,0.76
+Enterococcus,46,GCF_021496385.1,Enterococcus gallinarum,True,Complete Genome,3488294,98.81,81.65,20298_3_12,L1_strain,0,1,98.81,20298_3_12,Enterococcus,98.81,81.65
+Enterococcus,46,GCF_022846515.1,Enterococcus innesii,True,Complete Genome,3598496,97.42,79.47,14670_1_61,L1_strain,0,1,97.42,14670_1_61,Enterococcus,97.42,79.47
+Enterococcus,46,GCF_029215545.1,Enterococcus casseliflavus,True,Complete Genome,3662325,95.26,75.09,14670_1_61,L1_strain,0,1,95.26,14670_1_61,Enterococcus,95.26,75.09
+Enterococcus,46,GCF_040049835.1,Enterococcus rotai,True,Complete Genome,3825538,,,,L2_far,0,1,,,,92.76,0.58
+Eubacterium,47,GCF_000152245.2,Eubacterium callanderi,True,Complete Genome,4316707,,,,L2_far,0,1,,,,98.44,0.09
+Eubacterium,47,GCF_000807675.2,Eubacterium limosum,True,Complete Genome,4422837,,,,L2_far,0,1,,,,,
+Eubacterium,47,GCF_002441855.2,Eubacterium maltosivorans,True,Complete Genome,4337501,,,,L2_far,0,1,,,,95.55,0.18
+Eubacterium,47,GCF_022174665.1,Eubacterium sp. MSJ-33,False,Complete Genome,2908239,,,,L2_far,0,1,89.89,UMGS1660,Clostridium,91.25,0.14
+Eubacterium,47,GCF_025150745.1,Eubacterium ventriosum,True,Complete Genome,2856089,98.93,65.29,UMGS1488,L1_strain,0,1,98.93,UMGS1488,Eubacterium,99.51,0.06
+Eubacterium,47,GCF_045002895.1,Eubacterium ramulus,True,Complete Genome,3378009,,,,L2_far,0,1,,,,100.0,0.03
+Eubacterium,47,GCF_046244355.1,Eubacterium sp. F2,False,Complete Genome,2425940,,,,L2_far,0,1,,,,,
+Eubacterium,47,GCF_059427965.1,Eubacterium pyruvativorans,True,Complete Genome,2386435,,,,L2_far,0,1,,,,,
+Exiguobacterium,48,GCF_000019905.1,Exiguobacterium artemiae 255-15,True,Complete Genome,3040786,86.85,44.41,20298_3_28,L2_species,0,1,86.85,20298_3_28,Exiguobacterium,86.85,44.41
+Exiguobacterium,48,GCF_000299435.1,Exiguobacterium antarcticum B7,True,Complete Genome,2815863,86.67,42.13,20298_3_28,L2_species,0,1,86.67,20298_3_28,Exiguobacterium,86.67,42.13
+Exiguobacterium,48,GCF_018138125.1,Exiguobacterium alkaliphilum,True,Complete Genome,3029824,,,,L2_far,0,1,,,,86.48,0.36
+Exiguobacterium,48,GCF_018604565.1,Exiguobacterium acetylicum,True,Complete Genome,3396606,,,,L2_far,0,1,,,,84.49,0.52
+Exiguobacterium,48,GCF_024362205.1,Exiguobacterium aurantiacum,True,Complete Genome,3154266,,,,L2_far,0,1,,,,84.54,0.25
+Exiguobacterium,48,GCF_048401725.1,Exiguobacterium mexicanum,True,Complete Genome,3063677,,,,L2_far,0,1,,,,87.08,0.45
+Exiguobacterium,48,GCF_053763475.1,Exiguobacterium profundum,True,Complete Genome,3000275,94.85,73.43,14672_4_4,L2_species,0,1,94.85,14672_4_4,Exiguobacterium,94.85,73.43
+Exiguobacterium,48,GCF_058150795.1,Exiguobacterium undae,True,Complete Genome,3212553,91.77,63.5,20298_3_28,L2_species,0,1,91.77,20298_3_28,Exiguobacterium,91.77,63.5
+Faecalibacterium,49,GCF_010509575.1,Faecalibacterium duncaniae,True,Complete Genome,3102523,93.12,21.64,UMGS2067,L2_species,0,1,93.12,UMGS2067,Faecalibacterium,93.12,21.64
+Faecalibacterium,49,GCF_023347235.1,Faecalibacterium sp. I4-1-79,False,Complete Genome,3227950,95.89,35.16,UMGS2067,L1_strain,0,1,95.89,UMGS2067,Faecalibacterium,95.89,35.16
+Faecalibacterium,49,GCF_023347255.1,Faecalibacterium sp. I4-3-84,False,Complete Genome,3119411,97.17,66.76,GCF_000166035,L1_strain,0,1,97.17,GCF_000166035,Faecalibacterium,97.17,66.76
+Faecalibacterium,49,GCF_023347535.1,Faecalibacterium wellingii,True,Complete Genome,2776287,97.71,72.64,UMGS184,L1_strain,0,1,97.71,UMGS184,Faecalibacterium,97.71,72.64
+Faecalibacterium,49,GCF_036632915.2,Faecalibacterium taiwanense,True,Complete Genome,2955389,97.9,76.31,GCF_000166035,L1_strain,0,1,97.9,GCF_000166035,Faecalibacterium,97.9,76.31
+Faecalibacterium,49,GCF_049532955.1,Faecalibacterium prausnitzii,True,Complete Genome,3141344,89.5,9.61,UMGS2067,L2_species,0,1,89.5,UMGS2067,Faecalibacterium,89.5,9.61
+Faecalibacterium,49,GCF_049545105.1,Faecalibacterium hominis (ex Afrizal et al. 2022),True,Complete Genome,3080408,93.0,21.3,UMGS2067,L2_species,0,1,93.0,UMGS2067,Faecalibacterium,93.0,21.3
+Faecalibacterium,49,GCF_049562865.1,Faecalibacterium sp. 7,False,Complete Genome,3108353,97.42,65.42,UMGS184,L1_strain,0,1,97.42,UMGS184,Faecalibacterium,97.42,65.42
+Finegoldia,50,GCF_013267535.1,Finegoldia magna,True,Complete Genome,2090058,97.6,75.46,GCF_000010185,L1_strain,0,1,97.6,GCF_000010185,Finegoldia,97.6,75.46
+Flavobacterium,51,GCF_000016645.1,Flavobacterium johnsoniae UW101,True,Complete Genome,6096872,,,,L2_far,0,1,,,,80.0,0.18
+Flavobacterium,51,GCF_003122385.1,Flavobacterium crocinum,True,Complete Genome,5877431,,,,L2_far,0,1,,,,80.0,0.22
+Flavobacterium,51,GCF_020911925.1,Flavobacterium cupriresistens,True,Complete Genome,5740613,,,,L2_far,0,1,,,,81.17,0.33
+Flavobacterium,51,GCF_023272795.1,Flavobacterium humidisoli,True,Complete Genome,5636211,,,,L2_far,0,1,,,,80.95,0.32
+Flavobacterium,51,GCF_024271895.1,Flavobacterium bizetiae,True,Complete Genome,5745280,,,,L2_far,0,1,,,,79.53,0.32
+Flavobacterium,51,GCF_024499525.1,Flavobacterium panici,True,Complete Genome,5972859,,,,L2_far,0,1,,,,80.54,0.26
+Flavobacterium,51,GCF_027111295.1,Flavobacterium gelatinilyticum,True,Complete Genome,5832845,,,,L2_far,0,1,,,,79.99,0.29
+Flavobacterium,51,GCF_030378165.1,Flavobacterium panacagri,True,Complete Genome,5976098,,,,L2_far,0,1,,,,80.39,0.25
+Franconibacter,52,GCF_036830455.1,Franconibacter daqui,True,Complete Genome,4720980,89.17,35.81,UMGS2076,L2_species,0,1,89.17,UMGS2076,Franconibacter,89.17,35.81
+Franconibacter,52,GCF_049942935.1,Franconibacter helveticus 1159,True,Complete Genome,4690958,98.98,64.17,UMGS2076,L1_strain,0,1,98.98,UMGS2076,Franconibacter,98.98,64.17
+Franconibacter,52,GCF_056780215.1,Franconibacter pulveris,True,Complete Genome,4684626,89.32,36.18,UMGS2076,L2_species,0,1,89.32,UMGS2076,Franconibacter,89.32,36.18
+Fusobacterium,53,GCF_001296145.1,Fusobacterium animalis,True,Complete Genome,2310804,98.19,91.53,GCF_000158275,L1_strain,0,1,98.19,GCF_000158275,Fusobacterium,98.19,91.53
+Fusobacterium,53,GCF_001455085.1,Fusobacterium hwasookii ChDC F206,True,Complete Genome,2430523,93.21,70.78,GCF_000523555,L2_species,0,1,93.21,GCF_000523555,Fusobacterium,98.52,0.08
+Fusobacterium,53,GCF_001457555.1,Fusobacterium polymorphum,True,Complete Genome,2455060,96.75,79.91,GCF_000523555,L1_strain,0,1,96.75,GCF_000523555,Fusobacterium,98.22,0.1
+Fusobacterium,53,GCF_003019315.1,Fusobacterium mortiferum ATCC 9817,True,Complete Genome,2716766,99.99,98.06,GCF_000158195,L0_dup,0,0,99.99,GCF_000158195,Fusobacterium,99.99,98.06
+Fusobacterium,53,GCF_003019655.1,Fusobacterium varium ATCC 27725,True,Complete Genome,3346458,99.99,98.74,GCF_000159915,L0_dup,0,0,99.99,GCF_000159915,Fusobacterium,99.99,98.74
+Fusobacterium,53,GCF_003019675.1,Fusobacterium ulcerans,True,Complete Genome,3537675,99.9,98.67,GCF_000158315,L0_dup,0,0,99.9,GCF_000158315,Fusobacterium,99.9,98.67
+Fusobacterium,53,GCF_016724785.1,Fusobacterium canifelinum,True,Complete Genome,2352222,92.25,66.02,GCF_000523555,L2_species,0,1,92.25,GCF_000523555,Fusobacterium,97.65,0.05
+Fusobacterium,53,GCF_055694045.1,Fusobacterium abscessus,True,Complete Genome,2209464,94.91,77.66,GCF_000479265,L2_species,0,1,94.91,GCF_000479265,Fusobacterium,99.22,0.21
+Garciella,54,GCF_900167305.1,Garciella nitratireducens DSM 15102,True,Scaffold,2163332,,,,L2_far,0,1,,,,81.61,6.52
+Gemella,55,GCF_001553915.1,Gemella sp. oral taxon 928,False,Complete Genome,1769679,,,,L2_far,0,1,,,,82.95,0.08
+Gemella,55,GCF_003351945.1,Gemella sp. ND 6198,False,Complete Genome,1797925,,,,L2_far,0,1,,,,82.95,0.08
+Gemella,55,GCF_009730295.1,Gemella sanguinis,True,Complete Genome,1796606,93.46,47.46,UMGS1894,L2_species,0,1,93.46,UMGS1894,Gemella,93.46,47.46
+Gemella,55,GCF_018866345.1,Gemella sp. zg-570,False,Complete Genome,1558665,,,,L2_far,0,1,,,,,
+Gemella,55,GCF_020097455.1,Gemella haemolysans,True,Complete Genome,1928240,,,,L2_far,0,1,,,,79.85,2.55
+Gemella,55,GCF_900476045.1,Gemella morbillorum,True,Complete Genome,1760930,,,,L2_far,0,1,,,,81.73,3.31
+Gemmiger,56,GCF_027689445.1,Gemmiger qucibialis,True,Scaffold,3494751,,,,L2_far,0,1,,,,79.47,0.27
+Gemmiger,56,GCF_052308075.1,Gemmiger sp.,False,Scaffold,3181577,,,,L2_far,0,1,,,,79.64,0.26
+Gemmiger,56,GCF_056961695.1,Gemmiger sp.,False,Scaffold,2606607,,,,L2_far,0,1,,,,79.06,0.4
+Gemmiger,56,GCF_900167555.1,Gemmiger formicilis,True,Scaffold,3241569,,,,L2_far,0,1,,,,79.02,0.21
+Gemmiger,56,GCF_977036745.1,Gemmiger sp.,False,Scaffold,2845268,,,,L2_far,0,1,,,,79.79,0.31
+Gemmiger,56,GCF_977038045.1,Gemmiger sp.,False,Scaffold,2520302,,,,L2_far,0,1,,,,78.47,0.4
+Gemmiger,56,GCF_977039575.1,Gemmiger sp.,False,Scaffold,2918144,,,,L2_far,0,1,,,,79.92,0.47
+Gemmiger,56,GCF_977051525.1,Gemmiger sp.,False,Scaffold,2427676,,,,L2_far,0,1,,,,79.68,0.42
+Granulicatella,57,GCF_019931005.1,Granulicatella adiacens,True,Complete Genome,1965420,90.45,19.83,UMGS1922,L2_species,0,1,90.45,UMGS1922,Granulicatella,90.45,19.83
+Granulicatella,57,GCF_020735385.1,Granulicatella elegans,True,Complete Genome,1890620,,,,L2_far,0,1,,,,88.39,1.03
+Halomonas,58,GCF_000196875.2,Halomonas elongata DSM 2581,True,Complete Genome,4061825,,,,L2_far,0,1,,,,80.06,0.96
+Halomonas,58,GCF_001431725.1,Halomonas huangheensis,True,Complete Genome,4757486,,,,L2_far,0,1,,,,81.18,0.07
+Halomonas,58,GCF_001545155.1,Halomonas chromatireducens,True,Complete Genome,3973651,,,,L2_far,0,1,,,,81.05,0.43
+Halomonas,58,GCF_008329985.2,Halomonas binhaiensis,True,Complete Genome,4895269,,,,L2_far,0,1,,,,81.6,0.08
+Halomonas,58,GCF_025820815.1,Halomonas qinghailakensis,True,Complete Genome,3804176,,,,L2_far,0,1,,,,99.37,0.04
+Halomonas,58,GCF_030505695.1,Halomonas alkalicola,True,Complete Genome,3989759,,,,L2_far,0,1,,,,80.76,1.33
+Halomonas,58,GCF_050215505.1,Halomonas casei,True,Complete Genome,4150051,,,,L2_far,0,1,,,,98.33,0.04
+Halomonas,58,GCF_055382475.1,Halomonas beimenensis,True,Complete Genome,4053137,,,,L2_far,0,1,,,,80.8,1.54
+Helicobacter,59,GCF_000007905.1,Helicobacter hepaticus ATCC 51449,True,Complete Genome,1799146,,,,L2_far,0,1,,,,98.52,0.17
+Helicobacter,59,GCF_000259275.1,Helicobacter cetorum MIT 99-5656,True,Complete Genome,1847790,82.08,14.32,GCF_000345485,L2_species,0,1,82.08,GCF_000345485,Helicobacter,96.94,0.35
+Helicobacter,59,GCF_000284635.1,Helicobacter cinaedi PAGU611,True,Complete Genome,2101402,99.08,94.73,GCF_000349975,L0_dup,0,0,99.08,GCF_000349975,Helicobacter,99.08,94.73
+Helicobacter,59,GCF_001460635.1,Helicobacter typhlonius,True,Complete Genome,1920832,,,,L2_far,0,1,,,,97.95,0.15
+Helicobacter,59,GCF_001602095.1,Helicobacter himalayensis,True,Complete Genome,1829936,,,,L2_far,0,1,,,,98.03,0.43
+Helicobacter,59,GCF_003097575.1,Helicobacter apodemus,True,Complete Genome,2067954,,,,L2_far,0,1,,,,97.66,0.36
+Helicobacter,59,GCF_030296895.1,Helicobacter felistomachi,True,Complete Genome,1891463,,,,L2_far,0,1,,,,98.69,0.21
+Helicobacter,59,GCF_039555295.1,Helicobacter mastomyrinus,True,Complete Genome,2090509,,,,L2_far,0,1,,,,98.27,0.12
+Klebsiella,60,GCF_003261575.2,Klebsiella huaxiensis,True,Complete Genome,6300829,88.46,50.52,20287_6_6,L2_species,0,1,88.46,20287_6_6,Klebsiella,88.46,50.52
+Klebsiella,60,GCF_012029655.1,Klebsiella terrigena,True,Complete Genome,5598454,84.96,32.76,20298_2_67,L2_species,0,1,84.96,20298_2_67,Klebsiella,84.96,32.76
+Klebsiella,60,GCF_015139575.1,Klebsiella michiganensis,True,Complete Genome,6041841,98.86,88.04,20298_2_67,L1_strain,0,1,98.86,20298_2_67,Klebsiella,98.86,88.04
+Klebsiella,60,GCF_018139045.1,Klebsiella pasteurii,True,Complete Genome,5910952,95.72,84.42,20287_6_6,L1_strain,0,1,95.72,20287_6_6,Klebsiella,95.72,84.42
+Klebsiella,60,GCF_020525545.1,Klebsiella variicola subsp. variicola,True,Complete Genome,5521194,99.02,91.78,GCF_000163075,L0_dup,0,0,99.02,GCF_000163075,Klebsiella,99.02,91.78
+Klebsiella,60,GCF_030505655.1,Klebsiella ornithinolytica,True,Complete Genome,5952440,84.55,26.89,20298_2_67,L2_species,0,1,84.55,20298_2_67,Klebsiella,84.55,26.89
+Klebsiella,60,GCF_042137965.1,Klebsiella grimontii,True,Complete Genome,5885562,99.18,91.11,20287_6_6,L0_dup,0,0,99.18,20287_6_6,Klebsiella,99.18,91.11
+Klebsiella,60,GCF_900636985.1,Klebsiella oxytoca,True,Complete Genome,5857964,99.13,93.02,20298_3_13,L0_dup,0,0,99.13,20298_3_13,Klebsiella,99.13,93.02
+Lachnobacterium,61,GCF_900107245.1,Lachnobacterium bovis DSM 14045,True,Scaffold,2717066,,,,L2_far,0,1,,,,99.42,0.07
+Lachnoclostridium,62,GCF_000018685.1,Lachnoclostridium phytofermentans ISDg,True,Complete Genome,4847594,,,,L2_far,0,1,,,,,
+Lachnoclostridium,62,GCF_030524235.1,Lachnoclostridium edouardi,True,Scaffold,2993231,,,,L2_far,1,0,98.73,20298_3_62,Clostridium,,
+Lachnoclostridium,62,GCF_900625025.1,Lachnoclostridium sp. Marseille-P6806,False,Scaffold,3125999,,,,L2_far,0,1,,,,96.34,0.03
+Lachnoclostridium,62,GCF_964238185.1,Lachnoclostridium sp. Marseille-P6806,False,Scaffold,3184162,,,,L2_far,1,0,99.22,UMGS34,Clostridium,95.88,0.14
+Lachnospira,63,GCF_000146185.1,Lachnospira eligens ATCC 27750,True,Complete Genome,2831389,95.58,73.12,14207_7_1,L1_strain,0,1,95.58,14207_7_1,Lachnospira,95.58,73.12
+Lactobacillus,64,GCF_003151025.1,Lactobacillus kullabergensis,True,Complete Genome,2018944,,,,L2_far,0,1,,,,96.31,0.38
+Lactobacillus,64,GCF_009769205.1,Lactobacillus crispatus,True,Complete Genome,2039404,,,,L2_far,0,1,,,,95.9,0.17
+Lactobacillus,64,GCF_014656585.1,Lactobacillus kefiranofaciens,True,Complete Genome,2173634,86.95,19.18,GCF_000160855,L2_species,0,1,86.95,GCF_000160855,Lactobacillus,92.51,0.18
+Lactobacillus,64,GCF_016647595.1,Lactobacillus ultunensis,True,Complete Genome,2246389,99.96,95.35,GCF_000159415,L0_dup,0,0,99.96,GCF_000159415,Lactobacillus,99.96,95.35
+Lactobacillus,64,GCF_019469265.1,Lactobacillus panisapium,True,Complete Genome,2188116,,,,L2_far,0,1,,,,96.16,0.08
+Lactobacillus,64,GCF_046109915.1,Lactobacillus helveticus,True,Complete Genome,2120944,98.44,69.17,GCF_000160855,L1_strain,0,1,98.44,GCF_000160855,Lactobacillus,98.44,69.17
+Lactobacillus,64,GCF_055502585.1,Lactobacillus kitasatonis,True,Complete Genome,1999355,84.73,15.61,GCF_000160855,L2_species,0,1,84.73,GCF_000160855,Lactobacillus,95.88,0.12
+Lactobacillus,64,GCF_947539375.1,Lactobacillus isalae,True,Complete Genome,2119816,88.58,46.79,20427_4_22,L2_species,0,1,88.58,20427_4_22,Lactobacillus,96.99,0.13
+Leuconostoc,65,GCF_000014445.1,Leuconostoc mesenteroides subsp. mesenteroides ATCC 8293,True,Complete Genome,2075763,98.41,66.97,GCF_000160595,L1_strain,0,1,98.41,GCF_000160595,Leuconostoc,98.41,66.97
+Leuconostoc,65,GCF_000092505.1,Leuconostoc kimchii IMSNU 11154,True,Complete Genome,2101787,,,,L2_far,0,1,,,,88.18,4.11
+Leuconostoc,65,GCF_000196855.1,Leuconostoc gasicomitatum LMG 18811,True,Complete Genome,1954080,,,,L2_far,0,1,,,,82.57,1.99
+Leuconostoc,65,GCF_000298875.1,Leuconostoc gelidum JB7,True,Complete Genome,1893499,,,,L2_far,0,1,,,,83.3,1.64
+Leuconostoc,65,GCF_001891125.1,Leuconostoc suionicum,True,Complete Genome,2048833,93.98,60.06,GCF_000160595,L2_species,0,1,93.98,GCF_000160595,Leuconostoc,93.98,60.06
+Leuconostoc,65,GCF_007954785.1,Leuconostoc citreum,True,Complete Genome,1903250,,,,L2_far,0,1,,,,87.33,4.31
+Leuconostoc,65,GCF_016127255.1,Leuconostoc pseudomesenteroides,True,Complete Genome,2114657,96.9,81.99,20298_2_19,L1_strain,0,1,96.9,20298_2_19,Leuconostoc,96.9,81.99
+Leuconostoc,65,GCF_045801155.1,Leuconostoc falkenbergense,True,Complete Genome,2170838,92.71,75.15,20298_2_19,L2_species,0,1,92.71,20298_2_19,Leuconostoc,92.71,75.15
+Listeria,66,GCF_000027145.1,Listeria seeligeri serovar 1/2b str. SLCC3954,True,Complete Genome,2797636,84.35,32.36,GCF_000241405,L2_species,0,1,84.35,GCF_000241405,Listeria,84.35,32.36
+Listeria,66,GCF_000196035.1,Listeria monocytogenes EGD-e,True,Complete Genome,2944528,89.79,63.64,GCF_000241405,L2_species,0,1,89.79,GCF_000241405,Listeria,89.79,63.64
+Listeria,66,GCF_000763515.1,Listeria ivanovii subsp. ivanovii,True,Complete Genome,2919548,84.19,29.42,GCF_000241405,L2_species,0,1,84.19,GCF_000241405,Listeria,84.19,29.42
+Listeria,66,GCF_028596125.1,Listeria innocua,True,Complete Genome,2887185,98.75,92.24,GCF_000241405,L1_strain,0,1,98.75,GCF_000241405,Listeria,98.75,92.24
+Listeria,66,GCF_031843265.2,Listeria swaminathanii,True,Complete Genome,2848613,89.18,61.29,GCF_000241405,L2_species,0,1,89.18,GCF_000241405,Listeria,89.18,61.29
+Listeria,66,GCF_051853115.1,Listeria aquatica,True,Complete Genome,2715857,,,,L2_far,0,1,,,,82.21,0.92
+Listeria,66,GCF_900187315.1,Listeria welshimeri,True,Complete Genome,2814137,88.03,56.93,GCF_000241405,L2_species,0,1,88.03,GCF_000241405,Listeria,88.03,56.93
+Listeria,66,GCF_900638015.1,Listeria grayi,True,Complete Genome,2751104,,,,L2_far,0,1,,,,83.58,0.8
+Marvinbryantia,67,GCF_025148285.1,Marvinbryantia formatexigens DSM 14469,True,Complete Genome,4577574,87.42,19.37,UMGS1329,L2_species,0,1,87.42,UMGS1329,Marvinbryantia,87.42,19.37
+Marvinbryantia,67,GCF_047017445.1,Marvinbryantia sp.,False,Scaffold,4181233,99.07,78.5,UMGS1329,L0_dup,0,0,99.07,UMGS1329,Marvinbryantia,99.07,78.5
+Massiliomicrobiota,68,GCF_002160725.1,Massilimicrobiota sp. An142,False,Contig,2772711,98.43,73.99,UMGS1038,L1_strain,0,1,98.43,UMGS1038,Massiliomicrobiota,98.43,73.99
+Massiliomicrobiota,68,GCF_002160815.1,Massilimicrobiota sp. An134,False,Contig,2558858,98.53,73.39,UMGS1038,L1_strain,0,1,98.53,UMGS1038,Massiliomicrobiota,98.53,73.39
+Massiliomicrobiota,68,GCF_012027715.1,Massilimicrobiota sp. SW1139,False,Contig,2302628,97.95,77.75,UMGS1038,L1_strain,0,1,97.95,UMGS1038,Massiliomicrobiota,97.95,77.75
+Massiliomicrobiota,68,GCF_055420065.1,Massilimicrobiota sp. mt181,False,Contig,2689029,87.14,26.6,UMGS1038,L2_species,0,1,87.14,UMGS1038,Massiliomicrobiota,87.14,26.6
+Megamonas,69,GCF_010669225.1,Megamonas funiformis,True,Complete Genome,2568766,99.99,99.11,GCF_000245775,L0_dup,0,0,99.99,GCF_000245775,Megamonas,99.99,99.11
+Megamonas,69,GCF_900187035.1,Megamonas hypermegale,True,Complete Genome,2230342,,,,L2_far,0,1,,,,83.58,6.98
+Megasphaera,70,GCF_003010495.1,Megasphaera elsdenii DSM 20460,True,Complete Genome,2478942,90.49,58.38,UMGS14,L2_species,0,1,90.49,UMGS14,Megasphaera,90.49,58.38
+Megasphaera,70,GCF_003367905.1,Megasphaera stantonii,True,Complete Genome,2652760,97.4,83.23,13470_2_73,L1_strain,0,1,97.4,13470_2_73,Megasphaera,97.4,83.23
+Megasphaera,70,GCF_020181515.1,Megasphaera massiliensis,True,Complete Genome,2610024,96.13,79.64,UMGS163,L1_strain,0,1,96.13,UMGS163,Megasphaera,96.13,79.64
+Megasphaera,70,GCF_043520715.1,Megasphaera hexanoica,True,Complete Genome,2882434,98.71,80.16,GCF_900095875,L1_strain,0,1,98.71,GCF_900095875,Megasphaera,98.71,80.16
+Megasphaera,70,GCF_050219315.1,Megasphaera sueciensis,True,Complete Genome,2904220,,,,L2_far,0,1,,,,87.68,1.23
+Megasphaera,70,GCF_052147965.1,Megasphaera coli,True,Complete Genome,1822736,98.71,87.52,GCF_900095855,L1_strain,0,1,98.71,GCF_900095855,Megasphaera,100.0,0.04
+Morganella,71,GCF_006094455.1,Morganella morganii subsp. morganii,True,Complete Genome,3889903,93.73,72.02,UMGS836,L2_species,0,1,93.73,UMGS836,Morganella,93.73,72.02
+Negativicoccus,72,GCF_014207605.1,Negativicoccus succinicivorans,True,Scaffold,1405382,97.59,82.05,UMGS760,L1_strain,0,1,97.59,UMGS760,Negativicoccus,97.59,82.05
+Neisseria,73,GCF_009671065.1,Neisseria brasiliensis,True,Complete Genome,2617510,,,,L2_far,0,1,,,,80.73,1.98
+Neisseria,73,GCF_014055005.1,Neisseria dentiae,True,Complete Genome,2755930,,,,L2_far,0,1,,,,79.52,1.3
+Neisseria,73,GCF_014297595.2,Neisseria musculi,True,Complete Genome,2933059,,,,L2_far,0,1,,,,80.6,0.43
+Neisseria,73,GCF_014898075.1,Neisseria yangbaofengii,True,Complete Genome,2645607,,,,L2_far,0,1,,,,81.03,2.03
+Neisseria,73,GCF_017753665.1,Neisseria sicca,True,Complete Genome,2566407,93.47,55.24,GCF_000220865,L2_species,0,1,93.47,GCF_000220865,Neisseria,93.47,55.24
+Neisseria,73,GCF_022749495.1,Neisseria macacae ATCC 33926,True,Complete Genome,2801968,99.99,95.6,GCF_000220865,L0_dup,0,0,99.99,GCF_000220865,Neisseria,99.99,95.6
+Neisseria,73,GCF_022870885.1,Neisseria dumasiana,True,Complete Genome,2679563,,,,L2_far,0,1,,,,80.99,1.92
+Neisseria,73,GCF_900636765.1,Neisseria canis,True,Complete Genome,2569389,,,,L2_far,0,1,,,,80.29,1.66
+Nesterenkonia,74,GCF_007922635.1,Nesterenkonia sp. NBAIMH1,False,Complete Genome,2691978,,,,L2_far,0,1,,,,82.12,1.0
+Nesterenkonia,74,GCF_019575955.1,Nesterenkonia pannonica,True,Complete Genome,2699453,,,,L2_far,0,1,,,,83.46,0.81
+Odoribacter,75,GCF_900187175.1,Odoribacter splanchnicus,True,Complete Genome,4392177,98.44,75.35,18048_2_90,L1_strain,0,1,98.44,18048_2_90,Odoribacter,98.44,75.35
+Olsenella,76,GCF_000143845.1,Olsenella uli DSM 7084,True,Complete Genome,2051896,,,,L2_far,0,1,,,,85.23,1.23
+Olsenella,76,GCF_001189515.2,Olsenella sp. oral taxon 807,False,Complete Genome,3213585,,,,L2_far,0,1,,,,83.69,0.26
+Oribacterium,77,GCF_000160135.1,Oribacterium sp. oral taxon 078 str. F0262,False,Scaffold,2676554,,,,L2_far,0,1,,,,,
+Oribacterium,77,GCF_000238055.2,Oribacterium parvum ACB1,True,Scaffold,2470863,,,,L2_far,0,1,,,,,
+Oribacterium,77,GCF_000238075.1,Oribacterium asaccharolyticum ACB7,True,Scaffold,2520584,,,,L2_far,0,1,,,,,
+Oribacterium,77,GCF_000701645.1,Oribacterium sp. FC2011,False,Scaffold,4166765,,,,L2_far,0,1,,,,83.03,0.25
+Oribacterium,77,GCF_014202695.1,Oribacterium sinus,True,Scaffold,2727810,,,,L2_far,0,1,,,,,
+Oribacterium,77,GCF_057249685.1,Oribacterium sp.,False,Scaffold,2743605,,,,L2_far,0,1,,,,,
+Oribacterium,77,GCF_057250125.1,Oribacterium sp.,False,Scaffold,2668154,,,,L2_far,0,1,,,,,
+Oribacterium,77,GCF_900113415.1,Oribacterium sp. WCC10,False,Scaffold,3642652,,,,L2_far,0,1,,,,82.6,0.35
+Oscillibacter,78,GCF_003574015.1,Oscillibacter sp. PEA192,False,Complete Genome,3320462,88.78,20.01,UMGS1987,L2_species,0,1,88.78,UMGS1987,Oscillibacter,88.78,20.01
+Oscillibacter,78,GCF_014334055.1,Oscillibacter hominis,True,Chromosome,2823823,,,,L2_far,0,1,,,,83.87,0.39
+Oxalobacter,79,GCF_002127965.1,Oxalobacter formigenes,True,Complete Genome,2468871,100.0,97.96,GCF_000158495,L0_dup,0,0,100.0,GCF_000158495,Oxalobacter,100.0,97.96
+Oxalobacter,79,GCF_027116475.1,Oxalobacter aliiformigenes,True,Complete Genome,2406724,,,,L2_far,0,1,,,,80.91,9.53
+Oxalobacter,79,GCF_027118995.1,Oxalobacter vibrioformis,True,Complete Genome,2606300,,,,L2_far,0,1,,,,97.85,0.09
+Paenibacillus,80,GCF_000258535.2,Paenibacillus mucilaginosus K02,True,Complete Genome,8819200,,,,L2_far,0,1,,,,80.9,0.23
+Paenibacillus,80,GCF_000758665.1,Paenibacillus borealis,True,Complete Genome,8156808,,,,L2_far,0,1,,,,96.68,0.14
+Paenibacillus,80,GCF_000981585.1,Paenibacillus riograndensis SBR5,True,Complete Genome,7919576,,,,L2_far,0,1,,,,96.77,0.14
+Paenibacillus,80,GCF_002192415.1,Paenibacillus donghaensis,True,Complete Genome,8542333,,,,L2_far,0,1,,,,83.17,0.21
+Paenibacillus,80,GCF_009728935.1,Paenibacillus psychroresistens,True,Complete Genome,8101785,,,,L2_far,0,1,,,,97.61,0.13
+Paenibacillus,80,GCF_018604145.1,Paenibacillus agaridevorans,True,Complete Genome,9041977,,,,L2_far,0,1,,,,87.0,0.17
+Paenibacillus,80,GCF_046244365.1,Paenibacillus litoralis,True,Complete Genome,8741851,,,,L2_far,0,1,,,,86.06,0.51
+Paenibacillus,80,GCF_054515435.1,Paenibacillus chondroitinus,True,Complete Genome,8010791,,,,L2_far,0,1,,,,80.54,0.18
+Pantoea,81,GCF_000233595.1,Pantoea ananatis PA13,True,Complete Genome,4867131,,,,L2_far,0,1,,,,86.2,2.59
+Pantoea,81,GCF_002101395.1,Pantoea alhagi,True,Complete Genome,4316301,,,,L2_far,0,1,,,,83.16,0.87
+Pantoea,81,GCF_004792415.1,Pantoea vagans,True,Complete Genome,4790329,91.11,30.62,UMGS1895,L2_species,0,1,91.11,UMGS1895,Pantoea,91.11,30.62
+Pantoea,81,GCF_009646115.1,Pantoea eucalypti,True,Complete Genome,4798990,98.89,49.25,UMGS1895,L1_strain,0,1,98.89,UMGS1895,Pantoea,98.89,49.25
+Pantoea,81,GCF_011044475.1,Pantoea stewartii,True,Complete Genome,4982863,,,,L2_far,0,1,,,,86.42,2.91
+Pantoea,81,GCF_019048385.1,Pantoea agglomerans,True,Complete Genome,4692018,91.32,32.37,UMGS1895,L2_species,0,1,91.32,UMGS1895,Pantoea,91.32,32.37
+Pantoea,81,GCF_019890955.1,Pantoea dispersa,True,Complete Genome,4885065,83.75,13.86,UMGS970,L2_species,0,1,83.75,UMGS970,Pantoea,85.85,2.92
+Pantoea,81,GCF_046529425.1,Pantoea allii,True,Complete Genome,5001370,,,,L2_far,0,1,,,,86.04,3.16
+Parabacteroides,82,GCF_002257605.1,Parabacteroides sp. CT06,False,Complete Genome,5372666,,,,L2_far,0,1,,,,98.7,0.09
+Parabacteroides,82,GCF_018279895.1,Parabacteroides distasonis,True,Complete Genome,5348976,,,,L2_far,0,1,,,,99.04,0.11
+Parabacteroides,82,GCF_018289315.1,Parabacteroides merdae,True,Complete Genome,4799513,98.81,77.57,13470_2_67,L1_strain,0,1,98.81,13470_2_67,Parabacteroides,98.81,77.57
+Parabacteroides,82,GCF_020091425.1,Parabacteroides goldsteinii,True,Complete Genome,7053599,97.8,74.86,GCF_000969835,L1_strain,0,1,97.8,GCF_000969835,Parabacteroides,97.8,74.86
+Parabacteroides,82,GCF_023744375.2,Parabacteroides absconsus,True,Complete Genome,3770817,97.51,66.31,UMGS1064,L1_strain,0,1,97.51,UMGS1064,Parabacteroides,97.51,66.31
+Parabacteroides,82,GCF_024759285.1,Parabacteroides faecis,True,Complete Genome,6826483,97.94,67.19,UMGS1137,L1_strain,0,1,97.94,UMGS1137,Parabacteroides,97.94,67.19
+Parabacteroides,82,GCF_025151045.1,Parabacteroides johnsonii DSM 18315,True,Complete Genome,4749455,97.02,71.99,21673_4_33,L1_strain,0,1,97.02,21673_4_33,Parabacteroides,97.02,71.99
+Parabacteroides,82,GCF_049860805.1,Parabacteroides vesiculifaciens,True,Complete Genome,5161977,87.88,39.02,21673_4_33,L2_species,0,1,87.88,21673_4_33,Parabacteroides,87.88,39.02
+Paraprevotella,83,GCF_027923645.1,Paraprevotella clara,True,Complete Genome,4034988,97.76,82.23,GCF_000233955,L1_strain,0,1,97.76,GCF_000233955,Paraprevotella,97.76,82.23
+Paraprevotella,83,GCF_900683745.1,Paraprevotella xylaniphila YIT 11841,True,Complete Genome,4125322,98.84,84.36,GCF_000205165,L1_strain,0,1,98.84,GCF_000205165,Paraprevotella,98.84,84.36
+Pediococcus,84,GCF_000014505.1,Pediococcus pentosaceus ATCC 25745,True,Complete Genome,1832387,,,,L2_far,0,1,,,,84.12,2.61
+Pediococcus,84,GCF_001611155.1,Pediococcus damnosus,True,Complete Genome,2173661,,,,L2_far,0,1,,,,82.62,0.47
+Pediococcus,84,GCF_001702215.1,Pediococcus claussenii,True,Complete Genome,1950035,,,,L2_far,0,1,,,,85.04,1.01
+Pediococcus,84,GCF_016127815.1,Pediococcus acidilactici,True,Complete Genome,2068296,97.34,81.1,GCF_000146325,L1_strain,0,1,97.34,GCF_000146325,Pediococcus,97.34,81.1
+Pediococcus,84,GCF_034049535.1,Pediococcus inopinatus,True,Complete Genome,2090142,,,,L2_far,0,1,,,,82.9,0.55
+Pediococcus,84,GCF_047220215.1,Pediococcus siamensis,True,Complete Genome,2298821,,,,L2_far,0,1,,,,83.04,0.79
+Pediococcus,84,GCF_964062635.1,Pediococcus ethanolidurans,True,Complete Genome,2228266,,,,L2_far,0,1,,,,84.99,0.87
+Pediococcus,84,GCF_964063155.1,Pediococcus parvulus,True,Complete Genome,2163309,,,,L2_far,0,1,,,,80.94,0.59
+Pelosinus,85,GCF_000271665.2,Pelosinus fermentans JBW45,True,Complete Genome,5380816,,,,L2_far,0,1,,,,82.41,0.08
+Pelosinus,85,GCF_000725345.1,Pelosinus sp. UFO1,False,Complete Genome,5115410,,,,L2_far,0,1,,,,,
+Peptoniphilus,86,GCF_016726485.1,Peptoniphilus harei,True,Complete Genome,1929566,96.91,79.17,UMGS44,L1_strain,0,1,96.91,UMGS44,Peptoniphilus,96.91,79.17
+Peptoniphilus,86,GCF_023614525.1,Peptoniphilus genitalis,True,Complete Genome,1917962,96.3,84.65,20298_3_36,L1_strain,0,1,96.3,20298_3_36,Peptoniphilus,96.3,84.65
+Peptoniphilus,86,GCF_027921445.1,Peptoniphilus equinus,True,Complete Genome,1709189,,,,L2_far,0,1,,,,96.68,0.31
+Peptoniphilus,86,GCF_045348795.1,Peptoniphilus lacrimalis,True,Complete Genome,1675552,,,,L2_far,0,1,,,,95.92,4.07
+Peptostreptococcus,87,GCF_027125355.1,Peptostreptococcus equinus,True,Complete Genome,1995029,,,,L2_far,0,1,,,,80.78,0.28
+Peptostreptococcus,87,GCF_050780165.1,Peptostreptococcus anaerobius,True,Complete Genome,2151941,,,,L2_far,0,1,,,,81.13,0.46
+Peptostreptococcus,87,GCF_055394155.1,Peptostreptococcus porci,True,Complete Genome,2386046,,,,L2_far,0,1,,,,77.91,0.04
+Phascolarctobacterium,88,GCF_003945365.1,Phascolarctobacterium faecium,True,Complete Genome,2454371,98.88,82.15,UMGS470,L1_strain,0,1,98.88,UMGS470,Phascolarctobacterium,98.88,82.15
+Phascolarctobacterium,88,GCF_017968825.1,Phascolarctobacterium sp. Marseille-Q4147,False,Chromosome,2385942,,,,L2_far,0,1,,,,87.84,0.31
+Phascolarctobacterium,88,GCF_023497905.1,Phascolarctobacterium succinatutens,True,Chromosome,2345971,,,,L2_far,0,1,,,,87.64,0.41
+Phyllobacterium,89,GCF_002764115.1,Phyllobacterium zundukense,True,Complete Genome,6208009,,,,L2_far,0,1,,,,81.36,5.81
+Phyllobacterium,89,GCF_014189505.1,Phyllobacterium sp. 628,False,Complete Genome,5254435,82.99,17.61,UMGS170,L2_species,0,1,82.99,UMGS170,Phyllobacterium,82.99,17.61
+Phyllobacterium,89,GCF_020730965.2,Phyllobacterium pellucidum,True,Complete Genome,3872269,,,,L2_far,0,1,,,,80.73,5.58
+Phyllobacterium,89,GCF_020731415.3,Phyllobacterium meliloti,True,Complete Genome,5074034,84.43,27.21,UMGS170,L2_species,0,1,84.43,UMGS170,Phyllobacterium,84.43,27.21
+Phyllobacterium,89,GCF_025452215.1,Phyllobacterium sp. A18/5-2,False,Complete Genome,5805043,,,,L2_far,0,1,,,,80.58,4.34
+Phyllobacterium,89,GCF_054796155.1,Phyllobacterium sp. K27,False,Complete Genome,5316853,,,,L2_far,0,1,,,,81.19,1.36
+Phyllobacterium,89,GCF_055378485.1,Phyllobacterium sp. T2-21,False,Complete Genome,5660647,96.99,79.98,UMGS170,L1_strain,0,1,96.99,UMGS170,Phyllobacterium,96.99,79.98
+Porphyromonas,90,GCF_000010505.1,Porphyromonas gingivalis ATCC 33277,True,Complete Genome,2354886,,,,L2_far,0,1,,,,95.48,0.13
+Porphyromonas,90,GCF_000212375.1,Porphyromonas asaccharolytica DSM 20707,True,Complete Genome,2186370,94.85,29.69,UMGS2040,L2_species,0,1,94.85,UMGS2040,Porphyromonas,99.53,0.19
+Porphyromonas,90,GCF_020097375.1,Porphyromonas endodontalis,True,Complete Genome,2102930,,,,L2_far,0,1,,,,97.89,0.1
+Porphyromonas,90,GCF_022845615.1,Porphyromonas somerae,True,Complete Genome,2727503,97.33,63.69,UMGS713,L1_strain,0,1,97.33,UMGS713,Porphyromonas,97.56,0.2
+Porphyromonas,90,GCF_036320655.1,Porphyromonas pogonae,True,Complete Genome,2916423,,,,L2_far,0,1,,,,95.78,0.08
+Porphyromonas,90,GCF_055384205.1,Porphyromonas gingivicanis,True,Complete Genome,2085170,,,,L2_far,0,1,,,,,
+Porphyromonas,90,GCF_900476255.1,Porphyromonas crevioricanis,True,Complete Genome,2133352,,,,L2_far,0,1,,,,,
+Porphyromonas,90,GCF_900638305.1,Porphyromonas cangingivalis,True,Complete Genome,2404857,,,,L2_far,0,1,,,,83.65,0.17
+Prevotella,91,GCF_002849795.1,Prevotella jejuni,True,Complete Genome,3913006,,,,L2_far,0,1,,,,97.33,0.02
+Prevotella,91,GCF_002998535.1,Prevotella heparinolytica,True,Complete Genome,3608975,,,,L2_far,0,1,,,,97.78,0.02
+Prevotella,91,GCF_017347605.1,Prevotella herbatica,True,Complete Genome,3524789,,,,L2_far,0,1,,,,96.65,0.03
+Prevotella,91,GCF_018127765.1,Prevotella veroralis,True,Complete Genome,2990547,,,,L2_far,0,1,,,,95.17,0.08
+Prevotella,91,GCF_018127825.1,Prevotella nigrescens,True,Complete Genome,2887107,,,,L2_far,0,1,,,,100.0,0.11
+Prevotella,91,GCF_022024115.1,Prevotella communis,True,Complete Genome,3567699,,,,L2_far,0,1,,,,98.98,0.04
+Prevotella,91,GCF_055381405.1,Prevotella mikamonis,True,Complete Genome,2948037,,,,L2_far,0,1,,,,100.0,0.06
+Prevotella,91,GCF_055385135.1,Prevotella histicola,True,Complete Genome,2989316,,,,L2_far,0,1,,,,100.0,0.31
+Propionibacterium,92,GCF_000940845.1,Propionibacterium freudenreichii subsp. freudenreichii,True,Complete Genome,2649166,,,,L2_far,1,0,98.97,20298_2_29,Propionimicrobium,97.95,0.06
+Propionibacterium,92,GCF_003798325.1,Propionibacterium acidifaciens,True,Complete Genome,3072768,,,,L2_far,0,1,,,,81.11,0.19
+Propionibacterium,92,GCF_900637915.1,Propionibacterium australiense,True,Complete Genome,3044331,,,,L2_far,0,1,,,,97.95,0.05
+Propionimicrobium,93,GCF_030286045.1,Propionimicrobium sp. PCR01-08-3,False,Complete Genome,3289007,,,,L2_far,0,1,,,,80.78,0.41
+Propionimicrobium,93,GCF_055521855.1,Propionimicrobium lymphophilum,True,Complete Genome,2226193,,,,L2_far,0,1,,,,93.63,0.2
+Proteus,94,GCF_000069965.1,Proteus mirabilis HI4320,True,Complete Genome,4099895,98.97,87.51,GCF_000297815,L1_strain,0,1,98.97,GCF_000297815,Proteus,98.97,87.51
+Proteus,94,GCF_004116975.1,Proteus hauseri,True,Complete Genome,3930735,83.14,20.39,GCF_000297815,L2_species,0,1,83.14,GCF_000297815,Proteus,83.14,20.39
+Proteus,94,GCF_009914335.1,Proteus columbae,True,Complete Genome,4114477,84.5,26.21,GCF_000297815,L2_species,0,1,84.5,GCF_000297815,Proteus,84.5,26.21
+Proteus,94,GCF_011045835.1,Proteus terrae subsp. cibarius,True,Complete Genome,4118748,84.41,25.93,GCF_000297815,L2_species,0,1,84.41,GCF_000297815,Proteus,84.41,25.93
+Proteus,94,GCF_022369495.1,Proteus penneri,True,Complete Genome,4023090,84.46,26.91,GCF_000297815,L2_species,0,1,84.46,GCF_000297815,Proteus,84.46,26.91
+Proteus,94,GCF_025200655.1,Proteus vulgaris,True,Complete Genome,4035522,83.7,23.42,GCF_000297815,L2_species,0,1,83.7,GCF_000297815,Proteus,83.7,23.42
+Proteus,94,GCF_030271835.1,Proteus appendicitidis,True,Complete Genome,4105600,84.18,23.88,GCF_000297815,L2_species,0,1,84.18,GCF_000297815,Proteus,84.18,23.88
+Proteus,94,GCF_038825855.1,Proteus faecis,True,Complete Genome,3882378,84.23,25.63,GCF_000297815,L2_species,0,1,84.23,GCF_000297815,Proteus,84.23,25.63
+Providencia,95,GCF_016618195.1,Providencia manganoxydans,True,Complete Genome,4342370,,,,L2_far,0,1,,,,83.03,14.9
+Providencia,95,GCF_019048105.1,Providencia rettgeri,True,Complete Genome,4641942,91.77,71.59,GCF_000158055,L2_species,0,1,91.77,GCF_000158055,Providencia,91.77,71.59
+Providencia,95,GCF_029193595.2,Providencia hangzhouensis,True,Complete Genome,4598023,98.66,90.01,GCF_000158055,L1_strain,0,1,98.66,GCF_000158055,Providencia,98.66,90.01
+Providencia,95,GCF_035747985.1,Providencia stuartii,True,Complete Genome,4487528,99.22,89.83,GCF_000154865,L0_dup,0,0,99.22,GCF_000154865,Providencia,99.22,89.83
+Providencia,95,GCF_036898185.1,Providencia huaxiensis,True,Complete Genome,4641436,91.86,72.15,GCF_000158055,L2_species,0,1,91.86,GCF_000158055,Providencia,91.86,72.15
+Providencia,95,GCF_041953405.1,Providencia xihuensis,True,Complete Genome,4453698,84.38,23.21,GCF_000158055,L2_species,0,1,84.38,GCF_000158055,Providencia,84.38,23.21
+Providencia,95,GCF_041953975.1,Providencia zhejiangensis,True,Complete Genome,4330635,84.97,29.46,GCF_000154865,L2_species,0,1,84.97,GCF_000154865,Providencia,84.97,29.46
+Providencia,95,GCF_900475855.1,Providencia heimbachae,True,Complete Genome,4286000,,,,L2_far,0,1,,,,82.79,5.51
+Pseudobutyrivibrio,96,GCF_008935055.1,Pseudobutyrivibrio xylanivorans,True,Complete Genome,3584491,,,,L2_far,0,1,,,,,
+Pseudobutyrivibrio,96,GCF_054977415.1,Pseudobutyrivibrio ruminis,True,Complete Genome,2947984,,,,L2_far,0,1,,,,81.9,0.21
+Pseudomonas,97,GCF_001586155.1,Pseudomonas citronellolis,True,Complete Genome,6951444,84.37,16.87,GCF_000233495,L2_species,0,1,84.37,GCF_000233495,Pseudomonas,84.37,16.87
+Pseudomonas,97,GCF_003850565.1,Pseudomonas sessilinigenes,True,Complete Genome,6896611,,,,L2_far,0,1,,,,84.54,2.73
+Pseudomonas,97,GCF_014268755.2,Pseudomonas vanderleydeniana,True,Complete Genome,7026924,,,,L2_far,0,1,,,,84.76,3.69
+Pseudomonas,97,GCF_024296925.1,Pseudomonas nunensis,True,Complete Genome,7328926,,,,L2_far,0,1,,,,84.3,1.88
+Pseudomonas,97,GCF_042015035.1,Pseudomonas gorinensis,True,Complete Genome,7080597,,,,L2_far,0,1,,,,83.9,2.4
+Pseudomonas,97,GCF_045037875.1,Pseudomonas petroselini,True,Complete Genome,6936857,,,,L2_far,0,1,,,,83.71,1.98
+Pseudomonas,97,GCF_047758675.1,Pseudomonas arabinosi,True,Complete Genome,6932784,,,,L2_far,0,1,,,,84.14,1.7
+Pseudomonas,97,GCF_965119365.1,Pseudomonas medicaginis,True,Complete Genome,7118414,,,,L2_far,0,1,,,,84.94,0.5
+Ralstonia,98,GCF_000954135.1,Ralstonia mannitolilytica,True,Complete Genome,5072301,88.21,49.01,GCF_000227255,L2_species,0,1,88.21,GCF_000227255,Ralstonia,88.21,49.01
+Ralstonia,98,GCF_001587155.1,Ralstonia solanacearum,True,Complete Genome,5530249,84.43,22.82,GCF_000227255,L2_species,0,1,84.43,GCF_000227255,Ralstonia,84.43,22.82
+Ralstonia,98,GCF_001663855.1,Ralstonia insidiosa,True,Complete Genome,6177004,87.34,37.36,GCF_000227255,L2_species,0,1,87.34,GCF_000227255,Ralstonia,87.34,37.36
+Ralstonia,98,GCF_018243235.1,Ralstonia nicotianae,True,Complete Genome,5613239,84.51,23.23,GCF_000227255,L2_species,0,1,84.51,GCF_000227255,Ralstonia,84.51,23.23
+Ralstonia,98,GCF_021173085.2,Ralstonia wenshanensis,True,Complete Genome,5310536,91.54,69.12,GCF_000227255,L2_species,0,1,91.54,GCF_000227255,Ralstonia,91.54,69.12
+Ralstonia,98,GCF_024925465.1,Ralstonia pseudosolanacearum,True,Complete Genome,5690309,84.56,22.14,GCF_000227255,L2_species,0,1,84.56,GCF_000227255,Ralstonia,84.56,22.14
+Ralstonia,98,GCF_037101365.1,Ralstonia syzygii subsp. indonesiensis,True,Complete Genome,5521407,84.51,24.51,GCF_000227255,L2_species,0,1,84.51,GCF_000227255,Ralstonia,84.51,24.51
+Ralstonia,98,GCF_050626975.1,Ralstonia thomasii,True,Complete Genome,5138688,95.71,85.31,GCF_000227255,L1_strain,0,1,95.71,GCF_000227255,Ralstonia,95.71,85.31
+Robinsoniella,99,GCF_042680125.1,Robinsoniella peoriensis,True,Scaffold,7464303,99.06,65.85,UMGS271,L0_dup,0,0,99.06,UMGS271,Robinsoniella,99.06,65.85
+Roseburia,100,GCF_000225345.1,Roseburia hominis A2-183,True,Complete Genome,3592125,,,,L2_far,0,1,,,,99.26,0.1
+Roseburia,100,GCF_001940165.2,Roseburia sp. 831b,False,Complete Genome,3368602,,,,L2_far,0,1,,,,98.52,0.03
+Roseburia,100,GCF_001940225.2,Roseburia sp. 499,False,Complete Genome,3381825,,,,L2_far,0,1,,,,98.14,0.23
+Roseburia,100,GCF_014287515.2,Roseburia rectibacter,True,Complete Genome,3959994,98.84,78.99,UMGS147,L1_strain,0,1,98.84,UMGS147,Roseburia,98.84,78.99
+Roseburia,100,GCF_045061065.1,Roseburia faecis,True,Complete Genome,3385415,,,,L2_far,1,0,98.5,UMGS2010,Lachnobacterium,100.0,0.13
+Roseburia,100,GCF_900537995.1,Roseburia intestinalis L1-82,True,Complete Genome,4493348,98.57,77.46,14207_7_83,L1_strain,0,1,98.57,14207_7_83,Roseburia,98.57,77.46
+Rothia,101,GCF_000164695.2,Rothia dentocariosa ATCC 17931,True,Complete Genome,2506025,,,,L2_far,0,1,,,,85.01,1.31
+Rothia,101,GCF_014217215.1,Rothia nasimurium,True,Complete Genome,2526221,,,,L2_far,0,1,,,,80.77,0.62
+Rothia,101,GCF_014705925.2,Rothia terrae,True,Complete Genome,2660019,,,,L2_far,0,1,,,,82.09,0.33
+Rothia,101,GCF_014705945.2,Rothia amarae,True,Complete Genome,2483880,,,,L2_far,0,1,,,,81.2,0.4
+Rothia,101,GCF_016028855.1,Rothia kristinae,True,Complete Genome,2377741,,,,L2_far,0,1,,,,79.62,0.58
+Rothia,101,GCF_016726365.1,Rothia aeria,True,Complete Genome,2583917,,,,L2_far,0,1,,,,84.24,1.1
+Rothia,101,GCF_029850985.2,Rothia similimucilaginosa,True,Complete Genome,2089287,87.33,30.49,UMGS774,L2_species,0,1,87.33,UMGS774,Rothia,87.33,30.49
+Rothia,101,GCF_052232265.1,Rothia koreensis,True,Complete Genome,2908889,,,,L2_far,0,1,,,,81.08,0.34
+Ruminococcus,102,GCF_000723465.1,Ruminococcus bicirculans (ex Wegman et al. 2014),True,Complete Genome,2968500,97.88,79.54,21673_4_22,L1_strain,0,1,97.88,21673_4_22,Ruminococcus,98.86,0.59
+Ruminococcus,102,GCF_005601135.1,Ruminococcus bovis,True,Complete Genome,2440231,,,,L2_far,0,1,,,,97.22,0.19
+Ruminococcus,102,GCF_025151995.1,Ruminococcus gauvreauii,True,Complete Genome,4145839,,,,L2_far,0,1,,,,100.0,0.02
+Ruminococcus,102,GCF_027942055.1,Ruminococcus sp. FMB-CY1,False,Complete Genome,2375995,,,,L2_far,0,1,,,,100.0,0.14
+Ruminococcus,102,GCF_045819885.1,Ruminococcus sp. NATIVEDY160,False,Complete Genome,2427278,,,,L2_far,0,1,,,,100.0,0.03
+Ruminococcus,102,GCF_045819895.1,Ruminococcus sp. NATIVEDY161,False,Complete Genome,2475787,,,,L2_far,0,1,,,,91.68,0.25
+Ruminococcus,102,GCF_049562855.1,Ruminococcus callidus,True,Complete Genome,3228728,99.96,95.3,GCF_000468015,L0_dup,0,0,99.96,GCF_000468015,Ruminococcus,100.0,0.03
+Ruminococcus,102,GCF_058119865.1,Ruminococcus sp. 8Y-12,False,Complete Genome,4982813,,,,L2_far,0,1,,,,98.1,0.02
+Sanguibacteroides,103,GCF_027666085.1,Sanguibacteroides sp. AM78-02pH3A,False,Scaffold,3361013,88.14,57.08,UMGS572,L2_species,0,1,88.14,UMGS572,Sanguibacteroides,88.14,57.08
+Selenomonas,104,GCF_000208405.1,Selenomonas sputigena ATCC 35185,True,Complete Genome,2568361,,,,L2_far,0,1,,,,81.22,0.44
+Selenomonas,104,GCF_001189555.1,Selenomonas sp. oral taxon 478,False,Complete Genome,2284135,,,,L2_far,0,1,,,,82.23,0.3
+Selenomonas,104,GCF_001554015.1,Selenomonas sp. oral taxon 136,False,Complete Genome,2458072,,,,L2_far,0,1,,,,80.86,0.44
+Selenomonas,104,GCF_001717585.1,Selenomonas sp. oral taxon 920,False,Complete Genome,2440121,,,,L2_far,0,1,,,,81.77,0.38
+Selenomonas,104,GCF_037076525.1,Selenomonas sp. TAMA-11512,False,Complete Genome,2593422,,,,L2_far,0,1,,,,82.88,0.3
+Selenomonas,104,GCF_051603425.1,Selenomonas oralis,True,Complete Genome,2601282,,,,L2_far,0,1,,,,97.23,0.17
+Slackia,105,GCF_049191205.1,Slackia exigua,True,Complete Genome,1987822,,,,L2_far,0,1,,,,86.06,0.63
+Slackia,105,GCF_900637575.1,Slackia heliotrinireducens,True,Complete Genome,3166158,,,,L2_far,0,1,,,,86.9,0.51
+Sneathia,106,GCF_000973085.1,Sneathia vaginalis,True,Complete Genome,1330224,,,,L2_far,0,1,,,,83.46,9.61
+Sneathia,106,GCF_042033325.1,Sneathia sanguinegens,True,Complete Genome,1305941,98.63,88.17,UMGS437,L1_strain,0,1,98.63,UMGS437,Sneathia,98.63,88.17
+Solobacterium,107,GCF_036323475.1,Solobacterium moorei,True,Complete Genome,2615268,91.52,28.91,UMGS1737,L2_species,0,1,91.52,UMGS1737,Solobacterium,100.0,0.03
+Sporolactobacillus,108,GCF_019930545.1,Sporolactobacillus terrae,True,Complete Genome,3344205,,,,L2_far,0,1,,,,,
+Sporolactobacillus,108,GCF_040529185.1,Sporolactobacillus sp. Y61,False,Complete Genome,3224419,,,,L2_far,0,1,,,,79.34,0.09
+Staphylococcus,109,GCF_000013425.1,Staphylococcus aureus subsp. aureus NCTC 8325,True,Complete Genome,2821361,,,,L2_far,0,1,,,,85.84,1.05
+Staphylococcus,109,GCF_002442935.1,Staphylococcus nepalensis,True,Complete Genome,3007747,99.32,88.62,13154_4_43,L0_dup,0,0,99.32,13154_4_43,Staphylococcus,99.32,88.62
+Staphylococcus,109,GCF_010365305.1,Staphylococcus ursi,True,Complete Genome,2896994,,,,L2_far,0,1,,,,89.19,0.52
+Staphylococcus,109,GCF_029774255.1,Staphylococcus gallinarum,True,Complete Genome,2942339,,,,L2_far,0,1,,,,90.78,1.25
+Staphylococcus,109,GCF_030294405.1,Staphylococcus casei,True,Complete Genome,2913362,,,,L2_far,0,1,,,,85.83,1.18
+Staphylococcus,109,GCF_033597815.3,Staphylococcus halotolerans,True,Complete Genome,3018393,99.5,91.64,12718_7_23,L0_dup,0,0,99.5,12718_7_23,Staphylococcus,99.5,91.64
+Staphylococcus,109,GCF_039237145.1,Staphylococcus parequorum,True,Complete Genome,2918407,,,,L2_far,0,1,,,,86.44,1.23
+Staphylococcus,109,GCF_044794325.1,Staphylococcus pseudoxylosus,True,Complete Genome,2940356,94.64,85.5,12718_7_23,L2_species,0,1,94.64,12718_7_23,Staphylococcus,94.64,85.5
+Streptococcus,110,GCF_001623565.1,Streptococcus marmotae,True,Complete Genome,2322791,,,,L2_far,0,1,,,,88.84,0.56
+Streptococcus,110,GCF_001708305.1,Streptococcus himalayensis,True,Complete Genome,2275471,,,,L2_far,0,1,,,,89.35,0.34
+Streptococcus,110,GCF_003086355.1,Streptococcus chenjunshii,True,Complete Genome,2443046,,,,L2_far,0,1,,,,96.82,0.18
+Streptococcus,110,GCF_032595075.1,Streptococcus iners,True,Complete Genome,2315477,,,,L2_far,0,1,,,,87.83,0.24
+Streptococcus,110,GCF_037076355.1,Streptococcus parapneumoniae,True,Complete Genome,2327012,91.62,47.19,UMGS146,L2_species,0,1,91.62,UMGS146,Streptococcus,91.62,47.19
+Streptococcus,110,GCF_040836615.1,Streptococcus nasisuis,True,Complete Genome,2594199,,,,L2_far,0,1,,,,91.03,0.59
+Streptococcus,110,GCF_900187085.1,Streptococcus merionis,True,Complete Genome,2384128,,,,L2_far,0,1,,,,96.34,0.05
+Streptococcus,110,GCF_900475505.1,Streptococcus sanguinis,True,Complete Genome,2296927,86.54,23.01,GCF_000161955,L2_species,0,1,86.54,GCF_000161955,Streptococcus,89.34,1.26
+Streptomyces,111,GCF_016598615.1,Streptomyces liliifuscus,True,Complete Genome,11347200,,,,L2_far,0,1,,,,81.24,1.61
+Streptomyces,111,GCF_024298965.1,Streptomyces rapamycinicus NRRL 5491,True,Complete Genome,12466108,,,,L2_far,0,1,,,,81.85,1.92
+Streptomyces,111,GCF_025908395.1,Streptomyces milbemycinicus,True,Complete Genome,12063392,,,,L2_far,0,1,,,,81.51,1.95
+Streptomyces,111,GCF_030294945.1,Streptomyces graminofaciens,True,Complete Genome,11602651,,,,L2_far,0,1,,,,81.69,1.36
+Streptomyces,111,GCF_035957715.1,Streptomyces phaeochromogenes,True,Complete Genome,11713170,,,,L2_far,0,1,,,,80.81,1.63
+Streptomyces,111,GCF_036073155.1,Streptomyces mirabilis,True,Complete Genome,11832677,,,,L2_far,0,1,,,,81.62,1.48
+Streptomyces,111,GCF_042466515.1,Streptomyces iranensis,True,Complete Genome,12213033,,,,L2_far,0,1,,,,81.4,2.04
+Streptomyces,111,GCF_055597465.1,Streptomyces yongxingensis,True,Complete Genome,11310836,,,,L2_far,0,1,,,,81.66,2.34
+Subdoligranulum,112,GCF_025152575.1,Subdoligranulum variabile,True,Complete Genome,3244954,87.14,31.76,UMGS795,L2_species,0,1,87.14,UMGS795,Subdoligranulum,87.14,31.76
+Subdoligranulum,112,GCF_057005535.1,Subdoligranulum sp. DSM 23681,False,Complete Genome,3143997,,,,L2_far,0,1,,,,83.22,7.45
+Succinatimonas,113,GCF_963931075.1,Succinatimonas hippei,True,Complete Genome,2864620,,,,L2_far,0,1,,,,,
+Succiniclasticum,114,GCF_056977735.1,Succiniclasticum sp.,False,Scaffold,2495062,,,,L2_far,0,1,,,,80.14,0.62
+Succiniclasticum,114,GCF_900112895.1,Succiniclasticum ruminis DSM 9236,True,Scaffold,2539887,,,,L2_far,0,1,,,,80.3,0.99
+Sutterella,115,GCF_003609995.1,Sutterella megalosphaeroides,True,Complete Genome,2725161,,,,L2_far,0,1,,,,97.9,0.07
+Sutterella,115,GCF_006337085.1,Sutterella faecalis,True,Complete Genome,2987884,,,,L2_far,0,1,,,,98.3,0.06
+Sutterella,115,GCF_016724805.1,Sutterella wadsworthensis,True,Complete Genome,3026517,98.14,88.05,GCF_000186505,L1_strain,0,1,98.14,GCF_000186505,Sutterella,98.3,0.06
+Treponema,116,GCF_000008185.1,Treponema denticola ATCC 35405,True,Complete Genome,2843201,,,,L2_far,0,1,,,,,
+Treponema,116,GCF_000212415.1,Treponema brennaborense DSM 12168,True,Complete Genome,3055580,,,,L2_far,0,1,,,,,
+Treponema,116,GCF_000214375.1,Treponema primitia ZAS-2,True,Complete Genome,4059867,,,,L2_far,0,1,,,,,
+Treponema,116,GCF_000447675.1,Treponema pedis str. T A4,True,Complete Genome,2889325,,,,L2_far,0,1,,,,,
+Treponema,116,GCF_008153345.1,Treponema phagedenis,True,Complete Genome,3372116,,,,L2_far,0,1,,,,85.94,0.07
+Treponema,116,GCF_024181585.1,Treponema socranskii subsp. buccale,True,Complete Genome,2805741,,,,L2_far,0,1,,,,,
+Treponema,116,GCF_024401155.1,Treponema putidum,True,Complete Genome,2762635,,,,L2_far,0,1,,,,96.65,0.03
+Treponema,116,GCF_036492245.1,Treponema bryantii,True,Complete Genome,3516600,,,,L2_far,0,1,,,,86.99,0.09
+Veillonella,117,GCF_002082765.1,Veillonella atypica,True,Complete Genome,2071952,96.15,83.22,GCF_000411535,L1_strain,0,1,96.15,GCF_000411535,Veillonella,96.53,0.23
+Veillonella,117,GCF_013393365.1,Veillonella nakazawae,True,Complete Genome,2097818,94.91,61.82,UMGS1979,L2_species,0,1,94.91,UMGS1979,Veillonella,94.91,61.82
+Veillonella,117,GCF_018406505.1,Veillonella orientalis,True,Complete Genome,2072807,94.35,61.16,UMGS1979,L2_species,0,1,94.35,UMGS1979,Veillonella,94.35,61.16
+Veillonella,117,GCF_026057735.1,Veillonella rogosae,True,Complete Genome,2205714,96.48,81.48,UMGS16,L1_strain,0,1,96.48,UMGS16,Veillonella,96.48,81.48
+Veillonella,117,GCF_900186885.1,Veillonella parvula,True,Complete Genome,2132142,95.13,85.17,GCF_000163735,L1_strain,0,1,95.13,GCF_000163735,Veillonella,95.13,85.17
+Veillonella,117,GCF_900187285.1,Veillonella rodentium,True,Complete Genome,2041290,,,,L2_far,0,1,,,,89.29,0.5
+Veillonella,117,GCF_900637515.1,Veillonella dispar,True,Complete Genome,2116915,94.96,70.12,UMGS1547,L2_species,0,1,94.96,UMGS1547,Veillonella,94.96,70.12
+Weissella,118,GCF_001761545.1,Weissella soli,True,Complete Genome,1683184,,,,L2_far,0,1,,,,81.49,1.14
+Weissella,118,GCF_001932615.1,Weissella jogaejeotgali,True,Complete Genome,2149545,83.79,24.8,GCF_000160575,L2_species,0,1,83.79,GCF_000160575,Weissella,83.79,24.8
+Weissella,118,GCF_001951095.1,Weissella cibaria,True,Complete Genome,2363492,,,,L2_far,0,1,,,,81.97,1.56
+Weissella,118,GCF_004771075.1,Weissella confusa,True,Complete Genome,2216758,,,,L2_far,0,1,,,,81.3,1.2
+Weissella,118,GCF_011304355.1,Weissella coleopterorum,True,Complete Genome,1618880,,,,L2_far,0,1,,,,84.67,1.05
+Weissella,118,GCF_014397255.1,Weissella diestrammenae,True,Complete Genome,1659381,,,,L2_far,0,1,,,,80.74,0.82
+Weissella,118,GCF_014789145.1,Weissella viridescens,True,Complete Genome,1593241,,,,L2_far,0,1,,,,85.81,1.21
+Weissella,118,GCF_036327715.1,Weissella paramesenteroides,True,Complete Genome,2007410,97.49,80.66,GCF_000160575,L1_strain,0,1,97.49,GCF_000160575,Weissella,97.49,80.66
+Xylanibacter,119,GCF_000025925.1,Xylanibacter ruminicola 23,True,Complete Genome,3619559,,,,L2_far,0,1,,,,,

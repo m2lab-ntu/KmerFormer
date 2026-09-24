@@ -1,0 +1,191 @@
+{
+  "run": "DRR466867",
+  "source_doi": "10.1093/dnares/dsad010",
+  "expected": "Equal cells weighted by published genome mass; ideal input DNA, not post-extraction truth",
+  "n_expected_in_catalogue_genera": 17,
+  "expected_dna_mass_in_catalogue": 0.9378979670276226,
+  "normalization": "Pearson, Spearman, Bray-Curtis and L2 on expected in-catalogue genera, each vector renormalized; FP on all 120 catalogue genera using unnormalized fractions",
+  "bootstrap": {
+    "unit": "genus",
+    "n": 2000,
+    "seed": 0,
+    "interval": "95% percentile"
+  },
+  "models": {
+    "KmerFormer 6-mer, 8 layers": {
+      "pearson": 0.6654208573403231,
+      "pearson_ci95": [
+        -0.33291923761498926,
+        0.8531841509827308
+      ],
+      "spearman": 0.2058823529411765,
+      "bray_curtis": 0.2894004542708282,
+      "l2": 0.21255392014257823,
+      "source": "depth_sweep/abundance_eval/mock_preds/kim/L8/rctta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "6f253ed194c9910fc0ec440cd403b50faf06055740d3149bed037b22e4e22fc6",
+      "fp_genera_above_1pct": 4,
+      "predicted_mass_expected_genera": 0.7968633333333334,
+      "predicted_mass_other_catalogue_genera": 0.20313666666666666
+    },
+    "KmerFormer 6-mer, 16 layers": {
+      "pearson": 0.6642658977657873,
+      "pearson_ci95": [
+        -0.3379296461885401,
+        0.852462886876763
+      ],
+      "spearman": 0.22058823529411767,
+      "bray_curtis": 0.2861637957958939,
+      "l2": 0.20022331494271,
+      "source": "depth_sweep/abundance_eval/mock_preds/kim/L16/rctta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "42d40cc42024ded63dae253be6029acacec40a722b7f301eedbe4c2502b2bce2",
+      "fp_genera_above_1pct": 4,
+      "predicted_mass_expected_genera": 0.7956433333333333,
+      "predicted_mass_other_catalogue_genera": 0.20435666666666663
+    },
+    "KmerFormer 6-mer, 29 layers": {
+      "pearson": 0.6571515897814442,
+      "pearson_ci95": [
+        -0.33397051333559735,
+        0.848963948945387
+      ],
+      "spearman": 0.2034313725490196,
+      "bray_curtis": 0.28594665842875977,
+      "l2": 0.19547696101129247,
+      "source": "depth_sweep/abundance_eval/mock_preds/kim/L29/rctta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "a0c7501becaea550726169a507bc043451d96e4222833b5473bb6313f4f8aaee",
+      "fp_genera_above_1pct": 4,
+      "predicted_mass_expected_genera": 0.7951093333333333,
+      "predicted_mass_other_catalogue_genera": 0.20489066666666664
+    },
+    "KmerFormer 13-mer exact, 16 l.": {
+      "pearson": 0.5903982698685707,
+      "pearson_ci95": [
+        -0.29101573165042577,
+        0.8228231897702902
+      ],
+      "spearman": 0.14705882352941177,
+      "bray_curtis": 0.2865379929080165,
+      "l2": 0.17803299594477318,
+      "source": "mock_community/out/jobA_exact13mer_16L_kim/predictions_rc_tta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "ecf944bea47584c382ce21f2220ffa7ea512aa71995eccff38d96d86b69ee382",
+      "fp_genera_above_1pct": 4,
+      "predicted_mass_expected_genera": 0.7566920000000001,
+      "predicted_mass_other_catalogue_genera": 0.243308
+    },
+    "KmerFormer 13-mer hashed d128, 1 l.": {
+      "pearson": 0.6401230230972377,
+      "pearson_ci95": [
+        -0.26132181926433945,
+        0.8481106675078798
+      ],
+      "spearman": 0.14215686274509806,
+      "bray_curtis": 0.3222524654724185,
+      "l2": 0.20491819181817159,
+      "source": "mock_community/out/item3_hash13mer_d128_1L_kim/predictions_rc_tta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "7e6b7041014e3cc28910963715904d56cbe0486e99a1a1382d419ca549b87358",
+      "fp_genera_above_1pct": 3,
+      "predicted_mass_expected_genera": 0.8493816666666666,
+      "predicted_mass_other_catalogue_genera": 0.15061833333333333
+    },
+    "KmerFormer 13-mer hashed d128, 16 l.": {
+      "pearson": 0.6298783026120273,
+      "pearson_ci95": [
+        -0.2512907784290063,
+        0.8387454096723204
+      ],
+      "spearman": 0.19117647058823534,
+      "bray_curtis": 0.306650518806886,
+      "l2": 0.2026860533322898,
+      "source": "mock_community/out/jobC_hash13mer_d128_16L_kim/predictions_rc_tta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "c56038454a151469e2e15a5f845973a820e238ecc813643e5ad4fc2c0060903b",
+      "fp_genera_above_1pct": 3,
+      "predicted_mass_expected_genera": 0.8117706666666668,
+      "predicted_mass_other_catalogue_genera": 0.18822933333333333
+    },
+    "KmerFormer 13-mer hashed d64, 16 l.": {
+      "pearson": 0.6426681083286413,
+      "pearson_ci95": [
+        -0.1798080959237369,
+        0.8470053284923331
+      ],
+      "spearman": 0.21813725490196081,
+      "bray_curtis": 0.32053014408131336,
+      "l2": 0.2394615051460506,
+      "source": "mock_community/out/item2_hash13mer_d64_16L_kim/predictions_rc_tta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "0af2ed548c8ae1e978a8eb9d59688513e4934d2166a25494f4089a6dcb0f46aa",
+      "fp_genera_above_1pct": 4,
+      "predicted_mass_expected_genera": 0.8288226666666668,
+      "predicted_mass_other_catalogue_genera": 0.17117733333333332
+    },
+    "MetaTransformer 13-mer": {
+      "pearson": 0.5809689297005318,
+      "pearson_ci95": [
+        -0.3782171792366276,
+        0.8273933288446513
+      ],
+      "spearman": 0.17401960784313728,
+      "bray_curtis": 0.30772824613746985,
+      "l2": 0.1816354093183275,
+      "source": "kim_mock/out/mock_mt13/preds.npz",
+      "n_reads": 1500000,
+      "preds_sha256": "2944db59435861ac929f346daf68b9279aad4f66a1889e9c97d613e02d1c2fd5",
+      "fp_genera_above_1pct": 2,
+      "predicted_mass_expected_genera": 0.839414,
+      "predicted_mass_other_catalogue_genera": 0.16058599999999995
+    },
+    "MetaTransformer 6-mer": {
+      "pearson": 0.6807827600263898,
+      "pearson_ci95": [
+        -0.34181406932086084,
+        0.8678631980903113
+      ],
+      "spearman": 0.22794117647058826,
+      "bray_curtis": 0.3550350617508187,
+      "l2": 0.29133473760805073,
+      "source": "kim_mock/out/mock_mt6/preds.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "1476cb806eacf37695fd6f97e4a39d395434a795007512d969fc7214756af4e0",
+      "fp_genera_above_1pct": 3,
+      "predicted_mass_expected_genera": 0.7908560000000001,
+      "predicted_mass_other_catalogue_genera": 0.20914399999999997
+    },
+    "NT-v2 500M + LoRA": {
+      "pearson": 0.6683753874642306,
+      "pearson_ci95": [
+        -0.3259335404436967,
+        0.8562735338314319
+      ],
+      "spearman": 0.2132352941176471,
+      "bray_curtis": 0.29484167659979216,
+      "l2": 0.2134863227392129,
+      "source": "kim_mock/out/mock_ntv2/rctta.npz",
+      "n_reads": 3000000,
+      "preds_sha256": "878a49cbd62a13781db0479fe01e591d7e01f96e07afcbdb436a9bb1bc3b9930",
+      "fp_genera_above_1pct": 4,
+      "predicted_mass_expected_genera": 0.8040683333333334,
+      "predicted_mass_other_catalogue_genera": 0.19593166666666664
+    },
+    "Kraken 2 + Bracken": {
+      "pearson": 0.3346347250562949,
+      "pearson_ci95": [
+        -0.5047639237286693,
+        0.6856947649472677
+      ],
+      "spearman": 0.07107843137254903,
+      "bray_curtis": 0.3411505339049136,
+      "l2": 0.18564252785658036,
+      "source": "kim_mock/out/mock_kraken2bracken/kraken2_bracken_genus.csv",
+      "input_sha256": "472495ffcec9f0282703d8ad47ed624ec5929b1936dbc2363ee95a783c6ccec0",
+      "fp_genera_above_1pct": 1,
+      "predicted_mass_expected_genera": 0.85559,
+      "predicted_mass_other_catalogue_genera": 0.14434999999999998
+    }
+  }
+}
