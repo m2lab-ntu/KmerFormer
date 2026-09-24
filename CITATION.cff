@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite the manuscript below. It is in preparation
+  and not yet published, so cite it as such; this file will be updated with the
+  journal reference and DOI once it is accepted.
+title: KmerFormer
+abstract: >-
+  A from-scratch k-mer transformer for short-read metagenomic taxonomic
+  classification, with a systematic comparison against genomic foundation models
+  under documented training data, label space and evaluation conditions.
+  Pre-training provides a low-data advantage, while tokenization and reference
+  distance change the relative performance of the tested classifiers.
+type: software
+license: MIT
+license-url: "https://github.com/m2lab-ntu/KmerFormer/blob/main/LICENSE"
+repository-code: "https://github.com/m2lab-ntu/KmerFormer"
+keywords:
+  - metagenomics
+  - taxonomic classification
+  - short-read sequencing
+  - genomic foundation models
+  - transformer
+  - k-mer tokenization
+authors:
+  - family-names: Yang
+    given-names: Ming-Ju
+    email: r13945009@ntu.edu.tw
+    orcid: "https://orcid.org/0009-0005-7128-0745"
+    affiliation: >-
+      Graduate Institute of Biomedical Electronics and Bioinformatics,
+      National Taiwan University
+  - family-names: YEN
+    given-names: TING-YU
+    affiliation: >-
+      Department of Pediatrics, National Taiwan University Hospital
+  - family-names: Chen
+    given-names: Chien-Yu
+    affiliation: >-
+      Department of Biomechatronics Engineering, National Taiwan University
+  - family-names: Liu
+    given-names: Joyce Tzu-Yu
+    email: joyliu@ntu.edu.tw
+    orcid: "https://orcid.org/0000-0002-6902-5965"
+    affiliation: >-
+      Graduate Institute of Biomedical Electronics and Bioinformatics,
+      National Taiwan University
+preferred-citation:
+  type: unpublished
+  title: >-
+    KmerFormer: k-mer Transformers for Short-Read Metagenomic Taxonomic
+    Classification and Systematic Comparison with Genomic Foundation Models
+  authors:
+    - family-names: Yang
+      given-names: Ming-Ju
+    - family-names: YEN
+      given-names: TING-YU
+    - family-names: Chen
+      given-names: Chien-Yu
+    - family-names: Liu
+      given-names: Joyce Tzu-Yu
+  year: 2026
+  notes: Manuscript in preparation

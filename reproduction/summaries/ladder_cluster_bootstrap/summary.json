@@ -1,0 +1,938 @@
+{
+  "method": "95% percentile hierarchical bootstrap: genus, then genome within genus/rung; paired across neural arms",
+  "replicates": 5000,
+  "seed": 20260908,
+  "common_genus_ids": [
+    22,
+    34,
+    44,
+    64,
+    65,
+    66,
+    70,
+    81,
+    82,
+    89,
+    90,
+    95,
+    117,
+    118
+  ],
+  "arms": [
+    "mt_250M",
+    "kf_exact13_1L_250M",
+    "kf_exact13_1L_50M",
+    "mt_50M",
+    "kf_exact13_16L",
+    "kf_hash13_d128_1L",
+    "kf_hash13_d128_16L",
+    "kf_hash13_d64_16L",
+    "L29",
+    "nt_v9",
+    "mt_6mer"
+  ],
+  "limitations": [
+    "Fixed checkpoints; not training-seed variation",
+    "Different genomes across rungs; only genera paired between rungs",
+    "Historical arrays without read IDs are aligned by archived order and checked labels; original sequence membership not independently established",
+    "Exploratory 24 pairwise comparisons, pointwise intervals without multiplicity correction",
+    "Naive Bayes excluded because its read subsets differ"
+  ],
+  "pairs_supporting_reversal_both_intervals": 16,
+  "n_pairs": 24,
+  "inputs": [
+    {
+      "rung": "L1_strain",
+      "arm": "mt_250M",
+      "path": "track_b/out/L1_strain/mt_250M/preds.npz",
+      "sha256": "dad75bc5ab7e84516f17e90fe3bc4343ae20dedb8f60f6ba00132bc46c50e90d"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "kf_exact13_1L_250M",
+      "path": "track_b/out/L1_strain/kf_exact13_1L_250M/preds.npz",
+      "sha256": "e09ea01eb1f874538f50ab18cc0a9c31175fc1e1f306f4f59d20a5d90586e06a"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "kf_exact13_1L_50M",
+      "path": "track_b/out/L1_strain/kf_exact13_1L_50M/preds.npz",
+      "sha256": "2ae57bbb6c2d3160e7bff17b238dc1f39ccd540438db8bce3d54762ce007eca3"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "mt_50M",
+      "path": "track_b/out/L1_strain/mt_50M/preds.npz",
+      "sha256": "9c506050f9ca57048dcf6b5c33c6683f4e48743093fb6958453ce8d09bed02c3"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "kf_exact13_16L",
+      "path": "track_b/out/L1_strain/kf_exact13_16L/preds.npz",
+      "sha256": "5e1ee087d1154e054c316af29f190452ce2a44432d3a496aacbfc6b38a666d07"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "kf_hash13_d128_1L",
+      "path": "track_b/out/L1_strain/kf_hash13_d128_1L/preds.npz",
+      "sha256": "98ca3714e4123c1dd108b880df4198b44e7e229b190aa348ecbb7556d0f798b3"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "kf_hash13_d128_16L",
+      "path": "track_b/out/L1_strain/kf_hash13_d128_16L/preds.npz",
+      "sha256": "a8d47532926909dee494b50cf4c543c55f8eacdc93ba98bf749dd1ff483d2f21"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "kf_hash13_d64_16L",
+      "path": "track_b/out/L1_strain/kf_hash13_d64_16L/preds.npz",
+      "sha256": "ed1170834a6f2cc1124610e579c33ef49c3d1e13bd9f3a75f6c1ef2745b8a6c3"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "L29",
+      "path": "track_b/out/L1_strain/L29/preds.npz",
+      "sha256": "e8a7a18d119933d43a428601d839c65a8dfe55790fb574ada8428517babaa89f"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "nt_v9",
+      "path": "track_b/out/L1_strain/nt_v9/preds.npz",
+      "sha256": "124f0f50416eb1fea313496cc7ec6e89fcaed3d1b1308b5e8901ccda501d3c30"
+    },
+    {
+      "rung": "L1_strain",
+      "arm": "mt_6mer",
+      "path": "track_b/out/L1_strain/mt_6mer/preds.npz",
+      "sha256": "ff419b525980a56c73c671c7b4e2faa1829dfa51dcff23d3b6cb06472d5b5643"
+    },
+    {
+      "rung": "L1_strain",
+      "labels_path": "track_b/test_data/L1_strain_labels.tsv",
+      "labels_sha256": "8ea6706e6042f6c3d5b1e3b8afb23a94a0c0fb11190356a0762bbb0efddae71d",
+      "selected_reads": 94999,
+      "selected_genomes": 27,
+      "genomes_per_genus": [
+        4,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        1,
+        5,
+        1,
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "rung": "L2_species",
+      "arm": "mt_250M",
+      "path": "track_b/out/L2_species/mt_250M/preds.npz",
+      "sha256": "f9a7807e1c419409f0af269fca8d2458aed335b3301ca288b824f8cb44663901"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "kf_exact13_1L_250M",
+      "path": "track_b/out/L2_species/kf_exact13_1L_250M/preds.npz",
+      "sha256": "11fa201f9ee113af4a592acd3df682ec2d628680b58dc2b7ac04783dec484713"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "kf_exact13_1L_50M",
+      "path": "track_b/out/L2_species/kf_exact13_1L_50M/preds.npz",
+      "sha256": "2b7be3801d1b0eb2acbe3578ffd2bda3bb251231b1ed275989fb3d5adc6b87f1"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "mt_50M",
+      "path": "track_b/out/L2_species/mt_50M/preds.npz",
+      "sha256": "8bdb9c71161e04782b64355e8cba83ffb9ce19c33a0079b5ea3bdbbb60c6e161"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "kf_exact13_16L",
+      "path": "track_b/out/L2_species/kf_exact13_16L/preds.npz",
+      "sha256": "01423186b529ce3c984d8ddb7f9bda02661428be90d052fc292fec73edeb9b6d"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "kf_hash13_d128_1L",
+      "path": "track_b/out/L2_species/kf_hash13_d128_1L/preds.npz",
+      "sha256": "47beb5c39c76b3f08521c33de23438200478806ec6187e6076df8e98ef89768d"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "kf_hash13_d128_16L",
+      "path": "track_b/out/L2_species/kf_hash13_d128_16L/preds.npz",
+      "sha256": "2b4d8b54784c1ea41422ba6a819d875dde0b6c2aec7be40aa319dda34251363b"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "kf_hash13_d64_16L",
+      "path": "track_b/out/L2_species/kf_hash13_d64_16L/preds.npz",
+      "sha256": "f3eb20e7d5ffd566e004d1494bd68f4676af441cad7e2f519790af6ad9fd9f49"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "L29",
+      "path": "track_b/out/L2_species/L29/preds.npz",
+      "sha256": "db2d505de4492bcbc2515ce2783f52a6943d7925f06dcbc40ca870aa1ea400b8"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "nt_v9",
+      "path": "track_b/out/L2_species/nt_v9/preds.npz",
+      "sha256": "1e133767c237fe118da2b8e5f1b13b54e0419ad1fe78c942c2ac06b36b4ca1e7"
+    },
+    {
+      "rung": "L2_species",
+      "arm": "mt_6mer",
+      "path": "track_b/out/L2_species/mt_6mer/preds.npz",
+      "sha256": "d36ff0c1dc986641a195be839c5db4f92ceaea8283f612c57a5e437de959d752"
+    },
+    {
+      "rung": "L2_species",
+      "labels_path": "track_b/test_data/L2_species_labels.tsv",
+      "labels_sha256": "86d47f6e24854246be56b89c75f3afebd0c791bc4380bb8a9eee21f3a91f1813",
+      "selected_reads": 109997,
+      "selected_genomes": 30,
+      "genomes_per_genus": [
+        2,
+        1,
+        1,
+        3,
+        2,
+        5,
+        1,
+        3,
+        1,
+        2,
+        1,
+        4,
+        3,
+        1
+      ]
+    },
+    {
+      "rung": "L2_far",
+      "arm": "mt_250M",
+      "path": "track_b/out/L2_far/mt_250M/preds.npz",
+      "sha256": "27fa438b9e831c74a6487568d0c5a52cae5becdb21ca83f0410b89df805aca85"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "kf_exact13_1L_250M",
+      "path": "track_b/out/L2_far/kf_exact13_1L_250M/preds.npz",
+      "sha256": "913ee6ec471823c20d89723b36f92cf799a7c576dab1b077ad3955139c6d863f"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "kf_exact13_1L_50M",
+      "path": "track_b/out/L2_far/kf_exact13_1L_50M/preds.npz",
+      "sha256": "9ed7f143ac5fa90d8900fd28e30a6a93306881477833d6cc18c72f411aa5f8b9"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "mt_50M",
+      "path": "track_b/out/L2_far/mt_50M/preds.npz",
+      "sha256": "b12cbb5ca83140938923a7f025f7e636de32b06f74f0b13dbc9c31df284fdd57"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "kf_exact13_16L",
+      "path": "track_b/out/L2_far/kf_exact13_16L/preds.npz",
+      "sha256": "11d779115f16e07bfc5ae8a12e648005eef442ec1cfe5cbb4ff290284f55e014"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "kf_hash13_d128_1L",
+      "path": "track_b/out/L2_far/kf_hash13_d128_1L/preds.npz",
+      "sha256": "dae676ad2473204ca008da11fce322edc267d0a15460ff6b60ad9fd37767e059"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "kf_hash13_d128_16L",
+      "path": "track_b/out/L2_far/kf_hash13_d128_16L/preds.npz",
+      "sha256": "ec97b78a7a55eb7a0c9f1ff0f14495eee5a69631c54ec08967548546e053fc58"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "kf_hash13_d64_16L",
+      "path": "track_b/out/L2_far/kf_hash13_d64_16L/preds.npz",
+      "sha256": "bbdbc4e8e534073ae59c58d8fd96dd6485ad2585ac5d4bec53ee523976b37fae"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "L29",
+      "path": "track_b/out/L2_far/L29/preds.npz",
+      "sha256": "bcf989ca25b8910248ef7df3aa185b7c824e7b4e0b1e9c7cebcad79b6f27194b"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "nt_v9",
+      "path": "track_b/out/L2_far/nt_v9/preds.npz",
+      "sha256": "11d60c33737700902668497ed85aefcf06c1db410ca1c053030bfc891efac43f"
+    },
+    {
+      "rung": "L2_far",
+      "arm": "mt_6mer",
+      "path": "track_b/out/L2_far/mt_6mer/preds.npz",
+      "sha256": "4fbf9e53c99b26cf47abc025cc20f38e41a7a77476774608cb09327824626eb0"
+    },
+    {
+      "rung": "L2_far",
+      "labels_path": "track_b/test_data/L2_far_labels.tsv",
+      "labels_sha256": "80d06d618be59863cbf5f0ebe7284b5f658b36944f171c911d59afd2e98051a7",
+      "selected_reads": 114991,
+      "selected_genomes": 38,
+      "genomes_per_genus": [
+        1,
+        1,
+        1,
+        3,
+        4,
+        2,
+        1,
+        4,
+        2,
+        4,
+        6,
+        2,
+        1,
+        6
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "long_arm": "mt_250M",
+      "six_arm": "L29",
+      "first_difference_pp": 32.25086579858735,
+      "first_difference_ci95": [
+        23.167899671052634,
+        41.268508333333315
+      ],
+      "far_difference_pp": -11.296536250663095,
+      "far_difference_ci95": [
+        -15.980765534807574,
+        -7.230900420055074
+      ],
+      "far_minus_first_difference_pp": -43.54740204925044,
+      "far_minus_first_ci95": [
+        -52.092192187336785,
+        -35.1166505901294
+      ],
+      "six_minus_long_retention_pp": 34.59234915096432,
+      "six_minus_long_retention_ci95": [
+        21.822560873814073,
+        50.37142398374441
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "mt_250M",
+      "six_arm": "nt_v9",
+      "first_difference_pp": 36.246697333656144,
+      "first_difference_ci95": [
+        26.393272323687615,
+        46.02348529411765
+      ],
+      "far_difference_pp": -9.718151855362594,
+      "far_difference_ci95": [
+        -14.589464035890318,
+        -5.768517416611582
+      ],
+      "far_minus_first_difference_pp": -45.964849189018736,
+      "far_minus_first_ci95": [
+        -54.703722894422,
+        -37.477334396746905
+      ],
+      "six_minus_long_retention_pp": 35.4764327297269,
+      "six_minus_long_retention_ci95": [
+        22.119953660458393,
+        53.22715143631414
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "mt_250M",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 52.04686365119633,
+      "first_difference_ci95": [
+        42.556673048886516,
+        61.0940864521803
+      ],
+      "far_difference_pp": -2.2393056847927224,
+      "far_difference_ci95": [
+        -7.999345982989646,
+        2.7275195787410484
+      ],
+      "far_minus_first_difference_pp": -54.28616933598905,
+      "far_minus_first_ci95": [
+        -61.76885373244523,
+        -47.61995111859782
+      ],
+      "six_minus_long_retention_pp": 36.8796272540268,
+      "six_minus_long_retention_ci95": [
+        21.153150539798332,
+        62.418191786319554
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.7902
+    },
+    {
+      "long_arm": "kf_exact13_1L_250M",
+      "six_arm": "L29",
+      "first_difference_pp": 32.024547626817125,
+      "first_difference_ci95": [
+        23.33222142061201,
+        40.81223245614034
+      ],
+      "far_difference_pp": -11.57307963231905,
+      "far_difference_ci95": [
+        -16.03505582904234,
+        -7.351021409864044
+      ],
+      "far_minus_first_difference_pp": -43.597627259136175,
+      "far_minus_first_ci95": [
+        -52.22763765445679,
+        -34.80351663356927
+      ],
+      "six_minus_long_retention_pp": 34.90619285619962,
+      "six_minus_long_retention_ci95": [
+        21.658767846797776,
+        51.27460244009073
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "kf_exact13_1L_250M",
+      "six_arm": "nt_v9",
+      "first_difference_pp": 36.02037916188592,
+      "first_difference_ci95": [
+        26.497796377573817,
+        45.37495952380951
+      ],
+      "far_difference_pp": -9.99469523701855,
+      "far_difference_ci95": [
+        -14.49819473925729,
+        -5.840300621474277
+      ],
+      "far_minus_first_difference_pp": -46.01507439890447,
+      "far_minus_first_ci95": [
+        -54.730845106971515,
+        -37.25058515200068
+      ],
+      "six_minus_long_retention_pp": 35.79027643496221,
+      "six_minus_long_retention_ci95": [
+        21.893064373811004,
+        54.183252304972825
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "kf_exact13_1L_250M",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 51.820545479426094,
+      "first_difference_ci95": [
+        42.68926802365705,
+        60.4542113577272
+      ],
+      "far_difference_pp": -2.515849066448678,
+      "far_difference_ci95": [
+        -7.077145802090957,
+        1.2779158550695184
+      ],
+      "far_minus_first_difference_pp": -54.336394545874775,
+      "far_minus_first_ci95": [
+        -61.511701228355605,
+        -47.85644897940149
+      ],
+      "six_minus_long_retention_pp": 37.19347095926211,
+      "six_minus_long_retention_ci95": [
+        21.581836897229845,
+        62.40221190032276
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.8864
+    },
+    {
+      "long_arm": "kf_exact13_1L_50M",
+      "six_arm": "L29",
+      "first_difference_pp": 19.07283234560364,
+      "first_difference_ci95": [
+        12.752481210158374,
+        25.673550314253138
+      ],
+      "far_difference_pp": -12.29052708472837,
+      "far_difference_ci95": [
+        -16.577018824747373,
+        -7.94010895835374
+      ],
+      "far_minus_first_difference_pp": -31.36335943033201,
+      "far_minus_first_ci95": [
+        -38.437079624604785,
+        -24.537470898860153
+      ],
+      "six_minus_long_retention_pp": 33.2469344184659,
+      "six_minus_long_retention_ci95": [
+        20.851368712766853,
+        48.74534119377724
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "kf_exact13_1L_50M",
+      "six_arm": "nt_v9",
+      "first_difference_pp": 23.068663880672435,
+      "first_difference_ci95": [
+        16.136197485465505,
+        30.24202826112527
+      ],
+      "far_difference_pp": -10.71214268942787,
+      "far_difference_ci95": [
+        -15.058078307640551,
+        -6.585692922250031
+      ],
+      "far_minus_first_difference_pp": -33.78080657010031,
+      "far_minus_first_ci95": [
+        -40.800949154703694,
+        -27.012350580090278
+      ],
+      "six_minus_long_retention_pp": 34.13101799722849,
+      "six_minus_long_retention_ci95": [
+        21.131792162025445,
+        51.553687928503635
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "kf_exact13_1L_50M",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 38.86883019821262,
+      "first_difference_ci95": [
+        31.89608898416035,
+        45.861361468864686
+      ],
+      "far_difference_pp": -3.2332965188579976,
+      "far_difference_ci95": [
+        -7.337736377926751,
+        -0.020587180091799377
+      ],
+      "far_minus_first_difference_pp": -42.10212671707062,
+      "far_minus_first_ci95": [
+        -48.111086903833545,
+        -36.514415889382526
+      ],
+      "six_minus_long_retention_pp": 35.53421252152839,
+      "six_minus_long_retention_ci95": [
+        20.791470824781296,
+        59.62186581760368
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 0.9754
+    },
+    {
+      "long_arm": "mt_50M",
+      "six_arm": "L29",
+      "first_difference_pp": 16.790703060032207,
+      "first_difference_ci95": [
+        10.491630484882299,
+        23.194105806058047
+      ],
+      "far_difference_pp": -11.269577619118017,
+      "far_difference_ci95": [
+        -15.482901525840301,
+        -7.3136863445752125
+      ],
+      "far_minus_first_difference_pp": -28.060280679150225,
+      "far_minus_first_ci95": [
+        -34.95977972642782,
+        -21.519189783416284
+      ],
+      "six_minus_long_retention_pp": 31.052410965499195,
+      "six_minus_long_retention_ci95": [
+        19.493848819238064,
+        45.23775307263497
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "mt_50M",
+      "six_arm": "nt_v9",
+      "first_difference_pp": 20.786534595101003,
+      "first_difference_ci95": [
+        13.982381561556373,
+        27.79071241830065
+      ],
+      "far_difference_pp": -9.691193223817516,
+      "far_difference_ci95": [
+        -13.925822975216814,
+        -5.907831090357871
+      ],
+      "far_minus_first_difference_pp": -30.47772781891852,
+      "far_minus_first_ci95": [
+        -37.2012446714986,
+        -24.023522012568797
+      ],
+      "six_minus_long_retention_pp": 31.936494544261784,
+      "six_minus_long_retention_ci95": [
+        19.959806781054816,
+        48.032114430926825
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "mt_50M",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 36.586700912641184,
+      "first_difference_ci95": [
+        29.77235951297973,
+        43.17767105263156
+      ],
+      "far_difference_pp": -2.2123470532476444,
+      "far_difference_ci95": [
+        -6.912947212508913,
+        1.7960659206271463
+      ],
+      "far_minus_first_difference_pp": -38.799047965888825,
+      "far_minus_first_ci95": [
+        -44.71474249986608,
+        -33.2472474980917
+      ],
+      "six_minus_long_retention_pp": 33.33968906856168,
+      "six_minus_long_retention_ci95": [
+        19.23132197075054,
+        56.95330530208609
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.8456
+    },
+    {
+      "long_arm": "kf_exact13_16L",
+      "six_arm": "L29",
+      "first_difference_pp": 10.020105474794471,
+      "first_difference_ci95": [
+        4.125660707314605,
+        16.136343749999998
+      ],
+      "far_difference_pp": -13.894130845022653,
+      "far_difference_ci95": [
+        -19.188773404508776,
+        -8.987497446880846
+      ],
+      "far_minus_first_difference_pp": -23.914236319817125,
+      "far_minus_first_ci95": [
+        -30.741246334037438,
+        -17.168916648313857
+      ],
+      "six_minus_long_retention_pp": 33.60254628616761,
+      "six_minus_long_retention_ci95": [
+        21.36284546669631,
+        48.34834553847208
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "kf_exact13_16L",
+      "six_arm": "nt_v9",
+      "first_difference_pp": 14.015937009863267,
+      "first_difference_ci95": [
+        7.528913129551018,
+        20.73601238390092
+      ],
+      "far_difference_pp": -12.315746449722154,
+      "far_difference_ci95": [
+        -17.63864370029283,
+        -7.493713104361552
+      ],
+      "far_minus_first_difference_pp": -26.33168345958542,
+      "far_minus_first_ci95": [
+        -33.0217189204232,
+        -19.743429312312173
+      ],
+      "six_minus_long_retention_pp": 34.48662986493021,
+      "six_minus_long_retention_ci95": [
+        21.625461425470316,
+        51.14197585239756
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "kf_exact13_16L",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 29.816103327403447,
+      "first_difference_ci95": [
+        23.3519043907314,
+        36.125202880444924
+      ],
+      "far_difference_pp": -4.836900279152282,
+      "far_difference_ci95": [
+        -9.93431464669992,
+        -0.7807052529182887
+      ],
+      "far_minus_first_difference_pp": -34.653003606555735,
+      "far_minus_first_ci95": [
+        -40.16078131231183,
+        -29.440547783995164
+      ],
+      "six_minus_long_retention_pp": 35.88982438923011,
+      "six_minus_long_retention_ci95": [
+        20.909599352480328,
+        59.6214666057008
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 0.9946
+    },
+    {
+      "long_arm": "kf_hash13_d128_1L",
+      "six_arm": "L29",
+      "first_difference_pp": 4.163201717912823,
+      "first_difference_ci95": [
+        -1.5992175403137643,
+        10.260627571275705
+      ],
+      "far_difference_pp": -15.800366985242324,
+      "far_difference_ci95": [
+        -22.060678480607393,
+        -9.998132995841479
+      ],
+      "far_minus_first_difference_pp": -19.963568703155147,
+      "far_minus_first_ci95": [
+        -27.101890489551455,
+        -13.165272213271374
+      ],
+      "six_minus_long_retention_pp": 35.637511506147014,
+      "six_minus_long_retention_ci95": [
+        22.305768659344796,
+        51.44468030948401
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.9108
+    },
+    {
+      "long_arm": "kf_hash13_d128_1L",
+      "six_arm": "nt_v9",
+      "first_difference_pp": 8.159033252981619,
+      "first_difference_ci95": [
+        1.7466599331986663,
+        14.822369117647064
+      ],
+      "far_difference_pp": -14.221982589941822,
+      "far_difference_ci95": [
+        -20.50631280834178,
+        -8.572850433185545
+      ],
+      "far_minus_first_difference_pp": -22.38101584292344,
+      "far_minus_first_ci95": [
+        -29.47868131541474,
+        -15.733181549414903
+      ],
+      "six_minus_long_retention_pp": 36.521595084909606,
+      "six_minus_long_retention_ci95": [
+        22.558554675009745,
+        54.2616191207107
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 0.9944
+    },
+    {
+      "long_arm": "kf_hash13_d128_1L",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 23.9591995705218,
+      "first_difference_ci95": [
+        17.742379847596947,
+        30.124627450980395
+      ],
+      "far_difference_pp": -6.74313641937195,
+      "far_difference_ci95": [
+        -12.129582665102511,
+        -2.5009230833514575
+      ],
+      "far_minus_first_difference_pp": -30.702335989893747,
+      "far_minus_first_ci95": [
+        -36.609909866981276,
+        -25.26591868504208
+      ],
+      "six_minus_long_retention_pp": 37.92478960920951,
+      "six_minus_long_retention_ci95": [
+        22.171475837173492,
+        62.57601511328645
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 0.9998
+    },
+    {
+      "long_arm": "kf_hash13_d128_16L",
+      "six_arm": "L29",
+      "first_difference_pp": -1.456857440604642,
+      "first_difference_ci95": [
+        -7.111805402243861,
+        4.165312499999992
+      ],
+      "far_difference_pp": -15.817759650755276,
+      "far_difference_ci95": [
+        -22.047958519303094,
+        -9.915864315166711
+      ],
+      "far_minus_first_difference_pp": -14.360902210150634,
+      "far_minus_first_ci95": [
+        -21.714540649473808,
+        -7.197838152283783
+      ],
+      "six_minus_long_retention_pp": 34.01545119394354,
+      "six_minus_long_retention_ci95": [
+        21.23809545123937,
+        48.95022869799361
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.294
+    },
+    {
+      "long_arm": "kf_hash13_d128_16L",
+      "six_arm": "nt_v9",
+      "first_difference_pp": 2.5389740944641526,
+      "first_difference_ci95": [
+        -3.5967691059801297,
+        8.69217222222222
+      ],
+      "far_difference_pp": -14.239375255454775,
+      "far_difference_ci95": [
+        -20.51273638784085,
+        -8.56280368320416
+      ],
+      "far_minus_first_difference_pp": -16.778349349918926,
+      "far_minus_first_ci95": [
+        -23.739879935866284,
+        -9.898881685784385
+      ],
+      "six_minus_long_retention_pp": 34.89953477270613,
+      "six_minus_long_retention_ci95": [
+        21.54541368048097,
+        51.85690743751401
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.781
+    },
+    {
+      "long_arm": "kf_hash13_d128_16L",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 18.339140412004333,
+      "first_difference_ci95": [
+        12.433018041827196,
+        24.08670602900949
+      ],
+      "far_difference_pp": -6.760529084884903,
+      "far_difference_ci95": [
+        -12.165419493461652,
+        -2.608079968945208
+      ],
+      "far_minus_first_difference_pp": -25.099669496889238,
+      "far_minus_first_ci95": [
+        -31.04816206522015,
+        -19.4888493421177
+      ],
+      "six_minus_long_retention_pp": 36.30272929700603,
+      "six_minus_long_retention_ci95": [
+        21.096436247186055,
+        60.01321070035991
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    },
+    {
+      "long_arm": "kf_hash13_d64_16L",
+      "six_arm": "L29",
+      "first_difference_pp": -6.7263865935430935,
+      "first_difference_ci95": [
+        -12.545859444066192,
+        -0.9704645551617274
+      ],
+      "far_difference_pp": -15.976902540198799,
+      "far_difference_ci95": [
+        -22.23119385818212,
+        -10.143437775161196
+      ],
+      "far_minus_first_difference_pp": -9.250515946655705,
+      "far_minus_first_ci95": [
+        -16.794790057930708,
+        -1.7021279459409018
+      ],
+      "six_minus_long_retention_pp": 32.43635536038321,
+      "six_minus_long_retention_ci95": [
+        20.287106601498166,
+        46.58000362165039
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.011
+    },
+    {
+      "long_arm": "kf_hash13_d64_16L",
+      "six_arm": "nt_v9",
+      "first_difference_pp": -2.730555058474299,
+      "first_difference_ci95": [
+        -8.989810820750849,
+        3.4919028106296164
+      ],
+      "far_difference_pp": -14.398518144898297,
+      "far_difference_ci95": [
+        -20.74248310462609,
+        -8.70245209863546
+      ],
+      "far_minus_first_difference_pp": -11.667963086423999,
+      "far_minus_first_ci95": [
+        -18.9014342479547,
+        -4.570652634311447
+      ],
+      "six_minus_long_retention_pp": 33.3204389391458,
+      "six_minus_long_retention_ci95": [
+        20.6133668100628,
+        49.03139336826703
+      ],
+      "both_rung_intervals_support_reversal": false,
+      "resampling_fraction_first_positive_far_negative": 0.1844
+    },
+    {
+      "long_arm": "kf_hash13_d64_16L",
+      "six_arm": "mt_6mer",
+      "first_difference_pp": 13.069611259065884,
+      "first_difference_ci95": [
+        7.455182485688303,
+        18.400270858770078
+      ],
+      "far_difference_pp": -6.919671974328426,
+      "far_difference_ci95": [
+        -11.971482115450605,
+        -2.879498545022404
+      ],
+      "far_minus_first_difference_pp": -19.98928323339431,
+      "far_minus_first_ci95": [
+        -25.80407401218475,
+        -14.490701402753489
+      ],
+      "six_minus_long_retention_pp": 34.7236334634457,
+      "six_minus_long_retention_ci95": [
+        20.56932436041501,
+        56.81457752259422
+      ],
+      "both_rung_intervals_support_reversal": true,
+      "resampling_fraction_first_positive_far_negative": 1.0
+    }
+  ]
+}

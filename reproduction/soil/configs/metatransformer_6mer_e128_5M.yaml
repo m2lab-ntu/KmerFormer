@@ -1,0 +1,64 @@
+cfgs:
+  dataset: genus_refSoil
+  model: classification_transformer_128
+  optimizer: adam
+paths:
+  data_path_root: ${KF_DATA}/soil
+  vocabulary_path: ${KF_VOCAB}/vocab_6mer.txt
+  class_weight_path: null
+common:
+  experiment_name: genus_5M_soil_6mer_e128
+  prepend_cls_token: false
+  resume_model: false
+hashing:
+  num_buckets: 22
+  num_hash_functions: 6
+multi_level_cls:
+  use: false
+  ranks: Genome,Genus
+  num_classes: 1535,120
+mdl_common:
+  input_module: vocab
+  kmer_size: 6
+  kmer_stride: 1
+  num_classes: 500
+  class_indices: 1
+  classification_threshold: 0.5
+  sparse_embedding: false
+device_settings:
+  use_cpu: false
+  gpu_count: 1
+  gpu_ids: 0
+  split_gpus: false
+dataloader:
+  batch_size: 2048
+  num_workers: 8
+training:
+  save_interval: 1
+  logging_interval: 100
+  evaluation_interval: 1000
+  max_epochs: 15
+  max_steps: 300000
+  early_stop_threshold: 15
+  save_top_n_models: 2
+  use_cudnn_benchmark: true
+  monitor_metric: min loss/val
+  amp: true
+  lr_scheduler_enabled: false
+  warmup_lr_scheduler_enabled: false
+model:
+  name: classification_transformer
+  embed_dim: 128
+  num_att_heads: 2
+  dim_ff: 512
+  num_encoder_blocks: 1
+  dropout: 0.1
+  use_pad_mask: true
+  activation: relu
+  aggregation_mode: mean
+dataset:
+  train_set_path: ${paths.data_path_root}/data/train
+  validation_set_path: ${paths.data_path_root}/data/val
+optimizer:
+  _target_: torch.optim.Adam
+  lr: 0.001

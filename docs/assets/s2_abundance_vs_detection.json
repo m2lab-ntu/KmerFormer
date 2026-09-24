@@ -1,0 +1,191 @@
+{
+  "pool": "${KF_DATA}/val_100K/reads_100K_val.fa",
+  "pool_md5": "cf9220f05f8bd0d8f3c6b2fd07cd8bc9",
+  "pool_identity": "clean_common / val_100K -- the closed-set pool the manuscript prints",
+  "pool_labels_sha1": "9b9ec0c313f7f5fc",
+  "n_reads": 100000,
+  "n_reads_in_db": 85773,
+  "detection_feasibility": {
+    "full_empty_genera": 0,
+    "full_avg_empty_of_present": 0.0,
+    "masked_empty_genera": 17,
+    "masked_avg_empty_of_present": 8.295
+  },
+  "protocol": {
+    "n_partition_samples": 100,
+    "reads_per_sample": 1000,
+    "n_sparse_samples": 200,
+    "genera_present": 60,
+    "seed": 42
+  },
+  "rows": [
+    {
+      "arm": "KmerFormer_exact13mer_1L_250M",
+      "preds_sha1": "a31f6f2bc3acabfe",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.99155,
+      "read_acc_in_db": 0.9924918097769695,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.999886828776127,
+      "bray_curtis": 0.00607,
+      "roc_auc": 0.9444782013888888,
+      "sens_at_95spec": 0.8801666666666667
+    },
+    {
+      "arm": "Kraken2_raw_genus_aware",
+      "preds_sha1": "98a72e03f2a85de8",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.99062,
+      "read_acc_in_db": 0.9909178879134459,
+      "unclassified_frac": 0.00935,
+      "pearson_r": 0.999926516425374,
+      "bray_curtis": 0.004708953768088237,
+      "roc_auc": 0.9541591944444444,
+      "sens_at_95spec": 0.9144166666666667
+    },
+    {
+      "arm": "MetaTransformer_13mer_250M",
+      "preds_sha1": "46f0270523211e28",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.98683,
+      "read_acc_in_db": 0.9880848285591037,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9998234434062612,
+      "bray_curtis": 0.009040000000000001,
+      "roc_auc": 0.9389965486111111,
+      "sens_at_95spec": 0.833
+    },
+    {
+      "arm": "KmerFormer_exact13mer_1L_50M",
+      "preds_sha1": "ddab9e2c74462755",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.91152,
+      "read_acc_in_db": 0.922294894663822,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9980976778665984,
+      "bray_curtis": 0.042919999999999986,
+      "roc_auc": 0.8633872986111111,
+      "sens_at_95spec": 0.5063333333333333
+    },
+    {
+      "arm": "MetaTransformer_13mer_50M",
+      "preds_sha1": "e4761cd90a2b8803",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.87458,
+      "read_acc_in_db": 0.8886129667844194,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9976004993349804,
+      "bray_curtis": 0.053500000000000006,
+      "roc_auc": 0.8358868125000001,
+      "sens_at_95spec": 0.432
+    },
+    {
+      "arm": "KmerFormer_hash13mer_1L_d128_50M",
+      "preds_sha1": "7448b74ed10b57e3",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.86805,
+      "read_acc_in_db": 0.8830984109218518,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.994856512424442,
+      "bray_curtis": 0.06366000000000001,
+      "roc_auc": 0.8435525277777778,
+      "sens_at_95spec": 0.4078333333333333
+    },
+    {
+      "arm": "KmerFormer_exact13mer_16L_50M",
+      "preds_sha1": "eaebe3ad142d0970",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.85629,
+      "read_acc_in_db": 0.8726522332202441,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9977725357004636,
+      "bray_curtis": 0.05599000000000002,
+      "roc_auc": 0.8143077708333333,
+      "sens_at_95spec": 0.4086666666666667
+    },
+    {
+      "arm": "KmerFormer_hash13mer_16L_d128_50M",
+      "preds_sha1": "120bd9cc7cac651f",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.83833,
+      "read_acc_in_db": 0.8562834458395999,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9949078605795889,
+      "bray_curtis": 0.07218000000000001,
+      "roc_auc": 0.8041614097222223,
+      "sens_at_95spec": 0.3561666666666667
+    },
+    {
+      "arm": "Kraken2_raw_species_only",
+      "preds_sha1": "575cc2bec77f47ba",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.79968,
+      "read_acc_in_db": 0.772177724925093,
+      "unclassified_frac": 0.20006,
+      "pearson_r": 0.8311190035773355,
+      "bray_curtis": 0.11140724015243364,
+      "roc_auc": 0.9535664305555555,
+      "sens_at_95spec": 0.9136666666666666
+    },
+    {
+      "arm": "KmerFormer_hash13mer_16L_d64_50M",
+      "preds_sha1": "1f7f97f2cf00a000",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.79257,
+      "read_acc_in_db": 0.8144637589917573,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9880705526130119,
+      "bray_curtis": 0.09878000000000002,
+      "roc_auc": 0.7654194861111111,
+      "sens_at_95spec": 0.2855
+    },
+    {
+      "arm": "KmerFormer_6mer_L29_50M",
+      "preds_sha1": "c1d6c50f47f72366",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.69527,
+      "read_acc_in_db": 0.7172536812283585,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9919619392807617,
+      "bray_curtis": 0.10686,
+      "roc_auc": 0.6920700138888889,
+      "sens_at_95spec": 0.19441666666666665
+    },
+    {
+      "arm": "NTv2_6mer_LoRA_50M",
+      "preds_sha1": "bf310cbfa3e2091c",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.67082,
+      "read_acc_in_db": 0.6939479789677404,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.989365331247649,
+      "bray_curtis": 0.12703,
+      "roc_auc": 0.6702739027777779,
+      "sens_at_95spec": 0.17216666666666666
+    },
+    {
+      "arm": "KmerFormer_ov6mer_50M",
+      "preds_sha1": "6a17047c6c2638c9",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.62753,
+      "read_acc_in_db": 0.6529094237114244,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9873434026827157,
+      "bray_curtis": 0.12683999999999998,
+      "roc_auc": 0.638932548611111,
+      "sens_at_95spec": 0.15758333333333333
+    },
+    {
+      "arm": "MetaTransformer_6mer_50M",
+      "preds_sha1": "2c7e60f771d5111a",
+      "labels_sha1": "9b9ec0c313f7f5fc",
+      "read_acc_full": 0.4892,
+      "read_acc_in_db": 0.5148939643011204,
+      "unclassified_frac": 0.0,
+      "pearson_r": 0.9777647705668718,
+      "bray_curtis": 0.19486000000000003,
+      "roc_auc": 0.5684835208333333,
+      "sens_at_95spec": 0.09275
+    }
+  ]
+}

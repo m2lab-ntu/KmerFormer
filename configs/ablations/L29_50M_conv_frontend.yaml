@@ -1,0 +1,45 @@
+# RESULT: closed-set 100K genus Top-1 69.72%  |  Track A out-of-genome 29.23%
+# Configuration and recorded result: docs/RESULTS.md.
+# Historical rationale is preserved at source revision 5a9870d.
+model:
+  type: "shallow_transformer"
+  backbone: "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species"
+  head_type: "attention_pool"
+  head_config: {hidden_dim: 512, num_attention_heads: 4, dropout: 0.15}
+  max_seq_len: 128
+  shallow_config:
+    d_model: 128
+    nhead: 2
+    d_ff: 512
+    num_layers: 29
+    dropout: 0.1
+    conv_kernels: [2, 3, 5]
+data:
+  split_strategy: stratified
+  fasta_path: "${KF_DATA}/balanced_50M/reads_50M.fa"
+  labels_path: "${KF_DATA}/balanced_50M/labels_50M.tsv"
+  val_ratio: 0.1
+  seed: 42
+  max_token_length: 32
+  task: "genus"
+  rc_augment: true
+training:
+  seed: null  # Historical initialization was unseeded; data.seed controls the split.
+  batch_size: 512
+  eval_batch_size: 1024
+  gradient_accumulation_steps: 1
+  num_epochs: 15
+  learning_rate: 5.0e-4
+  backbone_lr: 5.0e-4
+  weight_decay: 0.02
+  warmup_ratio: 0.05
+  amp: true
+  max_grad_norm: 5.0
+  early_stopping_patience: 5
+  num_workers: 0   # was 4; DataLoader workers duplicated the ~18GB in-RAM 50M corpus → OOM kill
+  label_smoothing: 0.0
+  class_weights: false
+  max_class_weight: 10.0
+  phase1_epochs: 0
+output:
+  dir: "${KF_OUT}/L29_50M_conv_frontend"

@@ -1,0 +1,19 @@
+strain,published_genus,assembly_accession,genome_length_bp,genome_mass_fg_per_cell,evaluation_genus,genus_class,mapping_note,expected_dna_fraction
+Bacteroides thetaiotaomicron JCM 5827T,Bacteroides,GCF_000011065.1,6293399,8.118518203097851,Bacteroides,18,Published genus,0.09561762432676976
+Parabacteroides distasonis JCM 5825T,Parabacteroides,GCF_000012845.1,4811379,6.261897588757453,Parabacteroides,82,Published genus,0.07375086884525876
+Agathobacter rectalis JCM 17463T (previous name is Eubacterium rectale JCM 17463T),Agathobacter,GCF_000020605.1,3449685,4.42774492535451,Eubacterium,47,Former genus Eubacterium given in source Table S1,0.05214873457150835
+Anaerostipes caccae JCM 13470T,Anaerostipes,GCF_000154305.1,3606936,4.6799513082172055,Anaerostipes,12,Published genus,0.05511915042401906
+Prevotella copri JCM 13464T,Prevotella,GCF_000157935.1,3512473,4.5661461416314095,Prevotella,91,Published genus,0.053778785175974925
+Collinsella aerofaciens JCM 10188T,Collinsella,GCF_000169035.1,2439869,3.362834676315793,Collinsella,34,Published genus,0.039606521129718325
+Catenibacterium mitsuokai JCM 10609T,Catenibacterium,GCF_000173795.1,2671313,3.366068212479835,Catenibacterium,29,Published genus,0.039644604809331484
+Bifidobacterium longum subsp. longum JCM 1217T,Bifidobacterium,GCF_000196555.1,2385164,3.282677152710626,Bifidobacterium,20,Published genus,0.03866244835839431
+Flavonifractor plautii 32125T,Flavonifractor,GCF_000239295.1,3820124,5.272840532124228,Flavonifractor,,Published genus,0.0621020329723762
+Megamonas funiformis JCM 14723T,Megamonas,GCF_000245775.1,2562512,3.161232795643367,Megamonas,69,Published genus,0.037232110873133474
+Blautia producta JCM 1471T,Blautia,GCF_000373885.1,6085687,7.93859131730459,Blautia,22,Published genus,0.09349849606448404
+Veillonella tobetsuensis JCM 17976T,Veillonella,GCF_001078375.1,2161277,2.7417071387962855,Veillonella,117,Published genus,0.032291055664741025
+Roseburia faecis JCM 17581T,Roseburia,GCF_001406815.1,3334694,4.305099422696355,Roseburia,100,Published genus,0.05070425033126109
+Clostridium bolteae JCM 12243T,Clostridium,GCF_002234575.2,6614036,8.756458814415446,Clostridium,33,Published genus,0.10313110944681049
+Faecalibacterium prausnitzii JCM 31915 (current name is Faecalibacterium duncaniae JCM31915T),Faecalibacterium,GCF_002734145.1,3110044,4.221378494240067,Faecalibacterium,49,Published genus,0.049718208779692345
+Megasphaera elsdenii JCM 1772T,Megasphaera,GCF_003010495.1,2478942,3.3214868225542045,Megasphaera,70,Published genus,0.03911953773585401
+Streptococcus mutans JCM 5705T,Streptococcus,GCF_006739205.1,2018796,2.5438445737858144,Streptococcus,110,Published genus,0.02996068601646172
+Ruminococcus gnavus JCM 6515T,Ruminococcus,GCF_008121495.1,3552639,4.577607554552551,Ruminococcus,102,Published genus,0.05391377447421035

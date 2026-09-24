@@ -1,0 +1,18 @@
+# Supported KmerFormer environment. For a CPU-only environment, use the
+# explicit PyTorch CPU installation command in README.md.
+name: kmerformer
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - torch>=2.13,<3
+      - safetensors>=0.8,<1
+      - numpy>=2.0,<3
+      - pandas>=2.2
+      - scikit-learn>=1.5
+      - scipy>=1.14
+      - pyyaml>=6.0
+      - tqdm>=4.66
+      - psutil>=5.9

@@ -1,0 +1,47 @@
+# Benchmark configuration: bench/L8.yaml
+# Configuration and recorded result: docs/RESULTS.md.
+# Historical rationale is preserved at source revision 5a9870d.
+model:
+  type: shallow_transformer
+  backbone: InstaDeepAI/nucleotide-transformer-v2-500m-multi-species
+  head_type: attention_pool
+  head_config:
+    hidden_dim: 512
+    num_attention_heads: 4
+    dropout: 0.15
+  max_seq_len: 128
+  shallow_config:
+    d_model: 128
+    nhead: 2
+    d_ff: 512
+    num_layers: 8
+    dropout: 0.1
+data:
+  split_strategy: stratified
+  fasta_path: ${KF_DATA}/balanced_5M/reads_5M.fa
+  labels_path: ${KF_DATA}/balanced_5M/labels_5M.tsv
+  val_ratio: 0.1
+  seed: 42
+  max_token_length: 32
+  task: genus
+  rc_augment: true
+training:
+  seed: null  # Historical initialization was unseeded; data.seed controls the split.
+  batch_size: 512
+  eval_batch_size: 1024
+  gradient_accumulation_steps: 1
+  num_epochs: 15
+  learning_rate: 0.0005
+  backbone_lr: 0.0005
+  weight_decay: 0.02
+  warmup_ratio: 0.05
+  amp: true
+  max_grad_norm: 5.0
+  early_stopping_patience: 5
+  num_workers: 2
+  label_smoothing: 0.0
+  class_weights: false
+  max_class_weight: 10.0
+  phase1_epochs: 0
+output:
+  dir: "${KF_OUT}/bench_L8"

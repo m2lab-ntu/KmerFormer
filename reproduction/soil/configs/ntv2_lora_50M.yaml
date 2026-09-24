@@ -1,0 +1,44 @@
+model:
+  backbone: InstaDeepAI/nucleotide-transformer-v2-500m-multi-species
+  head_type: attention_pool
+  head_config:
+    hidden_dim: 512
+    num_attention_heads: 4
+    dropout: 0.15
+  freeze_backbone: false
+  use_lora: true
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_target_modules:
+  - query
+  - key
+  - value
+  gradient_checkpointing: true
+  type: gfm
+data:
+  fasta_path: ${KF_DATA}/soil/ntv2_data/nt_soil_train_50M.fa
+  labels_path: ${KF_DATA}/soil/ntv2_data/nt_soil_train_50M_labels.tsv
+  val_ratio: 0.05
+  seed: 42
+  max_token_length: 32
+  task: genus
+  rc_augment: false
+  split_strategy: stratified
+training:
+  batch_size: 384
+  eval_batch_size: 768
+  gradient_accumulation_steps: 1
+  num_epochs: 6
+  learning_rate: 0.0005
+  backbone_lr: 3.0e-05
+  weight_decay: 0.02
+  warmup_ratio: 0.05
+  amp: true
+  max_grad_norm: 5.0
+  early_stopping_patience: 2
+  checkpoint_every_steps: 2000
+  num_workers: 2
+  seed: null
+output:
+  dir: ${KF_OUT}/soil/ntv2_lora_50M

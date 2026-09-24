@@ -1,0 +1,7 @@
+{
+  "selection": "First 16 records in the primary 100K FASTA, in original order; selected before prediction",
+  "pool": "gut primary closed set, 100000 reads",
+  "source_fasta_sha256": "5806be45dcc18381e3efd1542f9ca6c4376eca84dc0a55f37d1f24dc5369f4c9",
+  "example_sha256": "a177cffbadf9d7e895a6add9b547953dde6e6492e4280cb3d845fe9905904cc7",
+  "read_count": 16
+}

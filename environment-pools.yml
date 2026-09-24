@@ -1,0 +1,66 @@
+# Environment for the evaluation-pool pipelines in scripts/track_a/ and
+# scripts/track_b/ -- building the off-catalogue test sets and scoring on them.
+#
+#     conda env create -f environment-pools.yml
+#     conda activate kmerformer-pools
+#
+# Separate from environment.yml on purpose. That one is for training, needs a
+# CUDA build of torch, and knows nothing about genomics tooling. This one carries
+# the command-line tools the pipelines shell out to, which are the part that is
+# easy to miss: art_illumina, the NCBI datasets CLI, skani, and Kraken 2 with
+# Bracken. Those four are why "just pip install" does not get you a runnable
+# pipeline.
+#
+# The inference steps here also need torch. The cu121 pin below is what actually
+# ran the Track A and Track B inference; training happened elsewhere under
+# cu124. If you only want to *build* the pools and will score them under
+# environment.yml instead, everything under the pip: key is unnecessary.
+name: kmerformer-pools
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.11
+  - pip
+
+  # --- the command-line tools the pipelines invoke -----------------------
+  - art                 # provides art_illumina; read simulation, both tracks
+  - ncbi-datasets-cli   # fetching assemblies, both tracks
+  - skani               # ANI against every reference genome; Track B step 03
+  - kraken2             # the non-neural baseline; Track B step 06
+  - bracken             # abundance re-estimation on top of Kraken 2
+
+  # --- inference, for the scoring steps ---------------------------------
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - torch==2.5.1+cu121
+      - transformers==4.46.3   # the pin is load-bearing; see environment.yml
+      - tokenizers==0.20.3
+      - peft==0.19.1           # NOTE: not 0.20.0. See below.
+      - omegaconf==2.3.0
+      - accelerate==1.13.0
+      - einops==0.8.2
+      - numpy
+      - pandas
+      - scipy
+      - matplotlib
+
+# Two things worth knowing before you trust this file.
+#
+# peft differs from environment.yml on purpose, and the difference is recorded
+# rather than smoothed over: the Track A and Track B inference ran under 0.19.1
+# while training ran under 0.20.0. Both load the NT-v2 LoRA adapters. If you are
+# reproducing the off-catalogue numbers, 0.19.1 is what produced them.
+#
+# This file is transcribed from the environment the pipelines ran in, with skani,
+# kraken2 and bracken added because the Track B steps invoke them and the
+# original spec predates those steps. Creating the environment from it has NOT
+# been tested end to end here, so treat the four bioconda tools as "should
+# resolve" rather than "verified"; if solving fails, install them however your
+# site prefers -- the pipelines only need them on PATH, not in this env.
+#
+# MetaTransformer, if you are scoring that baseline, needs its own src on
+# PYTHONPATH and its own interpreter. Point MT_PYTHON at it; see
+# scripts/track_a/README.md.

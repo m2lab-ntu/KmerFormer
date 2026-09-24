@@ -1,0 +1,152 @@
+[
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 6-mer, 1 layer",
+  "pearson": 0.34519228724983836,
+  "spearman": 0.1859252049028905,
+  "bray_curtis": 0.48384099760383986,
+  "n_genera": 11,
+  "pearson_lo": -0.477950368481543,
+  "pearson_hi": 0.7974487319804459
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 6-mer, 8 layers",
+  "pearson": 0.28114752044763314,
+  "spearman": 0.25743489909630995,
+  "bray_curtis": 0.3898761029825924,
+  "n_genera": 11,
+  "pearson_lo": -0.47254009748024284,
+  "pearson_hi": 0.8698776580917874
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 6-mer, 16 layers",
+  "pearson": 0.4258938340983692,
+  "spearman": 0.33847921918218526,
+  "bray_curtis": 0.34883763002955925,
+  "n_genera": 11,
+  "pearson_lo": -0.3065074829088149,
+  "pearson_hi": 0.8908929272099458
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 6-mer, 29 layers",
+  "pearson": 0.3926176706146755,
+  "spearman": 0.40045428748314876,
+  "bray_curtis": 0.37787020714894737,
+  "n_genera": 11,
+  "pearson_lo": -0.34758589976167514,
+  "pearson_hi": 0.8772699209189959
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 13-mer exact, 16 l.",
+  "pearson": 0.49992513346851597,
+  "spearman": 0.4290581651605165,
+  "bray_curtis": 0.3337612282885716,
+  "n_genera": 11,
+  "pearson_lo": -0.27564524953377145,
+  "pearson_hi": 0.9170224956437542
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 13-mer hashed d128, 1 l.",
+  "pearson": 0.41768677452762,
+  "spearman": 0.4290581651605165,
+  "bray_curtis": 0.3446650583460763,
+  "n_genera": 11,
+  "pearson_lo": -0.3799761865620952,
+  "pearson_hi": 0.9122122027465119
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 13-mer hashed d128, 16 l.",
+  "pearson": 0.4121027621153043,
+  "spearman": 0.3909196615906929,
+  "bray_curtis": 0.3454353655258127,
+  "n_genera": 11,
+  "pearson_lo": -0.3753056073110043,
+  "pearson_hi": 0.9110050283294479
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "KmerFormer 13-mer hashed d64, 16 l.",
+  "pearson": 0.28314386951864384,
+  "spearman": 0.3098753415048175,
+  "bray_curtis": 0.3622654793511189,
+  "n_genera": 11,
+  "pearson_lo": -0.4736645022660963,
+  "pearson_hi": 0.9025457783985241
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "MetaTransformer 13-mer",
+  "pearson": 0.5453745728723823,
+  "spearman": 0.4385927910529725,
+  "bray_curtis": 0.3439701426834951,
+  "n_genera": 11,
+  "pearson_lo": -0.17986346316049012,
+  "pearson_hi": 0.9099033315420348
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "MetaTransformer 6-mer",
+  "pearson": 0.06465893897766778,
+  "spearman": 0.20022714374157438,
+  "bray_curtis": 0.40917527528709724,
+  "n_genera": 11,
+  "pearson_lo": -0.5688705266912563,
+  "pearson_hi": 0.8604084035559016
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "NT-v2 500M + LoRA",
+  "pearson": 0.4202792913207564,
+  "spearman": 0.33847921918218526,
+  "bray_curtis": 0.37636994714367433,
+  "n_genera": 11,
+  "pearson_lo": -0.3610415112000196,
+  "pearson_hi": 0.8768765379218543
+ },
+ {
+  "mock": "d6331_rep1",
+  "arm": "Kraken 2 + Bracken",
+  "pearson": 0.5796847989859611,
+  "spearman": 0.5720775535473553,
+  "bray_curtis": 0.4367367914631495,
+  "n_genera": 11,
+  "pearson_lo": -0.11479014198754371,
+  "pearson_hi": 0.8928989626178669
+ },
+ {
+  "mock": "d6331_rep2",
+  "arm": "KmerFormer 6-mer, 8 layers",
+  "pearson": 0.26423082989823843,
+  "spearman": 0.25743489909630995,
+  "bray_curtis": 0.40582164476182486,
+  "n_genera": 11,
+  "pearson_lo": -0.4721714794505563,
+  "pearson_hi": 0.8572079958126667
+ },
+ {
+  "mock": "d6331_rep2",
+  "arm": "KmerFormer 6-mer, 16 layers",
+  "pearson": 0.4074409583215293,
+  "spearman": 0.33847921918218526,
+  "bray_curtis": 0.3655028476437422,
+  "n_genera": 11,
+  "pearson_lo": -0.33402282255969074,
+  "pearson_hi": 0.8806897329725469
+ },
+ {
+  "mock": "d6331_rep2",
+  "arm": "KmerFormer 6-mer, 29 layers",
+  "pearson": 0.3745761060120873,
+  "spearman": 0.40045428748314876,
+  "bray_curtis": 0.3938912481935071,
+  "n_genera": 11,
+  "pearson_lo": -0.36176286700728877,
+  "pearson_hi": 0.863880738661176
+ }
+]

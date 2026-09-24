@@ -1,0 +1,6 @@
+# Preserve source-evidence bytes so recorded checksums survive checkout.
+# Empty final CSV/TSV fields and source CRLF records are intentional.
+reproduction/** -text -whitespace
+examples/*.tsv -text whitespace=cr-at-eol
+# Retain the exact published licence texts and their upstream checksums.
+kmerformer/assets/licences/*.txt -text -whitespace

@@ -1,0 +1,17 @@
+{
+  "record": "https://zenodo.org/records/7594864",
+  "creator": "Alexander Wichmann",
+  "title": "MetaTransformer embedding tables",
+  "licence": "cc-by-4.0",
+  "file": {
+    "id": "35b96105-2ef0-49d4-905d-ae1e104b9caa",
+    "key": "vocab_13mer.txt.gz",
+    "size": 74811478,
+    "checksum": "md5:7423574a749f83272ba8d302423eeef8",
+    "links": {
+      "self": "https://zenodo.org/api/records/7594864/files/vocab_13mer.txt.gz/content"
+    }
+  },
+  "retrieved_on": "2026-09-15",
+  "local_vocabulary_sha256": "502bdb13057102a4f2c0cecb0d48d9565a58c5f54d3f7f0b7be500340dba1087"
+}

@@ -1,0 +1,52 @@
+# STATUS: ran to completion on Nano4 (25/25 epochs, sacct COMPLETED 0:0).
+# Configuration and recorded result: docs/RESULTS.md.
+# Historical rationale is preserved at source revision 5a9870d.
+model:
+  backbone: "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species"
+  head_type: "attention_pool"
+  head_config:
+    hidden_dim: 512
+    num_attention_heads: 4
+    dropout: 0.15
+  freeze_backbone: false
+  use_lora: true
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_target_modules: ["query", "key", "value"]
+  gradient_checkpointing: true
+  trust_remote_code: true
+
+# ===== Data =====
+data:
+  split_strategy: stratified
+  fasta_path: "${KF_DATA}/balanced_250M/reads_250M.fa"
+  labels_path: "${KF_DATA}/balanced_250M/labels_250M.tsv"
+  val_ratio: 0.02
+  seed: 42
+  max_token_length: 32
+  task: "genus"
+  rc_augment: true
+
+# ===== Training =====
+training:
+  seed: null  # Historical initialization was unseeded; data.seed controls the split.
+  batch_size: 128           # per-GPU  (128 × 64 GPUs = 8192 effective batch)
+  eval_batch_size: 512
+  gradient_accumulation_steps: 1
+  num_epochs: 25            # from scratch on balanced data
+  learning_rate: 3.0e-4
+  backbone_lr: 2.0e-5
+  weight_decay: 0.02
+  warmup_ratio: 0.03
+  amp: true
+  max_grad_norm: 5.0
+  early_stopping_patience: 5
+  num_workers: 8
+  label_smoothing: 0.0
+  class_weights: false      # balanced data → no weighting (v9 recipe)
+  logit_adjustment: false
+
+# ===== Output =====
+output:
+  dir: "${KF_OUT}/ntv2_lora_250M"

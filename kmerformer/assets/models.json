@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "models": {
+    "kmerformer-6mer-l29-50m": {
+      "model_id": "kmerformer-6mer-l29-50m",
+      "num_classes": 120,
+      "task": "genus",
+      "source_checkpoint_sha256": "7d1da3253727ffe9c33d191fd57431f7a4258de6471a902303fca0ea22bdb650",
+      "weights_licence": "Apache-2.0",
+      "tokenizer_licence": "CC-BY-NC-SA-4.0",
+      "inference": {
+        "aggregation": "mean_logits",
+        "default_precision": "fp32",
+        "rc_tta": true,
+        "fp32_encoder_fastpath": false
+      },
+      "status": "not_publicly_released",
+      "weights_licence_scope": "model.safetensors"
+    },
+    "kmerformer-exact13-1l-250m": {
+      "model_id": "kmerformer-exact13-1l-250m",
+      "num_classes": 120,
+      "task": "genus",
+      "source_checkpoint_sha256": "ab12cb7045a343ed47c81505928bfbabf29a8faa175beeff56fd84ada09e1ee9",
+      "weights_licence": "Apache-2.0",
+      "tokenizer_licence": "CC-BY-4.0",
+      "inference": {
+        "aggregation": "mean_logits",
+        "default_precision": "fp32",
+        "rc_tta": true,
+        "fp32_encoder_fastpath": false
+      },
+      "status": "not_publicly_released",
+      "weights_licence_scope": "model.safetensors"
+    },
+    "kmerformer-exact13-1l-50m": {
+      "model_id": "kmerformer-exact13-1l-50m",
+      "num_classes": 120,
+      "task": "genus",
+      "source_checkpoint_sha256": "448fb2df0f0e59de4c3c79f6257f43b1c2ba3d6e2a83a524a5e0ba9d3df06d92",
+      "weights_licence": "Apache-2.0",
+      "tokenizer_licence": "CC-BY-4.0",
+      "inference": {
+        "aggregation": "mean_logits",
+        "default_precision": "fp32",
+        "rc_tta": true,
+        "fp32_encoder_fastpath": false
+      },
+      "status": "not_publicly_released",
+      "weights_licence_scope": "model.safetensors"
+    },
+    "kmerformer-hashed13-d128-1l-50m": {
+      "model_id": "kmerformer-hashed13-d128-1l-50m",
+      "num_classes": 120,
+      "task": "genus",
+      "source_checkpoint_sha256": "0dcc75058901ffdb5344f40e4df9f8fe5e33a442191b3579d5cc6416f1848a05",
+      "weights_licence": "Apache-2.0",
+      "tokenizer_licence": "MIT",
+      "inference": {
+        "aggregation": "mean_logits",
+        "default_precision": "fp32",
+        "rc_tta": true,
+        "fp32_encoder_fastpath": false
+      },
+      "status": "not_publicly_released",
+      "weights_licence_scope": "model.safetensors"
+    }
+  }
+}

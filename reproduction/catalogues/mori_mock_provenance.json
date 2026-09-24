@@ -1,0 +1,21 @@
+{
+  "run": "DRR466867",
+  "experiment": "DRX451103",
+  "study": "DRP010046",
+  "bioproject": "PRJDB10817",
+  "sample": "DRS305787",
+  "biosample": "SAMD00611011",
+  "library_name": "Cmix_MetaHit_Hi",
+  "library_strategy": "WGS",
+  "sample_design": "Equal-cell mixture of 18 gut bacterial strains; MetaHIT DNA extraction",
+  "source_doi": "10.1093/dnares/dsad010",
+  "source_table": "Supplementary Table S1",
+  "source_table_sha256": "cdfadd3aaceff924da68cf3246ab5c5ae176def7d72758fcd676e453898d8f45",
+  "expected_abundance": "Theoretical DNA-mass fractions: genome mass per cell divided by the sum across 18 equal-cell strains. Not measured post-extraction read composition.",
+  "n_strains": 18,
+  "n_in_catalogue": 17,
+  "expected_dna_mass_in_catalogue": 0.9378979670276234,
+  "excluded_genus": "Flavonifractor",
+  "historical_alias": "kim; kept only in input artifact paths",
+  "correction": "Previous composition included Akkermansia and Methanobrevibacter, omitted Clostridium and Streptococcus, and did not describe this sample."
+}

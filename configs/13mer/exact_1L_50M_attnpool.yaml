@@ -1,0 +1,64 @@
+# RESULT: closed-set 100K genus Top-1 90.74%  |  Track A out-of-genome 26.12%
+# Configuration and recorded result: docs/RESULTS.md.
+# Historical rationale is preserved at source revision 5a9870d.
+model:
+  type: "shallow_transformer"
+  backbone: "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species"  # unused; kept for config symmetry
+  vocab_size: 33545102     # 33,545,099 observed 13-mers + 3 specials — asserted against the tokenizer
+  pad_id: 0
+  head_type: "attention_pool"
+  head_config:
+    hidden_dim: 512
+    num_attention_heads: 4
+    dropout: 0.15
+  max_seq_len: 150
+  shallow_config:
+    d_model: 64
+    nhead: 2
+    d_ff: 512
+    num_layers: 1          # <-- the only model-side change from Job A
+    dropout: 0.1
+    sparse_embedding: true
+
+# ===== Data =====
+data:
+  split_strategy: random
+  fasta_path: "${KF_DATA}/balanced_50M/reads_50M.fa"
+  labels_path: "${KF_DATA}/balanced_50M/labels_50M.tsv"
+  lazy: true
+  val_ratio: 0.1
+  seed: 42
+  max_token_length: 140
+  task: "genus"
+  tokenizer:
+    type: "exact_kmer"
+    k: 13
+    stride: 1
+    vocab_path: "${KF_VOCAB}/vocab_13mer.txt"
+    canonical: true
+  rc_augment: true
+
+# ===== Training =====
+training:
+  seed: null  # Historical initialization was unseeded; data.seed controls the split.
+  batch_size: 256
+  eval_batch_size: 512
+  gradient_accumulation_steps: 2   # 256 x 2 = 512 effective (= Jobs A/B/C)
+  num_epochs: 15
+  learning_rate: 5.0e-4
+  backbone_lr: 5.0e-4
+  weight_decay: 0.02
+  warmup_ratio: 0.05
+  amp: true
+  amp_dtype: "fp16"
+  max_grad_norm: 5.0
+  early_stopping_patience: 5
+  periodic_save_interval: 40000
+  num_workers: 4
+  label_smoothing: 0.0
+  class_weights: false
+  phase1_epochs: 0
+
+# ===== Output =====
+output:
+  dir: "${KF_OUT}/exact13_1L_50M_attnpool"

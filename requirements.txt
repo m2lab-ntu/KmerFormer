@@ -1,0 +1,2 @@
+# Supported code and reviewer tooling; install a suitable PyTorch build first.
+-e .[review,plots]
