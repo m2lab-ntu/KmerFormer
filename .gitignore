@@ -39,6 +39,9 @@ vocab_*.txt
 # and because two 100K pools agree on 8% of labels -- the stored label
 # vector is the only thing that says which pool a row is on.
 !docs/assets/*.npz
+# The second 50M exact 13-mer run, kept apart from the table's arrays so the
+# regeneration loop over docs/assets/*_preds_clean_common.npz does not pick it up.
+!docs/assets/repeats/*.npz
 !examples/*.fa
 !examples/*.tsv
 !tests/fixtures/*.json
