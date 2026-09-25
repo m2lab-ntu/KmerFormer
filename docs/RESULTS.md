@@ -556,6 +556,16 @@ predictions exactly, that spread is **training** variance, not evaluation noise 
 inference here is deterministic, and re-scoring an existing checkpoint will not
 reproduce it.
 
+Both runs' predictions are in the repository, so the pair can be checked directly:
+the first is `docs/assets/KmerFormer_exact13mer_1L_50M_preds_clean_common.npz`, the
+second `docs/assets/repeats/KmerFormer_exact13mer_1L_50M_run2_preds_clean_common.npz`.
+Their label vectors are identical (SHA-1 `9b9ec0c313f7f5fc`); 2,155 reads are right
+in the first and wrong in the second and 2,268 the other way round, which gives the
+nominal standard error of 0.067 points the supplement quotes when the read pairs
+are treated as independent. The second run sits in its own directory so the
+regeneration command below, which loops over the table's arrays, does not treat it
+as a fifteenth arm.
+
 #### The coverage mask gives read accuracy and nothing else
 
 Restricting to the 85,773 reads whose source species is in the Kraken 2 index is
