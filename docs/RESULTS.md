@@ -465,22 +465,31 @@ communities of 60 genera for detection, seed 42. Regenerate with
 values in [`docs/assets/s2_abundance_vs_detection.json`](assets/s2_abundance_vs_detection.json),
 predictions alongside it.
 
+> **Detection columns corrected on 2026-09-26.** ROC points are now formed only at
+> the end of each group of tied scores ([`scripts/eval/_roc.py`](../scripts/eval/_roc.py)).
+> Between 10,289 and 13,074 of the 24,000 pooled genus-community pairs score exactly
+> 0, and the earlier one-pair-at-a-time accumulation placed the 95%-specificity
+> operating point inside that tie, where no threshold can reach. Sensitivity at
+> 95% specificity fell by 0.04-10.52 points and AUC rose by 0.0003-0.0011;
+> read accuracy, *r* and Bray-Curtis are unaffected. The 250M sensitivity lead
+> over MetaTransformer, 88.02% against 83.30% before the correction, is a tie after it.
+
 | Arm | Read acc. | Pearson *r* | Bray–Curtis | ROC AUC | Sens@95% spec. |
 |---|---:|---:|---:|---:|---:|
-| Kraken 2 raw, **genus-aware** index | 99.06% | **0.9999** | **0.005** | **0.954** | **91.44%** |
-| KmerFormer exact 13-mer, 1L, 250M | **99.16%** | **0.9999** | 0.006 | 0.944 | 88.02% |
-| MetaTransformer 13-mer, 250M | 98.68% | 0.9998 | 0.009 | 0.939 | 83.30% |
-| KmerFormer exact 13-mer, 1L, 50M | 91.15% | 0.9981 | 0.043 | 0.863 | 50.63% |
-| MetaTransformer 13-mer, 50M | 87.46% | 0.9976 | 0.054 | 0.836 | 43.20% |
-| KmerFormer hashed 13-mer, 1L, d128, 50M | 86.80% | 0.9949 | 0.064 | 0.844 | 40.78% |
-| KmerFormer exact 13-mer, 16L, 50M | 85.63% | 0.9978 | 0.056 | 0.814 | 40.87% |
-| KmerFormer hashed 13-mer, 16L, d128, 50M | 83.83% | 0.9949 | 0.072 | 0.804 | 35.62% |
-| Kraken 2 raw, species-only index | 79.97% | 0.8311 | 0.111 | 0.954 | 91.37% |
-| KmerFormer hashed 13-mer, 16L, d64, 50M | 79.26% | 0.9881 | 0.099 | 0.765 | 28.55% |
-| KmerFormer 6-mer, 29 layers, 50M | 69.53% | 0.9920 | 0.107 | 0.692 | 19.44% |
-| NT-v2 6-mer + LoRA, 50M | 67.08% | 0.9894 | 0.127 | 0.670 | 17.22% |
-| KmerFormer overlapping 6-mer, 50M | 62.75% | 0.9873 | 0.127 | 0.639 | 15.76% |
-| MetaTransformer 6-mer, 50M | 48.92% | 0.9778 | 0.195 | 0.568 | 9.28% |
+| Kraken 2 raw, **genus-aware** index | 99.06% | **0.9999** | **0.005** | **0.955** | **90.99%** |
+| KmerFormer exact 13-mer, 1L, 250M | **99.16%** | **0.9999** | 0.006 | 0.945 | 77.49% |
+| MetaTransformer 13-mer, 250M | 98.68% | 0.9998 | 0.009 | 0.940 | 77.47% |
+| KmerFormer exact 13-mer, 1L, 50M | 91.15% | 0.9981 | 0.043 | 0.864 | 46.19% |
+| MetaTransformer 13-mer, 50M | 87.46% | 0.9976 | 0.054 | 0.837 | 41.49% |
+| KmerFormer hashed 13-mer, 1L, d128, 50M | 86.80% | 0.9949 | 0.064 | 0.845 | 39.68% |
+| KmerFormer exact 13-mer, 16L, 50M | 85.63% | 0.9978 | 0.056 | 0.815 | 37.30% |
+| KmerFormer hashed 13-mer, 16L, d128, 50M | 83.83% | 0.9949 | 0.072 | 0.805 | 35.05% |
+| Kraken 2 raw, species-only index | 79.97% | 0.8311 | 0.111 | 0.954 | 90.92% |
+| KmerFormer hashed 13-mer, 16L, d64, 50M | 79.26% | 0.9881 | 0.099 | 0.766 | 27.98% |
+| KmerFormer 6-mer, 29 layers, 50M | 69.53% | 0.9920 | 0.107 | 0.692 | 19.18% |
+| NT-v2 6-mer + LoRA, 50M | 67.08% | 0.9894 | 0.127 | 0.671 | 16.31% |
+| KmerFormer overlapping 6-mer, 50M | 62.75% | 0.9873 | 0.127 | 0.640 | 15.45% |
+| MetaTransformer 6-mer, 50M | 48.92% | 0.9778 | 0.195 | 0.569 | 9.23% |
 
 > The main primary-pool comparison now uses the MetaTransformer arrays:
 > 87.458% for 13-mer and 48.920% for 6-mer. The recovered 99,742-read 13-mer
@@ -506,17 +515,18 @@ re-estimation is involved. The species-only build's *r* of 0.831 is not a proper
 of *k*-mer lookup; it is the 20.01% of reads that climb to root when no genus node
 exists to stop at, and those missing counts deflate every genus at once. Insert the
 genus nodes and unclassified falls to 0.94%, *r* goes to 0.9999 and Bray–Curtis to
-0.005. Detection is unchanged (0.954 either way), because the reads that were
+0.005. Detection barely moves (AUC 0.954 against 0.955), because the reads that were
 climbing to root were ambiguous *within* a genus and never decided whether a genus
 is present. Both indexes come from the same 1,535-genome library, so a row named by
 genome count cannot distinguish them — name the taxonomy.
 
-**The head-to-head against MetaTransformer holds on every column, at both
-budgets.** At 250M, 99.16% against 98.68% read accuracy, *r* 0.9999 against 0.9998,
-AUC 0.944 against 0.939, sensitivity 88.02% against 83.30%. At 50M, 91.15% against
-87.46%, 0.9981 against 0.9976, 0.863 against 0.836, 50.63% against 43.20%. The
-250M arm also has the highest read accuracy of anything here, Kraken 2 included —
-though Kraken 2 still leads detection, so "best at both" stays Kraken 2's.
+**Against MetaTransformer, KmerFormer leads on every column at 50M and on all but
+one at 250M.** At 50M: 91.15% against 87.46% read accuracy, *r* 0.9981 against
+0.9976, AUC 0.864 against 0.837, sensitivity 46.19% against 41.49%. At 250M: 99.16%
+against 98.68%, *r* 0.9999 against 0.9998 and AUC 0.945 against 0.940, while
+sensitivity at 95% specificity is level, 77.49% against 77.47%. The 250M arm also
+has the highest read accuracy of anything here, Kraken 2 included. Kraken 2 still
+leads detection, so "best at both" stays Kraken 2's.
 
 **Exact beats hashed on abundance by more than read accuracy predicts.** Every
 exact 13-mer arm sits at *r* ≥ 0.9976 and every hashed one at ≤ 0.9949, and the
@@ -528,7 +538,7 @@ collisions as the source of the abundance gap.
 
 **The 6-mer models sit together** — high *r*, weak detection, all four of them
 across two architectures and two tokenizer variants. Ours is in that group, 0.9920
-and 19.44%. The pattern recurs across the tested 6-mer configurations; these
+and 19.18%. The pattern recurs across the tested 6-mer configurations; these
 comparisons do not isolate tokenization from every other modeling choice.
 
 #### Two of these rows reproduce bit-for-bit across machines
@@ -574,7 +584,7 @@ moves every neural arm by 2–3 points. It cannot produce a detection column. Th
 mask empties 17 of the 120 genera, so of the 60 genera each sparse sample declares
 present, **8.3 on average hold no reads at all**: 14% of the positives are false
 negatives by construction, for every method alike, and the same arm reads AUC 0.899
-masked against 0.954 unmasked. The two scorers in this repo disagree about what to
+masked against 0.955 unmasked. The two scorers in this repo disagree about what to
 do here, which is worth knowing before trusting either.
 [`evaluate_sample.py`](../scripts/eval/evaluate_sample.py) caps
 `reads_per_sample` by the smallest genus over all 120, so one empty genus collapses
