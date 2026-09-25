@@ -29,6 +29,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _roc import operating_point, tie_grouped_roc  # noqa: E402  (shared with the other scorer)
 import pandas as pd
 from scipy.stats import pearsonr, spearmanr
 
@@ -324,41 +328,14 @@ def compute_roc_curve(sparse_samples, n_classes: int):
     y_true = np.array(labels_list, dtype=np.int32)
     y_score = np.array(scores_list, dtype=np.float64)
 
-    # Sort by score descending
-    order = np.argsort(-y_score)
-    y_true_s = y_true[order]
-    y_score_s = y_score[order]
-
-    n_pos = y_true.sum()
-    n_neg = len(y_true) - n_pos
-
-    # Build ROC by sweeping threshold
-    tps = np.cumsum(y_true_s)
-    fps = np.cumsum(1 - y_true_s)
-    tpr = tps / n_pos
-    fpr = fps / n_neg
-
-    # Prepend (0, 0) to close the curve
-    tpr = np.concatenate([[0.0], tpr])
-    fpr = np.concatenate([[0.0], fpr])
-    thresholds = np.concatenate([[np.inf], y_score_s])
-
-    # AUC via trapezoidal rule
-    auc = float(np.trapezoid(tpr, fpr) if hasattr(np, "trapezoid") else np.trapz(tpr, fpr))
+    # ROC with tied scores grouped; see scripts/eval/_roc.py for why the
+    # earlier one-pair-at-a-time accumulation overstated sensitivity.
+    fpr, tpr, thresholds, auc = tie_grouped_roc(y_true, y_score)
 
     # Operating points at fixed specificities
     target_specs = [0.80, 0.90, 0.95, 0.99]
-    ops = {}
-    for sp_target in target_specs:
-        fpr_target = 1.0 - sp_target
-        # Find last index where fpr <= fpr_target
-        idx = np.searchsorted(fpr, fpr_target, side="right") - 1
-        idx = max(0, min(idx, len(tpr) - 1))
-        ops[sp_target] = {
-            "threshold": float(thresholds[idx]),
-            "sensitivity": float(tpr[idx]),
-            "specificity": float(1.0 - fpr[idx]),
-        }
+    ops = {sp_target: operating_point(fpr, tpr, thresholds, sp_target)
+           for sp_target in target_specs}
 
     return fpr, tpr, thresholds, auc, ops
 

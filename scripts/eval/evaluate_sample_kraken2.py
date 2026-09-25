@@ -19,6 +19,10 @@ import json
 import io
 import zipfile
 import numpy as np
+
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _roc import operating_point, tie_grouped_roc  # noqa: E402  (shared with the other scorer)
 from pathlib import Path
 from scipy.stats import pearsonr, spearmanr
 
@@ -137,29 +141,16 @@ def main():
                 all_scores.append(pc[c]); all_truth.append(0)
     all_scores = np.array(all_scores); all_truth = np.array(all_truth)
 
-    # ROC AUC computation
-    order = np.argsort(-all_scores, kind="stable")
-    truth_sorted = all_truth[order]
-    n_pos = truth_sorted.sum(); n_neg = len(truth_sorted) - n_pos
-    cum_tp = np.cumsum(truth_sorted)
-    tp_at_threshold = cum_tp / n_pos
-    fp_at_threshold = (np.arange(1, len(truth_sorted)+1) - cum_tp) / n_neg
-    trap = getattr(np, "trapezoid", None) or np.trapz
-    auc = trap(tp_at_threshold, fp_at_threshold)
+    # ROC with tied scores grouped; see scripts/eval/_roc.py for why the
+    # earlier one-pair-at-a-time accumulation overstated sensitivity.
+    fpr, tpr, thresholds, auc = tie_grouped_roc(all_truth, all_scores)
     print(f"  ROC AUC: {auc:.4f}")
 
     # Operating points: sensitivity at fixed specificity
     op_points = {}
     for target_spec in [0.80, 0.90, 0.95, 0.99]:
-        # specificity = 1 - fp_rate; find largest threshold where 1-fpr >= target
-        eligible = fp_at_threshold <= (1 - target_spec)
-        if eligible.any():
-            i_last = np.where(eligible)[0].max()
-            sens = tp_at_threshold[i_last]
-            spec = 1 - fp_at_threshold[i_last]
-            thresh = all_scores[order[i_last]]
-        else:
-            sens = float("nan"); spec = float("nan"); thresh = float("nan")
+        op = operating_point(fpr, tpr, thresholds, target_spec)
+        sens, spec, thresh = op["sensitivity"], op["specificity"], op["threshold"]
         op_points[f"spec_{int(target_spec*100)}pct"] = dict(
             target_specificity=target_spec, achieved_specificity=float(spec),
             sensitivity=float(sens), threshold_pred_frac=float(thresh))

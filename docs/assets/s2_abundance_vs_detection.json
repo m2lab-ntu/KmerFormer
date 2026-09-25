@@ -28,8 +28,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.999886828776127,
       "bray_curtis": 0.00607,
-      "roc_auc": 0.9444782013888888,
-      "sens_at_95spec": 0.8801666666666667
+      "roc_auc": 0.9452094756944444,
+      "sens_at_95spec": 0.7749166666666667
     },
     {
       "arm": "Kraken2_raw_genus_aware",
@@ -40,8 +40,8 @@
       "unclassified_frac": 0.00935,
       "pearson_r": 0.999926516425374,
       "bray_curtis": 0.004708953768088237,
-      "roc_auc": 0.9541591944444444,
-      "sens_at_95spec": 0.9144166666666667
+      "roc_auc": 0.9548932673611111,
+      "sens_at_95spec": 0.9099166666666667
     },
     {
       "arm": "MetaTransformer_13mer_250M",
@@ -52,8 +52,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9998234434062612,
       "bray_curtis": 0.009040000000000001,
-      "roc_auc": 0.9389965486111111,
-      "sens_at_95spec": 0.833
+      "roc_auc": 0.9396994201388889,
+      "sens_at_95spec": 0.7746666666666666
     },
     {
       "arm": "KmerFormer_exact13mer_1L_50M",
@@ -64,8 +64,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9980976778665984,
       "bray_curtis": 0.042919999999999986,
-      "roc_auc": 0.8633872986111111,
-      "sens_at_95spec": 0.5063333333333333
+      "roc_auc": 0.8640810694444445,
+      "sens_at_95spec": 0.46191666666666664
     },
     {
       "arm": "MetaTransformer_13mer_50M",
@@ -76,8 +76,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9976004993349804,
       "bray_curtis": 0.053500000000000006,
-      "roc_auc": 0.8358868125000001,
-      "sens_at_95spec": 0.432
+      "roc_auc": 0.8365849409722221,
+      "sens_at_95spec": 0.41491666666666666
     },
     {
       "arm": "KmerFormer_hash13mer_1L_d128_50M",
@@ -88,8 +88,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.994856512424442,
       "bray_curtis": 0.06366000000000001,
-      "roc_auc": 0.8435525277777778,
-      "sens_at_95spec": 0.4078333333333333
+      "roc_auc": 0.8446753819444445,
+      "sens_at_95spec": 0.3968333333333333
     },
     {
       "arm": "KmerFormer_exact13mer_16L_50M",
@@ -100,8 +100,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9977725357004636,
       "bray_curtis": 0.05599000000000002,
-      "roc_auc": 0.8143077708333333,
-      "sens_at_95spec": 0.4086666666666667
+      "roc_auc": 0.8146312291666666,
+      "sens_at_95spec": 0.373
     },
     {
       "arm": "KmerFormer_hash13mer_16L_d128_50M",
@@ -112,8 +112,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9949078605795889,
       "bray_curtis": 0.07218000000000001,
-      "roc_auc": 0.8041614097222223,
-      "sens_at_95spec": 0.3561666666666667
+      "roc_auc": 0.805246048611111,
+      "sens_at_95spec": 0.3505
     },
     {
       "arm": "Kraken2_raw_species_only",
@@ -124,8 +124,8 @@
       "unclassified_frac": 0.20006,
       "pearson_r": 0.8311190035773355,
       "bray_curtis": 0.11140724015243364,
-      "roc_auc": 0.9535664305555555,
-      "sens_at_95spec": 0.9136666666666666
+      "roc_auc": 0.9543334340277779,
+      "sens_at_95spec": 0.90925
     },
     {
       "arm": "KmerFormer_hash13mer_16L_d64_50M",
@@ -136,8 +136,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9880705526130119,
       "bray_curtis": 0.09878000000000002,
-      "roc_auc": 0.7654194861111111,
-      "sens_at_95spec": 0.2855
+      "roc_auc": 0.7661161597222222,
+      "sens_at_95spec": 0.2798333333333333
     },
     {
       "arm": "KmerFormer_6mer_L29_50M",
@@ -148,8 +148,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9919619392807617,
       "bray_curtis": 0.10686,
-      "roc_auc": 0.6920700138888889,
-      "sens_at_95spec": 0.19441666666666665
+      "roc_auc": 0.692379951388889,
+      "sens_at_95spec": 0.19183333333333333
     },
     {
       "arm": "NTv2_6mer_LoRA_50M",
@@ -160,8 +160,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.989365331247649,
       "bray_curtis": 0.12703,
-      "roc_auc": 0.6702739027777779,
-      "sens_at_95spec": 0.17216666666666666
+      "roc_auc": 0.6708494687500001,
+      "sens_at_95spec": 0.16308333333333333
     },
     {
       "arm": "KmerFormer_ov6mer_50M",
@@ -172,8 +172,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9873434026827157,
       "bray_curtis": 0.12683999999999998,
-      "roc_auc": 0.638932548611111,
-      "sens_at_95spec": 0.15758333333333333
+      "roc_auc": 0.6395708888888889,
+      "sens_at_95spec": 0.1545
     },
     {
       "arm": "MetaTransformer_6mer_50M",
@@ -184,8 +184,8 @@
       "unclassified_frac": 0.0,
       "pearson_r": 0.9777647705668718,
       "bray_curtis": 0.19486000000000003,
-      "roc_auc": 0.5684835208333333,
-      "sens_at_95spec": 0.09275
+      "roc_auc": 0.5690590277777778,
+      "sens_at_95spec": 0.09233333333333334
     }
   ]
 }
