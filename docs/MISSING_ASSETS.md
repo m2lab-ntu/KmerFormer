@@ -1,7 +1,7 @@
 # Asset inventory and release boundaries
 
-Updated for the maintained release on 2026-09-18. This page describes the source
-snapshot, separately delivered model bundles and external experimental inputs.
+Updated 2026-09-29. This page describes the public source snapshot, model
+bundles that are not publicly downloadable, and external experimental inputs.
 
 ## 1. Included in the code snapshot
 
@@ -17,9 +17,13 @@ labels and is excluded from the offline check.
 
 ## 2. Model bundles and external data
 
-Four portable model bundles are uploaded to the private GitHub release draft;
-[the registry](../kmerformer/assets/models.json) records their verified URLs and
-checksums. The [Zenodo inventory](../weights/ZENODO.md) includes all four bundles.
+The four portable model bundles are not publicly downloadable. There is no
+public GitHub release. [The registry](../kmerformer/assets/models.json) records
+checksums and licences and sets each model to `not_publicly_released`; it does
+not register download parts. The bundles were on Hugging Face from 2026-09-21
+to 2026-09-25 and were then withdrawn. The
+[Zenodo inventory](../weights/ZENODO.md) describes a prepared deposit and does
+not assign a DOI. Current access is in [weights/README.md](../weights/README.md).
 
 Three original `.pt` checkpoints are retained in the local `weights/` directory.
 Their metadata identifies the expected arms: 6-mer L29 at 50M and exact 13-mer

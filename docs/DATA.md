@@ -231,9 +231,10 @@ would document a model that was never run.
 
 ## Availability
 
-> **TODO** — Zenodo DOI for the read pools, evaluation sets and vocabulary, once the
-> record is published. Model weights go in a separate record; see
-> [`weights/README.md`](../weights/README.md).
+No Zenodo DOI is assigned for the read pools, evaluation sets or vocabulary.
+The trained weights are not publicly downloadable; see
+[`weights/README.md`](../weights/README.md). Publishing either record is a
+separate step and is not implied by this repository.
 
 [`MISSING_ASSETS.md`](MISSING_ASSETS.md) distinguishes bundled evidence, local-only
 assets and unresolved provenance. On the machine

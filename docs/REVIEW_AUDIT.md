@@ -81,8 +81,10 @@ the package's declared minimum versions.
   remaining primary/subset prediction distinction.
 - Archived-array versus manuscript score differences remain disclosed in
   [RESULTS.md](RESULTS.md#abundance-against-detection-on-one-pool).
-- Reviewer access URLs/DOIs and the weights licence require author decisions.
-  No publication or sharing action is implied by preparation of a local archive.
+- Update, 2026-09-29: the four maintained weight files are Apache-2.0 and are
+  not publicly downloadable. No Zenodo DOI is assigned. The code repository is
+  public. See [weights/README.md](../weights/README.md). The 2026-09-07 audit
+  had left the licence and archive identifiers undecided.
 
 Keep the archive's `RELEASE_MANIFEST.json` with the delivered version. For a
 formal `--release` ZIP, its commit identifies the exact source revision and every

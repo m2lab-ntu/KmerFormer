@@ -6,7 +6,7 @@ The manuscript and historical prediction arrays remain source evidence.
 | Review item | Deliverable | Status |
 |---|---|---|
 | 1 | Unlabelled FASTA/FASTQ prediction CLI and API | Implemented; actual CPU/GPU example verified |
-| 2 | Verified, portable model bundles and download registry | Four Apache-2.0 weight bundles with separate tokenizer terms; all 22 part hashes and URLs verified; primary download/inference verified |
+| 2 | Verified, portable model bundles and download registry | Four Apache-2.0 weight bundles with separate tokenizer terms were prepared. Public download parts were removed; each registry entry is `not_publicly_released` |
 | 3 | Shared, explicit single-process/DDP split contract | Implemented; both partition strategies tested |
 | 4 | Bounded-memory evaluation and prediction | Implemented; metrics and saved-array equivalence tested |
 | 5 | Validated class-ID space for genus and species | Raw ID gaps preserved; checkpoint-derived evaluation width tested |
@@ -19,10 +19,11 @@ The manuscript and historical prediction arrays remain source evidence.
 | 12 | Claim/config/asset manifests and recovered evidence | 109 evidence files recovered and verified; full upstream generation remains external |
 | 13 | Historical snapshot and maintained-version migration guide | Source revisions, environment and two published snapshot tags preserved |
 | 14 | Current configuration documentation and maintainer separation | Historical hyperparameters preserved; obsolete headers removed |
-| 15 | CI, packaged-install checks and versioned release candidate | Remote CI passed; draft `v0.2.0rc1` assets, wheel, reviewer archive and download registry updated |
+| 15 | CI, packaged-install checks and versioned release candidate | Remote CI passed on `main` and tag `v0.2.0-submission`. Package version remains `0.2.0rc1`. No public GitHub release; the registry does not advertise a weight download |
 
-Availability and licensing statements describe actual supplied assets. Unknown
-licences and archive identifiers remain unresolved until the authors provide them.
+The four maintained weight files are Apache-2.0 and are not publicly
+downloadable. No Zenodo DOI is assigned for the read pools or the weights.
+See [weights/README.md](../weights/README.md).
 
 [Validation record](validation/0.2.0rc1.md) states execution scope and remaining
 release work. Local software checks do not constitute a full training rerun.

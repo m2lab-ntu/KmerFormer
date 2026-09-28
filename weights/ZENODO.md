@@ -79,8 +79,8 @@ licence texts remain inside the corresponding bundles. The four KmerFormer
 weight files use **Apache-2.0**, recorded in `WEIGHTS_LICENSE.txt` and scoped to
 `model.safetensors` in each manifest. Tokenizer terms are in
 `TOKENIZER_LICENSE.txt`; the 6-mer asset retains its NonCommercial restriction.
-The record's access setting and real DOI are selected in Zenodo, not
-inferred from the private GitHub draft.
+The record's access setting and real DOI are selected in Zenodo. An
+unpublished draft does not assign either one.
 
 Before publishing, verify the uploaded file inventory against the local
 `DEPOSIT_MANIFEST.json`. Local preparation and GitHub uploads do not establish

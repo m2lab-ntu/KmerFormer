@@ -26,15 +26,15 @@ Use Python 3.11 in a fresh environment. For CPU inference:
 ```bash
 git clone https://github.com/m2lab-ntu/KmerFormer
 cd KmerFormer
-git checkout release/kmerformer-usable-20260915
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install 'torch>=2.13,<3' --index-url https://download.pytorch.org/whl/cpu
 python -m pip install .
 ```
 
-The command selects the release candidate branch while it is under review.
-The repository and its release assets currently require GitHub access.
+The default branch is the maintained public source. Cloning it does not require
+a GitHub login. Tag `v0.2.0-submission` is the manuscript snapshot. The package
+version remains `0.2.0rc1` because the weight release is not published.
 
 For GPU use, install a PyTorch build compatible with your CUDA setup, then this
 package. KmerFormer itself does not require Transformers or PEFT;
