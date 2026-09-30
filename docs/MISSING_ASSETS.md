@@ -34,7 +34,7 @@ match every bundled prediction on the verified 100K FASTA. L29 reproduces the
 historical and archived predictions under their respective precision/aggregation
 settings; see RESULTS. New ordered read/sequence manifests, eight exact-checkpoint
 pool evaluations, training records and timing metadata accompany the manuscript's
-Supplementary S22; these large inputs/outputs are not bundled in this code snapshot.
+Supplementary Data 1 (results in Supplementary S7 and S11); these large inputs/outputs are not bundled in this code snapshot.
 
 Large read pools, full evaluation FASTAs/labels and reference genomes remain
 external. Exact model bundles include the vocabulary, and recovered ladder

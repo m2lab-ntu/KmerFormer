@@ -184,7 +184,7 @@ support. Checkpoint selection and shuffling remain procedural differences betwee
 the codebases. See [`configs/ablations/mt_direction_*.yaml`](../configs/ablations/).
 Forward-only KmerFormer reaches 91.144% against MetaTransformer's 87.458%, a
 3.686-point margin; RC-TTA adds only 0.008 points to the KmerFormer score. The
-advantage therefore also holds under forward-only inference (Supplementary S22).
+advantage therefore also holds under forward-only inference (Supplementary S7).
 
 **The hashed configuration trades 6.37 points for an eightfold smaller table at matched width and depth** (exact d64 85.63% vs hashed
 d64 79.26%), and doubling the width to d128 recovers most of it (83.83%) on 2 GiB
@@ -426,7 +426,7 @@ the tested complete-reference setting offers little accuracy incentive for the
 larger learned classifier.
 
 On the novel-species log-normal community, raw Kraken 2 leads Pearson correlation,
-while Bracken improves composition error and detection (Supplementary S22).
+while Bracken improves composition error and detection (Supplementary S6).
 Kraken 2 declines to call 53.9% of reads. Three genera
 exceed 0.1% of its calls while accounting for less than 0.1% of the true composition;
 two are absent from the community. Every

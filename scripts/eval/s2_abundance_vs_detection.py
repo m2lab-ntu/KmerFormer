@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the abundance-vs-detection comparison (manuscript Fig. S2 / Table 5).
+"""Regenerate the abundance-vs-detection comparison (manuscript Supplementary Fig. S2).
 
 WHY THIS EXISTS. The figure was drawn from five hardcoded triples in the
 manuscript's `figures_src/make_figures.py` with no provenance comment, and with
