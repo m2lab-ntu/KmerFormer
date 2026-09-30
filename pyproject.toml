@@ -11,7 +11,7 @@ license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [
     { name = "Ming-Ju Yang", email = "r13945009@ntu.edu.tw" },
-    { name = "TING-YU YEN" },
+    { name = "Ting-Yu Yen" },
     { name = "Chien-Yu Chen" },
     { name = "Joyce Tzu-Yu Liu", email = "joyliu@ntu.edu.tw" },
 ]

@@ -139,7 +139,7 @@ python scripts/reviewer_check.py
 ## Citation
 
 The manuscript is in preparation; citation metadata are in [CITATION.cff](CITATION.cff).
-Authors: Ming-Ju Yang, TING-YU YEN, Chien-Yu Chen and Joyce Tzu-Yu Liu.
+Authors: Ming-Ju Yang, Ting-Yu Yen, Chien-Yu Chen and Joyce Tzu-Yu Liu.
 Affiliations and supplied identifiers are recorded in `CITATION.cff`.
 
 ## Licence

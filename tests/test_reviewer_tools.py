@@ -292,7 +292,7 @@ def test_release_metadata_retains_manuscript_authors():
     import yaml
     citation = yaml.safe_load((ROOT / "CITATION.cff").read_text())
     authors = [(a["given-names"], a["family-names"]) for a in citation["authors"]]
-    assert authors == [("Ming-Ju", "Yang"), ("TING-YU", "YEN"),
+    assert authors == [("Ming-Ju", "Yang"), ("Ting-Yu", "Yen"),
                        ("Chien-Yu", "Chen"), ("Joyce Tzu-Yu", "Liu")]
     assert [(a["given-names"], a["family-names"]) for a in citation["preferred-citation"]["authors"]] == authors
 

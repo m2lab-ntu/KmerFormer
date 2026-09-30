@@ -64,7 +64,7 @@ their real DOIs. Their manifests retain the compatible source commit.
 
 The generated manifest describes software, trained model bundles and recorded
 evidence. It copies creator metadata from `CITATION.cff`. The authors confirmed
-the latest manuscript order on 2026-09-18: Ming-Ju Yang, TING-YU YEN, Chien-Yu
+the latest manuscript order on 2026-09-18: Ming-Ju Yang, Ting-Yu Yen, Chien-Yu
 Chen and Joyce Tzu-Yu Liu. Only supplied affiliations and identifiers are included.
 No tool identity is added as an author. No grant identifier, Zenodo DOI, record
 number or publication date is invented.
