@@ -36,8 +36,8 @@ The default branch is the maintained public source. Cloning it does not require
 a GitHub login. Tag `v0.2.0-submission` preserves the original submission.
 [Evaluation protocols and results](docs/EVALUATION.md) and their
 [CPU rescoring bundle](reproduction/evaluation/README.md) accompany the revised
-manuscript. The package version remains `0.2.0rc1` because the weight release is
-not published.
+manuscript. The package version remains `0.2.0rc1`, the version the published
+model bundles were built with.
 
 For GPU use, install a PyTorch build compatible with your CUDA setup, then this
 package. KmerFormer itself does not require Transformers or PEFT;
@@ -45,17 +45,17 @@ foundation-model adapters use the optional `baselines` extra.
 
 ## Classify reads with a trained model
 
-**The trained weights are not currently available for public download.** They
-will be released when the paper is accepted, and are available to reviewers on
-request in the meantime. `kmerformer-model list` shows the registered models and
-reports that none has a public download yet; see
+The four trained models are public at
+[huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights).
+`kmerformer-model download` fetches one archive, checks its SHA-256 and unpacks
+it; `kmerformer-model list --check` asks the host whether each archive is
+reachable. Sizes, checksums and licences are in
 [`weights/README.md`](weights/README.md).
 
-Once you have a bundle — exported from your own checkpoint with
-`kmerformer-model export`, or downloaded after release — classification runs
-locally with no network access:
+After the download, classification runs locally with no network access:
 
 ```bash
+kmerformer-model download kmerformer-6mer-l29-50m --output models/6mer-l29
 kmerformer-model verify models/6mer-l29
 kmerformer-predict --model models/6mer-l29 --reads examples/reads.fa \
   --output predictions.tsv --device cpu

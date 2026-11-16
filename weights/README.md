@@ -12,15 +12,22 @@ download is registered at all, and whether your credentials can use it.
 `kmerformer-model list --check` goes further and asks the host, reporting the
 HTTP status rather than inferring.
 
-**The trained weights are not currently available for public download.** The
-registry lists the four models with their checksums and licences but no download
-parts, so `list` reports each as `unregistered` and `download` exits with that
-explanation. The weights will be released upon acceptance of the paper and are
-available to reviewers on request in the meantime.
+The four trained models are public as one TAR archive each in the Hugging Face
+dataset [ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights).
+The registry records each archive's address, size and SHA-256, and
+`kmerformer-model download` checks the SHA-256 before unpacking. A URL alone
+does not show whether a host serves a file, so `list` reports these entries as
+`unverified` and `list --check` reports what the host answered.
 
-They were briefly publicly downloadable, from Hugging Face between 2026-09-21
-and 2026-09-25. Copies obtained then remain under the licences below; the
-withdrawal stops further public distribution and does not revoke those grants. Bundles have been prepared
+| Archive | Size (bytes) | SHA-256 |
+|---|---:|---|
+| `kmerformer-6mer-l29-50m.tar` | 25,968,640 | `e29e8c95de258ec550666fc5c21ad2775b66cbd99805227eb14ddb1a8e339231` |
+| `kmerformer-exact13-1l-50m.tar` | 9,057,986,560 | `0557006e291a454e33d89319c64410cd3deb2f345971f50e0fe0543116837208` |
+| `kmerformer-exact13-1l-250m.tar` | 9,057,986,560 | `61d29dca968078acaa419fb6f0ad0bba77b86ea52f2eb2550125ce784baf588d` |
+| `kmerformer-hashed13-d128-1l-50m.tar` | 2,149,038,080 | `816a46df15e0fb5e672bcfb9737fea62c95e1ca9de7b91729b7008d7887fe0c0` |
+
+The same archives were first public there from 2026-09-21 to 2026-09-25; their
+checksums are unchanged. Bundles have been prepared
 from the existing checkpoints. All four listed KmerFormer weight files are
 licensed under Apache-2.0; tokenizer assets retain the terms listed below.
 
@@ -46,8 +53,13 @@ kmerformer-predict --model models/6mer-l29 --reads sample.fastq.gz \
   --output predictions.tsv --device cpu
 ```
 
-The commands above apply once download parts are registered again. For a
-GitHub asset that requires access, the downloader can use
+The download writes the archive and the unpacked bundle next to the output
+directory before moving the bundle into place, so an exact 13-mer model needs
+about 18 GB free during the download. An archive fetched from the dataset page
+can be checked against the table above, extracted into its own directory and
+passed to `kmerformer-model verify`.
+
+For a GitHub asset that requires access, the downloader can use
 `GH_TOKEN`/`GITHUB_TOKEN` or the existing GitHub CLI login; credentials are never
 written into the registry or forwarded to redirected storage hosts. Other hosts
 are reported as `unverified` until `list --check` confirms them.

@@ -1,7 +1,7 @@
 # Asset inventory and release boundaries
 
-Updated 2026-11-07. This page describes the public source snapshot, model
-bundles that are not publicly downloadable, and external experimental inputs.
+Updated 2026-11-16. This page describes the public source snapshot, the
+published model bundles, and external experimental inputs.
 
 ## 1. Included in the code snapshot
 
@@ -24,11 +24,12 @@ these later additions.
 
 ## 2. Model bundles and external data
 
-The four portable model bundles are not publicly downloadable. There is no
-public GitHub release. [The registry](../kmerformer/assets/models.json) records
-checksums and licences and sets each model to `not_publicly_released`; it does
-not register download parts. The bundles were on Hugging Face from 2026-09-21
-to 2026-09-25 and were then withdrawn. The
+The four portable model bundles are public in the Hugging Face dataset
+[ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights).
+[The registry](../kmerformer/assets/models.json) records each archive's address,
+size, SHA-256 and licences and sets each model to `publicly_released`. There is
+no public GitHub release. The same archives were first public on Hugging Face
+from 2026-09-21 to 2026-09-25. The
 [Zenodo inventory](../weights/ZENODO.md) describes a prepared deposit and does
 not assign a DOI. Current access is in [weights/README.md](../weights/README.md).
 

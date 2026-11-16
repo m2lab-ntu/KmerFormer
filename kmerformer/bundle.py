@@ -241,7 +241,7 @@ def describe_availability(entry, *, token=None):
     download = entry.get("download")
     if not download or not download.get("parts"):
         return {"state": "unregistered",
-                "detail": "the trained weights are not publicly released; "
+                "detail": "no download is registered for this model; "
                           "see weights/README.md"}
     hosts = {urlparse(part["url"]).hostname for part in download["parts"]}
     if hosts == {"api.github.com"}:
@@ -259,22 +259,32 @@ def describe_availability(entry, *, token=None):
 def check_reachable(entry, *, token=None, timeout=20):
     """Ask the host whether the first part is actually fetchable."""
     part = entry["download"]["parts"][0]
+    host = urlparse(part["url"]).hostname
     request = urllib.request.Request(part["url"],
                                      headers={"Accept": "application/octet-stream",
                                               "Range": "bytes=0-0"})
-    if token and urlparse(part["url"]).hostname == "api.github.com":
+    if token and host == "api.github.com":
         request.add_unredirected_header("Authorization", "Bearer " + token)
     try:
         with urllib.request.urlopen(request, timeout=timeout):
             return {"reachable": True}
     except urllib.error.HTTPError as error:
         return {"reachable": False, "http_status": error.code,
-                "detail": _access_hint(error.code)}
+                "detail": _access_hint(error.code, host)}
     except Exception as error:                      # network down, DNS, proxy
         return {"reachable": False, "detail": f"{type(error).__name__}: {error}"}
 
 
-def _access_hint(status):
+def _access_hint(status, host="api.github.com"):
+    if host != "api.github.com":
+        # The GitHub wording below names credentials this host never asked for.
+        if status in (401, 403):
+            return (f"{host} refused the request (HTTP {status}); the file is "
+                    "not open to anonymous download at this address. "
+                    "See weights/README.md")
+        if status == 404:
+            return f"not found at {host} (HTTP 404); see weights/README.md"
+        return f"HTTP {status} from {host}"
     if status in (401, 403):
         return ("the credential does not grant access to "
                 "m2lab-ntu/KmerFormer's releases")
@@ -296,9 +306,7 @@ def download_model(model_id, output, *, registry_path=None):
         raise ValueError(f"Unknown model id {model_id!r}; `kmerformer-model list` shows the known ones")
     if not entry.get("download"):
         raise ModelUnavailable(
-            f"{model_id!r} has no public download: the trained weights are not "
-            f"publicly released. They are available to reviewers on request; "
-            f"see weights/README.md")
+            f"{model_id!r} has no registered download; see weights/README.md")
     output = Path(output).resolve()
     if output.exists():
         raise FileExistsError(output)
@@ -319,7 +327,8 @@ def download_model(model_id, output, *, registry_path=None):
                     # Without this the caller sees a bare urllib traceback and
                     # no way to tell "you lack access" from "the URL is wrong".
                     raise ModelUnavailable(
-                        f"Cannot download {model_id!r}: {_access_hint(error.code)}"
+                        f"Cannot download {model_id!r}: "
+                        f"{_access_hint(error.code, urlparse(part['url']).hostname)}"
                     ) from error
                 with source:
                     part_digest = __import__("hashlib").sha256()

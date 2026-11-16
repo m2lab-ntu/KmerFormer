@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """The registry must say what the caller can actually fetch.
 
-WHY. The trained weights are withheld until the paper is accepted, so the
-registry lists the models with their checksums and licences but no download
-parts. Two earlier states each misled: printing the registry verbatim implied
+WHY. The registry lists each model with one checksummed archive on Hugging
+Face. Two earlier states each misled: printing the registry verbatim implied
 every model was downloadable, and a refused download surfaced as a bare urllib
 traceback. And a non-GitHub URL used to be reported "open" -- a private Hugging
-Face dataset looks identical to a public one from its URL alone.
+Face dataset looks identical to a public one from its URL alone, so `list`
+says "unverified" and `list --check` asks the host.
 """
 
 import json
@@ -22,25 +22,40 @@ REPO = Path(__file__).resolve().parent.parent
 REGISTRY = json.loads(
     (REPO / "kmerformer" / "assets" / "models.json").read_text())
 GH = {"download": {"parts": [{"url": "https://api.github.com/repos/o/r/releases/assets/1"}]}}
+HOSTED = "https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights"
 
 
 @pytest.mark.parametrize("model_id", sorted(REGISTRY["models"]))
-def test_no_model_advertises_a_public_download_while_weights_are_withheld(model_id):
+def test_each_model_registers_one_checksummed_archive(model_id):
     entry = REGISTRY["models"][model_id]
-    assert not entry.get("download"), f"{model_id} still registers download parts"
-    assert entry["status"] == "not_publicly_released"
+    assert entry["status"] == "publicly_released"
+    download = entry["download"]
+    (part,) = download["parts"]
+    assert part["url"] == f"{HOSTED}/resolve/main/{model_id}.tar"
+    assert part["filename"] == f"{model_id}.tar"
+    assert part["sha256"] == download["sha256"]
+    assert len(part["sha256"]) == 64 and set(part["sha256"]) <= set("0123456789abcdef")
+    assert part["size_bytes"] > 0
+    report = describe_availability(entry, token=None)
+    assert report["state"] == "unverified"
+    assert "huggingface.co" in report["detail"]
+
+
+def test_archive_checksums_are_distinct():
+    digests = [entry["download"]["sha256"] for entry in REGISTRY["models"].values()]
+    assert len(set(digests)) == len(digests)
+
+
+def test_an_entry_without_a_download_explains_itself(tmp_path):
+    entry = {"model_id": "m"}
     report = describe_availability(entry, token=None)
     assert report["state"] == "unregistered"
-    assert "not publicly released" in report["detail"]
-
-
-def test_download_of_a_withheld_model_explains_itself(tmp_path):
-    model_id = next(iter(REGISTRY["models"]))
+    assert "weights/README.md" in report["detail"]
+    registry = tmp_path / "models.json"
+    registry.write_text(json.dumps({"models": {"m": entry}}))
     with pytest.raises(ModelUnavailable) as caught:
-        download_model(model_id, tmp_path / "out")
-    message = str(caught.value)
-    assert "not publicly released" in message
-    assert "reviewers on request" in message
+        download_model("m", tmp_path / "out", registry_path=registry)
+    assert "no registered download" in str(caught.value)
 
 
 def test_an_unknown_model_id_is_a_different_error(tmp_path):
@@ -87,10 +102,33 @@ def test_a_refused_part_raises_the_typed_error(tmp_path, monkeypatch):
     assert "GH_TOKEN" in str(caught.value)
 
 
-def test_readmes_say_the_weights_are_withheld():
+@pytest.mark.parametrize("status", [401, 403, 404])
+def test_a_refusal_from_another_host_names_that_host(status):
+    hint = _access_hint(status, "huggingface.co")
+    assert "huggingface.co" in hint
+    assert "GH_TOKEN" not in hint and "m2lab-ntu" not in hint
+
+
+def test_a_refused_hosted_archive_raises_the_typed_error(tmp_path, monkeypatch):
+    import kmerformer.bundle as bundle
+
+    def refuse(request, timeout=None):
+        raise urllib.error.HTTPError(request.full_url, 401, "Unauthorized", {}, None)
+
+    monkeypatch.setattr(bundle.urllib.request, "urlopen", refuse)
+    monkeypatch.setattr(bundle, "_github_token", lambda: None)
+    model_id = next(iter(REGISTRY["models"]))
+    with pytest.raises(ModelUnavailable) as caught:
+        download_model(model_id, tmp_path / "out")
+    assert "huggingface.co" in str(caught.value)
+    assert not (tmp_path / "out").exists()
+
+
+def test_readmes_say_where_the_weights_are():
     for doc in ("README.md", "weights/README.md"):
         text = (REPO / doc).read_text()
-        assert "not currently available for public download" in text, doc
+        assert HOSTED in text, doc
+        assert "not currently available for public download" not in text, doc
         assert "private repository" not in text, f"{doc} still calls the repository private"
 
 
