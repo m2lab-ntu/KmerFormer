@@ -49,5 +49,5 @@ def test_the_discordant_counts_and_paired_se_match_the_supplement():
 
 def test_the_second_run_is_outside_the_regeneration_glob():
     """REPRODUCE.md loops over docs/assets/*_preds_clean_common.npz as the
-    table's arms; the second run must not become a fifteenth row."""
+    table's configurations; the second run must not become a fifteenth row."""
     assert RUN2 not in set(ASSETS.glob("*_preds_clean_common.npz"))

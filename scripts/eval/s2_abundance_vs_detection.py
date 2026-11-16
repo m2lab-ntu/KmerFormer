@@ -3,11 +3,11 @@
 
 WHY THIS EXISTS. The figure was drawn from five hardcoded triples in the
 manuscript's `figures_src/make_figures.py` with no provenance comment, and with
-no KmerFormer arm. The constants cannot be reproduced from anything on disk: a
+no KmerFormer configuration. The constants cannot be reproduced from anything on disk: a
 sweep over pools and protocol parameters got no closer to the published ROC AUC
 0.905 / sens@95 66.5% than 0.882 / 61.2%, and commit 7455d67 -- which introduced
 them -- says the numbers were checked against an internal notes file, where none
-of the five appear. So this recomputes every arm from predictions instead, on one
+of the five appear. So this recomputes every configuration from predictions instead, on one
 pool, with one scorer, one protocol and one seed, and prints the pool's md5.
 
 THREE THINGS THAT MAKE THAT HARDER THAN IT SOUNDS, each of which produced a
@@ -18,9 +18,9 @@ wrong number before it was caught:
    exactly 8.00% of positions, which is above chance and far below identity, so
    no length, class-count or spot check separates them. `reads_100K_val.fa`
    (cf9220f0) is the closed-set pool every printed number comes from.
-   `reads_100K.fa` (3436e31e) is a second, disjoint draw. The KmerFormer arms
+   `reads_100K.fa` (3436e31e) is a second, disjoint draw. The KmerFormer configurations
    already had sample-level output on the wrong one -- r 0.9951, sens 20.41% --
-   which looked usable and was not. Hence the label check in check_arm().
+   which looked usable and was not. Hence the label check in check_configuration().
 
 2. THE COVERAGE MASK CANNOT CARRY A DETECTION COLUMN. Restricting to the reads
    whose source species is in the Kraken 2 index (85,773 of 100,000) is right
@@ -30,7 +30,7 @@ wrong number before it was caught:
    construction. `evaluate_sample.py` refuses such a run outright (its global
    feasibility cap collapses reads_per_sample to 0);
    `evaluate_sample_kraken2.py` has no such cap and quietly returns a depressed
-   number -- AUC 0.899 against 0.954 for the same arm. So the masked pool
+   number -- AUC 0.899 against 0.954 for the same configuration. So the masked pool
    contributes read accuracy here and nothing else.
 
 3. THE KRAKEN 2 ROW WAS ON THE INDEX THE PAPER ARGUES AGAINST. Two indexes
@@ -112,11 +112,11 @@ def coverage_mask(species_names):
     return np.array([s in present for s in species_names])
 
 
-def check_arm(name, path, pool_labels):
-    """Refuse an arm whose labels are not the pool's, in the pool's order.
+def check_configuration(name, path, pool_labels):
+    """Refuse a configuration whose labels are not the pool's, in the pool's order.
 
     This is the check the missing figure point needed. Candidate files for
-    these arms are all 100,000 reads long over 120 genus classes, so only
+    these configurations are all 100,000 reads long over 120 genus classes, so only
     elementwise label equality separates the two pools -- they agree on 8% of
     positions, which is neither identity nor chance.
     """
@@ -136,12 +136,12 @@ def check_arm(name, path, pool_labels):
 
 
 def score(npz, out_dir):
-    """Every arm goes through evaluate_sample_kraken2.py, including the neural
+    """Every configuration goes through evaluate_sample_kraken2.py, including the neural
     ones -- not because they need its unclassified handling, but because the
     two scorers do not agree. On the same predictions and seed they give
     identical abundance and different detection (AUC 0.6863 against 0.6858),
     because they consume the RNG in a different order. Scoring Kraken 2 with
-    one and the neural arms with the other put them on different sparse draws.
+    one and the neural configurations with the other put them on different sparse draws.
     """
     cmd = [sys.executable,
            str(REPO / "scripts" / "eval" / "evaluate_sample_kraken2.py"),
@@ -178,7 +178,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pool_fasta", default=DEFAULT_FA)
     ap.add_argument("--pool_labels", default=DEFAULT_TSV)
-    ap.add_argument("--arm", action="append", default=[], metavar="NAME=NPZ",
+    ap.add_argument("--configuration", action="append", default=[], metavar="NAME=NPZ",
                     help="repeatable; NPZ must be predictions on this pool")
     ap.add_argument("--work_dir", required=True)
     ap.add_argument("--out_json", default=None)
@@ -213,19 +213,19 @@ def main():
           f"{avg_mask:.1f} of {PROTOCOL['genera_present']} hold no reads"
           f"{'  <- read accuracy only' if n_empty_mask else ''}\n")
 
-    if not args.arm:
-        raise SystemExit("no --arm given")
+    if not args.configuration:
+        raise SystemExit("no --configuration given")
     rows = []
-    for spec in args.arm:
+    for spec in args.configuration:
         if "=" not in spec:
-            raise SystemExit(f"--arm wants NAME=PATH, got {spec!r}")
+            raise SystemExit(f"--configuration wants NAME=PATH, got {spec!r}")
         name, path = spec.split("=", 1)
-        preds, labels = check_arm(name, path, pool_labels)
+        preds, labels = check_configuration(name, path, pool_labels)
         npz = work / "cmp" / f"{name}.npz"
         np.savez(npz, preds=preds, labels=labels)
         m = score(npz, work / "cmp" / f"out_{name}")
         rows.append(dict(
-            arm=name,
+            configuration=name,
             preds_sha1=hashlib.sha1(preds.tobytes()).hexdigest()[:16],
             labels_sha1=hashlib.sha1(labels.tobytes()).hexdigest()[:16],
             read_acc_full=float((preds == labels).mean()),
@@ -238,12 +238,12 @@ def main():
                             ["spec_95pct"]["sensitivity"])))
 
     rows.sort(key=lambda r: -r["read_acc_full"])
-    w = max(len(r["arm"]) for r in rows) + 2
-    hdr = (f"{'arm':<{w}}{'read acc':>10}{'in-DB':>9}{'Pearson r':>11}"
+    w = max(len(r["configuration"]) for r in rows) + 2
+    hdr = (f"{'configuration':<{w}}{'read acc':>10}{'in-DB':>9}{'Pearson r':>11}"
            f"{'Bray-C':>9}{'ROC AUC':>9}{'Sens@95':>9}")
     print(hdr); print("-" * len(hdr))
     for r in rows:
-        print(f"{r['arm']:<{w}}{r['read_acc_full']*100:>9.2f}%"
+        print(f"{r['configuration']:<{w}}{r['read_acc_full']*100:>9.2f}%"
               f"{r['read_acc_in_db']*100:>8.2f}%{r['pearson_r']:>11.4f}"
               f"{r['bray_curtis']:>9.3f}{r['roc_auc']:>9.3f}"
               f"{r['sens_at_95spec']*100:>8.2f}%")

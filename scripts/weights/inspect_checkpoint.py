@@ -2,7 +2,7 @@
 """Print what a KmerFormer checkpoint is, without loading its tensors.
 
 The exact-13-mer checkpoints are 8 GiB because 99.99% of their parameters are the
-embedding table, so ``torch.load`` is an expensive way to answer "which arm is
+embedding table, so ``torch.load`` is an expensive way to answer "which configuration is
 this?". A torch checkpoint is a zip whose ``data.pkl`` holds the object graph with
 tensor storages kept out of line, so the config, epoch and validation accuracy can
 be read from a few kilobytes.
@@ -13,11 +13,11 @@ Use it to confirm a download before trusting it::
 
 THE ACCURACY IT PRINTS IS NOT THE PAPER'S NUMBER, and should not be "corrected" to
 match it. A checkpoint records the best accuracy on the run's own validation split
--- the 10% each arm holds out of its training pool, forward pass only. The paper
+-- the 10% each configuration holds out of its training pool, forward pass only. The paper
 reports the separate 100,000-read closed-set test set with reverse-complement
 test-time augmentation. Two different pools and two different protocols, so they
-land a fraction of a point apart: this prints 0.9111 for the 50M exact-13-mer arm
-where docs/RESULTS.md says 91.15%, and 0.6928 for the 29-layer 6-mer arm where it
+land a fraction of a point apart: this prints 0.9111 for the 50M exact-13-mer configuration
+where docs/RESULTS.md says 91.15%, and 0.6928 for the 29-layer 6-mer configuration where it
 says 69.52%. Both pairs are right. To reproduce the paper's figure, run
 kmerformer-eval against val_100K with --rc_tta; see docs/REPRODUCE.md.
 

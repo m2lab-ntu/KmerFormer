@@ -24,7 +24,7 @@ from kmerformer import (
 )
 from kmerformer.kmer_tokenizers import CLS_ID, N_SPECIAL, PAD_ID, UNK_ID
 
-# A fixed 150 bp read -- the length every arm in the paper is trained and
+# A fixed 150 bp read -- the length every configuration in the paper is trained and
 # evaluated on, so the token counts below are the real ones.
 READ = ("ACCCAGGCATAGTACGAGATAGACCGGCGAATTTCCGGCACGTGGGGAGT"
         "TGAAACTGTGCAGCGCTTGTGGCGAGGGTTCGTCGTAGCTAGTCTTATCC"
@@ -84,7 +84,7 @@ def test_hashed_ids_match_the_values_the_checkpoints_were_trained_on():
     instances of the *same wrong code* agree perfectly. Only pinned values can.
 
     The numbers below were taken from the implementation that trained every
-    released hashed arm, whose checkpoints record `hash_seed: 42` and
+    released hashed configuration, whose checkpoints record `hash_seed: 42` and
     `n_buckets: 4194304` in their own config. If this test fails, the tokenizer
     changed and those weights no longer map onto it.
     """
@@ -184,7 +184,7 @@ def test_stride_k_gives_non_overlapping_tokens():
 # --------------------------------------------------------------------------
 # Exact tokenizer
 #
-# The released arms use MetaTransformer's 33,545,099-entry vocab_13mer.txt, which
+# The released configurations use MetaTransformer's 33,545,099-entry vocab_13mer.txt, which
 # is 448 MiB and not in this repo. These build the same thing at k=4 and k=5 in a
 # tmpdir, so the code path under test -- fixed-width parse, int32 lookup table,
 # canonical auto-detection, cache round-trip -- is the real one. Anything about
@@ -337,7 +337,7 @@ def _tiny(**shallow):
     """A KmerFormer small enough to run on a CPU, with the real code path.
 
     vocab_size is set so no NT-v2 tokenizer is downloaded; everything else is
-    the architecture the paper's arms use, only narrower.
+    the architecture the paper's configurations use, only narrower.
     """
     cfg = {
         "type": "shallow_transformer",
@@ -354,7 +354,7 @@ def _tiny(**shallow):
 
 
 @pytest.mark.parametrize("kwargs", [
-    {},                                                  # the default arm
+    {},                                                  # the default configuration
     {"head_type": "mean_pool"},                          # the k=13 headline pooling
     {"conv_kernels": [2, 3, 5]},                         # the negative-result front-end
     {"pos_encoding": "sinusoidal", "norm_first": False,   # walked toward MetaTransformer
@@ -400,7 +400,7 @@ def test_one_training_step_moves_the_loss():
 
 
 def test_sparse_embedding_yields_a_sparse_gradient():
-    """This is why the exact-13-mer arms cannot use DDP.
+    """This is why the exact-13-mer configurations cannot use DDP.
 
     torch's data-parallel reducer rejects sparse gradients, so the flag that
     makes the 8 GiB table trainable is also what forces single-GPU training.
@@ -424,7 +424,7 @@ def test_parameter_count_is_dominated_by_the_vocabulary_at_large_k():
                if not n.startswith("token_embedding"))
     assert embed > 0 and rest > 0
     # At 4,107 tokens x 32 dims the table is small; the point is the ratio scales
-    # with vocab_size, which is 8,000x larger for the exact 13-mer arms.
+    # with vocab_size, which is 8,000x larger for the exact 13-mer configurations.
     assert embed == 4107 * 32
 
 

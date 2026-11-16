@@ -537,7 +537,7 @@ def main():
     eval_model_cfg["gradient_checkpointing"] = False  # not needed for eval
     model = create_model(eval_model_cfg, num_classes).to(device)
 
-    # map_location="cpu", not device: a last.pt for a long-k arm carries the
+    # map_location="cpu", not device: a last.pt for a long-k configuration carries the
     # SparseAdam moments as well as the weights (25.7 GiB against 8 GiB for the
     # model alone), and loading all of that straight onto the card OOMs before
     # load_state_dict has a chance to copy only what it needs. Staging on host

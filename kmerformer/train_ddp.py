@@ -109,18 +109,18 @@ def optimizer_groups(model, backbone_lr, head_lr, previous_state=None):
 def rejects_data_parallel(cfg: dict) -> bool:
     """True when this config cannot be trained under torch's data parallelism.
 
-    The single criterion is ``model.shallow_config.sparse_embedding``. An arm with
+    The single criterion is ``model.shallow_config.sparse_embedding``. A configuration with
     it takes sparse gradients on its embedding table -- required for the
-    exact-13-mer arms, where a dense gradient would be table-sized -- and torch's
+    exact-13-mer configurations, where a dense gradient would be table-sized -- and torch's
     data-parallel reducer rejects sparse gradients. Without this check the failure
     is an opaque reducer error tens of minutes in, after the FASTA index and the
     256 MiB vocabulary lookup table have been built on every rank.
 
     Keyed on the sparse flag and NOT on ``k`` or on the tokenizer type, which is
-    the whole point: the hashed 13-mer arms are also long-k, but they update a
+    the whole point: the hashed 13-mer configurations are also long-k, but they update a
     2^22-row table densely and train perfectly well across GPUs. Rejecting them
     would forfeit multi-GPU training for nothing, and it is the kind of mistake
-    nobody reports -- it just makes the hashed arms look inherently slow. That is
+    nobody reports -- it just makes the hashed configurations look inherently slow. That is
     why ``tests/test_configs.py`` asserts both directions against the real config
     tree rather than only the rejecting one.
     """
@@ -290,8 +290,8 @@ def validate(model, loader, criterion, device, use_amp, amp_dtype, world_size):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Train a KmerFormer 6-mer arm across GPUs with torchrun. "
-                    "Arms with shallow_config.sparse_embedding (the exact 13-mer "
+        description="Train a KmerFormer 6-mer model across GPUs with torchrun. "
+                    "Configurations with shallow_config.sparse_embedding (the exact 13-mer "
                     "vocabulary) are rejected here -- train those single-GPU.")
     parser.add_argument("--config",  type=str, required=True)
     parser.add_argument("--resume",  type=str, default=None)
@@ -302,7 +302,7 @@ def main():
     cfg = load_config(args.config)
     seed_training(cfg["training"].get("seed"))
 
-    # Reject unsupported arms BEFORE touching the distributed world, so this stays
+    # Reject unsupported configurations BEFORE touching the distributed world, so this stays
     # a plain config read that needs no GPU, no rendezvous and no launcher -- it
     # fires even for someone who runs this module directly to see what it does.
     if rejects_data_parallel(cfg):

@@ -3,7 +3,7 @@
 
 WHY. Two 100,000-read pools exist over the same 120 genera, and their
 genus_class vectors agree on 8.00% of positions -- neither identity nor chance.
-Every candidate file for these arms is 100,000 long over 120 classes, so shape,
+Every candidate file for these configurations is 100,000 long over 120 classes, so shape,
 length, class count and accuracy all pass on the wrong pool: the same 6-mer
 checkpoint scores 69.53% on one and 69.88% on the other. The table has already
 been published on the wrong pool once.
@@ -26,7 +26,7 @@ ASSETS = REPO / "docs" / "assets"
 SUMMARY = ASSETS / "s2_abundance_vs_detection.json"
 
 # clean_common's genus_class column. Independently confirmed on the A6000,
-# which stores predictions for two of these arms from separate jobs.
+# which stores predictions for two of these configurations from separate jobs.
 CLEAN_COMMON_LABELS_SHA1 = "9b9ec0c313f7f5fc"
 
 
@@ -66,17 +66,17 @@ def test_every_table_row_has_a_committed_array():
     rows = json.loads(SUMMARY.read_text())["rows"]
     have = {p.stem.replace("_preds_clean_common", "").lower()
             for p in arrays()}
-    missing = [r["arm"] for r in rows if r["arm"].lower() not in have]
+    missing = [r["configuration"] for r in rows if r["configuration"].lower() not in have]
     assert not missing, f"table rows with no committed predictions: {missing}"
 
 
 def test_arrays_reproduce_the_tables_read_accuracy():
     """Ties the committed arrays to the printed numbers, so a swapped array
     fails here rather than quietly changing what the table means."""
-    rows = {r["arm"].lower(): r for r in json.loads(SUMMARY.read_text())["rows"]}
+    rows = {r["configuration"].lower(): r for r in json.loads(SUMMARY.read_text())["rows"]}
     for path in arrays():
-        arm = path.stem.replace("_preds_clean_common", "").lower()
-        row = rows.get(arm)
+        configuration = path.stem.replace("_preds_clean_common", "").lower()
+        row = rows.get(configuration)
         if row is None:
             continue
         d = np.load(path)

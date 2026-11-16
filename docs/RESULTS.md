@@ -606,7 +606,7 @@ table is almost the whole model.
 | KmerFormer 13-mer exact d64, 1L | 140 | 187,862 | 16,088 | 8,248 | 24,712 | 2,146.9 / 0.2 | ✓ |
 | MetaTransformer 13-mer stride-1 | 138 | 193,942 | 18,248 | 8,244 | 24,698 | 2,146.9 / 0.1 | ✓ |
 
-Reproduce with [`scripts/bench/bench_arms.py`](../scripts/bench/bench_arms.py) and
+Reproduce with [`scripts/bench/bench_configs.py`](../scripts/bench/bench_configs.py) and
 [`configs/bench/`](../configs/bench/). NT-v2 is LoRA-adapted, so 5.54M of its 498.6M
 parameters are trained; every KmerFormer configuration trains all of its own.
 

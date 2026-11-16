@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Assemble the release weight bundle in weights/.
 #
-# The three arms below are the ones every headline number in the paper rests on.
+# The three configurations below are the ones every headline number in the paper rests on.
 # They are copied, not moved: the originals stay where the runs left them.
 #
 #   usage: scripts/weights/collect_weights.sh [DEST]
@@ -25,13 +25,13 @@ DEST="${1:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)/weights}"
 _here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [[ -f "$_here/../local_paths.sh" ]] && source "$_here/../local_paths.sh"
 
-# arm name -> source checkpoint; unset means "not configured" and is reported
+# configuration name -> source checkpoint; unset means "not configured" and is reported
 : "${L29_6MER:=}"
 : "${EXACT13_1L_50M:=}"
 : "${EXACT13_1L_250M:=}"
 
 # release filename | source | config it belongs to
-ARMS=(
+CONFIGURATIONS=(
   "kmerformer_6mer_L29_50M.pt|${L29_6MER}|configs/6mer/L29_50M.yaml"
   "kmerformer_exact13mer_1L_50M.pt|${EXACT13_1L_50M}|configs/13mer/exact_1L_50M_meanpool.yaml"
   "kmerformer_exact13mer_1L_250M.pt|${EXACT13_1L_250M}|configs/13mer/exact_1L_250M_meanpool.yaml"
@@ -42,8 +42,8 @@ echo "destination: $DEST"
 echo
 
 missing=0
-for arm in "${ARMS[@]}"; do
-  IFS='|' read -r name src cfg <<<"$arm"
+for configuration in "${CONFIGURATIONS[@]}"; do
+  IFS='|' read -r name src cfg <<<"$configuration"
   if [[ ! -f "$src" ]]; then
     echo "MISSING  $name"
     echo "         expected at: ${src:-(not configured -- set it in scripts/local_paths.sh)}"

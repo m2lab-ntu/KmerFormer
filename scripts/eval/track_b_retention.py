@@ -2,10 +2,10 @@
 """Recompute the ANI-ladder retention table in docs/RESULTS.md.
 
 Retention is far-rung accuracy as a fraction of same-species accuracy. It is the
-paper's cleanest separation of the two tokenizer families: every long-k arm keeps
-13-22% of its first-rung accuracy at the far rung and every 6-mer arm keeps
+paper's cleanest separation of the two tokenizer families: every long-k configuration keeps
+13-22% of its first-rung accuracy at the far rung and every 6-mer configuration keeps
 49-54%, with no overlap, across 1 to 29 encoder layers, exact and hashed
-vocabularies, 0.9M to 500M parameters, and two arms with no neural network at all.
+vocabularies, 0.9M to 500M parameters, and two configurations with no neural network at all.
 
 THE RESTRICTION MATTERS. Accuracies are computed only over the genera present at
 *every* rung -- fourteen of them. That is what makes the three points on a line
@@ -18,18 +18,18 @@ Usage::
     python scripts/eval/track_b_retention.py --track_b_out $KF_OUT/track_b
     python scripts/eval/track_b_retention.py --track_b_out ... --markdown
 
-Expects one directory per rung, each holding one directory per arm with a
+Expects one directory per rung, each holding one directory per configuration with a
 ``preds.npz`` carrying ``preds`` and ``labels``::
 
     <track_b_out>/L1_strain/L29/preds.npz
     <track_b_out>/L2_species/L29/preds.npz
     <track_b_out>/L2_far/L29/preds.npz
 
-Arms are discovered from the directory names, so it reports whatever is present.
-Rows are labelled through ARM_LABELS below; an unknown directory is reported
+Configurations are discovered from the directory names, so it reports whatever is present.
+Rows are labelled through CONFIGURATION_LABELS below; an unknown directory is reported
 under its own name and left unclassified. Abstaining methods (Kraken 2) are
 omitted unless --include_abstaining is passed, so the default output matches
-docs/RESULTS.md -- see the note on that row in ARM_LABELS.
+docs/RESULTS.md -- see the note on that row in CONFIGURATION_LABELS.
 """
 
 import argparse
@@ -44,7 +44,7 @@ RUNGS = ["L1_strain", "L2_species", "L2_far"]
 # directory name -> (display label, tokenizer family)
 # "family" is what the band claim is about: the two k families separate, and
 # nothing else in the table does.
-ARM_LABELS = {
+CONFIGURATION_LABELS = {
     # L29 is the depth series' endpoint AND the 6-mer representative the
     # manuscript's band claim uses; L1/L8/L16 are the same architecture at other
     # depths, which is why they are reported as a separate grouping below.
@@ -68,7 +68,7 @@ ARM_LABELS = {
     # manuscript and docs/RESULTS.md, which report no Kraken 2 row on this
     # ladder. Read-level accuracy on these rungs is not a like-for-like quantity
     # for a method that abstains: a low far-rung number means "declined to call"
-    # where a neural arm's means "called it wrong". Pass --include_abstaining to
+    # where a neural configuration's means "called it wrong". Pass --include_abstaining to
     # see it. Note what adding it would mean: Kraken 2 appears in the paper's
     # framing, methods, compute section, discussion and supplementary but in none
     # of its four results sections, so putting it on the ladder is not adding a
@@ -80,7 +80,7 @@ ARM_LABELS = {
 
 BAND_FAMILIES = ("6-mer", "long-k")
 
-# The manuscript states the band over the four architecturally distinct 6-mer arms.
+# The manuscript states the band over the four architecturally distinct 6-mer configurations.
 # The depth series is the same architecture at 1, 8 and 16 layers, and including it
 # widens the 6-mer band without touching the separation. Both are reported, because
 # a reader who regenerates this table and compares it with the paper needs to see
@@ -95,12 +95,12 @@ def load(path):
 
 def common_genera(root):
     """Genera present at every rung. Labels are a property of the pool, so any
-    one arm per rung answers this."""
+    one configuration per rung answers this."""
     per_rung = []
     for rung in RUNGS:
         found = None
-        for arm_dir in sorted((root / rung).iterdir()):
-            f = arm_dir / "preds.npz"
+        for configuration_dir in sorted((root / rung).iterdir()):
+            f = configuration_dir / "preds.npz"
             if f.exists():
                 found = set(np.unique(load(f)[1]).tolist())
                 break
@@ -133,22 +133,22 @@ def main():
     print(f"# genera present at every rung: {len(genera)}", file=sys.stderr)
     print(f"# genus label ids: {genera.tolist()}", file=sys.stderr)
 
-    arms = sorted({d.name for rung in RUNGS for d in (root / rung).iterdir()
+    configurations = sorted({d.name for rung in RUNGS for d in (root / rung).iterdir()
                    if (d / "preds.npz").exists()})
     if not args.include_abstaining:
-        dropped = [a for a in arms
-                   if ARM_LABELS.get(a, (a, ""))[1] == "abstaining"]
-        arms = [a for a in arms if a not in dropped]
+        dropped = [a for a in configurations
+                   if CONFIGURATION_LABELS.get(a, (a, ""))[1] == "abstaining"]
+        configurations = [a for a in configurations if a not in dropped]
         for a in dropped:
             print(f"# omitted (abstaining method, not on the manuscript's ladder): "
                   f"{a} -- pass --include_abstaining to score it", file=sys.stderr)
 
     rows = []
-    for arm in arms:
-        label, family = ARM_LABELS.get(arm, (arm, "unclassified"))
+    for configuration in configurations:
+        label, family = CONFIGURATION_LABELS.get(configuration, (configuration, "unclassified"))
         accs = []
         for rung in RUNGS:
-            f = root / rung / arm / "preds.npz"
+            f = root / rung / configuration / "preds.npz"
             if not f.exists():
                 accs.append(None)
                 continue
@@ -156,12 +156,12 @@ def main():
             keep = np.isin(labels, genera)
             accs.append(100.0 * float((preds[keep] == labels[keep]).mean()))
         retention = (100.0 * accs[2] / accs[0]) if (accs[0] and accs[2]) else None
-        rows.append({"arm": arm, "label": label, "family": family,
+        rows.append({"configuration": configuration, "label": label, "family": family,
                      "L1_strain": accs[0], "L2_species": accs[1],
                      "L2_far": accs[2], "retention": retention})
 
     # families first, then best first rung inside a family
-    # The depth series sorts after the four architecturally distinct 6-mer arms
+    # The depth series sorts after the four architecturally distinct 6-mer configurations
     # rather than interleaving with them. Interleaved, its 45.0% reads as a member
     # of a band it is not in, and the two groupings printed below stop being
     # legible in the table they summarise.
@@ -173,7 +173,7 @@ def main():
         return f"{v:.2f}{suffix}" if v is not None else "--"
 
     if args.markdown:
-        print("| Arm | L1 strain | L2 species | L2_far | Retention |")
+        print("| Configuration | L1 strain | L2 species | L2_far | Retention |")
         print("|---|---:|---:|---:|---:|")
         for r in rows:
             print(f"| {r['label']} | {cell(r['L1_strain'], '%')} | "
@@ -181,7 +181,7 @@ def main():
                   f"{cell(r['retention'], '%')} |")
     else:
         w = max(len(r["label"]) for r in rows)
-        print(f"{'Arm':<{w}} {'L1':>9} {'L2_sp':>9} {'L2_far':>9} {'retention':>10}  family")
+        print(f"{'Configuration':<{w}} {'L1':>9} {'L2_sp':>9} {'L2_far':>9} {'retention':>10}  family")
         for r in rows:
             print(f"{r['label']:<{w}} {cell(r['L1_strain']):>9} "
                   f"{cell(r['L2_species']):>9} {cell(r['L2_far']):>9} "

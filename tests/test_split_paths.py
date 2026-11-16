@@ -63,7 +63,7 @@ def test_the_overlap_is_what_independent_draws_would_give():
     """Not merely different: different in the way two unrelated draws are.
 
     A seed shared across the paths buys nothing, so 'same seed' must never be
-    offered as evidence that two arms saw the same partition.
+    offered as evidence that two configurations saw the same partition.
     """
     y = labels(); n = len(y)
     _, v_lazy = split_lazy(n)
@@ -110,9 +110,9 @@ def test_only_one_path_holds_the_class_balance():
     ("6mer/L1_50M.yaml", False),
     ("baselines/ntv2_lora_50M.yaml", False),
 ])
-def test_which_arms_take_which_path(path, expected):
+def test_which_configurations_take_which_path(path, expected):
     """Pins the grouping the comment names, so a config edit that silently
-    moves an arm across the boundary fails here rather than in a claim."""
+    moves a configuration across the boundary fails here rather than in a claim."""
     import yaml
     cfg = yaml.safe_load((REPO / "configs" / path).read_text())
     assert bool(cfg["data"].get("lazy", False)) is expected

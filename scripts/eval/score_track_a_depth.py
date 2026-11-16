@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-# SWEEP holds the depth-sweep run outputs (one directory per arm under out/);
+# SWEEP holds the depth-sweep run outputs (one directory per configuration under out/);
 # TRACKA holds the out-of-genome pool. See docs/DATA.md.
 SWEEP = Path(os.environ.get("KF_OUT", "."))
 TRACKA = Path(os.environ.get("KF_TRACK_A",

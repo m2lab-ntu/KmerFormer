@@ -10,7 +10,7 @@ They come from different scripts at different times and nothing ties them
 together. That was harmless while the run root also carried metrics.json, but an
 earlier train.py crashed before writing it (docs/MISSING_ASSETS.md), so for nine
 runs these two are the *only* record — and the paper now leans on it: a repeat of
-the headline 13-mer arm selected epoch 14 where the original selected 12, and part
+the headline 13-mer configuration selected epoch 14 where the original selected 12, and part
 of the 0.113-point difference between the two draws is that choice. If
 checkpoint_epoch ever drifted from the val_acc peak, the paper would be wrong in a
 way nothing downstream would reveal.

@@ -224,9 +224,9 @@ def validate(model, loader, criterion, device, use_amp, amp_dtype=None):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Train a KmerFormer arm, or a LoRA-adapted foundation-model "
+        description="Train a KmerFormer model, or a LoRA-adapted foundation-model "
                     "baseline, from a YAML config. Single GPU; see train_ddp for "
-                    "multi-GPU dense-gradient arms.")
+                    "multi-GPU dense-gradient configurations.")
     parser.add_argument("--config", type=str, required=True, help="YAML config path")
     parser.add_argument("--resume", type=str, default=None,
                         help="Path to checkpoint (last.pt) to resume SAME experiment")
@@ -651,7 +651,7 @@ def main():
     warmup_ratio = train_cfg.get("warmup_ratio", 0.1)
     warmup_steps = int(total_steps_full * warmup_ratio)
 
-    # training.lr_schedule: "cosine" (default, every arm so far) or "none".
+    # training.lr_schedule: "cosine" (default, every configuration so far) or "none".
     # "none" holds the learning rate flat for the whole run, which is what
     # MetaTransformer does -- its config defines a StepLR but leaves
     # lr_scheduler_enabled false, and warmup_lr_scheduler_enabled false with it.

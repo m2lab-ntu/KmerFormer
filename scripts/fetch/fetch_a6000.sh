@@ -12,7 +12,7 @@
 # is corroboration, not a dependency.
 #
 # Default is a dry run. Nothing large is fetched without an explicit flag, because
-# the 250M pool is 67 GiB and is needed only to RETRAIN a 250M arm; the trained
+# the 250M pool is 67 GiB and is needed only to RETRAIN a 250M configuration; the trained
 # checkpoint is present locally; reviewer download access is still pending.
 set -uo pipefail
 
@@ -33,8 +33,8 @@ done
 : "${DEST:=${KF_OUT:-./fetched}}"
 
 RUNS=(
-  "shallow1_exact13mer_50M_meanpool|exact 13-mer 1L 50M -- the 91.15% arm"
-  "shallow1_exact13mer_250M_meanpool|exact 13-mer 1L 250M -- the 99.16% arm"
+  "shallow1_exact13mer_50M_meanpool|exact 13-mer 1L 50M -- the 91.15% configuration"
+  "shallow1_exact13mer_250M_meanpool|exact 13-mer 1L 250M -- the 99.16% configuration"
   "shallow1_exact13mer_50M|exact 13-mer 1L 50M, attention pooling -- 90.74%"
   "L16_5M_meanpool|k=6 pooling ablation, 54.29% -- no local output directory exists"
   "L29|6-mer 29 layers, 69.52% -- also local; fetch to cross-check"
@@ -106,14 +106,14 @@ number look wrong. Details and the full table: docs/MISSING_ASSETS.md.
 
 1. eval_track_a/ was run on the RAW 595,000-read / 119-genome pool. The paper
    reports the 580,000 / 116-genome pool, after removing the three training-
-   overlapping accessions, so the 13-mer arms read ~1.5 points HIGHER here.
+   overlapping accessions, so the 13-mer configurations read ~1.5 points HIGHER here.
    Multiply micro_accuracy by each candidate pool size: only the right one
    gives an integer read count.
    Do NOT equate that ~1.5 with the paper's 1.13/1.75 near-identical-genome
    figures -- those measure a DISJOINT set of six other genomes. Same
    mechanism, different subset; the magnitudes must not be reconciled.
 
-2. The attention-pooling arm has TWO closed-set eval dirs. eval_final_rctta is
+2. The attention-pooling configuration has TWO closed-set eval dirs. eval_final_rctta is
    the reported one (90.74%); eval_clean_common_rctta is an earlier evaluation
    (90.12%). Check checkpoint_epoch in the JSON.
 

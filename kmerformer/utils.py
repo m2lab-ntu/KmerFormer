@@ -19,7 +19,7 @@ def _expand(value):
 
         KF_DATA   root of the read pools and evaluation sets
         KF_OUT    where runs write checkpoints and metrics
-        KF_VOCAB  directory holding ``vocab_13mer.txt`` (exact 13-mer arms only)
+        KF_VOCAB  directory holding ``vocab_13mer.txt`` (exact 13-mer configurations only)
 
     An unset variable is left verbatim rather than replaced by an empty string,
     so a missing one fails as ``no such file: $KF_DATA/reads_50M.fa`` instead of

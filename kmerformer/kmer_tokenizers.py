@@ -135,7 +135,7 @@ class HashedKmerTokenizer(_BaseKmerTokenizer):
     complement land in unrelated buckets here, where the exact vocabulary maps
     both to one row. That asymmetry is a real confound in the exact-vs-hashed
     contrast the paper reports, and it is disclosed there rather than corrected:
-    the trained arms are what they are, and adding canonicalisation now would
+    the trained configurations are what they are, and adding canonicalisation now would
     describe a model nobody trained. Do not "fix" it.
 
     The mixer and the default seed are load-bearing. A separate implementation of

@@ -43,7 +43,7 @@ class ShallowTransformerClassifier(nn.Module):
             raise ValueError("num_classes must be a positive integer")
         # The four knobs above exist so the model can be walked toward
         # MetaTransformer one group at a time. Every default is what KmerFormer
-        # already did, so nothing changes for the arms already reported.
+        # already did, so nothing changes for the configurations already reported.
         if pos_encoding not in ("learned", "sinusoidal"):
             raise ValueError(f"pos_encoding: {pos_encoding}")
         if embed_scale not in ("layernorm", "sqrt_d"):
@@ -137,7 +137,7 @@ class ShallowTransformerClassifier(nn.Module):
         # Found by counting parameters above the embedding table during the
         # MetaTransformer-direction ablation: our reconstruction came out 128
         # parameters short at d_model=64, and this was the whole of the gap.
-        # Default False preserves every arm reported so far, including the ones
+        # Default False preserves every configuration reported so far, including the ones
         # already trained.
         self.encoder = nn.TransformerEncoder(
             encoder_layer, num_layers=num_layers,

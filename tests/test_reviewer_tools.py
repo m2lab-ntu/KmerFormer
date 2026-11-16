@@ -209,7 +209,7 @@ def test_separate_zenodo_records_have_scoped_licences_and_complete_checksums(tmp
 
 def test_archived_prediction_evidence():
     report = module("scripts/review_predictions.py").verify(ROOT / "docs/assets")
-    assert len(report["arms"]) == 14
+    assert len(report["configurations"]) == 14
     assert not report["full_metrics"]
 
 

@@ -268,7 +268,7 @@ same 120 genera and their label vectors agree on 8.00% of positions, so shape, l
 class count and even accuracy all pass on the wrong one. Coverage-masked accuracy
 is excluded from this offline check. The original `s2_abundance_vs_detection.py`
 also checks FASTA identity and coverage, but needs `--pool_fasta`, `--pool_labels`
-and one `--arm NAME=NPZ` per model.
+and one `--configuration NAME=NPZ` per model.
 
 For a Kraken 2 configuration, convert its read-level output first — the same script handles
 either index and prints the rank histogram so the build is visible:
@@ -284,7 +284,7 @@ python scripts/eval/kraken2_genus_calls.py \
 ### Throughput and memory (main-text Table 2)
 
 ```bash
-python scripts/bench/bench_arms.py --configs configs/bench/*.yaml
+python scripts/bench/bench_configs.py --configs configs/bench/*.yaml
 ```
 
 One GPU, batch 128, 150 bp synthetic reads, warm-up excluded. The two exact-13-mer configurations

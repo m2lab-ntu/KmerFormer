@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tests for scripts/track_b/_coverage.py.
 
-The helper exists because a hardcoded `--models` default silently excluded an arm
+The helper exists because a hardcoded `--models` default silently excluded a configuration
 whose predictions were on disk: section 7.3 of the manuscript cites the 29-layer
 KmerFormer at r = 0.522 on L2_lognormal, no such row was in the stored summary,
 and establishing that the number was real rather than fabricated cost a working
@@ -43,7 +43,7 @@ def capture(level, scored, **kw):
 
 
 def test_available_models_requires_predictions(tmp_path):
-    """A directory with no preds.npz is not a scoreable arm and must not be
+    """A directory with no preds.npz is not a scoreable configuration and must not be
     reported as skipped — otherwise every run nags about scratch directories."""
     level = make_level(tmp_path, "L2_far", ["mt_250M", "L29"], models_without=["tmp", "logs"])
     assert available_models(level) == {"mt_250M", "L29"}
@@ -69,7 +69,7 @@ def test_silent_when_everything_present_was_scored(tmp_path):
 
 
 def test_requesting_an_absent_model_is_also_reported(tmp_path):
-    """The mirror-image mistake: naming an arm that is not there. The scoring
+    """The mirror-image mistake: naming a configuration that is not there. The scoring
     loop just skips it, so without this it is as quiet as the other direction."""
     level = make_level(tmp_path, "L2_far", ["mt_250M"])
     unscored, out = capture(level, ["mt_250M", "kf_exact13_1L_50M"])

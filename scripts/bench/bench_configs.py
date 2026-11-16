@@ -1,28 +1,28 @@
 #!/usr/bin/env python
-"""Uniform speed / memory benchmark across every arm in the v4 manuscript.
+"""Uniform speed / memory benchmark across every configuration in the manuscript.
 
 WHY THIS EXISTS
-The compute table the advisor asked for cannot be assembled from the numbers we
-already have: the earlier benchmark covers NT-v2 and the MetaTransformer arms
-only, our own arms are absent entirely, and the rows were not all taken on one
-machine. This script measures every arm through one code path, on one GPU, at
-one batch size, so the columns are actually comparable.
+The manuscript's compute table cannot be assembled from the numbers we
+already have: the earlier benchmark covers NT-v2 and the MetaTransformer
+configurations only, our own configurations are absent entirely, and the rows were
+not all taken on one machine. This script measures every configuration through
+one code path, on one GPU, at one batch size, so the columns are actually comparable.
 
 WHAT IS MEASURED
 Forward-only and forward+backward+step throughput on a fixed synthetic batch of
 150 bp reads, with warm-up excluded, so the number reflects the architecture's
 compute rather than data loading or NFS. Peak allocated GPU memory is captured
 per phase. Parameter counts are split into embedding and non-embedding, because
-for long-k arms nearly all of the model is the embedding table and a single
-"parameters" figure is misleading.
+for long-k configurations nearly all of the model is the embedding table and a
+single "parameters" figure is misleading.
 
 Two tokenizer families are handled: the HuggingFace tokenizer that the 6-mer
-arms and NT-v2 share, and the exact/hashed k-mer tokenizers used by the 13-mer
-arms. Both are driven from the same config files the training runs used, so an
-arm cannot be benchmarked in a configuration it was never trained in.
+configurations and NT-v2 share, and the exact/hashed k-mer tokenizers used by the
+13-mer configurations. Both are driven from the same config files the training
+runs used, so a model cannot be benchmarked with settings it was never trained with.
 
 Usage:
-  python bench_arms.py --config CFG.yaml --label NAME --num_classes 120 \
+  python bench_configs.py --config CFG.yaml --label NAME --num_classes 120 \
       --batch 128 --csv out.csv [--infer_only]
 """
 import argparse
@@ -45,7 +45,7 @@ def rand_reads(n, length=150):
 
 
 def encode(cfg, reads, max_len):
-    """Return input_ids, attention_mask for whichever tokenizer the arm uses."""
+    """Return input_ids, attention_mask for whichever tokenizer the configuration uses."""
     tok_cfg = cfg.get("data", {}).get("tokenizer")
     if tok_cfg:
         # the k-mer tokenizers are HuggingFace-compatible through __call__, so
@@ -72,7 +72,7 @@ def encode(cfg, reads, max_len):
 def param_split(model):
     """Embedding parameters versus everything else.
 
-    For the long-k arms the embedding table is essentially the whole model, so
+    For the long-k configurations the embedding table is essentially the whole model, so
     a single parameter count hides where the cost actually is.
 
     The table is found by module type, not by attribute name. Matching the string
@@ -81,7 +81,7 @@ def param_split(model):
     embeddings.word_embeddings, so NT-v2 was reported with a zero-parameter
     vocabulary table and its whole 498.6M in "other" -- printed as an em dash in
     the manuscript, which reads as "has no table" rather than "was not counted".
-    Positional embeddings stay in "other", which is what the k-mer arms already
+    Positional embeddings stay in "other", which is what the k-mer configurations already
     did and what the column means.
     """
     tables = {n for n, m in model.named_modules()
@@ -102,7 +102,7 @@ def main():
     ap.add_argument("--warmup", type=int, default=8)
     ap.add_argument("--csv", required=True)
     ap.add_argument("--infer_only", action="store_true",
-                    help="skip the training phase (for arms whose optimiser "
+                    help="skip the training phase (for configurations whose optimiser "
                          "state does not fit on this GPU)")
     args = ap.parse_args()
 

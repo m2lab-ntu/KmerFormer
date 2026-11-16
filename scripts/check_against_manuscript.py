@@ -91,7 +91,7 @@ def banner_values():
     """(accepted forms, config) for every accuracy stamped on a config.
 
     A banner may end with `[not in the manuscript]`, for a measurement this
-    repository reports that the paper does not print -- an arm dropped when a
+    repository reports that the paper does not print -- a configuration dropped when a
     section was rewritten, say. Those are skipped and counted, so the exemption
     cannot grow quietly into a way of silencing real drift.
     """

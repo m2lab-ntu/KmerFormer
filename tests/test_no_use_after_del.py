@@ -2,7 +2,7 @@
 """Static check: nothing reads a local after `del` removed it.
 
 WHY THIS EXISTS. `train.py` loads the best checkpoint at the end of training,
-pulls what it needs out, and deletes the dict immediately — the exact-13-mer arms
+pulls what it needs out, and deletes the dict immediately — the exact-13-mer configurations
 carry an 8 GiB embedding table and keeping a second copy alive OOM'd the box after
 all 15 epochs had already finished. That is a good optimisation and the code does
 it correctly today: `best_epoch` is extracted *before* the `del`.
@@ -18,7 +18,7 @@ never appear and the log never records which epoch was selected. Anyone auditing
 such a run by reading its log concludes the epoch was not recorded, rather than
 that the summary crashed.
 
-Checkpoint selection is load-bearing here — a repeat of one arm differs from the
+Checkpoint selection is load-bearing here — a repeat of one configuration differs from the
 original by 0.113 points and part of that is which epoch each run selected — so
 the fact this bug erases is one that matters.
 

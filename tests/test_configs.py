@@ -2,7 +2,7 @@
 """Invariants over the config tree. No GPU, no data, no network.
 
 These lock in the properties that make `configs/` usable by someone who is not on
-the machine the runs were done on, and that make the arms comparable. Each was
+the machine the runs were done on, and that make the configurations comparable. Each was
 verified by hand once; a test is what keeps it true.
 """
 
@@ -85,16 +85,16 @@ def test_output_dirs_are_unique():
 
 @pytest.mark.parametrize("cfg_path", CONFIGS, ids=lambda p: str(p.relative_to(CONFIG_DIR)))
 def test_result_banner_present(cfg_path):
-    """Every arm the paper reports carries the number it produced, at the top of
+    """Every configuration the paper reports carries the number it produced, at the top of
     the file, so a config and its result cannot drift apart. The exceptions are
     declared here rather than left implicit."""
     text = cfg_path.read_text()
     rel = cfg_path.relative_to(CONFIG_DIR)
     if rel.parts[0] == "bench":
-        return  # benchmark arms report throughput, not accuracy
+        return  # benchmark configurations report throughput, not accuracy
     if rel.parts[0] == "extra":
         # Nothing in extra/ backs a claim, so it carries no result -- but it must
-        # say whether a result exists at all, so an arm that was never run is not
+        # say whether a result exists at all, so a configuration that was never run is not
         # mistaken for one whose number is being withheld.
         assert text.startswith("# STATUS:"), (
             f"{rel} is in extra/ and has no '# STATUS:' line saying whether it ran")
@@ -122,7 +122,7 @@ def _tokenizer_type(raw):
 @pytest.mark.parametrize("cfg_path", CONFIGS, ids=lambda p: str(p.relative_to(CONFIG_DIR)))
 def test_sparse_embedding_only_on_exact_vocabularies(cfg_path):
     """sparse_embedding is what makes the 33.5M-row exact table trainable, and it
-    is also what rules out DDP. It must not appear on an arm that does not need
+    is also what rules out DDP. It must not appear on a configuration that does not need
     it: a hashed table is 2^22 rows and updates densely, and turning sparse on
     there would forfeit multi-GPU training for nothing.
     """
@@ -138,11 +138,11 @@ def test_ddp_guard_matches_the_sparse_flag(cfg_path):
     """`train_ddp.rejects_data_parallel` must key on sparsity and nothing else.
 
     Both directions matter, and the second is the one at risk. Rejecting a sparse
-    arm prevents an opaque reducer failure tens of minutes into a run. But
-    *admitting* the non-sparse arms is what keeps multi-GPU training available to
-    the hashed 13-mer arms -- which are long-k too, so a guard rewritten to key on
+    configuration prevents an opaque reducer failure tens of minutes into a run. But
+    *admitting* the non-sparse configurations is what keeps multi-GPU training available to
+    the hashed 13-mer configurations -- which are long-k too, so a guard rewritten to key on
     `k` or on the tokenizer type would start rejecting them. That failure is silent:
-    nobody reports it, the hashed arms just look inherently slow.
+    nobody reports it, the hashed configurations just look inherently slow.
 
     So do not delete this as redundant with the invariant above. That one constrains
     the configs; this one constrains the guard.
@@ -156,16 +156,16 @@ def test_ddp_guard_matches_the_sparse_flag(cfg_path):
         f"{'reject' if not expected else 'admit'} but sparse_embedding is {expected}")
 
 
-def test_ddp_guard_admits_every_hashed_arm():
+def test_ddp_guard_admits_every_hashed_configuration():
     """The negative case, stated once over the whole family rather than per file."""
     from kmerformer.train_ddp import rejects_data_parallel
 
     hashed = [p for p in CONFIGS
               if _tokenizer_type(yaml.safe_load(p.read_text())) == "hashed_kmer"]
-    assert hashed, "no hashed arms found -- has the config tree been renamed?"
+    assert hashed, "no hashed configurations found -- has the config tree been renamed?"
     rejected = [p.name for p in hashed if rejects_data_parallel(load_config(p))]
     assert not rejected, (
-        "the DDP guard rejects hashed arms, which train densely and should keep "
+        "the DDP guard rejects hashed configurations, which train densely and should keep "
         f"multi-GPU support: {rejected}")
 
 
@@ -173,7 +173,7 @@ def test_ddp_guard_admits_every_hashed_arm():
 def test_custom_tokenizer_declares_a_vocab_size(cfg_path):
     """train.py asserts config vocab_size == tokenizer vocab_size. Leaving it out
     means the embedding is sized from NT-v2's 6-mer vocabulary, which for a
-    13-mer arm is a silently wrong model rather than an error."""
+    13-mer configuration is a silently wrong model rather than an error."""
     raw = yaml.safe_load(cfg_path.read_text())
     if _tokenizer_type(raw) in {"exact_kmer", "hashed_kmer"}:
         assert raw["model"].get("vocab_size"), (
@@ -181,8 +181,8 @@ def test_custom_tokenizer_declares_a_vocab_size(cfg_path):
             "model.vocab_size")
 
 
-def test_hashed_arms_agree_on_bucket_count():
-    """Every hashed arm in the paper maps into 2^22 buckets. A config that
+def test_hashed_configurations_agree_on_bucket_count():
+    """Every hashed configuration in the paper maps into 2^22 buckets. A config that
     quietly used a different count would not be comparable with the others."""
     counts = {}
     for cfg_path in CONFIGS:
@@ -190,7 +190,7 @@ def test_hashed_arms_agree_on_bucket_count():
         tok = (raw.get("data") or {}).get("tokenizer") or {}
         if tok.get("type") == "hashed_kmer":
             counts[str(cfg_path.relative_to(CONFIG_DIR))] = tok.get("n_buckets")
-    assert counts, "no hashed arms found"
+    assert counts, "no hashed configurations found"
     assert set(counts.values()) == {1 << 22}, f"mixed bucket counts: {counts}"
 
 

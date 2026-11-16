@@ -6,7 +6,7 @@ WHY THIS EXISTS, AND WHY IT IS NOT REDUNDANT WITH THE OTHER TESTS.
 The banners were transcribed by hand from the manuscript, one per config. The
 failure mode that transcription invites is not a missing number -- that is caught
 by `test_result_banner_present` -- but a number attached to the *wrong* config.
-Two banners swapped between sibling arms leaves every file well-formed, every link
+Two banners swapped between sibling configurations leaves every file well-formed, every link
 resolving and every name matching its contents, and is simply wrong. A checker
 that only verifies references resolve cannot see it.
 
@@ -14,16 +14,16 @@ What catches it is that the paper does not only state levels, it states
 *differences*: "one layer beats sixteen by 5.52 points with an exact vocabulary",
 "the cost of hashing is 6.37 points at matched width and depth", "the gain from
 depth alone is 15.60 points". Each is an independent arithmetic constraint tying
-two specific arms together. Transpose a pair and the arithmetic stops closing.
+two specific configurations together. Transpose a pair and the arithmetic stops closing.
 
 DELTAS retains quotations from the original manuscript with their sections.
 The condensed manuscript retains the source accuracies for the 15.60- and
 5.52-point differences; `check_against_manuscript.py` now derives these two
 differences from the named configurations instead of requiring the old wording.
 
-An arm leaves this table when the manuscript stops printing its number, not when
+A configuration leaves this table when the manuscript stops printing its number, not when
 the measurement stops being true. `L8_5M` was dropped here after Part 1 was
-rewritten around the depth-matched 29-layer arm; the 53.62% it measured is still
+rewritten around the depth-matched 29-layer configuration; the 53.62% it measured is still
 in `configs/`, marked so both checkers know it is ours rather than the paper's.
 
 WHAT THIS DOES NOT DO. An earlier version of this docstring claimed that if the
@@ -49,8 +49,8 @@ BANNER = re.compile(
     r"^# RESULT: closed-set 100K genus Top-1 (?P<closed>[\d.]+)%"
     r"(?:\s*\|\s*Track A out-of-genome (?P<track_a>[\d.]+)%)?")
 
-# (config path relative to configs/, ...) -- every arm a delta below refers to
-ARMS = {
+# (config path relative to configs/, ...) -- every configuration a delta below refers to
+CONFIGURATIONS = {
     "L1_50M":                "6mer/L1_50M.yaml",
     "L16_50M":               "6mer/L16_50M.yaml",
     "L29_50M":               "6mer/L29_50M.yaml",
@@ -73,7 +73,7 @@ ARMS = {
     "hashed_d64_16L":        "13mer/hashed_d64_16L_50M.yaml",
 }
 
-# (metric, arm_a, arm_b, expected difference, quoted source)
+# (metric, configuration_a, configuration_b, expected difference, quoted source)
 DELTAS = [
     # ---- Part 2: the 6-mer comparison ----
     ("closed", "L29_50M", "L1_50M", 15.60,
@@ -88,7 +88,7 @@ DELTAS = [
     ("closed", "L29_5M", "L16_5M", 0.08,
      'Part 1: "16 layers to 29 buys 0.08 points" at the 5M budget'),
     # Part 1's data-scale passage was rewritten to lead with the DEPTH-MATCHED
-    # arm -- the 29-layer model, NT-v2's own depth -- rather than the 16-layer
+    # configuration -- the 29-layer model, NT-v2's own depth -- rather than the 16-layer
     # one, and the 8-layer 5M figure was dropped. These four pin the primary
     # series; the four after them pin the 16-layer series it still reports
     # alongside.
@@ -102,8 +102,7 @@ DELTAS = [
     ("closed", "L29_50M", "ntv2_50M", 2.44,
      'Part 1: "overtaken by 2.4 at 50M (67.08% against 69.52%)"'),
     ("closed", "ntv2_500K", "L16_500K", 13.37,
-     'Part 1: the 16-layer series, "the lead over that arm is 13.4, 13.1, 8.9 '
-     'and -0.9 points"'),
+     'Part 1: the 16-layer series, a lead of 13.4, 13.1, 8.9 and -0.9 points'),
     ("closed", "ntv2_1M", "L16_1M", 13.05,
      'Part 1: the "13.1" of that series'),
     ("closed", "ntv2_5M", "L16_5M", 8.94,
@@ -115,7 +114,7 @@ DELTAS = [
      '+1.58 points as the budget grows"'),
     ("closed", "L29_1M", "L16_1M", -0.16,
      'Part 1: the "-0.16" of that series'),
-    # ---- Part 3: the 13-mer arms ----
+    # ---- Part 3: the 13-mer configurations ----
     ("closed", "exact_1L_mean", "exact_16L", 5.52,
      'Part 3: "one layer beats sixteen by 5.52 points with an exact vocabulary"'),
     ("closed", "hashed_d128_1L", "hashed_d128_16L", 2.97,
@@ -148,8 +147,8 @@ def _banner(rel_path):
     return m
 
 
-@pytest.mark.parametrize("key,rel", sorted(ARMS.items()))
-def test_arm_banner_parses(key, rel):
+@pytest.mark.parametrize("key,rel", sorted(CONFIGURATIONS.items()))
+def test_configuration_banner_parses(key, rel):
     assert (CONFIG_DIR / rel).exists(), f"{rel} is missing"
     _banner(rel)
 
@@ -159,9 +158,9 @@ def test_arm_banner_parses(key, rel):
     ids=[f"{m}:{a}-{b}={e}" for m, a, b, e, _ in DELTAS])
 def test_stated_difference_holds(metric, a, b, expected, source):
     """A difference the manuscript states must close over the two banners it names."""
-    va, vb = _banner(ARMS[a]).group(metric), _banner(ARMS[b]).group(metric)
-    assert va is not None, f"{ARMS[a]} has no {metric} figure, needed for {source}"
-    assert vb is not None, f"{ARMS[b]} has no {metric} figure, needed for {source}"
+    va, vb = _banner(CONFIGURATIONS[a]).group(metric), _banner(CONFIGURATIONS[b]).group(metric)
+    assert va is not None, f"{CONFIGURATIONS[a]} has no {metric} figure, needed for {source}"
+    assert vb is not None, f"{CONFIGURATIONS[b]} has no {metric} figure, needed for {source}"
     got = float(va) - float(vb)
     assert abs(got - expected) < TOLERANCE, (
         f"{source}\n"
@@ -183,7 +182,7 @@ def test_stated_difference_holds(metric, a, b, expected, source):
 # What settles it is that the manuscript states enough to over-determine the
 # count: the accuracy on the removed subset (48.06%), the accuracy on the rest of
 # the pool (26.31%), and the accuracy on the whole pool (27.44%, which is also the
-# Track A banner of the 50M arm). Those three close for exactly one value of n:
+# Track A banner of the 50M configuration). Those three close for exactly one value of n:
 #
 #     n=6  (30,000 of 580,000 reads) -> 27.4350%   agrees with 27.44%
 #     n=13 (65,000 of 580,000 reads) -> 28.7475%   does not
@@ -225,7 +224,7 @@ def test_near_identical_genome_count_is_arithmetically_consistent():
         f"{n} x {READS_PER_GENOME:,} = {n * READS_PER_GENOME:,}")
 
     # and both must reproduce the whole-pool accuracy the banner carries
-    banner_pool_acc = float(_banner(ARMS["exact_1L_mean"]).group("track_a"))
+    banner_pool_acc = float(_banner(CONFIGURATIONS["exact_1L_mean"]).group("track_a"))
     removed = n * READS_PER_GENOME
     weighted = (ACC_ON_REMOVED * removed
                 + ACC_ON_REST * (TRACK_A_POOL - removed)) / TRACK_A_POOL
@@ -238,22 +237,22 @@ def test_near_identical_genome_count_is_arithmetically_consistent():
         f"  n=6 gives 27.4350%; n=13 gives 28.7475%")
 
 
-def test_every_delta_names_a_known_arm():
-    """A typo in ARMS would make a delta silently untested."""
+def test_every_delta_names_a_known_configuration():
+    """A typo in CONFIGURATIONS would make a delta silently untested."""
     for metric, a, b, _, source in DELTAS:
-        assert a in ARMS, f"{source}: unknown arm {a!r}"
-        assert b in ARMS, f"{source}: unknown arm {b!r}"
+        assert a in CONFIGURATIONS, f"{source}: unknown configuration {a!r}"
+        assert b in CONFIGURATIONS, f"{source}: unknown configuration {b!r}"
         assert metric in ("closed", "track_a"), f"{source}: unknown metric {metric!r}"
 
 
-def test_deltas_cover_every_arm_they_can():
-    """Every arm listed in ARMS must take part in at least one cross-check --
+def test_deltas_cover_every_configuration_they_can():
+    """Every configuration listed in CONFIGURATIONS must take part in at least one cross-check --
     otherwise its banner is asserted to parse but never checked against anything."""
     used = {a for _, a, _, _, _ in DELTAS} | {b for _, _, b, _, _ in DELTAS}
-    unchecked = sorted(set(ARMS) - used)
+    unchecked = sorted(set(CONFIGURATIONS) - used)
     assert not unchecked, (
-        f"these arms are in ARMS but no delta constrains them: {unchecked}. "
-        "Either add a constraint from the manuscript or drop them from ARMS.")
+        f"these configurations are in CONFIGURATIONS but no delta constrains them: {unchecked}. "
+        "Either add a constraint from the manuscript or drop them from CONFIGURATIONS.")
 
 
 if __name__ == "__main__":

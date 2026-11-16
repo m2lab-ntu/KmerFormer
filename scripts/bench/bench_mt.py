@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Benchmark MetaTransformer under the same protocol as bench_arms.py.
+"""Benchmark MetaTransformer under the same protocol as bench_configs.py.
 
 WHY: the manuscript's compute table is measured on one GPU through one code
 path so its rows are comparable, but MetaTransformer lives in a separate
@@ -10,8 +10,8 @@ with the same warm-up-excluded timing and the same peak-memory accounting.
 
 The one thing that cannot be matched is the training loop: MT's optimiser and
 schedule are its own. We therefore time forward+backward+step with a plain AdamW
-(SparseAdam where the embedding is sparse), which is what bench_arms.py does for
-our arms too, so the training column measures the architecture rather than
+(SparseAdam where the embedding is sparse), which is what bench_configs.py does for
+our configurations too, so the training column measures the architecture rather than
 either project's recipe.
 
 Usage (MetaTransformer env):

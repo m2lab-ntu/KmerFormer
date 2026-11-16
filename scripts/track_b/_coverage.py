@@ -2,8 +2,8 @@
 """Report model directories that exist on disk but were not scored.
 
 WHY. Every scoring step in this pipeline takes `--models` as a comma-separated
-list with a hardcoded default naming the arms that existed when it was written.
-Add an arm later, run the step, and it is excluded from every level with no
+list with a hardcoded default naming the configurations that existed when it was written.
+Add a configuration later, run the step, and it is excluded from every level with no
 message: the only evidence is a row missing from the output, which is the one
 thing nobody notices.
 
@@ -17,7 +17,7 @@ number was not fabricated.
 The omission is wider than that one case. Against what is on disk today, the
 defaults skip 10 of 17 model directories per ladder level in tb_07, 12 of 17 in
 tb_09 and 13 of 17 in tb_14. Much of that is deliberate -- the ladder figures come
-from `scripts/eval/track_b_retention.py`, which discovers arms by listing the
+from `scripts/eval/track_b_retention.py`, which discovers configurations by listing the
 directory instead of naming them -- but "deliberate" and "forgotten" look
 identical in the output, and that is the problem this fixes.
 
@@ -43,7 +43,7 @@ def report_unscored(level_dir, scored, *, level=None, allow_unscored=False,
     """Print what was scored against what exists; return the unscored names.
 
     `scored` is whatever the caller actually processed. Names in `scored` with no
-    directory are reported too — asking for an arm that is not there is the
+    directory are reported too — asking for a configuration that is not there is the
     mirror-image mistake and equally quiet, since the loop simply skips it.
     """
     import sys
