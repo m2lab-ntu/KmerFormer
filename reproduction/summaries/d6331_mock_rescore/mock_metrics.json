@@ -1,7 +1,7 @@
 [
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 6-mer, 1 layer",
+  "configuration": "KmerFormer 6-mer, 1 layer",
   "pearson": 0.34519228724983836,
   "spearman": 0.1859252049028905,
   "bray_curtis": 0.48384099760383986,
@@ -11,7 +11,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 6-mer, 8 layers",
+  "configuration": "KmerFormer 6-mer, 8 layers",
   "pearson": 0.28114752044763314,
   "spearman": 0.25743489909630995,
   "bray_curtis": 0.3898761029825924,
@@ -21,7 +21,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 6-mer, 16 layers",
+  "configuration": "KmerFormer 6-mer, 16 layers",
   "pearson": 0.4258938340983692,
   "spearman": 0.33847921918218526,
   "bray_curtis": 0.34883763002955925,
@@ -31,7 +31,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 6-mer, 29 layers",
+  "configuration": "KmerFormer 6-mer, 29 layers",
   "pearson": 0.3926176706146755,
   "spearman": 0.40045428748314876,
   "bray_curtis": 0.37787020714894737,
@@ -41,7 +41,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 13-mer exact, 16 l.",
+  "configuration": "KmerFormer 13-mer exact, 16 l.",
   "pearson": 0.49992513346851597,
   "spearman": 0.4290581651605165,
   "bray_curtis": 0.3337612282885716,
@@ -51,7 +51,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 13-mer hashed d128, 1 l.",
+  "configuration": "KmerFormer 13-mer hashed d128, 1 l.",
   "pearson": 0.41768677452762,
   "spearman": 0.4290581651605165,
   "bray_curtis": 0.3446650583460763,
@@ -61,7 +61,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 13-mer hashed d128, 16 l.",
+  "configuration": "KmerFormer 13-mer hashed d128, 16 l.",
   "pearson": 0.4121027621153043,
   "spearman": 0.3909196615906929,
   "bray_curtis": 0.3454353655258127,
@@ -71,7 +71,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "KmerFormer 13-mer hashed d64, 16 l.",
+  "configuration": "KmerFormer 13-mer hashed d64, 16 l.",
   "pearson": 0.28314386951864384,
   "spearman": 0.3098753415048175,
   "bray_curtis": 0.3622654793511189,
@@ -81,7 +81,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "MetaTransformer 13-mer",
+  "configuration": "MetaTransformer 13-mer",
   "pearson": 0.5453745728723823,
   "spearman": 0.4385927910529725,
   "bray_curtis": 0.3439701426834951,
@@ -91,7 +91,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "MetaTransformer 6-mer",
+  "configuration": "MetaTransformer 6-mer",
   "pearson": 0.06465893897766778,
   "spearman": 0.20022714374157438,
   "bray_curtis": 0.40917527528709724,
@@ -101,7 +101,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "NT-v2 500M + LoRA",
+  "configuration": "NT-v2 500M + LoRA",
   "pearson": 0.4202792913207564,
   "spearman": 0.33847921918218526,
   "bray_curtis": 0.37636994714367433,
@@ -111,7 +111,7 @@
  },
  {
   "mock": "d6331_rep1",
-  "arm": "Kraken 2 + Bracken",
+  "configuration": "Kraken 2 + Bracken",
   "pearson": 0.5796847989859611,
   "spearman": 0.5720775535473553,
   "bray_curtis": 0.4367367914631495,
@@ -121,7 +121,7 @@
  },
  {
   "mock": "d6331_rep2",
-  "arm": "KmerFormer 6-mer, 8 layers",
+  "configuration": "KmerFormer 6-mer, 8 layers",
   "pearson": 0.26423082989823843,
   "spearman": 0.25743489909630995,
   "bray_curtis": 0.40582164476182486,
@@ -131,7 +131,7 @@
  },
  {
   "mock": "d6331_rep2",
-  "arm": "KmerFormer 6-mer, 16 layers",
+  "configuration": "KmerFormer 6-mer, 16 layers",
   "pearson": 0.4074409583215293,
   "spearman": 0.33847921918218526,
   "bray_curtis": 0.3655028476437422,
@@ -141,7 +141,7 @@
  },
  {
   "mock": "d6331_rep2",
-  "arm": "KmerFormer 6-mer, 29 layers",
+  "configuration": "KmerFormer 6-mer, 29 layers",
   "pearson": 0.3745761060120873,
   "spearman": 0.40045428748314876,
   "bray_curtis": 0.3938912481935071,

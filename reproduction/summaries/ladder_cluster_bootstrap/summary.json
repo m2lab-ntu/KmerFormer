@@ -1,5 +1,5 @@
 {
-  "method": "95% percentile hierarchical bootstrap: genus, then genome within genus/rung; paired across neural arms",
+  "method": "95% percentile hierarchical bootstrap: genus, then genome within genus/rung; paired across neural configurations",
   "replicates": 5000,
   "seed": 20260908,
   "common_genus_ids": [
@@ -18,7 +18,7 @@
     117,
     118
   ],
-  "arms": [
+  "configurations": [
     "mt_250M",
     "kf_exact13_1L_250M",
     "kf_exact13_1L_50M",
@@ -43,67 +43,67 @@
   "inputs": [
     {
       "rung": "L1_strain",
-      "arm": "mt_250M",
+      "configuration": "mt_250M",
       "path": "track_b/out/L1_strain/mt_250M/preds.npz",
       "sha256": "dad75bc5ab7e84516f17e90fe3bc4343ae20dedb8f60f6ba00132bc46c50e90d"
     },
     {
       "rung": "L1_strain",
-      "arm": "kf_exact13_1L_250M",
+      "configuration": "kf_exact13_1L_250M",
       "path": "track_b/out/L1_strain/kf_exact13_1L_250M/preds.npz",
       "sha256": "e09ea01eb1f874538f50ab18cc0a9c31175fc1e1f306f4f59d20a5d90586e06a"
     },
     {
       "rung": "L1_strain",
-      "arm": "kf_exact13_1L_50M",
+      "configuration": "kf_exact13_1L_50M",
       "path": "track_b/out/L1_strain/kf_exact13_1L_50M/preds.npz",
       "sha256": "2ae57bbb6c2d3160e7bff17b238dc1f39ccd540438db8bce3d54762ce007eca3"
     },
     {
       "rung": "L1_strain",
-      "arm": "mt_50M",
+      "configuration": "mt_50M",
       "path": "track_b/out/L1_strain/mt_50M/preds.npz",
       "sha256": "9c506050f9ca57048dcf6b5c33c6683f4e48743093fb6958453ce8d09bed02c3"
     },
     {
       "rung": "L1_strain",
-      "arm": "kf_exact13_16L",
+      "configuration": "kf_exact13_16L",
       "path": "track_b/out/L1_strain/kf_exact13_16L/preds.npz",
       "sha256": "5e1ee087d1154e054c316af29f190452ce2a44432d3a496aacbfc6b38a666d07"
     },
     {
       "rung": "L1_strain",
-      "arm": "kf_hash13_d128_1L",
+      "configuration": "kf_hash13_d128_1L",
       "path": "track_b/out/L1_strain/kf_hash13_d128_1L/preds.npz",
       "sha256": "98ca3714e4123c1dd108b880df4198b44e7e229b190aa348ecbb7556d0f798b3"
     },
     {
       "rung": "L1_strain",
-      "arm": "kf_hash13_d128_16L",
+      "configuration": "kf_hash13_d128_16L",
       "path": "track_b/out/L1_strain/kf_hash13_d128_16L/preds.npz",
       "sha256": "a8d47532926909dee494b50cf4c543c55f8eacdc93ba98bf749dd1ff483d2f21"
     },
     {
       "rung": "L1_strain",
-      "arm": "kf_hash13_d64_16L",
+      "configuration": "kf_hash13_d64_16L",
       "path": "track_b/out/L1_strain/kf_hash13_d64_16L/preds.npz",
       "sha256": "ed1170834a6f2cc1124610e579c33ef49c3d1e13bd9f3a75f6c1ef2745b8a6c3"
     },
     {
       "rung": "L1_strain",
-      "arm": "L29",
+      "configuration": "L29",
       "path": "track_b/out/L1_strain/L29/preds.npz",
       "sha256": "e8a7a18d119933d43a428601d839c65a8dfe55790fb574ada8428517babaa89f"
     },
     {
       "rung": "L1_strain",
-      "arm": "nt_v9",
+      "configuration": "nt_v9",
       "path": "track_b/out/L1_strain/nt_v9/preds.npz",
       "sha256": "124f0f50416eb1fea313496cc7ec6e89fcaed3d1b1308b5e8901ccda501d3c30"
     },
     {
       "rung": "L1_strain",
-      "arm": "mt_6mer",
+      "configuration": "mt_6mer",
       "path": "track_b/out/L1_strain/mt_6mer/preds.npz",
       "sha256": "ff419b525980a56c73c671c7b4e2faa1829dfa51dcff23d3b6cb06472d5b5643"
     },
@@ -132,67 +132,67 @@
     },
     {
       "rung": "L2_species",
-      "arm": "mt_250M",
+      "configuration": "mt_250M",
       "path": "track_b/out/L2_species/mt_250M/preds.npz",
       "sha256": "f9a7807e1c419409f0af269fca8d2458aed335b3301ca288b824f8cb44663901"
     },
     {
       "rung": "L2_species",
-      "arm": "kf_exact13_1L_250M",
+      "configuration": "kf_exact13_1L_250M",
       "path": "track_b/out/L2_species/kf_exact13_1L_250M/preds.npz",
       "sha256": "11fa201f9ee113af4a592acd3df682ec2d628680b58dc2b7ac04783dec484713"
     },
     {
       "rung": "L2_species",
-      "arm": "kf_exact13_1L_50M",
+      "configuration": "kf_exact13_1L_50M",
       "path": "track_b/out/L2_species/kf_exact13_1L_50M/preds.npz",
       "sha256": "2b7be3801d1b0eb2acbe3578ffd2bda3bb251231b1ed275989fb3d5adc6b87f1"
     },
     {
       "rung": "L2_species",
-      "arm": "mt_50M",
+      "configuration": "mt_50M",
       "path": "track_b/out/L2_species/mt_50M/preds.npz",
       "sha256": "8bdb9c71161e04782b64355e8cba83ffb9ce19c33a0079b5ea3bdbbb60c6e161"
     },
     {
       "rung": "L2_species",
-      "arm": "kf_exact13_16L",
+      "configuration": "kf_exact13_16L",
       "path": "track_b/out/L2_species/kf_exact13_16L/preds.npz",
       "sha256": "01423186b529ce3c984d8ddb7f9bda02661428be90d052fc292fec73edeb9b6d"
     },
     {
       "rung": "L2_species",
-      "arm": "kf_hash13_d128_1L",
+      "configuration": "kf_hash13_d128_1L",
       "path": "track_b/out/L2_species/kf_hash13_d128_1L/preds.npz",
       "sha256": "47beb5c39c76b3f08521c33de23438200478806ec6187e6076df8e98ef89768d"
     },
     {
       "rung": "L2_species",
-      "arm": "kf_hash13_d128_16L",
+      "configuration": "kf_hash13_d128_16L",
       "path": "track_b/out/L2_species/kf_hash13_d128_16L/preds.npz",
       "sha256": "2b4d8b54784c1ea41422ba6a819d875dde0b6c2aec7be40aa319dda34251363b"
     },
     {
       "rung": "L2_species",
-      "arm": "kf_hash13_d64_16L",
+      "configuration": "kf_hash13_d64_16L",
       "path": "track_b/out/L2_species/kf_hash13_d64_16L/preds.npz",
       "sha256": "f3eb20e7d5ffd566e004d1494bd68f4676af441cad7e2f519790af6ad9fd9f49"
     },
     {
       "rung": "L2_species",
-      "arm": "L29",
+      "configuration": "L29",
       "path": "track_b/out/L2_species/L29/preds.npz",
       "sha256": "db2d505de4492bcbc2515ce2783f52a6943d7925f06dcbc40ca870aa1ea400b8"
     },
     {
       "rung": "L2_species",
-      "arm": "nt_v9",
+      "configuration": "nt_v9",
       "path": "track_b/out/L2_species/nt_v9/preds.npz",
       "sha256": "1e133767c237fe118da2b8e5f1b13b54e0419ad1fe78c942c2ac06b36b4ca1e7"
     },
     {
       "rung": "L2_species",
-      "arm": "mt_6mer",
+      "configuration": "mt_6mer",
       "path": "track_b/out/L2_species/mt_6mer/preds.npz",
       "sha256": "d36ff0c1dc986641a195be839c5db4f92ceaea8283f612c57a5e437de959d752"
     },
@@ -221,67 +221,67 @@
     },
     {
       "rung": "L2_far",
-      "arm": "mt_250M",
+      "configuration": "mt_250M",
       "path": "track_b/out/L2_far/mt_250M/preds.npz",
       "sha256": "27fa438b9e831c74a6487568d0c5a52cae5becdb21ca83f0410b89df805aca85"
     },
     {
       "rung": "L2_far",
-      "arm": "kf_exact13_1L_250M",
+      "configuration": "kf_exact13_1L_250M",
       "path": "track_b/out/L2_far/kf_exact13_1L_250M/preds.npz",
       "sha256": "913ee6ec471823c20d89723b36f92cf799a7c576dab1b077ad3955139c6d863f"
     },
     {
       "rung": "L2_far",
-      "arm": "kf_exact13_1L_50M",
+      "configuration": "kf_exact13_1L_50M",
       "path": "track_b/out/L2_far/kf_exact13_1L_50M/preds.npz",
       "sha256": "9ed7f143ac5fa90d8900fd28e30a6a93306881477833d6cc18c72f411aa5f8b9"
     },
     {
       "rung": "L2_far",
-      "arm": "mt_50M",
+      "configuration": "mt_50M",
       "path": "track_b/out/L2_far/mt_50M/preds.npz",
       "sha256": "b12cbb5ca83140938923a7f025f7e636de32b06f74f0b13dbc9c31df284fdd57"
     },
     {
       "rung": "L2_far",
-      "arm": "kf_exact13_16L",
+      "configuration": "kf_exact13_16L",
       "path": "track_b/out/L2_far/kf_exact13_16L/preds.npz",
       "sha256": "11d779115f16e07bfc5ae8a12e648005eef442ec1cfe5cbb4ff290284f55e014"
     },
     {
       "rung": "L2_far",
-      "arm": "kf_hash13_d128_1L",
+      "configuration": "kf_hash13_d128_1L",
       "path": "track_b/out/L2_far/kf_hash13_d128_1L/preds.npz",
       "sha256": "dae676ad2473204ca008da11fce322edc267d0a15460ff6b60ad9fd37767e059"
     },
     {
       "rung": "L2_far",
-      "arm": "kf_hash13_d128_16L",
+      "configuration": "kf_hash13_d128_16L",
       "path": "track_b/out/L2_far/kf_hash13_d128_16L/preds.npz",
       "sha256": "ec97b78a7a55eb7a0c9f1ff0f14495eee5a69631c54ec08967548546e053fc58"
     },
     {
       "rung": "L2_far",
-      "arm": "kf_hash13_d64_16L",
+      "configuration": "kf_hash13_d64_16L",
       "path": "track_b/out/L2_far/kf_hash13_d64_16L/preds.npz",
       "sha256": "bbdbc4e8e534073ae59c58d8fd96dd6485ad2585ac5d4bec53ee523976b37fae"
     },
     {
       "rung": "L2_far",
-      "arm": "L29",
+      "configuration": "L29",
       "path": "track_b/out/L2_far/L29/preds.npz",
       "sha256": "bcf989ca25b8910248ef7df3aa185b7c824e7b4e0b1e9c7cebcad79b6f27194b"
     },
     {
       "rung": "L2_far",
-      "arm": "nt_v9",
+      "configuration": "nt_v9",
       "path": "track_b/out/L2_far/nt_v9/preds.npz",
       "sha256": "11d60c33737700902668497ed85aefcf06c1db410ca1c053030bfc891efac43f"
     },
     {
       "rung": "L2_far",
-      "arm": "mt_6mer",
+      "configuration": "mt_6mer",
       "path": "track_b/out/L2_far/mt_6mer/preds.npz",
       "sha256": "4fbf9e53c99b26cf47abc025cc20f38e41a7a77476774608cb09327824626eb0"
     },
@@ -311,8 +311,8 @@
   ],
   "pairs": [
     {
-      "long_arm": "mt_250M",
-      "six_arm": "L29",
+      "long_configuration": "mt_250M",
+      "six_configuration": "L29",
       "first_difference_pp": 32.25086579858735,
       "first_difference_ci95": [
         23.167899671052634,
@@ -337,8 +337,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "mt_250M",
-      "six_arm": "nt_v9",
+      "long_configuration": "mt_250M",
+      "six_configuration": "nt_v9",
       "first_difference_pp": 36.246697333656144,
       "first_difference_ci95": [
         26.393272323687615,
@@ -363,8 +363,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "mt_250M",
-      "six_arm": "mt_6mer",
+      "long_configuration": "mt_250M",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 52.04686365119633,
       "first_difference_ci95": [
         42.556673048886516,
@@ -389,8 +389,8 @@
       "resampling_fraction_first_positive_far_negative": 0.7902
     },
     {
-      "long_arm": "kf_exact13_1L_250M",
-      "six_arm": "L29",
+      "long_configuration": "kf_exact13_1L_250M",
+      "six_configuration": "L29",
       "first_difference_pp": 32.024547626817125,
       "first_difference_ci95": [
         23.33222142061201,
@@ -415,8 +415,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "kf_exact13_1L_250M",
-      "six_arm": "nt_v9",
+      "long_configuration": "kf_exact13_1L_250M",
+      "six_configuration": "nt_v9",
       "first_difference_pp": 36.02037916188592,
       "first_difference_ci95": [
         26.497796377573817,
@@ -441,8 +441,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "kf_exact13_1L_250M",
-      "six_arm": "mt_6mer",
+      "long_configuration": "kf_exact13_1L_250M",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 51.820545479426094,
       "first_difference_ci95": [
         42.68926802365705,
@@ -467,8 +467,8 @@
       "resampling_fraction_first_positive_far_negative": 0.8864
     },
     {
-      "long_arm": "kf_exact13_1L_50M",
-      "six_arm": "L29",
+      "long_configuration": "kf_exact13_1L_50M",
+      "six_configuration": "L29",
       "first_difference_pp": 19.07283234560364,
       "first_difference_ci95": [
         12.752481210158374,
@@ -493,8 +493,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "kf_exact13_1L_50M",
-      "six_arm": "nt_v9",
+      "long_configuration": "kf_exact13_1L_50M",
+      "six_configuration": "nt_v9",
       "first_difference_pp": 23.068663880672435,
       "first_difference_ci95": [
         16.136197485465505,
@@ -519,8 +519,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "kf_exact13_1L_50M",
-      "six_arm": "mt_6mer",
+      "long_configuration": "kf_exact13_1L_50M",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 38.86883019821262,
       "first_difference_ci95": [
         31.89608898416035,
@@ -545,8 +545,8 @@
       "resampling_fraction_first_positive_far_negative": 0.9754
     },
     {
-      "long_arm": "mt_50M",
-      "six_arm": "L29",
+      "long_configuration": "mt_50M",
+      "six_configuration": "L29",
       "first_difference_pp": 16.790703060032207,
       "first_difference_ci95": [
         10.491630484882299,
@@ -571,8 +571,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "mt_50M",
-      "six_arm": "nt_v9",
+      "long_configuration": "mt_50M",
+      "six_configuration": "nt_v9",
       "first_difference_pp": 20.786534595101003,
       "first_difference_ci95": [
         13.982381561556373,
@@ -597,8 +597,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "mt_50M",
-      "six_arm": "mt_6mer",
+      "long_configuration": "mt_50M",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 36.586700912641184,
       "first_difference_ci95": [
         29.77235951297973,
@@ -623,8 +623,8 @@
       "resampling_fraction_first_positive_far_negative": 0.8456
     },
     {
-      "long_arm": "kf_exact13_16L",
-      "six_arm": "L29",
+      "long_configuration": "kf_exact13_16L",
+      "six_configuration": "L29",
       "first_difference_pp": 10.020105474794471,
       "first_difference_ci95": [
         4.125660707314605,
@@ -649,8 +649,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "kf_exact13_16L",
-      "six_arm": "nt_v9",
+      "long_configuration": "kf_exact13_16L",
+      "six_configuration": "nt_v9",
       "first_difference_pp": 14.015937009863267,
       "first_difference_ci95": [
         7.528913129551018,
@@ -675,8 +675,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "kf_exact13_16L",
-      "six_arm": "mt_6mer",
+      "long_configuration": "kf_exact13_16L",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 29.816103327403447,
       "first_difference_ci95": [
         23.3519043907314,
@@ -701,8 +701,8 @@
       "resampling_fraction_first_positive_far_negative": 0.9946
     },
     {
-      "long_arm": "kf_hash13_d128_1L",
-      "six_arm": "L29",
+      "long_configuration": "kf_hash13_d128_1L",
+      "six_configuration": "L29",
       "first_difference_pp": 4.163201717912823,
       "first_difference_ci95": [
         -1.5992175403137643,
@@ -727,8 +727,8 @@
       "resampling_fraction_first_positive_far_negative": 0.9108
     },
     {
-      "long_arm": "kf_hash13_d128_1L",
-      "six_arm": "nt_v9",
+      "long_configuration": "kf_hash13_d128_1L",
+      "six_configuration": "nt_v9",
       "first_difference_pp": 8.159033252981619,
       "first_difference_ci95": [
         1.7466599331986663,
@@ -753,8 +753,8 @@
       "resampling_fraction_first_positive_far_negative": 0.9944
     },
     {
-      "long_arm": "kf_hash13_d128_1L",
-      "six_arm": "mt_6mer",
+      "long_configuration": "kf_hash13_d128_1L",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 23.9591995705218,
       "first_difference_ci95": [
         17.742379847596947,
@@ -779,8 +779,8 @@
       "resampling_fraction_first_positive_far_negative": 0.9998
     },
     {
-      "long_arm": "kf_hash13_d128_16L",
-      "six_arm": "L29",
+      "long_configuration": "kf_hash13_d128_16L",
+      "six_configuration": "L29",
       "first_difference_pp": -1.456857440604642,
       "first_difference_ci95": [
         -7.111805402243861,
@@ -805,8 +805,8 @@
       "resampling_fraction_first_positive_far_negative": 0.294
     },
     {
-      "long_arm": "kf_hash13_d128_16L",
-      "six_arm": "nt_v9",
+      "long_configuration": "kf_hash13_d128_16L",
+      "six_configuration": "nt_v9",
       "first_difference_pp": 2.5389740944641526,
       "first_difference_ci95": [
         -3.5967691059801297,
@@ -831,8 +831,8 @@
       "resampling_fraction_first_positive_far_negative": 0.781
     },
     {
-      "long_arm": "kf_hash13_d128_16L",
-      "six_arm": "mt_6mer",
+      "long_configuration": "kf_hash13_d128_16L",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 18.339140412004333,
       "first_difference_ci95": [
         12.433018041827196,
@@ -857,8 +857,8 @@
       "resampling_fraction_first_positive_far_negative": 1.0
     },
     {
-      "long_arm": "kf_hash13_d64_16L",
-      "six_arm": "L29",
+      "long_configuration": "kf_hash13_d64_16L",
+      "six_configuration": "L29",
       "first_difference_pp": -6.7263865935430935,
       "first_difference_ci95": [
         -12.545859444066192,
@@ -883,8 +883,8 @@
       "resampling_fraction_first_positive_far_negative": 0.011
     },
     {
-      "long_arm": "kf_hash13_d64_16L",
-      "six_arm": "nt_v9",
+      "long_configuration": "kf_hash13_d64_16L",
+      "six_configuration": "nt_v9",
       "first_difference_pp": -2.730555058474299,
       "first_difference_ci95": [
         -8.989810820750849,
@@ -909,8 +909,8 @@
       "resampling_fraction_first_positive_far_negative": 0.1844
     },
     {
-      "long_arm": "kf_hash13_d64_16L",
-      "six_arm": "mt_6mer",
+      "long_configuration": "kf_hash13_d64_16L",
+      "six_configuration": "mt_6mer",
       "first_difference_pp": 13.069611259065884,
       "first_difference_ci95": [
         7.455182485688303,

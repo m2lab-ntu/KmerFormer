@@ -136,51 +136,51 @@
       "path": "summaries/d6331_mock_rescore/mock_metrics.csv",
       "source_family": "manuscript_supplementary_data",
       "source_filename": "mock_metrics.csv",
-      "source_sha256": "d974497375816d042625052835a00be988904e67585ba80adf34561240ef440d",
+      "source_sha256": "7eea877eeccbae269e58336c2c381352311ffad0dd81f6257a7efadb89262344",
       "status": "included",
       "transformation": "Byte-for-byte copy",
-      "sha256": "d974497375816d042625052835a00be988904e67585ba80adf34561240ef440d",
-      "size_bytes": 2178
+      "sha256": "7eea877eeccbae269e58336c2c381352311ffad0dd81f6257a7efadb89262344",
+      "size_bytes": 2188
     },
     {
       "path": "summaries/d6331_mock_rescore/mock_metrics.json",
       "source_family": "manuscript_supplementary_data",
       "source_filename": "mock_metrics.json",
-      "source_sha256": "a1756156bcecf9c26b2a4111f613c87a5b87c54ae045a1e2c6f1d5d2065093c5",
+      "source_sha256": "e8362db5b1b54f56a699bcd28e72dc925cd2b848b1b76617b26de5d1ce4e49f7",
       "status": "included",
       "transformation": "Byte-for-byte copy",
-      "sha256": "a1756156bcecf9c26b2a4111f613c87a5b87c54ae045a1e2c6f1d5d2065093c5",
-      "size_bytes": 3994
+      "sha256": "e8362db5b1b54f56a699bcd28e72dc925cd2b848b1b76617b26de5d1ce4e49f7",
+      "size_bytes": 4144
     },
     {
       "path": "summaries/ladder_cluster_bootstrap/intervals.csv",
       "source_family": "manuscript_supplementary_data",
       "source_filename": "intervals.csv",
-      "source_sha256": "b4aa11118a929bc9d02b4767a12220297b0a96d51f33760588f87940d7ca5b6d",
+      "source_sha256": "48c05b0986cce08f5e1eaa61aaf8156c4656e39f9ce2c8dd26a5ff0aeb9b2f1b",
       "status": "included",
       "transformation": "Byte-for-byte copy",
-      "sha256": "b4aa11118a929bc9d02b4767a12220297b0a96d51f33760588f87940d7ca5b6d",
-      "size_bytes": 7539
+      "sha256": "48c05b0986cce08f5e1eaa61aaf8156c4656e39f9ce2c8dd26a5ff0aeb9b2f1b",
+      "size_bytes": 7549
     },
     {
       "path": "summaries/ladder_cluster_bootstrap/paired_differences.csv",
       "source_family": "manuscript_supplementary_data",
       "source_filename": "paired_differences.csv",
-      "source_sha256": "d231d391d9f05b1a213f005a256d6890ecb26810600efd7db9afdd5915de7943",
+      "source_sha256": "463ce0477fe6642cb2af25e7e18bbceac3ebca069cbbd2498d93e9de7c451c71",
       "status": "included",
       "transformation": "Byte-for-byte copy",
-      "sha256": "d231d391d9f05b1a213f005a256d6890ecb26810600efd7db9afdd5915de7943",
-      "size_bytes": 6984
+      "sha256": "463ce0477fe6642cb2af25e7e18bbceac3ebca069cbbd2498d93e9de7c451c71",
+      "size_bytes": 7004
     },
     {
       "path": "summaries/ladder_cluster_bootstrap/summary.json",
       "source_family": "manuscript_supplementary_data",
       "source_filename": "summary.json",
-      "source_sha256": "ec7abf4f35d5d3f5c088c3a9ea92c38431353c28b62e4b7f5e991a6efc970f57",
+      "source_sha256": "5fa59a29f8bf28a38b6ef733d994080ef19c6b544f6719af244943a02857abf6",
       "status": "included",
       "transformation": "Rewrote machine-specific path prefixes; values otherwise unchanged",
-      "sha256": "264697bb324f0f1a883f302705865e70b08d1870d9542816629a5305dd520e92",
-      "size_bytes": 28482
+      "sha256": "dd529d92862aa87df3681834f8c02be33716c73e9139f4b91fdda17d14836db6",
+      "size_bytes": 29312
     },
     {
       "path": "nt_99742/predictions/MT50M_99742.npz",

@@ -48,11 +48,11 @@
     },
     {
       "path": "all_read_metrics.json",
-      "sha256": "c08d410ac69aa23f3635fa3b28a1cb004a089e365c30830c54d84f3d500f0e29",
-      "size_bytes": 77808,
+      "sha256": "3cb55c5e09862824b750af681cf16bd4e39c773491f4c468fd14a35dd2f1b052",
+      "size_bytes": 77818,
       "source_id": "data/s1_kraken2_metrics_2026-10-17/s1_metrics.json",
       "source_sha256": "840344b6e0c879a8f3f038da1e5b6dadbd111c0d67e085a91a057385a6ba04a0",
-      "transformation": "JSON normalized; any local source paths replaced by portable source identifiers. Summary records, not raw inference outputs."
+      "transformation": "JSON normalized; any local source paths replaced by portable source identifiers; the model-setting field is named `configurations`. Summary records, not raw inference outputs."
     },
     {
       "path": "uncertainty_reported_values.json",

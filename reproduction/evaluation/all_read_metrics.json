@@ -2463,7 +2463,7 @@
   "far_rung_matched14": {
     "n": 114991,
     "n_k2_classified": 13217,
-    "arms": {
+    "configurations": {
       "Kraken2 genus-aware": {
         "correct_pct": 7.5745058308911135,
         "wrong_pct": 3.9194371733440008,
