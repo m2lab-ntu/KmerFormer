@@ -66,8 +66,7 @@ The generated manifest describes software, trained model bundles and recorded
 evidence. It copies creator metadata from `CITATION.cff`. The authors confirmed
 the latest manuscript order on 2026-09-18: Ming-Ju Yang, Ting-Yu Yen, Chien-Yu
 Chen and Joyce Tzu-Yu Liu. Only supplied affiliations and identifiers are included.
-No tool identity is added as an author. No grant identifier, Zenodo DOI, record
-number or publication date is invented.
+No grant identifier, Zenodo DOI, record number or publication date is invented.
 The code record's `CITATION.cff` retains MIT for software; the weights record's
 copy identifies the trained model collection and its Apache-2.0 weight terms.
 Both preserve the four authors and the manuscript citation. Tokenizer terms

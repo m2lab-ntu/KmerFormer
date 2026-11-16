@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Compute sample-level metrics on FULL 100K test set (no in-DB restriction) for the
-NEWLY ALIGNED MT predictions. These replace the older thesis table values which
+NEWLY ALIGNED MT predictions. These replace the earlier table values which
 were computed on MT's own val subset (a different 100K reads).
 """
 
@@ -73,7 +73,7 @@ def sample_eval(preds, labels, n_classes, rng,
 
 # ─── Species level (full 100K) ──────────────────────────────────────────
 print("="*80)
-print("MT species predictions on FULL 100K (aligned, replacing older thesis values)")
+print("MT species predictions on FULL 100K (aligned, replacing earlier table values)")
 print("="*80)
 print(f"{'Model':<35} {'Read':>7} {'r':>7} {'ρ':>7} {'BC':>7} {'AUC':>7} {'S@95':>7}")
 print("-"*80)

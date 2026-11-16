@@ -12,8 +12,10 @@ Neither is asserted to be the exact source of every historical run.
   `kmerformer` is the public model-type name.
 - Historical numbers, hyperparameters, data-loading mode and split algorithm
   are retained. Explicit split and unseeded-initialization fields describe them.
-- DDP now consumes the configured split strategy. Historical DDP runs may have
-  used the former unconditional random split.
+- DDP now consumes the configured split strategy. The recovered hashed 13-mer
+  launches used the former unconditional lazy/random split; their four configs
+  explicitly preserve it. Other historical DDP runs require their own provenance
+  checks. See [the split audit](EVALUATION.md#historical-hashed-model-data-loading).
 - Independent evaluation streams by default. `--legacy-eager` retains the
   older evaluator for historical comparisons and experimental routing modes.
 - Bundles use safetensors and checked tokenizer/class maps. Training recovery

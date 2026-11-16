@@ -23,7 +23,7 @@ does not silently replace a historical paper protocol.
    the release commit. State the available evidence and any remaining upstream
    data-generation gaps in the release notes.
 
-Use the [implementation record](docs/IMPLEMENTATION_STATUS.md) and
-[evidence catalogue](reproduction/README.md) to track delivery status. The old
+Use the [evidence catalogue](reproduction/README.md) and the
+[validation record](docs/validation/0.2.0rc1.md) to track delivery status. The old
 environment is preserved as [historical documentation](docs/history/ENVIRONMENT.md),
 not as the supported install specification.

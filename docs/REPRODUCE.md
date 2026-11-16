@@ -5,6 +5,21 @@ for the paper's experiments. MetaTransformer uses its own implementation.
 Full experimental reproduction requires the external inputs listed in
 [DATA.md](DATA.md) and [the asset inventory](MISSING_ASSETS.md).
 
+## Revised manuscript checks
+
+The [evaluation bundle](../reproduction/evaluation/README.md) contains a
+portable CPU scorer and the inputs for the primary common-read comparison:
+
+```bash
+python reproduction/evaluation/rescore_primary.py --check
+python reproduction/evaluation/rescore_primary.py --policy ts-control --check
+```
+
+These preserve the native-MT and added TS-MT policies separately. See
+[the evaluation guide](EVALUATION.md) for the detection definitions and the
+genus-aware Kraken2 correction. The archived checks below retain their
+original metric definitions.
+
 ## Software and evidence checks
 
 From the repository root or an extracted source archive, in Python 3.11:
@@ -72,7 +87,7 @@ Use `--rc_tta` for the reported KmerFormer and NT-v2 scores. MetaTransformer fol
 its authors' forward-only protocol. The released KmerFormer evaluator averages logits before
 softmax and uses bfloat16 autocast when supported, otherwise float16. RC-TTA adds
 about 0.7 points to NT-v2, at most 0.21 to the tested non-overlapping KmerFormer
-6-mer depths, and 5.44–6.95 to its non-canonical hashed 13-mer arms. Exact one-layer
+6-mer depths, and 5.44–6.95 to its non-canonical hashed 13-mer configurations. Exact one-layer
 mean-pooling gains are +0.008 and −0.005 points at 50M and 250M. Record both
 aggregation and inference precision; the training `amp_dtype` is not a guarantee
 of the evaluation dtype. The recovered Nano4 NT evaluator instead averages
@@ -82,13 +97,13 @@ probabilities under float16 autocast, despite its mean-logit docstring. Its
 
 Top-1 lands in `<output_dir>/eval_metrics_rc_tta.json` as `micro_accuracy`.
 
-Multi-GPU for dense-gradient arms (6-mer and hashed 13-mer):
+Multi-GPU for dense-gradient configurations (6-mer and hashed 13-mer):
 
 ```bash
 torchrun --nproc_per_node=4 -m kmerformer.train_ddp --config configs/6mer/L29_50M.yaml
 ```
 
-The exact-13-mer arms take **sparse gradients** on their 33.5M-row embedding table, and
+The exact-13-mer configurations take **sparse gradients** on their 33.5M-row embedding table, and
 torch's data-parallel reducer rejects sparse gradients — measured, not assumed. They
 train single-GPU through `kmerformer-train`, and every rank would hold its own copy of
 an 8 GiB table anyway. `train_ddp` will refuse them.
@@ -159,7 +174,7 @@ number it produced.
 |---|---|
 | KmerFormer leads MetaTransformer by 3.69 points at matched encoder | [`13mer/exact_1L_50M_meanpool`](../configs/13mer/exact_1L_50M_meanpool.yaml) |
 | …and the margin does not decompose into anything we can enumerate | [`ablations/mt_direction_{recipe,arch,both,both_pad139}`](../configs/ablations/) |
-| The hashed configuration trades 6.37 points for an eightfold smaller table at matched width; canonicalization and embedding updates also differ | [`13mer/hashed_d64_16L_50M`](../configs/13mer/hashed_d64_16L_50M.yaml) vs the exact d64 16-layer arm |
+| The hashed configuration trades 6.37 points for an eightfold smaller table at matched width; canonicalization and embedding updates also differ | [`13mer/hashed_d64_16L_50M`](../configs/13mer/hashed_d64_16L_50M.yaml) vs the exact d64 16-layer configuration |
 | …and doubling the width recovers most of it, on 2 GiB | [`13mer/hashed_d128_16L_50M`](../configs/13mer/hashed_d128_16L_50M.yaml) |
 | Depth *hurts* at *k* = 13 | [`13mer/exact_16L_50M`](../configs/13mer/exact_16L_50M.yaml) and [`hashed_d128_16L_50M`](../configs/13mer/hashed_d128_16L_50M.yaml) vs their 1-layer counterparts |
 | Attention pooling is a cost at *k* = 13 | [`13mer/exact_1L_50M_attnpool`](../configs/13mer/exact_1L_50M_attnpool.yaml) |
@@ -175,7 +190,7 @@ The two pools are *generated*, from RefSeq assemblies with ART, by the pipelines
 and explains which track answers which question. Both use identical ART settings — HiSeq
 2500, paired-end, 150 bp, insert 400±50, seed 42 — so they stay comparable.
 
-Once the pools exist, nothing needs training: every claim here re-evaluates arms trained
+Once the pools exist, nothing needs training: every claim here re-evaluates configurations trained
 above.
 
 ```bash
@@ -194,7 +209,7 @@ table exists to support.
 
 ### Non-neural baselines
 
-The naive Bayes arms are what make the ANI-ladder claim structural rather than
+The naive Bayes configurations are what make the ANI-ladder claim structural rather than
 architectural: each parameter-free baseline tracks its own *k* family, so *k* sets the
 slope and the network only sets the level.
 
@@ -217,7 +232,7 @@ The index **must** carry genus nodes between root and species. Without them a re
 ambiguous between two species of one genus has nowhere to stop, climbs to root and is
 scored unclassified — costing Kraken 2 20.01% of its reads and 19.09 points (79.97%
 against 99.06%). A custom database built the obvious way produces the species-only tree
-and understates Kraken 2 badly. See [`RESULTS.md §5`](RESULTS.md#5-kraken-2-and-where-a-learned-classifier-is-the-wrong-tool).
+and understates Kraken 2. See [`RESULTS.md §5`](RESULTS.md#5-kraken-2-comparison).
 
 ### Sample-level abundance
 
@@ -229,7 +244,7 @@ python scripts/eval/evaluate_sample.py \
     --n_sparse_samples 200 --genera_present 50
 ```
 
-Across fourteen arms whose read-level Top-1 spans
+Across fourteen configurations whose read-level Top-1 spans
 48.92% to 99.16%, genus abundance correlation moves only from *r* = 0.9778 to 0.9999.
 That compression is the reason everything in this repo is ranked by read-level
 accuracy. The full table, and the script that regenerates it from predictions, are in
@@ -237,7 +252,7 @@ accuracy. The full table, and the script that regenerates it from predictions, a
 
 ### The abundance-versus-detection table
 
-Regenerates every arm of
+Regenerates every configuration of
 [`RESULTS.md`](RESULTS.md#abundance-against-detection-on-one-pool) from stored
 predictions, so it needs no checkpoints and no GPU — the arrays are in
 `docs/assets/`:
@@ -246,7 +261,7 @@ predictions, so it needs no checkpoints and no GPU — the arrays are in
 python scripts/review_predictions.py --full-metrics
 ```
 
-This verifies the archived pool's label fingerprint and refuses any arm whose
+This verifies the archived pool's label fingerprint and refuses any configuration whose
 stored labels are not that pool's in that pool's order. That
 check is the only one that works here: the two pools are both 100,000 reads over the
 same 120 genera and their label vectors agree on 8.00% of positions, so shape, length,
@@ -255,7 +270,7 @@ is excluded from this offline check. The original `s2_abundance_vs_detection.py`
 also checks FASTA identity and coverage, but needs `--pool_fasta`, `--pool_labels`
 and one `--arm NAME=NPZ` per model.
 
-For a Kraken 2 arm, convert its read-level output first — the same script handles
+For a Kraken 2 configuration, convert its read-level output first — the same script handles
 either index and prints the rank histogram so the build is visible:
 
 ```bash
@@ -272,7 +287,7 @@ python scripts/eval/kraken2_genus_calls.py \
 python scripts/bench/bench_arms.py --configs configs/bench/*.yaml
 ```
 
-One GPU, batch 128, 150 bp synthetic reads, warm-up excluded. The two exact-13-mer arms
+One GPU, batch 128, 150 bp synthetic reads, warm-up excluded. The two exact-13-mer configurations
 need a 48 GiB card: they peak at 24.7 GiB to train at one layer and 25.8 GiB at sixteen,
 and fail outright on a 24 GiB card. `scripts/bench/embed_mem_probe.py` measures the
 embedding table's contribution alone, which is where the separation lives.
@@ -281,7 +296,7 @@ embedding table's contribution alone, which is where the separation lives.
 
 The reported runs used one RTX A6000 (48 GiB) and one RTX 4090.
 
-| Arm | Wall time | Notes |
+| Configuration | Wall time | Notes |
 |---|---|---|
 | 6-mer, 1–16 layers, 5M reads | hours | fine on a 4090 |
 | 6-mer, 29 layers, 50M reads | ~1d 8h | 15 epochs, single GPU |
@@ -289,7 +304,7 @@ The reported runs used one RTX A6000 (48 GiB) and one RTX 4090.
 | exact 13-mer, 1 layer, 250M reads | days | |
 | NT-v2 500M + LoRA, 50M reads | ~33h/epoch | the slow one; 500M parameters is heavy |
 
-Two practical notes from the runs. Set `num_workers: 0` for the large-vocabulary arms:
+Two practical notes from the runs. Set `num_workers: 0` for the large-vocabulary configurations:
 resident memory per worker is ~18 GiB, and four workers exhausted 62 GiB of host RAM
 mid-epoch. And `periodic_save_interval` in the 13-mer configs exists so a run that dies
 at hour 20 resumes from `last.pt` rather than from nothing —
@@ -307,11 +322,16 @@ pointed at a manuscript checkout:
 python scripts/check_against_manuscript.py /path/to/paper
 ```
 
-It confirms every accuracy stamped on a config, and every difference the test suite
-asserts, still appears in the manuscript. Two things it deliberately does not claim:
-a value that moved from one arm to another would still be found, and a number absent
-from the output may have been revised, moved to the supplementary, or simply be
-somewhere the check does not look. Read the sentence before changing anything.
+It checks the presence of reported config accuracies and asserted differences,
+including negative differences. Two differences omitted from the condensed text
+are calculated from explicitly mapped results: 69.52 - 53.92 = 15.60 points for
+29 versus 1 layer at 6-mer, and 91.15 - 85.63 = 5.52 points for exact 13-mer
+1-layer mean pooling versus 16 layers. The latter includes a pooling change.
+For these two comparisons, each manuscript value must match its named config's
+banner, and the subtraction must match the asserted difference. Missing,
+ambiguous or changed source values fail even if the difference appears elsewhere.
+Other entries use numeric presence, which still requires manual review of the
+surrounding claim. The command reports printed and derived differences separately.
 
 ## Checking a run selected the epoch it says it did
 
@@ -334,7 +354,7 @@ python scripts/weights/inspect_checkpoint.py weights/*.pt
 
 This reads the config, epoch and validation accuracy out of the checkpoint's pickle
 without materialising a single tensor, so it costs nothing on an 8 GiB file and it
-tells you which arm you actually have. Confirm the numbers against
+tells you which configuration you actually have. Confirm the numbers against
 [`weights/README.md`](../weights/README.md) before trusting a download.
 
 ## What is not reproducible from this repo
@@ -353,7 +373,7 @@ ids — that came from the original MetaTransformer data preparation. It does no
 reproduction, since those ids are recorded in the label files. See
 [`DATA.md`](DATA.md#there-is-no-build-the-catalogue-script-because-the-labels-are-the-catalogue).
 
-**Soil.** The RefSoil arms are reported in the manuscript's cross-environment check and
+**Soil.** The RefSoil configurations are reported in the manuscript's cross-environment check and
 run through the same code, but their configs point at a catalogue not bundled here.
 
 **The manuscript's own figures.** What is here draws the Track B ladder
@@ -362,7 +382,6 @@ run through the same code, but their configs point at a catalogue not bundled he
 the confusion matrices `kmerformer-eval` writes. The scripts that render the figures the
 manuscript actually includes — three panels from one generator, two more, and the
 generated ladder table — live in the manuscript's own repository alongside the LaTeX,
-not here. They read absolute `/nas2` paths, so mirroring them would publish something a
-reader could not run, and keeping a second copy of a generator in a second tree is how
-this project has already lost time twice. If you need them, ask; they are not secret,
-only elsewhere.
+not here. They read data from the authors' storage paths, so a copy here would not run
+for readers, and a single copy avoids the two drifting apart. They are available from
+the authors on request.

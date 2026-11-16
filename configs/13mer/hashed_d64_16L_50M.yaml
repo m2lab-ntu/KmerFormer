@@ -20,7 +20,8 @@ model:
     dropout: 0.1
     sparse_embedding: false
 data:
-  split_strategy: stratified
+  lazy: true  # Recovered historical launch uses train_ddp.py and LazyFASTADataset.
+  split_strategy: random
   fasta_path: ${KF_DATA}/balanced_50M/reads_50M.fa
   labels_path: ${KF_DATA}/balanced_50M/labels_50M.tsv
   val_ratio: 0.1

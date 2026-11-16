@@ -33,8 +33,11 @@ python -m pip install .
 ```
 
 The default branch is the maintained public source. Cloning it does not require
-a GitHub login. Tag `v0.2.0-submission` is the manuscript snapshot. The package
-version remains `0.2.0rc1` because the weight release is not published.
+a GitHub login. Tag `v0.2.0-submission` preserves the original submission.
+[Evaluation protocols and results](docs/EVALUATION.md) and their
+[CPU rescoring bundle](reproduction/evaluation/README.md) accompany the revised
+manuscript. The package version remains `0.2.0rc1` because the weight release is
+not published.
 
 For GPU use, install a PyTorch build compatible with your CUDA setup, then this
 package. KmerFormer itself does not require Transformers or PEFT;
@@ -120,8 +123,8 @@ kmerformer-eval --config configs/6mer/L29_50M.yaml --checkpoint /path/to/best.pt
 ```
 
 KmerFormer and NT-v2 paper accuracies use RC-TTA; MetaTransformer follows its
-authors' forward-only protocol. Exact 13-mer arms train on one GPU with sparse
-embedding gradients. Dense-gradient arms also support `torchrun`.
+authors' forward-only protocol. Exact 13-mer configurations train on one GPU with sparse
+embedding gradients. Dense-gradient configurations also support `torchrun`.
 
 ## Reproduce and contribute
 

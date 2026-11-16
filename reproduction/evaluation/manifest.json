@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-07",
+  "scope": "Evaluation records; original submission evidence is retained in its existing locations.",
+  "files": [
+    {
+      "path": "primary_scores.npz",
+      "sha256": "4cc762db7a90789fbed8a25a7c600bbec07bdca8aa6b128da8cd46c7270ff147",
+      "size_bytes": 2352829,
+      "sources": [
+        {
+          "id": "pulled/exact250M/primary_scores.npz",
+          "sha256": "1284d1f446aaee2ee40cfa183cab769d0df35e15ece46861fbf92e03424287c2"
+        },
+        {
+          "id": "pulled/mt_13mer_250M_mtval/primary_scores.npz",
+          "sha256": "8038b2819291e3a3e50bb3fd7d7762c4f05da089c6800b38053022f316d13994"
+        },
+        {
+          "id": "data/s1_kraken2_metrics_2026-10-17/inputs/Kraken2_raw_genus_aware_preds_clean_common.npz",
+          "sha256": "495852d5b1bd415459ae4c0170e0ca91edd879f3ec9493fe50c93a73f4227fa5"
+        }
+      ],
+      "transformation": "Selected and renamed arrays; lossless compression, original dtypes and row order. Source files have no read IDs; equal ordered labels are checked, not an independent ID alignment."
+    },
+    {
+      "path": "primary_reference.json",
+      "sha256": "e74f0c312c7bb92e8333d1c011003f96a4bd90843d2d94e966781c85b9d22e66",
+      "size_bytes": 3526,
+      "source_id": "s4_fair_pool/s4g_native_mt_results.json",
+      "source_sha256": "96bd2fd74ada624d489978b8ab6372829ec271e613dcfd593df0f55ed1555891",
+      "transformation": "Select main.primary (native MetaTransformer)."
+    },
+    {
+      "path": "primary_ts_control.json",
+      "sha256": "86d6d828261f196bc1dbcf3d9c07b8898d480e0981b57d9853fa5e53d7e12ca0",
+      "size_bytes": 3532,
+      "source_id": "s4_fair_pool/s4_results.json",
+      "source_sha256": "6754352100dd36fe05d2a198924efd209e8f2ed95f650b38eccaf2bdae48422f",
+      "transformation": "Select primary.cov_0.99065 (temperature-scaled MetaTransformer diagnostic)."
+    },
+    {
+      "path": "primary_sensitivity.json",
+      "sha256": "41e936035f9ead516a45ed47efdcff375d749292d4888ab0e9c22cedf1d0c4d9",
+      "size_bytes": 6888,
+      "source_id": "s4_fair_pool/s4h_native_main_results.json",
+      "source_sha256": "422aa0e0559f7d084ad625c03f5271c542b9a5f4626c1eb59f2bdb458fc6cc9e",
+      "transformation": "Select primary-pool threshold sensitivity results."
+    },
+    {
+      "path": "all_read_metrics.json",
+      "sha256": "c08d410ac69aa23f3635fa3b28a1cb004a089e365c30830c54d84f3d500f0e29",
+      "size_bytes": 77808,
+      "source_id": "data/s1_kraken2_metrics_2026-10-17/s1_metrics.json",
+      "source_sha256": "840344b6e0c879a8f3f038da1e5b6dadbd111c0d67e085a91a057385a6ba04a0",
+      "transformation": "JSON normalized; any local source paths replaced by portable source identifiers. Summary records, not raw inference outputs."
+    },
+    {
+      "path": "uncertainty_reported_values.json",
+      "sha256": "c2db1be1d19142b40178db9260e997cbdfd255aa44a2e62cec607739055c63bc",
+      "size_bytes": 7595,
+      "source_id": "data/s2_uncertainty_2026-10-17/s2_values.json",
+      "source_sha256": "6289c6bb24d0c887e9d288ca210711428401d2fafafc6c543ac47b2c16d3954e",
+      "transformation": "JSON normalized; any local source paths replaced by portable source identifiers. Summary records, not raw inference outputs."
+    },
+    {
+      "path": "strand_reported_values.json",
+      "sha256": "7c9402e8b1524557630b55a0f9fa892cbb7773cf9e520ab9bb93eb4c720be819",
+      "size_bytes": 6639,
+      "source_id": "presentation/analysis/rc_strand/rc_strand_values.json",
+      "source_sha256": "8b35b9312f0c15ab23d6d5640288a67d0c447a4bdeab28b223c8e04b8bc20edc",
+      "transformation": "JSON normalized; any local source paths replaced by portable source identifiers. Summary records, not raw inference outputs."
+    },
+    {
+      "path": "kraken_genus_aware/L1_strain_kraken2.npz",
+      "sha256": "0dc7376c9209b033d6395eebcd0c6e90f2261a1306e49f6e3be55996cdbed574",
+      "size_bytes": 5840380,
+      "source_id": "k2_genus_aware/L1_strain_kraken2.npz",
+      "source_sha256": "0dc7376c9209b033d6395eebcd0c6e90f2261a1306e49f6e3be55996cdbed574",
+      "transformation": "copied without modification"
+    },
+    {
+      "path": "kraken_genus_aware/L2_far_kraken2.npz",
+      "sha256": "1aad710c1420f02e9c333d420cbe4cee4006805ab337f553dafb7dd18a80a673",
+      "size_bytes": 11999436,
+      "source_id": "k2_genus_aware/L2_far_kraken2.npz",
+      "source_sha256": "1aad710c1420f02e9c333d420cbe4cee4006805ab337f553dafb7dd18a80a673",
+      "transformation": "copied without modification"
+    },
+    {
+      "path": "kraken_genus_aware/L2_lognormal_kraken2.npz",
+      "sha256": "3d743a5a9ebc1e2c0d3a2ea6caa9f710945dec06860abe718bc6af14202f84e0",
+      "size_bytes": 2080460,
+      "source_id": "k2_genus_aware/L2_lognormal_kraken2.npz",
+      "source_sha256": "3d743a5a9ebc1e2c0d3a2ea6caa9f710945dec06860abe718bc6af14202f84e0",
+      "transformation": "copied without modification"
+    },
+    {
+      "path": "kraken_genus_aware/L2_species_kraken2.npz",
+      "sha256": "f692150c2ab0ee6bcc8319f7a532003796bb19f1f0cfba9e2648fadd182f7854",
+      "size_bytes": 6559948,
+      "source_id": "k2_genus_aware/L2_species_kraken2.npz",
+      "source_sha256": "f692150c2ab0ee6bcc8319f7a532003796bb19f1f0cfba9e2648fadd182f7854",
+      "transformation": "copied without modification"
+    },
+    {
+      "path": "kraken_genus_aware/L3_genus_kraken2.npz",
+      "sha256": "f2f8ffbbb8cad4d2d7a6a77db50b9c261d49bb0bea7901c78560689c27fcf2ea",
+      "size_bytes": 7872508,
+      "source_id": "k2_genus_aware/L3_genus_kraken2.npz",
+      "source_sha256": "f2f8ffbbb8cad4d2d7a6a77db50b9c261d49bb0bea7901c78560689c27fcf2ea",
+      "transformation": "copied without modification"
+    },
+    {
+      "path": "kraken_genus_aware/primary_kraken2.npz",
+      "sha256": "f2b0d177a9d7475af9b3119efa470a60cdae2d2047d1ce0830015af48f8fcf4e",
+      "size_bytes": 1600508,
+      "source_id": "k2_genus_aware/primary_kraken2.npz",
+      "source_sha256": "f2b0d177a9d7475af9b3119efa470a60cdae2d2047d1ce0830015af48f8fcf4e",
+      "transformation": "copied without modification"
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "9818c13e175bcd12a4d5cfefdf2f842c2fce32ca5f09712edec1fcfa8ace5cbe",
+      "size_bytes": 1299,
+      "sources": [
+        "pulled/exact250M/posthoc.json",
+        "pulled/mt_13mer_250M_mt_posthoc.json",
+        "S4_fair_pool_plan.md"
+      ],
+      "transformation": "Extracted fitted parameters and recorded protocol; no new fitting."
+    },
+    {
+      "path": "historical_split_audit.json",
+      "sha256": "b2ed762f304b650ee8b3e4c76975dbf431a1f4e766b6f9a3717ec2a6f91473ce",
+      "size_bytes": 1631,
+      "transformation": "New source-path audit with checksums of recovered historical launch/trainer files."
+    }
+  ]
+}

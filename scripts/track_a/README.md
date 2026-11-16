@@ -69,7 +69,7 @@ export KF_TRACK_A="$KF_OUT/track_a"
 python scripts/track_a/track_a_01_download_genomes.py --help   # one assembly per genus
 python scripts/track_a/track_a_02_simulate_reads.py   --help   # ART, 150 bp, seed 42
 python scripts/track_a/track_a_03_build_test_fasta.py --help   # balance and label
-bash   scripts/track_a/track_a_04_run_inference.sh             # every arm
+bash   scripts/track_a/track_a_04_run_inference.sh             # every configuration
 bash   scripts/track_a/track_a_05_metrics.sh
 python scripts/track_a/track_a_06_clean_metrics.py    --help   # the strict-pool variant
 ```
@@ -78,10 +78,10 @@ python scripts/track_a/track_a_06_clean_metrics.py    --help   # the strict-pool
 external data assets rather than guessed from filenames. Step 06 scores after
 excluding the three specified training-overlapping accessions (595K → 580K reads).
 The additional six near-identical genomes are a different filter; their removal
-costs the 13-mer arms 1.13–1.75 points. See
+costs the 13-mer configurations 1.13–1.75 points. See
 [`../../docs/RESULTS.md`](../../docs/RESULTS.md#track-a-caveat).
 
-The shell inference drivers cover historical baseline arms, not every KmerFormer
+The shell inference drivers cover historical baseline configurations, not every KmerFormer
 configuration. Use the direct evaluator commands in
 [`../../docs/REPRODUCE.md`](../../docs/REPRODUCE.md#off-catalogue-evaluation) for
 KmerFormer and keep the 120-class output space. Fresh NCBI candidate selection may

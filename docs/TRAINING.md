@@ -27,8 +27,10 @@ must agree with TSV rows in FASTA order. The in-memory loader also accepts
 arbitrary FASTA identifiers joined through `seq_id`. Prediction and independent
 evaluation support compressed FASTA/FASTQ; indexed training uses plain FASTA.
 
-Historical configs retain their original strategies: stratified for the former
-eager path and random for the former lazy path. Sharing a source pool does not
+Historical configs retain their recorded strategies: stratified for the former
+eager path and random for the former lazy path. The four hashed 13-mer configs
+explicitly select the lazy/random path recovered from their DDP launch scripts
+(see [the split audit](EVALUATION.md#historical-hashed-model-data-loading)). Sharing a source pool does not
 imply that historical comparisons shared partition membership.
 
 ## Class IDs

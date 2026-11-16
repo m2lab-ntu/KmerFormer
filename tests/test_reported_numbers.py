@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-check the `# RESULT:` banners against the differences the paper states.
+"""Cross-check the `# RESULT:` banners against recorded manuscript differences.
 
 WHY THIS EXISTS, AND WHY IT IS NOT REDUNDANT WITH THE OTHER TESTS.
 
@@ -16,8 +16,10 @@ What catches it is that the paper does not only state levels, it states
 depth alone is 15.60 points". Each is an independent arithmetic constraint tying
 two specific arms together. Transpose a pair and the arithmetic stops closing.
 
-Every DELTAS entry below is quoted from the manuscript with its section, so this
-file doubles as the provenance record for the banners.
+DELTAS retains quotations from the original manuscript with their sections.
+The condensed manuscript retains the source accuracies for the 15.60- and
+5.52-point differences; `check_against_manuscript.py` now derives these two
+differences from the named configurations instead of requiring the old wording.
 
 An arm leaves this table when the manuscript stops printing its number, not when
 the measurement stops being true. `L8_5M` was dropped here after Part 1 was

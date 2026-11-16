@@ -14,6 +14,13 @@ new model inference.
 | Real mocks | [Mori composition](catalogues/mori_mock_expected.csv) | [Archived rescoring summaries](summaries/) |
 | Sequence uniqueness | [Sequence recount](catalogues/sequence_uniqueness_50M.json) | 49,640,347 distinct strings; source record retained |
 
+## Revised manuscript
+
+[Evaluation records](evaluation/README.md) add the revised primary common-read
+comparison, interpolated detection metrics, uncertainty/strand summary values
+and genus-aware Kraken2 reruns. Existing ladder Kraken2 arrays below retain
+the earlier species-only index. The new scorer does not change predictor defaults.
+
 ## Interpretation
 
 The NT-v2 scaling pool contains 99,742 reads after the 258-read identifier
@@ -27,7 +34,7 @@ Probability/logit matrices may be omitted from packaged arrays; the manifest
 records that transformation. Source-family protocols must be retained when
 comparing archives; a filename alone does not establish RC-TTA or precision.
 
-Soil MetaTransformer controls are the **6-mer e128** arms at 5M and 50M.
+Soil MetaTransformer controls are the **6-mer e128** configurations at 5M and 50M.
 Their configuration files retain the third-party MetaTransformer schema and
 must be run with that implementation, not `kmerformer-train`. KmerFormer/NT-v2
 soil configs use the package schema with normalized data paths. The recovered

@@ -1,0 +1,29 @@
+{
+  "sample_metrics_source": "s1_kraken2_metrics.py",
+  "sample_metrics_source_sha256": "78d895feaa2bca585f9f3e7b2397f3351a71ef87842d908d264c76c62585c756",
+  "functions_extracted": [
+    "tie_grouped_roc",
+    "operating_point",
+    "interp_sens",
+    "draw_samples",
+    "read_level",
+    "profile",
+    "abundance",
+    "detection_arrays",
+    "detection",
+    "score_cfg",
+    "paired_boot"
+  ],
+  "changes": "Portable module: remove extraction/CLI paths; preserve numerical functions and constants.",
+  "primary_metrics_source": "s4_fair_pool.py",
+  "primary_metrics_source_sha256": "af4ca2f8374427f83720ab8b08d7bab408964aa83f977a8eac5dead9ab1393d5",
+  "primary_functions_extracted": [
+    "abstain",
+    "mcnemar",
+    "boot_diff",
+    "verdict",
+    "fair_reads",
+    "detection_block"
+  ],
+  "source_identity_note": "Source identifiers use archived filenames; the SHA-256 values identify the original, unmodified source files. Local directory prefixes are omitted."
+}

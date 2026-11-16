@@ -29,7 +29,7 @@ def include(relative):
         return len(parts) == 3 and relative.suffix in {".yml", ".yaml"}
     if parts[0] not in SOURCE_ROOTS or any(p.startswith(".") for p in parts):
         return False
-    if any(p in {"__pycache__", "agent_prompts"} for p in parts):
+    if any(p in {"__pycache__", "local_notes"} for p in parts):
         return False
     if parts[0] == "weights":
         return relative.name in {"README.md", "ZENODO.md"} and len(parts) == 2

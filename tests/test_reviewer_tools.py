@@ -48,7 +48,7 @@ def test_metadata_rejects_executable_globals(global_name):
 
 
 @pytest.mark.parametrize("path", [".git/config", ".env", "weights/best.pt", "runs/config.yaml",
-                                  "docs/agent_prompts/task.md", "scripts/__pycache__/x.py",
+                                  "docs/local_notes/task.md", "scripts/__pycache__/x.py",
                                   "docs/assets/checkpoint.pt", "local_secret.json"])
 def test_archive_excludes_local_material(path):
     assert not module("scripts/package_reviewer.py").include(Path(path))

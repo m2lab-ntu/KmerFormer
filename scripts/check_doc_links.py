@@ -7,12 +7,12 @@ is not a word character, whitespace or a hyphen, and then replaces each remainin
 space with one hyphen. It does *not* collapse runs of whitespace. So a heading
 punctuated with an em-dash
 
-    ## 3. Part 3 — at 13-mer the vocabulary stops being free
+    ## 3. Part 3 — exact and hashed 13-mer vocabularies
 
 loses the dash and keeps the spaces that surrounded it, giving a **double**
 hyphen:
 
-    3-part-3--at-13-mer-the-vocabulary-stops-being-free
+    3-part-3--exact-and-hashed-13-mer-vocabularies
 
 An earlier version of this check collapsed whitespace and therefore computed the
 single-hyphen form. It reported such links as valid while GitHub served a 404,
@@ -35,7 +35,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 
 # Directories whose markdown is not published with the repo.
-SKIP_DIRS = {"agent_prompts"}
+SKIP_DIRS = {"local_notes"}
 
 ATX_HEADING = re.compile(r"^(#{1,6})\s+(.*?)\s*#*$")
 FENCE = re.compile(r"^\s*(```|~~~)")

@@ -1,6 +1,6 @@
 # Configs
 
-One YAML per arm in the paper. Each file opens with a `# RESULT:` banner giving the
+One YAML per configuration in the paper. Each file opens with a `# RESULT:` banner giving the
 number it produced, so a config and its result cannot drift apart; the prose below the
 banner is the rationale written when the run was commissioned, kept as provenance.
 
@@ -10,11 +10,11 @@ one fails as `no such file: $KF_DATA/reads_50M.fa` rather than reading from `/`.
 
 ```
 6mer/               Part 2 -- shared non-overlapping 6-mer, architecture varies
-  L{1,8,16,29}_50M      the depth series; L29 is the headline 6-mer arm
+  L{1,8,16,29}_50M      the depth series; L29 is the headline 6-mer configuration
   L16_50M_stride1       stride-1 control: 146 tokens, 5.19 points WORSE
-  data_scale/           Part 1 -- the same arms at 500K / 1M / 5M reads
+  data_scale/           Part 1 -- the same configurations at 500K / 1M / 5M reads
 13mer/              Part 3 -- the vocabulary stops being free
-  exact_1L_50M_meanpool   the headline 13-mer arm, 91.15%
+  exact_1L_50M_meanpool   the headline 13-mer configuration, 91.15%
   exact_1L_250M_meanpool  the same at MetaTransformer's own budget, 99.16%
   exact_1L_50M_attnpool   pooling ablation
   exact_16L_50M           depth hurts at k=13
@@ -31,7 +31,7 @@ extra/              secondary or exploratory settings; the two NT-v2 250M runs
 whether an output has been located; the two NT-v2 250M runs are now in the manuscript. Note the
 distinction that line now draws: **"no output found on any reachable machine" is not
 "never ran"**. Conflating the two is a mistake this repo already made once — the two
-`ntv2_lora_250M*` arms were written up as unrun and had in fact completed, on a
+`ntv2_lora_250M*` configurations were written up as unrun and had in fact completed, on a
 cluster no longer reachable from here. Their scores are in
 [`../docs/RESULTS.md`](../docs/RESULTS.md#nt-v2-at-the-250m-budget).
 
@@ -46,18 +46,18 @@ machine the runs were done on, so a future edit cannot quietly break it:
 - output dirs are unique, so two configs cannot overwrite each other's checkpoints
   and have the second look like a reproduction of the first;
 - every config outside `bench/` and `extra/` carries a `# RESULT:` banner;
-- `sparse_embedding` appears only on exact-vocabulary arms, since that flag is both
+- `sparse_embedding` appears only on exact-vocabulary configurations, since that flag is both
   what makes the 33.5M-row table trainable and what rules out data parallelism;
 - and separately, `train_ddp.rejects_data_parallel` keys on **that flag and nothing
   else** — checked in both directions against every config here. Rejecting a sparse
-  arm prevents an opaque reducer failure; *admitting* the non-sparse ones is what
-  keeps multi-GPU training available to the hashed 13-mer arms, which are long-*k*
+  configuration prevents an opaque reducer failure; *admitting* the non-sparse ones is what
+  keeps multi-GPU training available to the hashed 13-mer configurations, which are long-*k*
   too. A guard rewritten to key on *k* would break that silently, so the test is
   mutation-checked rather than assumed;
 - any custom k-mer tokenizer declares `model.vocab_size` (without it the embedding
   is sized from NT-v2's 6-mer vocabulary, which is a silently wrong model rather
   than an error);
-- every hashed arm uses the same 2^22 buckets, so they stay comparable;
+- every hashed configuration uses the same 2^22 buckets, so they stay comparable;
 - every config path linked from the docs exists.
 
 ## Which config for which claim
@@ -91,12 +91,12 @@ data:
 training:
   amp_dtype: fp16               # kept over bf16 so A6000 runs match V100 ones
   periodic_save_interval: 40000 # so a multi-day run resumes rather than restarts
-  num_workers: 4                # set 0 for the large-vocabulary arms; see below
+  num_workers: 4                # set 0 for the large-vocabulary configurations; see below
 ```
 
 Two settings bite in practice.
 
-`num_workers` — for the exact-13-mer arms, set it to **0**. Resident memory is ~18 GiB
+`num_workers` — for the exact-13-mer configurations, set it to **0**. Resident memory is ~18 GiB
 per worker because each holds the 256 MiB lookup table plus its share of the pool, and
 four workers exhausted 62 GiB of host RAM mid-epoch in the original runs.
 
@@ -105,7 +105,7 @@ table-sized, and it forces single-GPU training because torch's data-parallel red
 rejects sparse gradients. `train_ddp` checks for it and exits with that explanation
 rather than failing inside the reducer an hour into a run.
 
-## Adding an arm
+## Adding a configuration
 
 Copy the nearest config, change one thing, and give `output.dir` a new name under
 `${KF_OUT}`. Keeping one variable moving per file is what made the paper's comparisons

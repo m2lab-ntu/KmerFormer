@@ -1,6 +1,6 @@
 # Asset inventory and release boundaries
 
-Updated 2026-09-29. This page describes the public source snapshot, model
+Updated 2026-11-07. This page describes the public source snapshot, model
 bundles that are not publicly downloadable, and external experimental inputs.
 
 ## 1. Included in the code snapshot
@@ -15,6 +15,13 @@ Run [the software and evidence checks](REPRODUCE.md#software-and-evidence-checks
 the authors' data directories. The coverage-masked accuracy column needs species
 labels and is excluded from the offline check.
 
+The [evaluation bundle](../reproduction/evaluation/README.md) additionally
+includes primary confidence/prediction arrays and CPU rescoring, revised metric
+summaries and genus-aware Kraken2 reruns. MC-dropout/Laplace features, validation
+logits, checkpoints and retraining inputs are external; summary availability
+does not imply full reproduction. The original submission tag does not include
+these later additions.
+
 ## 2. Model bundles and external data
 
 The four portable model bundles are not publicly downloadable. There is no
@@ -26,7 +33,7 @@ to 2026-09-25 and were then withdrawn. The
 not assign a DOI. Current access is in [weights/README.md](../weights/README.md).
 
 Three original `.pt` checkpoints are retained in the local `weights/` directory.
-Their metadata identifies the expected arms: 6-mer L29 at 50M and exact 13-mer
+Their metadata identifies the expected configurations: 6-mer L29 at 50M and exact 13-mer
 single-layer mean-pooling models at 50M/250M. Their selected epochs are 15, 12 and
 15 respectively. Supplementary A6000 evaluation on 2026-09-08 verified all three
 checkpoint hashes and best-validation epochs. The exact one-layer 50M/250M outputs
@@ -51,9 +58,9 @@ download instructions for an external reviewer.
 
 **Raw versus filtered Track A.** The raw pool has 595,000 reads from 119 genera.
 Removing the three specified accessions gives the reported 580,000-read,
-116-genus pool. For the exact 13-mer arms, raw and reported scores differ:
+116-genus pool. For the exact 13-mer configurations, raw and reported scores differ:
 
-| Arm | Raw 595K | Reported 580K |
+| Configuration | Raw 595K | Reported 580K |
 |---|---:|---:|
 | exact 13-mer 1L, 50M, mean pooling | 28.95% | 27.44% |
 | exact 13-mer 1L, 250M, mean pooling | 33.62% | 31.92% |
@@ -62,7 +69,7 @@ Removing the three specified accessions gives the reported 580,000-read,
 This is not the additional analysis removing six near-identical genomes, whose
 effects are 1.13 and 1.75 points at 50M/250M. Keep the filters separate.
 
-**Evaluation checkpoint selection.** The attention-pooling arm's reported 90.74%
+**Evaluation checkpoint selection.** The attention-pooling configuration's reported 90.74%
 comes from `eval_final_rctta`; an earlier `eval_clean_common_rctta` evaluation
 records 90.12%. Compare `checkpoint_epoch`, the checkpoint identity and pool
 before comparing scores. `scripts/check_epoch_selection.py` checks the selected
@@ -105,7 +112,9 @@ to replace a different existing taxonomy.
 This is a new reconstruction of the documented hierarchy; it is not recovery of
 the original historical builder. A complete index build and comparison against the
 stored Kraken predictions still need the reference genomes, tools and compute.
-No reported Kraken score has been changed by this code repair.
+No reported Kraken score was changed by that code repair. The later October 30
+genus-aware rerun did change ladder, L3 and log-normal results; see
+[the evaluation guide](EVALUATION.md#kraken2-database-correction).
 
 ## 5. Deliberately not in this repo
 

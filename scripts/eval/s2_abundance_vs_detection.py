@@ -6,8 +6,8 @@ manuscript's `figures_src/make_figures.py` with no provenance comment, and with
 no KmerFormer arm. The constants cannot be reproduced from anything on disk: a
 sweep over pools and protocol parameters got no closer to the published ROC AUC
 0.905 / sens@95 66.5% than 0.882 / 61.2%, and commit 7455d67 -- which introduced
-them -- says the numbers were checked against `THESIS_NUMBERS.md`, where none of
-the five appear. So this recomputes every arm from predictions instead, on one
+them -- says the numbers were checked against an internal notes file, where none
+of the five appear. So this recomputes every arm from predictions instead, on one
 pool, with one scorer, one protocol and one seed, and prints the pool's md5.
 
 THREE THINGS THAT MAKE THAT HARDER THAN IT SOUNDS, each of which produced a

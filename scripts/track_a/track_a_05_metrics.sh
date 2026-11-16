@@ -49,7 +49,7 @@ for tag in mt_250M mt_50M nt_v9; do
 done
 
 echo ""
-echo "  Closed-set reference (same-genome, from THESIS_NUMBERS.md):"
+echo "  Closed-set reference (same-genome, see docs/RESULTS.md):"
 echo "    MT 13-mer 250M  →  98.7%  (clean_common)"
 echo "    MT 13-mer 50M   →  87.5%"
 echo "    NT-v2 v9 50M    →  67.1%  (RC-TTA)"

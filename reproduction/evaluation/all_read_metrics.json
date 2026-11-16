@@ -1,0 +1,2518 @@
+{
+  "protocol": {
+    "n_partition": 100,
+    "reads": 1000,
+    "n_sparse": 200,
+    "present": 60,
+    "seed": 42,
+    "nboot": 1000,
+    "boot_seed": 7
+  },
+  "source_bundle": {
+    "KmerFormer_6mer_L29_50M_preds_clean_common.npz": "f5b53aa6f3f61f773f7072db47b10908b9787fe35ad01431ca23b15d05dbb22d",
+    "KmerFormer_exact13mer_16L_50M_preds_clean_common.npz": "bc77272dc7d7da13506d51bb78aca98096ab0ed835815d1ecc4376841d77c581",
+    "KmerFormer_exact13mer_1L_250M_preds_clean_common.npz": "dfb9490f077480bd8e68c60904c0110be30f374cc0435b98e51e52113af7191a",
+    "KmerFormer_exact13mer_1L_50M_preds_clean_common.npz": "8d1b8bee123681a9b40bf59a44653d20a7063bb9c4807d134a9130531c97a10e",
+    "KmerFormer_hash13mer_16L_d128_50M_preds_clean_common.npz": "b53ebe0e38fd7caa2ffa84d2e2bbb4175ed7554ab069183b00783c46aa653ddf",
+    "KmerFormer_hash13mer_16L_d64_50M_preds_clean_common.npz": "3bfd84c35483e96a483138156b9abc184d751640efc9241b6c6ab1fd571f4dbc",
+    "KmerFormer_hash13mer_1L_d128_50M_preds_clean_common.npz": "f47f21b0ada3d495c97dfc3693f215b80b4586625f6db7aa8e4fab19fb05669c",
+    "KmerFormer_ov6mer_50M_preds_clean_common.npz": "eb80f8e433a8c397922177556d1027b4b13e18d1932d3d23bdf7a3e07ba7a23a",
+    "Kraken2_raw_genus_aware_preds_clean_common.npz": "495852d5b1bd415459ae4c0170e0ca91edd879f3ec9493fe50c93a73f4227fa5",
+    "Kraken2_raw_species_only_preds_clean_common.npz": "7756db2f80aee3cccdfdb2752e73617c3407c73565e9bbb93bce18db924b14bf",
+    "MetaTransformer_13mer_250M_preds_clean_common.npz": "215283d825184923ac046ccf9ee24a74206aab5ab3678752f1b90b5f11e00ce9",
+    "MetaTransformer_13mer_50M_preds_clean_common.npz": "fc851be622ce197777b64cfe25440858d488c2fec8a3b6fc533f66c3a7ae0f40",
+    "MetaTransformer_6mer_50M_preds_clean_common.npz": "162fbcc353e8b95ca072a6d74e136b712e510250180691c116b69b9d1da8af24",
+    "NTv2_6mer_LoRA_50M_preds_clean_common.npz": "40389bf5d65c4e73db4f72a3e582476bcbbb32573b5f9b50f24f4de64c95d2fb",
+    "detection_threshold.json": "a9a42499e900eaac0df7f4d426b25262f922629416554e3373d1ae82d2431d1b",
+    "far_rung_matched14.npz": "8d83ff8b504faa1dd75b961abff5599c32fa549f5e07d935bb83974ea5c1bdb7",
+    "kf250_ts_msp.npz": "558057d23608aff300abfb9cc2cb2023598839a3e2ee189f2a29fc5a44a6989d",
+    "reference_kf250_ts_msp_val_tau.json": "641799875f199fa6334acab9ff71bbf17bcbe845ffc313cfc0a0c7b09d2a6476"
+  },
+  "step0": "14 configurations reproduce s2_abundance_vs_detection.json (read Top-1, r, BC, AUC, rule sensitivity, unclassified fraction) and 5 configurations detection_threshold.json (spec, threshold reads); seed-43 sampler and declined->genus-0 both fail the same check",
+  "kraken2_declined_n": 935,
+  "species_only_declined_includes_genus_aware_declined": true,
+  "k2_classified_reads_left_per_sparse_sample": {
+    "mean": 990.41,
+    "min": 981,
+    "max": 997
+  },
+  "b1_n_partition_samples": 99,
+  "scenarios": {
+    "all_reads": {
+      "KmerFormer_exact13mer_1L_250M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.99155,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 845,
+          "classified_accuracy": 0.99155
+        },
+        "abundance": {
+          "pearson_r": 0.9998868287761268,
+          "bray_curtis": 0.00607,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.006070000000000025
+        },
+        "detection": {
+          "auc": 0.9452094756944444,
+          "sens_rule": 0.7749166666666667,
+          "spec_rule": 0.9841666666666666,
+          "threshold_reads_rule": 2,
+          "interp": {
+            "0.950": 0.8859929149797572,
+            "0.980": 0.7884625506072875,
+            "0.990": 0.7101334688346884,
+            "0.995": 0.645903100775194,
+            "0.999": 0.5180833333333333
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.90875,
+            "spec": 0.943
+          },
+          "count_ge2": {
+            "sens": 0.7749166666666667,
+            "spec": 0.9841666666666666
+          }
+        }
+      },
+      "Kraken2_raw_genus_aware": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.99062,
+          "coverage": 0.99065,
+          "n_declined": 935,
+          "n_wrong_committed": 3,
+          "classified_accuracy": 0.9999697168525715
+        },
+        "abundance": {
+          "pearson_r": 0.9999265164253738,
+          "bray_curtis": 0.004708953768088237,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.006486311902610643
+        },
+        "detection": {
+          "auc": 0.9548932673611111,
+          "sens_rule": 0.9099166666666667,
+          "spec_rule": 0.9994166666666666,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9143708830150922,
+            "0.980": 0.9116668056366214,
+            "0.990": 0.9107654465104644,
+            "0.995": 0.910314766947386,
+            "0.999": 0.9099542232969232
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.9099166666666667,
+            "spec": 0.9994166666666666
+          },
+          "count_ge2": {
+            "sens": 0.7769166666666667,
+            "spec": 1.0
+          }
+        }
+      },
+      "MetaTransformer_13mer_250M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.98683,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 1317,
+          "classified_accuracy": 0.98683
+        },
+        "abundance": {
+          "pearson_r": 0.999823443406261,
+          "bray_curtis": 0.009040000000000001,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.009040000000000019
+        },
+        "detection": {
+          "auc": 0.9396994201388889,
+          "sens_rule": 0.7746666666666666,
+          "spec_rule": 0.9755833333333334,
+          "threshold_reads_rule": 2,
+          "interp": {
+            "0.950": 0.8306762688614541,
+            "0.980": 0.7399607007575759,
+            "0.990": 0.6613811553030303,
+            "0.995": 0.5805378787878789,
+            "0.999": 0.46182692307692313
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.9076666666666666,
+            "spec": 0.9148333333333334
+          },
+          "count_ge2": {
+            "sens": 0.7746666666666666,
+            "spec": 0.9755833333333334
+          }
+        }
+      },
+      "KmerFormer_exact13mer_1L_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.91152,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 8848,
+          "classified_accuracy": 0.91152
+        },
+        "abundance": {
+          "pearson_r": 0.9980976778665982,
+          "bray_curtis": 0.042919999999999986,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.04292
+        },
+        "detection": {
+          "auc": 0.8640810694444445,
+          "sens_rule": 0.46191666666666664,
+          "spec_rule": 0.9568333333333333,
+          "threshold_reads_rule": 5,
+          "interp": {
+            "0.950": 0.503027777777778,
+            "0.980": 0.30252604166666686,
+            "0.990": 0.2139318181818183,
+            "0.995": 0.14312500000000006,
+            "0.999": 0.08891666666666669
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.874,
+            "spec": 0.7314166666666666
+          },
+          "count_ge2": {
+            "sens": 0.7240833333333333,
+            "spec": 0.8776666666666667
+          }
+        }
+      },
+      "MetaTransformer_13mer_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.87458,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 12542,
+          "classified_accuracy": 0.87458
+        },
+        "abundance": {
+          "pearson_r": 0.9976004993349803,
+          "bray_curtis": 0.053500000000000006,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.0535
+        },
+        "detection": {
+          "auc": 0.8365849409722221,
+          "sens_rule": 0.41491666666666666,
+          "spec_rule": 0.9533333333333334,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.42913383838383856,
+            "0.980": 0.25125806451612914,
+            "0.990": 0.17925,
+            "0.995": 0.13096428571428576,
+            "0.999": 0.070125
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.87475,
+            "spec": 0.6378333333333333
+          },
+          "count_ge2": {
+            "sens": 0.7245,
+            "spec": 0.8241666666666667
+          }
+        }
+      },
+      "KmerFormer_hash13mer_1L_d128_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.86805,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 13195,
+          "classified_accuracy": 0.86805
+        },
+        "abundance": {
+          "pearson_r": 0.9948565124244417,
+          "bray_curtis": 0.06366000000000001,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.06366000000000001
+        },
+        "detection": {
+          "auc": 0.8446753819444445,
+          "sens_rule": 0.3968333333333333,
+          "spec_rule": 0.9518333333333333,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.40667833333333353,
+            "0.980": 0.19251041666666674,
+            "0.990": 0.10308974358974363,
+            "0.995": 0.07064583333333335,
+            "0.999": 0.04608333333333333
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.8543333333333333,
+            "spec": 0.749
+          },
+          "count_ge2": {
+            "sens": 0.69725,
+            "spec": 0.8668333333333333
+          }
+        }
+      },
+      "KmerFormer_exact13mer_16L_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.85629,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 14371,
+          "classified_accuracy": 0.85629
+        },
+        "abundance": {
+          "pearson_r": 0.9977725357004635,
+          "bray_curtis": 0.05599000000000002,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.05599000000000001
+        },
+        "detection": {
+          "auc": 0.8146312291666666,
+          "sens_rule": 0.373,
+          "spec_rule": 0.9579166666666666,
+          "threshold_reads_rule": 7,
+          "interp": {
+            "0.950": 0.40824439102564125,
+            "0.980": 0.2580540540540541,
+            "0.990": 0.1842651515151516,
+            "0.995": 0.13175000000000006,
+            "0.999": 0.06975
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.8768333333333334,
+            "spec": 0.55025
+          },
+          "count_ge2": {
+            "sens": 0.7245,
+            "spec": 0.775
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d128_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.83833,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 16167,
+          "classified_accuracy": 0.83833
+        },
+        "abundance": {
+          "pearson_r": 0.994907860579589,
+          "bray_curtis": 0.07218000000000001,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.07218
+        },
+        "detection": {
+          "auc": 0.805246048611111,
+          "sens_rule": 0.3505,
+          "spec_rule": 0.9510833333333333,
+          "threshold_reads_rule": 7,
+          "interp": {
+            "0.950": 0.3546308411214955,
+            "0.980": 0.1775462962962964,
+            "0.990": 0.10783333333333342,
+            "0.995": 0.06997222222222227,
+            "0.999": 0.04275
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.8348333333333333,
+            "spec": 0.6584166666666667
+          },
+          "count_ge2": {
+            "sens": 0.671,
+            "spec": 0.8185
+          }
+        }
+      },
+      "Kraken2_raw_species_only": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.79968,
+          "coverage": 0.79994,
+          "n_declined": 20006,
+          "n_wrong_committed": 26,
+          "classified_accuracy": 0.9996749756231718
+        },
+        "abundance": {
+          "pearson_r": 0.8311190035773355,
+          "bray_curtis": 0.11140724015243364,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.1517666725703717
+        },
+        "detection": {
+          "auc": 0.9543334340277779,
+          "sens_rule": 0.90925,
+          "spec_rule": 0.9975,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9135714285714286,
+            "0.980": 0.9108421052631579,
+            "0.990": 0.9099323308270677,
+            "0.995": 0.9094774436090226,
+            "0.999": 0.8259741379310346
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.90925,
+            "spec": 0.9975
+          },
+          "count_ge2": {
+            "sens": 0.7750833333333333,
+            "spec": 0.9999166666666667
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d64_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.79257,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 20743,
+          "classified_accuracy": 0.79257
+        },
+        "abundance": {
+          "pearson_r": 0.9880705526130119,
+          "bray_curtis": 0.09878000000000002,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.09878
+        },
+        "detection": {
+          "auc": 0.7661161597222222,
+          "sens_rule": 0.2798333333333333,
+          "spec_rule": 0.9513333333333334,
+          "threshold_reads_rule": 9,
+          "interp": {
+            "0.950": 0.2865266666666669,
+            "0.980": 0.12985087719298252,
+            "0.990": 0.07366666666666673,
+            "0.995": 0.03958333333333333,
+            "0.999": 0.025
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.78125,
+            "spec": 0.6481666666666667
+          },
+          "count_ge2": {
+            "sens": 0.6218333333333333,
+            "spec": 0.8091666666666667
+          }
+        }
+      },
+      "KmerFormer_6mer_L29_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.69527,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 30473,
+          "classified_accuracy": 0.69527
+        },
+        "abundance": {
+          "pearson_r": 0.9919619392807617,
+          "bray_curtis": 0.10686,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.10686
+        },
+        "detection": {
+          "auc": 0.692379951388889,
+          "sens_rule": 0.19183333333333333,
+          "spec_rule": 0.95075,
+          "threshold_reads_rule": 14,
+          "interp": {
+            "0.950": 0.1944226190476192,
+            "0.980": 0.10005555555555559,
+            "0.990": 0.05979166666666676,
+            "0.995": 0.03966666666666667,
+            "0.999": 0.023666666666666666
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.77325,
+            "spec": 0.4970833333333333
+          },
+          "count_ge2": {
+            "sens": 0.6165833333333334,
+            "spec": 0.6795833333333333
+          }
+        }
+      },
+      "NTv2_6mer_LoRA_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.67082,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 32918,
+          "classified_accuracy": 0.67082
+        },
+        "abundance": {
+          "pearson_r": 0.989365331247649,
+          "bray_curtis": 0.12703,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.12703
+        },
+        "detection": {
+          "auc": 0.6708494687500001,
+          "sens_rule": 0.16308333333333333,
+          "spec_rule": 0.95225,
+          "threshold_reads_rule": 16,
+          "interp": {
+            "0.950": 0.17150476190476208,
+            "0.980": 0.07870833333333338,
+            "0.990": 0.04752777777777781,
+            "0.995": 0.0345,
+            "0.999": 0.020916666666666667
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.7274166666666667,
+            "spec": 0.5231666666666667
+          },
+          "count_ge2": {
+            "sens": 0.5710833333333334,
+            "spec": 0.6914166666666667
+          }
+        }
+      },
+      "KmerFormer_ov6mer_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.62753,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 37247,
+          "classified_accuracy": 0.62753
+        },
+        "abundance": {
+          "pearson_r": 0.9873434026827155,
+          "bray_curtis": 0.12683999999999998,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.12683999999999998
+        },
+        "detection": {
+          "auc": 0.6395708888888889,
+          "sens_rule": 0.1545,
+          "spec_rule": 0.9509166666666666,
+          "threshold_reads_rule": 17,
+          "interp": {
+            "0.950": 0.15641304347826096,
+            "0.980": 0.07675000000000004,
+            "0.990": 0.04475,
+            "0.995": 0.032083333333333346,
+            "0.999": 0.019166666666666665
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.71625,
+            "spec": 0.4665
+          },
+          "count_ge2": {
+            "sens": 0.56675,
+            "spec": 0.6496666666666666
+          }
+        }
+      },
+      "MetaTransformer_6mer_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.4892,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 51080,
+          "classified_accuracy": 0.4892
+        },
+        "abundance": {
+          "pearson_r": 0.9777647705668718,
+          "bray_curtis": 0.19486000000000003,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.19486000000000003
+        },
+        "detection": {
+          "auc": 0.5690590277777778,
+          "sens_rule": 0.09233333333333334,
+          "spec_rule": 0.9503333333333334,
+          "threshold_reads_rule": 24,
+          "interp": {
+            "0.950": 0.09278205128205134,
+            "0.980": 0.04018333333333336,
+            "0.990": 0.025097222222222233,
+            "0.995": 0.017666666666666667,
+            "0.999": 0.015916666666666666
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.584,
+            "spec": 0.5183333333333333
+          },
+          "count_ge2": {
+            "sens": 0.44733333333333336,
+            "spec": 0.6558333333333333
+          }
+        }
+      }
+    },
+    "k2_classified": {
+      "KmerFormer_exact13mer_1L_250M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9962751728662999,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 369,
+          "classified_accuracy": 0.9962751728662999
+        },
+        "abundance": {
+          "pearson_r": 0.9999489130881268,
+          "bray_curtis": 0.0030684690933325594,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.0030684690933325707
+        },
+        "detection": {
+          "auc": 0.9496025486111112,
+          "sens_rule": 0.9081666666666667,
+          "spec_rule": 0.972,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9102451989026064,
+            "0.980": 0.8520208333333334,
+            "0.990": 0.7877833333333334,
+            "0.995": 0.7082,
+            "0.999": 0.59475
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.9081666666666667,
+            "spec": 0.972
+          },
+          "count_ge2": {
+            "sens": 0.77425,
+            "spec": 0.9929166666666667
+          }
+        }
+      },
+      "Kraken2_raw_genus_aware": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9999697168525715,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 3,
+          "classified_accuracy": 0.9999697168525715
+        },
+        "abundance": {
+          "pearson_r": 0.9999995747680979,
+          "bray_curtis": 3.0323539716587785e-05,
+          "n_samples": 100,
+          "bray_curtis_conditional": 3.0323539716598176e-05
+        },
+        "detection": {
+          "auc": 0.9548899236111111,
+          "sens_rule": 0.9099166666666667,
+          "spec_rule": 0.9994166666666666,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9143708830150922,
+            "0.980": 0.9116668056366214,
+            "0.990": 0.9107654465104644,
+            "0.995": 0.910314766947386,
+            "0.999": 0.9099542232969232
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.9099166666666667,
+            "spec": 0.9994166666666666
+          },
+          "count_ge2": {
+            "sens": 0.7769166666666667,
+            "spec": 1.0
+          }
+        }
+      },
+      "MetaTransformer_13mer_250M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9918437389592691,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 808,
+          "classified_accuracy": 0.9918437389592691
+        },
+        "abundance": {
+          "pearson_r": 0.9998856780392639,
+          "bray_curtis": 0.006390104926885005,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.0063901049268850155
+        },
+        "detection": {
+          "auc": 0.9445179201388889,
+          "sens_rule": 0.8793333333333333,
+          "spec_rule": 0.9510833333333333,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.8826393678160921,
+            "0.980": 0.7920403225806452,
+            "0.990": 0.724576388888889,
+            "0.995": 0.6621388888888889,
+            "0.999": 0.526
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.9070833333333334,
+            "spec": 0.94175
+          },
+          "count_ge2": {
+            "sens": 0.77375,
+            "spec": 0.9874166666666667
+          }
+        }
+      },
+      "KmerFormer_exact13mer_1L_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9152980366426083,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 8391,
+          "classified_accuracy": 0.9152980366426083
+        },
+        "abundance": {
+          "pearson_r": 0.9981586656286094,
+          "bray_curtis": 0.04221451887337431,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.04221451887337431
+        },
+        "detection": {
+          "auc": 0.8661370069444445,
+          "sens_rule": 0.51125,
+          "spec_rule": 0.9508333333333333,
+          "threshold_reads_rule": 4,
+          "interp": {
+            "0.950": 0.5154807692307695,
+            "0.980": 0.30966666666666665,
+            "0.990": 0.22266666666666668,
+            "0.995": 0.15133333333333332,
+            "0.999": 0.09033333333333333
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.8734166666666666,
+            "spec": 0.7416666666666667
+          },
+          "count_ge2": {
+            "sens": 0.72275,
+            "spec": 0.883
+          }
+        }
+      },
+      "MetaTransformer_13mer_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8786958057840811,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 12017,
+          "classified_accuracy": 0.8786958057840811
+        },
+        "abundance": {
+          "pearson_r": 0.9976813202443197,
+          "bray_curtis": 0.05275509822309712,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.052755098223097124
+        },
+        "detection": {
+          "auc": 0.8381768125,
+          "sens_rule": 0.43166666666666664,
+          "spec_rule": 0.95,
+          "threshold_reads_rule": 5,
+          "interp": {
+            "0.950": 0.43166666666666664,
+            "0.980": 0.2604791666666667,
+            "0.990": 0.18216666666666667,
+            "0.995": 0.1365,
+            "0.999": 0.07133333333333333
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.8740833333333333,
+            "spec": 0.6464166666666666
+          },
+          "count_ge2": {
+            "sens": 0.72375,
+            "spec": 0.8291666666666666
+          }
+        }
+      },
+      "KmerFormer_hash13mer_1L_d128_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8717205874930601,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 12708,
+          "classified_accuracy": 0.8717205874930601
+        },
+        "abundance": {
+          "pearson_r": 0.9949838272497609,
+          "bray_curtis": 0.06286799469286636,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.06286799469286634
+        },
+        "detection": {
+          "auc": 0.8460282291666666,
+          "sens_rule": 0.4081666666666667,
+          "spec_rule": 0.9503333333333334,
+          "threshold_reads_rule": 5,
+          "interp": {
+            "0.950": 0.4102500000000003,
+            "0.980": 0.19304166666666672,
+            "0.990": 0.10695833333333336,
+            "0.995": 0.07316666666666667,
+            "0.999": 0.04633333333333333
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.85375,
+            "spec": 0.7573333333333333
+          },
+          "count_ge2": {
+            "sens": 0.6960833333333334,
+            "spec": 0.8716666666666667
+          }
+        }
+      },
+      "KmerFormer_exact13mer_16L_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8599808206732953,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 13871,
+          "classified_accuracy": 0.8599808206732953
+        },
+        "abundance": {
+          "pearson_r": 0.9978212621416239,
+          "bray_curtis": 0.05560133615167202,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.05560133615167203
+        },
+        "detection": {
+          "auc": 0.8155665659722223,
+          "sens_rule": 0.41183333333333333,
+          "spec_rule": 0.95025,
+          "threshold_reads_rule": 5,
+          "interp": {
+            "0.950": 0.4121833333333334,
+            "0.980": 0.2622222222222223,
+            "0.990": 0.19033333333333333,
+            "0.995": 0.13408333333333333,
+            "0.999": 0.0735
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.8761666666666666,
+            "spec": 0.556
+          },
+          "count_ge2": {
+            "sens": 0.7235,
+            "spec": 0.7805833333333333
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d128_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.841831120981174,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 15669,
+          "classified_accuracy": 0.841831120981174
+        },
+        "abundance": {
+          "pearson_r": 0.9949872182722191,
+          "bray_curtis": 0.07174859432516735,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.07174859432516736
+        },
+        "detection": {
+          "auc": 0.806826045138889,
+          "sens_rule": 0.3560833333333333,
+          "spec_rule": 0.9500833333333334,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.3563750000000001,
+            "0.980": 0.1818055555555556,
+            "0.990": 0.11025,
+            "0.995": 0.07183333333333333,
+            "0.999": 0.0435
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.8340833333333333,
+            "spec": 0.6640833333333334
+          },
+          "count_ge2": {
+            "sens": 0.66975,
+            "spec": 0.82225
+          }
+        }
+      },
+      "Kraken2_raw_species_only": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8072275778529249,
+          "coverage": 0.8074900317973048,
+          "n_declined": 19071,
+          "n_wrong_committed": 26,
+          "classified_accuracy": 0.9996749756231718
+        },
+        "abundance": {
+          "pearson_r": 0.8290149819963998,
+          "bray_curtis": 0.10679891087558317,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.15212898269315614
+        },
+        "detection": {
+          "auc": 0.9543207187500001,
+          "sens_rule": 0.90925,
+          "spec_rule": 0.9975,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9135714285714286,
+            "0.980": 0.9108421052631579,
+            "0.990": 0.9099323308270677,
+            "0.995": 0.9094774436090226,
+            "0.999": 0.8182500000000001
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.90925,
+            "spec": 0.9975
+          },
+          "count_ge2": {
+            "sens": 0.7750833333333333,
+            "spec": 0.9999166666666667
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d64_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.7957401705950639,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 20235,
+          "classified_accuracy": 0.7957401705950639
+        },
+        "abundance": {
+          "pearson_r": 0.9882419174790731,
+          "bray_curtis": 0.09818919201658483,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.09818919201658483
+        },
+        "detection": {
+          "auc": 0.7671565590277776,
+          "sens_rule": 0.28925,
+          "spec_rule": 0.9500833333333334,
+          "threshold_reads_rule": 8,
+          "interp": {
+            "0.950": 0.2895833333333335,
+            "0.980": 0.13111111111111115,
+            "0.990": 0.07525,
+            "0.995": 0.03983333333333333,
+            "0.999": 0.024833333333333332
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.7805,
+            "spec": 0.6540833333333333
+          },
+          "count_ge2": {
+            "sens": 0.6205,
+            "spec": 0.8121666666666667
+          }
+        }
+      },
+      "KmerFormer_6mer_L29_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.6991874022106698,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 29800,
+          "classified_accuracy": 0.6991874022106698
+        },
+        "abundance": {
+          "pearson_r": 0.9923089010178913,
+          "bray_curtis": 0.10602412398219974,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.10602412398219974
+        },
+        "detection": {
+          "auc": 0.6928206909722222,
+          "sens_rule": 0.19816666666666666,
+          "spec_rule": 0.9500833333333334,
+          "threshold_reads_rule": 13,
+          "interp": {
+            "0.950": 0.19854166666666687,
+            "0.980": 0.10275000000000006,
+            "0.990": 0.06141666666666667,
+            "0.995": 0.04054166666666667,
+            "0.999": 0.023666666666666666
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.7725,
+            "spec": 0.49916666666666665
+          },
+          "count_ge2": {
+            "sens": 0.61575,
+            "spec": 0.6815
+          }
+        }
+      },
+      "NTv2_6mer_LoRA_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.674567203351335,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 32239,
+          "classified_accuracy": 0.674567203351335
+        },
+        "abundance": {
+          "pearson_r": 0.989754881385153,
+          "bray_curtis": 0.1263031284031763,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.1263031284031763
+        },
+        "detection": {
+          "auc": 0.6713364722222223,
+          "sens_rule": 0.1735,
+          "spec_rule": 0.95,
+          "threshold_reads_rule": 14,
+          "interp": {
+            "0.950": 0.1735,
+            "0.980": 0.08100000000000003,
+            "0.990": 0.04816666666666667,
+            "0.995": 0.035083333333333334,
+            "0.999": 0.021
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.7264166666666667,
+            "spec": 0.5250833333333333
+          },
+          "count_ge2": {
+            "sens": 0.5703333333333334,
+            "spec": 0.6935
+          }
+        }
+      },
+      "KmerFormer_ov6mer_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.6310906980265483,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 36546,
+          "classified_accuracy": 0.6310906980265483
+        },
+        "abundance": {
+          "pearson_r": 0.9878077682630275,
+          "bray_curtis": 0.12609839714966714,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.12609839714966714
+        },
+        "detection": {
+          "auc": 0.6404356354166667,
+          "sens_rule": 0.15741666666666668,
+          "spec_rule": 0.9503333333333334,
+          "threshold_reads_rule": 16,
+          "interp": {
+            "0.950": 0.15819444444444455,
+            "0.980": 0.07841666666666666,
+            "0.990": 0.04475,
+            "0.995": 0.03258333333333333,
+            "0.999": 0.019583333333333335
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.71525,
+            "spec": 0.46891666666666665
+          },
+          "count_ge2": {
+            "sens": 0.5661666666666667,
+            "spec": 0.6516666666666666
+          }
+        }
+      },
+      "MetaTransformer_6mer_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.4917579367082219,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 50349,
+          "classified_accuracy": 0.4917579367082219
+        },
+        "abundance": {
+          "pearson_r": 0.9783230921820391,
+          "bray_curtis": 0.19420057912655875,
+          "n_samples": 100,
+          "bray_curtis_conditional": 0.19420057912655875
+        },
+        "detection": {
+          "auc": 0.5697199201388888,
+          "sens_rule": 0.09333333333333334,
+          "spec_rule": 0.9500833333333334,
+          "threshold_reads_rule": 23,
+          "interp": {
+            "0.950": 0.09354166666666679,
+            "0.980": 0.04,
+            "0.990": 0.024833333333333332,
+            "0.995": 0.017833333333333333,
+            "0.999": 0.015916666666666666
+          },
+          "ceiling": 0.9099166666666667,
+          "count_ge1": {
+            "sens": 0.5835,
+            "spec": 0.5197499999999999
+          },
+          "count_ge2": {
+            "sens": 0.44658333333333333,
+            "spec": 0.65675
+          }
+        }
+      }
+    },
+    "b1_repool": {
+      "KmerFormer_exact13mer_1L_250M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9962751728662999,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 369,
+          "classified_accuracy": 0.9962751728662999
+        },
+        "abundance": {
+          "pearson_r": 0.9999507730919832,
+          "bray_curtis": 0.0029898989898989904,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.00298989898989901
+        },
+        "detection": {
+          "auc": 0.9485381736111111,
+          "sens_rule": 0.9051666666666667,
+          "spec_rule": 0.9731666666666666,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9074242164754239,
+            "0.980": 0.8612808764940241,
+            "0.990": 0.7970577689243029,
+            "0.995": 0.7452641843971632,
+            "0.999": 0.6031944444444445
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.9051666666666667,
+            "spec": 0.9731666666666666
+          },
+          "count_ge2": {
+            "sens": 0.7708333333333334,
+            "spec": 0.9940833333333333
+          }
+        }
+      },
+      "Kraken2_raw_genus_aware": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9999697168525715,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 3,
+          "classified_accuracy": 0.9999697168525715
+        },
+        "abundance": {
+          "pearson_r": 0.9999995741687476,
+          "bray_curtis": 3.0303030303030302e-05,
+          "n_samples": 99,
+          "bray_curtis_conditional": 3.0303030303068504e-05
+        },
+        "detection": {
+          "auc": 0.9532955833333334,
+          "sens_rule": 0.9066666666666666,
+          "spec_rule": 0.9996666666666667,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9113037679226409,
+            "0.980": 0.9085028342780926,
+            "0.990": 0.90756918972991,
+            "0.995": 0.9071023674558185,
+            "0.999": 0.9067289096365455
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.9066666666666666,
+            "spec": 0.9996666666666667
+          },
+          "count_ge2": {
+            "sens": 0.7735,
+            "spec": 1.0
+          }
+        }
+      },
+      "MetaTransformer_13mer_250M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9918437389592691,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 808,
+          "classified_accuracy": 0.9918437389592691
+        },
+        "abundance": {
+          "pearson_r": 0.9998883224891527,
+          "bray_curtis": 0.006303030303030304,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.006303030303030319
+        },
+        "detection": {
+          "auc": 0.9439727604166667,
+          "sens_rule": 0.7690833333333333,
+          "spec_rule": 0.9893333333333333,
+          "threshold_reads_rule": 2,
+          "interp": {
+            "0.950": 0.8908436902485661,
+            "0.980": 0.7979756214149141,
+            "0.990": 0.7593944444444446,
+            "0.995": 0.6867277777777778,
+            "0.999": 0.5385416666666667
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.904,
+            "spec": 0.94575
+          },
+          "count_ge2": {
+            "sens": 0.7690833333333333,
+            "spec": 0.9893333333333333
+          }
+        }
+      },
+      "KmerFormer_exact13mer_1L_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.9152980366426083,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 8391,
+          "classified_accuracy": 0.9152980366426083
+        },
+        "abundance": {
+          "pearson_r": 0.9981984779910543,
+          "bray_curtis": 0.04236363636363636,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.04236363636363636
+        },
+        "detection": {
+          "auc": 0.8690621145833333,
+          "sens_rule": 0.46591666666666665,
+          "spec_rule": 0.9595833333333333,
+          "threshold_reads_rule": 5,
+          "interp": {
+            "0.950": 0.5253019125683063,
+            "0.980": 0.32505128205128214,
+            "0.990": 0.22115476190476213,
+            "0.995": 0.16041666666666676,
+            "0.999": 0.08883333333333333
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.87425,
+            "spec": 0.7483333333333333
+          },
+          "count_ge2": {
+            "sens": 0.72425,
+            "spec": 0.8848333333333334
+          }
+        }
+      },
+      "MetaTransformer_13mer_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8786958057840811,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 12017,
+          "classified_accuracy": 0.8786958057840811
+        },
+        "abundance": {
+          "pearson_r": 0.9977770037219315,
+          "bray_curtis": 0.05236363636363636,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.05236363636363636
+        },
+        "detection": {
+          "auc": 0.8380047708333334,
+          "sens_rule": 0.41633333333333333,
+          "spec_rule": 0.9565,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.44508333333333355,
+            "0.980": 0.25504761904761913,
+            "0.990": 0.18000000000000005,
+            "0.995": 0.13138636363636366,
+            "0.999": 0.0771388888888889
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.8705,
+            "spec": 0.6534166666666666
+          },
+          "count_ge2": {
+            "sens": 0.7199166666666666,
+            "spec": 0.8271666666666666
+          }
+        }
+      },
+      "KmerFormer_hash13mer_1L_d128_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8717205874930601,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 12708,
+          "classified_accuracy": 0.8717205874930601
+        },
+        "abundance": {
+          "pearson_r": 0.9949252241257472,
+          "bray_curtis": 0.06307070707070708,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.06307070707070708
+        },
+        "detection": {
+          "auc": 0.8469318854166668,
+          "sens_rule": 0.39841666666666664,
+          "spec_rule": 0.954,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.4216666666666669,
+            "0.980": 0.2007500000000001,
+            "0.990": 0.1103611111111112,
+            "0.995": 0.07619047619047621,
+            "0.999": 0.044291666666666674
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.8525833333333334,
+            "spec": 0.7556666666666667
+          },
+          "count_ge2": {
+            "sens": 0.69525,
+            "spec": 0.8721666666666666
+          }
+        }
+      },
+      "KmerFormer_exact13mer_16L_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8599808206732953,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 13871,
+          "classified_accuracy": 0.8599808206732953
+        },
+        "abundance": {
+          "pearson_r": 0.9978340051714513,
+          "bray_curtis": 0.055969696969696975,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.055969696969696975
+        },
+        "detection": {
+          "auc": 0.8177311354166668,
+          "sens_rule": 0.4095,
+          "spec_rule": 0.9523333333333334,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.4187604166666668,
+            "0.980": 0.26929569892473126,
+            "0.990": 0.19358333333333344,
+            "0.995": 0.13455833333333336,
+            "0.999": 0.07512500000000001
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.8746666666666667,
+            "spec": 0.5581666666666667
+          },
+          "count_ge2": {
+            "sens": 0.7255,
+            "spec": 0.7814166666666666
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d128_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.841831120981174,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 15669,
+          "classified_accuracy": 0.841831120981174
+        },
+        "abundance": {
+          "pearson_r": 0.9950299675528812,
+          "bray_curtis": 0.07089898989898989,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.07089898989898989
+        },
+        "detection": {
+          "auc": 0.8057863888888889,
+          "sens_rule": 0.34925,
+          "spec_rule": 0.9513333333333334,
+          "threshold_reads_rule": 7,
+          "interp": {
+            "0.950": 0.35580813953488394,
+            "0.980": 0.1851372549019609,
+            "0.990": 0.11470833333333347,
+            "0.995": 0.07166666666666667,
+            "0.999": 0.04275
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.8304166666666667,
+            "spec": 0.6643333333333333
+          },
+          "count_ge2": {
+            "sens": 0.6691666666666667,
+            "spec": 0.8229166666666666
+          }
+        }
+      },
+      "Kraken2_raw_species_only": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.8072275778529249,
+          "coverage": 0.8074900317973048,
+          "n_declined": 19071,
+          "n_wrong_committed": 26,
+          "classified_accuracy": 0.9996749756231718
+        },
+        "abundance": {
+          "pearson_r": 0.8289194957668484,
+          "bray_curtis": 0.10672811502934237,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.15215853063641965
+        },
+        "detection": {
+          "auc": 0.9529097916666667,
+          "sens_rule": 0.9063333333333333,
+          "spec_rule": 0.99775,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9108160026726801,
+            "0.980": 0.9079996659149754,
+            "0.990": 0.9070608869957404,
+            "0.995": 0.9065914975361229,
+            "0.999": 0.8315185185185185
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.9063333333333333,
+            "spec": 0.99775
+          },
+          "count_ge2": {
+            "sens": 0.7716666666666666,
+            "spec": 1.0
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d64_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.7957401705950639,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 20235,
+          "classified_accuracy": 0.7957401705950639
+        },
+        "abundance": {
+          "pearson_r": 0.9884068801277354,
+          "bray_curtis": 0.09761616161616161,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.09761616161616161
+        },
+        "detection": {
+          "auc": 0.7681659687500001,
+          "sens_rule": 0.27525,
+          "spec_rule": 0.9525,
+          "threshold_reads_rule": 9,
+          "interp": {
+            "0.950": 0.28514436619718325,
+            "0.980": 0.13708333333333345,
+            "0.990": 0.07479166666666678,
+            "0.995": 0.04425,
+            "0.999": 0.026416666666666668
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.7793333333333333,
+            "spec": 0.6606666666666667
+          },
+          "count_ge2": {
+            "sens": 0.6235,
+            "spec": 0.81125
+          }
+        }
+      },
+      "KmerFormer_6mer_L29_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.6991874022106698,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 29800,
+          "classified_accuracy": 0.6991874022106698
+        },
+        "abundance": {
+          "pearson_r": 0.9924453006416197,
+          "bray_curtis": 0.105979797979798,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.105979797979798
+        },
+        "detection": {
+          "auc": 0.6914070069444445,
+          "sens_rule": 0.18891666666666668,
+          "spec_rule": 0.9533333333333334,
+          "threshold_reads_rule": 14,
+          "interp": {
+            "0.950": 0.19969680851063845,
+            "0.980": 0.10217307692307698,
+            "0.990": 0.0655277777777778,
+            "0.995": 0.041916666666666665,
+            "0.999": 0.02575
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.76925,
+            "spec": 0.49491666666666667
+          },
+          "count_ge2": {
+            "sens": 0.6115833333333334,
+            "spec": 0.685
+          }
+        }
+      },
+      "NTv2_6mer_LoRA_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.674567203351335,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 32239,
+          "classified_accuracy": 0.674567203351335
+        },
+        "abundance": {
+          "pearson_r": 0.9896883964593187,
+          "bray_curtis": 0.1267676767676768,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.12676767676767678
+        },
+        "detection": {
+          "auc": 0.6684303506944445,
+          "sens_rule": 0.16916666666666666,
+          "spec_rule": 0.9516666666666667,
+          "threshold_reads_rule": 15,
+          "interp": {
+            "0.950": 0.17601190476190495,
+            "0.980": 0.07912820512820516,
+            "0.990": 0.05281250000000003,
+            "0.995": 0.03866666666666667,
+            "0.999": 0.022583333333333334
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.72325,
+            "spec": 0.5155000000000001
+          },
+          "count_ge2": {
+            "sens": 0.5688333333333333,
+            "spec": 0.6958333333333333
+          }
+        }
+      },
+      "KmerFormer_ov6mer_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.6310906980265483,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 36546,
+          "classified_accuracy": 0.6310906980265483
+        },
+        "abundance": {
+          "pearson_r": 0.9879042280823098,
+          "bray_curtis": 0.12644444444444444,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.12644444444444444
+        },
+        "detection": {
+          "auc": 0.6402038194444445,
+          "sens_rule": 0.15175,
+          "spec_rule": 0.9510833333333333,
+          "threshold_reads_rule": 17,
+          "interp": {
+            "0.950": 0.15493434343434356,
+            "0.980": 0.07957407407407414,
+            "0.990": 0.049683333333333336,
+            "0.995": 0.03325,
+            "0.999": 0.020916666666666667
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.71475,
+            "spec": 0.47150000000000003
+          },
+          "count_ge2": {
+            "sens": 0.5598333333333333,
+            "spec": 0.6514166666666666
+          }
+        }
+      },
+      "MetaTransformer_6mer_50M": {
+        "read": {
+          "n": 99065,
+          "accuracy": 0.4917579367082219,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 50349,
+          "classified_accuracy": 0.4917579367082219
+        },
+        "abundance": {
+          "pearson_r": 0.9785967077799638,
+          "bray_curtis": 0.19391919191919188,
+          "n_samples": 99,
+          "bray_curtis_conditional": 0.19391919191919188
+        },
+        "detection": {
+          "auc": 0.5648201041666667,
+          "sens_rule": 0.09566666666666666,
+          "spec_rule": 0.9505,
+          "threshold_reads_rule": 23,
+          "interp": {
+            "0.950": 0.09668750000000009,
+            "0.980": 0.042750000000000024,
+            "0.990": 0.025812500000000013,
+            "0.995": 0.020222222222222225,
+            "0.999": 0.016833333333333332
+          },
+          "ceiling": 0.9066666666666666,
+          "count_ge1": {
+            "sens": 0.5778333333333333,
+            "spec": 0.5103333333333333
+          },
+          "count_ge2": {
+            "sens": 0.44708333333333333,
+            "spec": 0.6561666666666667
+          }
+        }
+      }
+    },
+    "c1_uncbin": {
+      "KmerFormer_exact13mer_1L_250M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.99155,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 845,
+          "classified_accuracy": 0.99155
+        },
+        "abundance": {
+          "pearson_r": 0.9998869302135118,
+          "bray_curtis": 0.00607,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.9452094756944444,
+          "sens_rule": 0.7749166666666667,
+          "spec_rule": 0.9841666666666666,
+          "threshold_reads_rule": 2,
+          "interp": {
+            "0.950": 0.8859929149797572,
+            "0.980": 0.7884625506072875,
+            "0.990": 0.7101334688346884,
+            "0.995": 0.645903100775194,
+            "0.999": 0.5180833333333333
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.90875,
+            "spec": 0.943
+          },
+          "count_ge2": {
+            "sens": 0.7749166666666667,
+            "spec": 0.9841666666666666
+          }
+        }
+      },
+      "Kraken2_raw_genus_aware": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.99062,
+          "coverage": 0.99065,
+          "n_declined": 935,
+          "n_wrong_committed": 3,
+          "classified_accuracy": 0.9999697168525715
+        },
+        "abundance": {
+          "pearson_r": 0.9992646611274261,
+          "bray_curtis": 0.00936,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.9548932673611111,
+          "sens_rule": 0.9099166666666667,
+          "spec_rule": 0.9994166666666666,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9143708830150922,
+            "0.980": 0.9116668056366214,
+            "0.990": 0.9107654465104644,
+            "0.995": 0.910314766947386,
+            "0.999": 0.9099542232969232
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.9099166666666667,
+            "spec": 0.9994166666666666
+          },
+          "count_ge2": {
+            "sens": 0.7769166666666667,
+            "spec": 1.0
+          }
+        }
+      },
+      "MetaTransformer_13mer_250M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.98683,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 1317,
+          "classified_accuracy": 0.98683
+        },
+        "abundance": {
+          "pearson_r": 0.9998236052263452,
+          "bray_curtis": 0.009040000000000001,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.9396994201388889,
+          "sens_rule": 0.7746666666666666,
+          "spec_rule": 0.9755833333333334,
+          "threshold_reads_rule": 2,
+          "interp": {
+            "0.950": 0.8306762688614541,
+            "0.980": 0.7399607007575759,
+            "0.990": 0.6613811553030303,
+            "0.995": 0.5805378787878789,
+            "0.999": 0.46182692307692313
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.9076666666666666,
+            "spec": 0.9148333333333334
+          },
+          "count_ge2": {
+            "sens": 0.7746666666666666,
+            "spec": 0.9755833333333334
+          }
+        }
+      },
+      "KmerFormer_exact13mer_1L_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.91152,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 8848,
+          "classified_accuracy": 0.91152
+        },
+        "abundance": {
+          "pearson_r": 0.9980990745031184,
+          "bray_curtis": 0.042919999999999986,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.8640810694444445,
+          "sens_rule": 0.46191666666666664,
+          "spec_rule": 0.9568333333333333,
+          "threshold_reads_rule": 5,
+          "interp": {
+            "0.950": 0.503027777777778,
+            "0.980": 0.30252604166666686,
+            "0.990": 0.2139318181818183,
+            "0.995": 0.14312500000000006,
+            "0.999": 0.08891666666666669
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.874,
+            "spec": 0.7314166666666666
+          },
+          "count_ge2": {
+            "sens": 0.7240833333333333,
+            "spec": 0.8776666666666667
+          }
+        }
+      },
+      "MetaTransformer_13mer_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.87458,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 12542,
+          "classified_accuracy": 0.87458
+        },
+        "abundance": {
+          "pearson_r": 0.9976025162742507,
+          "bray_curtis": 0.053500000000000006,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.8365849409722221,
+          "sens_rule": 0.41491666666666666,
+          "spec_rule": 0.9533333333333334,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.42913383838383856,
+            "0.980": 0.25125806451612914,
+            "0.990": 0.17925,
+            "0.995": 0.13096428571428576,
+            "0.999": 0.070125
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.87475,
+            "spec": 0.6378333333333333
+          },
+          "count_ge2": {
+            "sens": 0.7245,
+            "spec": 0.8241666666666667
+          }
+        }
+      },
+      "KmerFormer_hash13mer_1L_d128_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.86805,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 13195,
+          "classified_accuracy": 0.86805
+        },
+        "abundance": {
+          "pearson_r": 0.9948595517347144,
+          "bray_curtis": 0.06366000000000001,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.8446753819444445,
+          "sens_rule": 0.3968333333333333,
+          "spec_rule": 0.9518333333333333,
+          "threshold_reads_rule": 6,
+          "interp": {
+            "0.950": 0.40667833333333353,
+            "0.980": 0.19251041666666674,
+            "0.990": 0.10308974358974363,
+            "0.995": 0.07064583333333335,
+            "0.999": 0.04608333333333333
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.8543333333333333,
+            "spec": 0.749
+          },
+          "count_ge2": {
+            "sens": 0.69725,
+            "spec": 0.8668333333333333
+          }
+        }
+      },
+      "KmerFormer_exact13mer_16L_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.85629,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 14371,
+          "classified_accuracy": 0.85629
+        },
+        "abundance": {
+          "pearson_r": 0.9977744607612895,
+          "bray_curtis": 0.05599000000000002,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.8146312291666666,
+          "sens_rule": 0.373,
+          "spec_rule": 0.9579166666666666,
+          "threshold_reads_rule": 7,
+          "interp": {
+            "0.950": 0.40824439102564125,
+            "0.980": 0.2580540540540541,
+            "0.990": 0.1842651515151516,
+            "0.995": 0.13175000000000006,
+            "0.999": 0.06975
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.8768333333333334,
+            "spec": 0.55025
+          },
+          "count_ge2": {
+            "sens": 0.7245,
+            "spec": 0.775
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d128_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.83833,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 16167,
+          "classified_accuracy": 0.83833
+        },
+        "abundance": {
+          "pearson_r": 0.9949107298531037,
+          "bray_curtis": 0.07218000000000001,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.805246048611111,
+          "sens_rule": 0.3505,
+          "spec_rule": 0.9510833333333333,
+          "threshold_reads_rule": 7,
+          "interp": {
+            "0.950": 0.3546308411214955,
+            "0.980": 0.1775462962962964,
+            "0.990": 0.10783333333333342,
+            "0.995": 0.06997222222222227,
+            "0.999": 0.04275
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.8348333333333333,
+            "spec": 0.6584166666666667
+          },
+          "count_ge2": {
+            "sens": 0.671,
+            "spec": 0.8185
+          }
+        }
+      },
+      "Kraken2_raw_species_only": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.79968,
+          "coverage": 0.79994,
+          "n_declined": 20006,
+          "n_wrong_committed": 26,
+          "classified_accuracy": 0.9996749756231718
+        },
+        "abundance": {
+          "pearson_r": 0.508580316161859,
+          "bray_curtis": 0.20023999999999995,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.9543334340277779,
+          "sens_rule": 0.90925,
+          "spec_rule": 0.9975,
+          "threshold_reads_rule": 1,
+          "interp": {
+            "0.950": 0.9135714285714286,
+            "0.980": 0.9108421052631579,
+            "0.990": 0.9099323308270677,
+            "0.995": 0.9094774436090226,
+            "0.999": 0.8259741379310346
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.90925,
+            "spec": 0.9975
+          },
+          "count_ge2": {
+            "sens": 0.7750833333333333,
+            "spec": 0.9999166666666667
+          }
+        }
+      },
+      "KmerFormer_hash13mer_16L_d64_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.79257,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 20743,
+          "classified_accuracy": 0.79257
+        },
+        "abundance": {
+          "pearson_r": 0.9880761501664055,
+          "bray_curtis": 0.09878000000000002,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.7661161597222222,
+          "sens_rule": 0.2798333333333333,
+          "spec_rule": 0.9513333333333334,
+          "threshold_reads_rule": 9,
+          "interp": {
+            "0.950": 0.2865266666666669,
+            "0.980": 0.12985087719298252,
+            "0.990": 0.07366666666666673,
+            "0.995": 0.03958333333333333,
+            "0.999": 0.025
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.78125,
+            "spec": 0.6481666666666667
+          },
+          "count_ge2": {
+            "sens": 0.6218333333333333,
+            "spec": 0.8091666666666667
+          }
+        }
+      },
+      "KmerFormer_6mer_L29_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.69527,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 30473,
+          "classified_accuracy": 0.69527
+        },
+        "abundance": {
+          "pearson_r": 0.9919654180239732,
+          "bray_curtis": 0.10686,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.692379951388889,
+          "sens_rule": 0.19183333333333333,
+          "spec_rule": 0.95075,
+          "threshold_reads_rule": 14,
+          "interp": {
+            "0.950": 0.1944226190476192,
+            "0.980": 0.10005555555555559,
+            "0.990": 0.05979166666666676,
+            "0.995": 0.03966666666666667,
+            "0.999": 0.023666666666666666
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.77325,
+            "spec": 0.4970833333333333
+          },
+          "count_ge2": {
+            "sens": 0.6165833333333334,
+            "spec": 0.6795833333333333
+          }
+        }
+      },
+      "NTv2_6mer_LoRA_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.67082,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 32918,
+          "classified_accuracy": 0.67082
+        },
+        "abundance": {
+          "pearson_r": 0.9893674637363212,
+          "bray_curtis": 0.12703,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.6708494687500001,
+          "sens_rule": 0.16308333333333333,
+          "spec_rule": 0.95225,
+          "threshold_reads_rule": 16,
+          "interp": {
+            "0.950": 0.17150476190476208,
+            "0.980": 0.07870833333333338,
+            "0.990": 0.04752777777777781,
+            "0.995": 0.0345,
+            "0.999": 0.020916666666666667
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.7274166666666667,
+            "spec": 0.5231666666666667
+          },
+          "count_ge2": {
+            "sens": 0.5710833333333334,
+            "spec": 0.6914166666666667
+          }
+        }
+      },
+      "KmerFormer_ov6mer_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.62753,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 37247,
+          "classified_accuracy": 0.62753
+        },
+        "abundance": {
+          "pearson_r": 0.9873491662651825,
+          "bray_curtis": 0.12683999999999998,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.6395708888888889,
+          "sens_rule": 0.1545,
+          "spec_rule": 0.9509166666666666,
+          "threshold_reads_rule": 17,
+          "interp": {
+            "0.950": 0.15641304347826096,
+            "0.980": 0.07675000000000004,
+            "0.990": 0.04475,
+            "0.995": 0.032083333333333346,
+            "0.999": 0.019166666666666665
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.71625,
+            "spec": 0.4665
+          },
+          "count_ge2": {
+            "sens": 0.56675,
+            "spec": 0.6496666666666666
+          }
+        }
+      },
+      "MetaTransformer_6mer_50M": {
+        "read": {
+          "n": 100000,
+          "accuracy": 0.4892,
+          "coverage": 1.0,
+          "n_declined": 0,
+          "n_wrong_committed": 51080,
+          "classified_accuracy": 0.4892
+        },
+        "abundance": {
+          "pearson_r": 0.977764542512462,
+          "bray_curtis": 0.19486000000000003,
+          "n_samples": 100
+        },
+        "detection": {
+          "auc": 0.5690590277777778,
+          "sens_rule": 0.09233333333333334,
+          "spec_rule": 0.9503333333333334,
+          "threshold_reads_rule": 24,
+          "interp": {
+            "0.950": 0.09278205128205134,
+            "0.980": 0.04018333333333336,
+            "0.990": 0.025097222222222233,
+            "0.995": 0.017666666666666667,
+            "0.999": 0.015916666666666666
+          },
+          "ceiling": 0.9104166666666667,
+          "count_ge1": {
+            "sens": 0.584,
+            "spec": 0.5183333333333333
+          },
+          "count_ge2": {
+            "sens": 0.44733333333333336,
+            "spec": 0.6558333333333333
+          }
+        }
+      }
+    }
+  },
+  "on_kraken2_declined_reads": {
+    "KmerFormer_exact13mer_1L_250M": {
+      "acc_on_k2_declined": 0.4909090909090909,
+      "wrong_on_k2_declined": 476,
+      "wrong_total": 845,
+      "acc_on_k2_classified": 0.9962751728662999
+    },
+    "Kraken2_raw_genus_aware": {
+      "acc_on_k2_declined": 0.0,
+      "wrong_on_k2_declined": 935,
+      "wrong_total": 938,
+      "acc_on_k2_classified": 0.9999697168525715
+    },
+    "MetaTransformer_13mer_250M": {
+      "acc_on_k2_declined": 0.4556149732620321,
+      "wrong_on_k2_declined": 509,
+      "wrong_total": 1317,
+      "acc_on_k2_classified": 0.9918437389592691
+    },
+    "KmerFormer_exact13mer_1L_50M": {
+      "acc_on_k2_declined": 0.5112299465240642,
+      "wrong_on_k2_declined": 457,
+      "wrong_total": 8848,
+      "acc_on_k2_classified": 0.9152980366426083
+    },
+    "MetaTransformer_13mer_50M": {
+      "acc_on_k2_declined": 0.4385026737967914,
+      "wrong_on_k2_declined": 525,
+      "wrong_total": 12542,
+      "acc_on_k2_classified": 0.8786958057840811
+    },
+    "KmerFormer_hash13mer_1L_d128_50M": {
+      "acc_on_k2_declined": 0.47914438502673795,
+      "wrong_on_k2_declined": 487,
+      "wrong_total": 13195,
+      "acc_on_k2_classified": 0.8717205874930601
+    },
+    "KmerFormer_exact13mer_16L_50M": {
+      "acc_on_k2_declined": 0.46524064171123,
+      "wrong_on_k2_declined": 500,
+      "wrong_total": 14371,
+      "acc_on_k2_classified": 0.8599808206732953
+    },
+    "KmerFormer_hash13mer_16L_d128_50M": {
+      "acc_on_k2_declined": 0.46737967914438505,
+      "wrong_on_k2_declined": 498,
+      "wrong_total": 16167,
+      "acc_on_k2_classified": 0.841831120981174
+    },
+    "Kraken2_raw_species_only": {
+      "acc_on_k2_declined": 0.0,
+      "wrong_on_k2_declined": 935,
+      "wrong_total": 20032,
+      "acc_on_k2_classified": 0.8072275778529249
+    },
+    "KmerFormer_hash13mer_16L_d64_50M": {
+      "acc_on_k2_declined": 0.4566844919786096,
+      "wrong_on_k2_declined": 508,
+      "wrong_total": 20743,
+      "acc_on_k2_classified": 0.7957401705950639
+    },
+    "KmerFormer_6mer_L29_50M": {
+      "acc_on_k2_declined": 0.2802139037433155,
+      "wrong_on_k2_declined": 673,
+      "wrong_total": 30473,
+      "acc_on_k2_classified": 0.6991874022106698
+    },
+    "NTv2_6mer_LoRA_50M": {
+      "acc_on_k2_declined": 0.2737967914438503,
+      "wrong_on_k2_declined": 679,
+      "wrong_total": 32918,
+      "acc_on_k2_classified": 0.674567203351335
+    },
+    "KmerFormer_ov6mer_50M": {
+      "acc_on_k2_declined": 0.25026737967914436,
+      "wrong_on_k2_declined": 701,
+      "wrong_total": 37247,
+      "acc_on_k2_classified": 0.6310906980265483
+    },
+    "MetaTransformer_6mer_50M": {
+      "acc_on_k2_declined": 0.21818181818181817,
+      "wrong_on_k2_declined": 731,
+      "wrong_total": 51080,
+      "acc_on_k2_classified": 0.4917579367082219
+    }
+  },
+  "kf250_abstention_ts_msp_val_tau": {
+    "tau": 0.7981959433621058,
+    "temperature": 0.7833955037492213,
+    "n_declined": 919,
+    "overlap_with_k2_declined": 231,
+    "errors_removed": 357,
+    "errors_before": 845,
+    "all_reads": {
+      "read": {
+        "n": 100000,
+        "accuracy": 0.98593,
+        "coverage": 0.99081,
+        "n_declined": 919,
+        "n_wrong_committed": 488,
+        "classified_accuracy": 0.9950747368314813
+      },
+      "abundance": {
+        "pearson_r": 0.9998634513148232,
+        "bray_curtis": 0.007370680599491637,
+        "n_samples": 100,
+        "bray_curtis_conditional": 0.009749154602539545
+      },
+      "detection": {
+        "auc": 0.9480999479166665,
+        "sens_rule": 0.90675,
+        "spec_rule": 0.9638333333333333,
+        "threshold_reads_rule": 1,
+        "interp": {
+          "0.950": 0.9080883624416393,
+          "0.980": 0.8309803639846745,
+          "0.990": 0.7841125478927203,
+          "0.995": 0.7259898989898991,
+          "0.999": 0.6004871794871796
+        },
+        "ceiling": 0.9104166666666667,
+        "count_ge1": {
+          "sens": 0.90675,
+          "spec": 0.9638333333333333
+        },
+        "count_ge2": {
+          "sens": 0.7708333333333334,
+          "spec": 0.9928333333333333
+        }
+      }
+    },
+    "k2_classified": {
+      "read": {
+        "n": 99065,
+        "accuracy": 0.9915409074849846,
+        "coverage": 0.9930550648564074,
+        "n_declined": 688,
+        "n_wrong_committed": 150,
+        "classified_accuracy": 0.9984752533620663
+      },
+      "abundance": {
+        "pearson_r": 0.9999264764170082,
+        "bray_curtis": 0.004388019303600039,
+        "n_samples": 100,
+        "bray_curtis_conditional": 0.0065778190404195205
+      },
+      "detection": {
+        "auc": 0.9513237743055555,
+        "sens_rule": 0.9063333333333333,
+        "spec_rule": 0.98725,
+        "threshold_reads_rule": 1,
+        "interp": {
+          "0.950": 0.9098674769983962,
+          "0.980": 0.9070211867983455,
+          "0.990": 0.8651916666666668,
+          "0.995": 0.8002083333333334,
+          "0.999": 0.72325
+        },
+        "ceiling": 0.9099166666666667,
+        "count_ge1": {
+          "sens": 0.9063333333333333,
+          "spec": 0.98725
+        },
+        "count_ge2": {
+          "sens": 0.7706666666666667,
+          "spec": 0.9983333333333333
+        }
+      }
+    },
+    "check": "reproduces the S2 hand-off (s1_link.json ts_msp|rank_on_det val_tau, a and b2) to 1e-12; declining the most confident reads does not"
+  },
+  "paired_bootstrap_95ci": {
+    "all_reads|KmerFormer_exact13mer_1L_250M-Kraken2_raw_genus_aware": {
+      "auc": {
+        "lo": -0.010500811892360806,
+        "hi": -0.008913981076388956
+      },
+      "interp_0.950": {
+        "lo": -0.03888140961496156,
+        "hi": -0.015282944543161522
+      },
+      "interp_0.990": {
+        "lo": -0.21571247739727187,
+        "hi": -0.18407896677598945
+      }
+    },
+    "all_reads|MetaTransformer_13mer_250M-Kraken2_raw_genus_aware": {
+      "auc": {
+        "lo": -0.016146587760416633,
+        "hi": -0.014146349913194347
+      },
+      "interp_0.950": {
+        "lo": -0.09021571862162502,
+        "hi": -0.07645559406440121
+      },
+      "interp_0.990": {
+        "lo": -0.2701887038532234,
+        "hi": -0.23584897283710546
+      }
+    },
+    "all_reads|KmerFormer_exact13mer_1L_250M-MetaTransformer_13mer_250M": {
+      "auc": {
+        "lo": 0.004549548350694682,
+        "hi": 0.006504631944444353
+      },
+      "interp_0.950": {
+        "lo": 0.04541094839580158,
+        "hi": 0.06716628865839204
+      },
+      "interp_0.990": {
+        "lo": 0.03538231187805182,
+        "hi": 0.06941496182604005
+      }
+    },
+    "all_reads|KmerFormer_exact13mer_1L_50M-MetaTransformer_13mer_50M": {
+      "auc": {
+        "lo": 0.024359484288194448,
+        "hi": 0.030602511371527863
+      },
+      "interp_0.950": {
+        "lo": 0.060909548169260204,
+        "hi": 0.08718789198258763
+      },
+      "interp_0.990": {
+        "lo": 0.02074420138888896,
+        "hi": 0.04893504960317462
+      }
+    },
+    "k2_classified|KmerFormer_exact13mer_1L_250M-Kraken2_raw_genus_aware": {
+      "auc": {
+        "lo": -0.0059190934027776474,
+        "hi": -0.004676031857638782
+      },
+      "interp_0.950": {
+        "lo": -0.004909503183360411,
+        "hi": -0.0034222336245587235
+      },
+      "interp_0.990": {
+        "lo": -0.13266983719410927,
+        "hi": -0.11150863785860232
+      }
+    },
+    "k2_classified|MetaTransformer_13mer_250M-Kraken2_raw_genus_aware": {
+      "auc": {
+        "lo": -0.011160259722222158,
+        "hi": -0.009564006423611193
+      },
+      "interp_0.950": {
+        "lo": -0.04441046694488974,
+        "hi": -0.019465200561759696
+      },
+      "interp_0.990": {
+        "lo": -0.20722130870526131,
+        "hi": -0.15610961202584714
+      }
+    },
+    "k2_classified|KmerFormer_exact13mer_1L_250M-MetaTransformer_13mer_250M": {
+      "auc": {
+        "lo": 0.004282109895833072,
+        "hi": 0.005997414062499995
+      },
+      "interp_0.950": {
+        "lo": 0.01553353803425822,
+        "hi": 0.04056259269596316
+      },
+      "interp_0.990": {
+        "lo": 0.03364130208333313,
+        "hi": 0.08333545538086203
+      }
+    },
+    "k2_classified|KmerFormer_exact13mer_1L_50M-MetaTransformer_13mer_50M": {
+      "auc": {
+        "lo": 0.025011079600694274,
+        "hi": 0.03113162751736108
+      },
+      "interp_0.950": {
+        "lo": 0.06641205808080809,
+        "hi": 0.09542359983766222
+      },
+      "interp_0.990": {
+        "lo": 0.02466250000000003,
+        "hi": 0.05392135416666664
+      }
+    },
+    "kf250_abstention|KmerFormer_exact13mer_1L_250M-Kraken2_raw_genus_aware": {
+      "auc": {
+        "lo": -0.007553844965277859,
+        "hi": -0.006008901909722267
+      },
+      "interp_0.950": {
+        "lo": -0.0074480605191664965,
+        "hi": -0.0051442801910088045
+      },
+      "interp_0.990": {
+        "lo": -0.13468655410343272,
+        "hi": -0.11881265135539602
+      }
+    }
+  },
+  "far_rung_matched14": {
+    "n": 114991,
+    "n_k2_classified": 13217,
+    "arms": {
+      "Kraken2 genus-aware": {
+        "correct_pct": 7.5745058308911135,
+        "wrong_pct": 3.9194371733440008,
+        "declined_pct": 88.50605699576488,
+        "classified_accuracy": 65.8999773019596,
+        "acc_on_k2_classified": 65.8999773019596
+      },
+      "KF exact 13-mer 1L 250M": {
+        "correct_pct": 10.795627483890044,
+        "wrong_pct": 89.20437251610996,
+        "declined_pct": 0.0,
+        "classified_accuracy": 10.795627483890044,
+        "acc_on_k2_classified": 39.76696678520088
+      },
+      "KF exact 13-mer 1L 50M": {
+        "correct_pct": 10.078180031480723,
+        "wrong_pct": 89.92181996851927,
+        "declined_pct": 0.0,
+        "classified_accuracy": 10.078180031480723,
+        "acc_on_k2_classified": 33.797382159340245
+      },
+      "KF 6-mer 29L 50M": {
+        "correct_pct": 22.368707116209094,
+        "wrong_pct": 77.6312928837909,
+        "declined_pct": 0.0,
+        "classified_accuracy": 22.368707116209094,
+        "acc_on_k2_classified": 29.552848604070515
+      },
+      "MT 13-mer 250M": {
+        "correct_pct": 11.072170865546,
+        "wrong_pct": 88.927829134454,
+        "declined_pct": 0.0,
+        "classified_accuracy": 11.072170865546,
+        "acc_on_k2_classified": 40.96996292653401
+      },
+      "MT 13-mer 50M": {
+        "correct_pct": 11.099129497091077,
+        "wrong_pct": 88.90087050290893,
+        "declined_pct": 0.0,
+        "classified_accuracy": 11.099129497091077,
+        "acc_on_k2_classified": 35.15926458349096
+      },
+      "NT-v2 6-mer": {
+        "correct_pct": 20.790322720908595,
+        "wrong_pct": 79.20967727909141,
+        "declined_pct": 0.0,
+        "classified_accuracy": 20.790322720908595,
+        "acc_on_k2_classified": 27.366270711961864
+      }
+    }
+  }
+}

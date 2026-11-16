@@ -8,7 +8,7 @@ machine:
 |---|---|
 | `KF_DATA` | read pools and evaluation sets |
 | `KF_OUT` | where a run writes its checkpoints and metrics |
-| `KF_VOCAB` | the directory holding `vocab_13mer.txt` (exact 13-mer arms only) |
+| `KF_VOCAB` | the directory holding `vocab_13mer.txt` (exact 13-mer configurations only) |
 
 An unset variable is left verbatim rather than replaced by an empty string, so a
 missing one fails as `no such file: $KF_DATA/reads_50M.fa` instead of silently reading
@@ -41,7 +41,7 @@ $KF_VOCAB/
 ```
 
 Sizes: `reads_50M.fa` is 8.9 GiB and `labels_50M.tsv` 3.6 GiB; the 250M pool is five
-times that. Plan for ~80 GiB if you want every arm.
+times that. Plan for ~80 GiB if you want every configuration.
 
 ## File formats
 
@@ -132,7 +132,7 @@ Those settings are not just documented, they are executable. The **evaluation** 
 rebuilt from RefSeq assemblies by two pipelines in this repository —
 [`scripts/track_a/`](../scripts/track_a/) (6 steps) and
 [`scripts/track_b/`](../scripts/track_b/) (14 steps) — which download the genomes,
-simulate the reads, run every arm and score them.
+simulate the reads, run every configuration and score them.
 [`scripts/track_a/README.md`](../scripts/track_a/README.md) is the entry point, including
 the external tools needed (`art_illumina`, `skani`, NCBI `datasets`, `kraken2`).
 
@@ -185,7 +185,7 @@ Sequence identity is the quantity that does bear on the results. Of the test set
 99,997 distinct sequences, 1,345 (1.345%) occur among the 50M training reads. They are
 easier by a wide margin — the 6-mer depth series scores 80.4/86.0/88.4/89.7% on them
 against 53.92/65.44/67.94/69.52% overall — but they are too few to matter in aggregate.
-Excluding them shifts the four arms by −0.36, −0.28, −0.28 and −0.28 points, nearly
+Excluding them shifts the four configurations by −0.36, −0.28, −0.28 and −0.28 points, nearly
 uniformly, preserving the ordering. The following scripts audit identifiers and
 leftover coverage, not the sequence-overlap claim itself:
 [`scripts/data/profile_leftover_coverage.py`](../scripts/data/profile_leftover_coverage.py)
@@ -214,19 +214,19 @@ file. Keep that cache on local disk. It is loaded fully into RAM on purpose: wit
 719 reads/s end-to-end against a 3,158 reads/s model ceiling. DataLoader workers fork
 after the load, so copy-on-write shares one copy.
 
-The hashed arms need none of this — `HashedKmerTokenizer` is a pure function of the
+The hashed configurations need none of this — `HashedKmerTokenizer` is a pure function of the
 *k*-mer, seeded from the config, with no vocabulary file at all.
 
-They also do **not** canonicalise, where the exact path does. In the hashed arms a
-*k*-mer and its reverse complement occupy unrelated buckets; in the exact arms they
+They also do **not** canonicalise, where the exact path does. In the hashed configurations a
+*k*-mer and its reverse complement occupy unrelated buckets; in the exact configurations they
 share one row. So the exact-vs-hashed comparison in
-[`RESULTS.md §3`](RESULTS.md#3-part-3--at-13-mer-the-vocabulary-stops-being-free) varies
+[`RESULTS.md §3`](RESULTS.md#3-part-3--exact-and-hashed-13-mer-vocabularies) varies
 canonicalisation and embedding updates alongside the vocabulary. Exact embeddings
 use SparseAdam without embedding weight decay/clipping; hashed embeddings use dense
 AdamW. The 6.37-point difference is a complete-configuration trade-off, not a guaranteed
 hashing-cost bound. At matched d64 it reduces the table from 8 GiB to 1 GiB;
 the 2 GiB hashed table instead uses d128. The manuscript discloses these differences. It is recorded here
-rather than corrected, because the arms were trained this way and changing the code now
+rather than corrected, because the configurations were trained this way and changing the code now
 would document a model that was never run.
 
 ## Availability

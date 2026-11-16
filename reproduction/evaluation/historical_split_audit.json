@@ -1,0 +1,42 @@
+{
+  "source_collection": "Taiwania-2 recovered source snapshot 2026-08-28",
+  "scope": "Launch/source audit, not independent recovery of all original split memberships.",
+  "files": [
+    {
+      "source_id": "slurm/run_shallow16_hash13mer_50M.sh",
+      "sha256": "741120ffef4dab8a91782c9f9aafffc4545ae899c6e1b9903800b29ddc12824f"
+    },
+    {
+      "source_id": "slurm/run_shallow16_hash13mer_50M_d64.sh",
+      "sha256": "4ac26a12206f23a671c278b5342495fa27351231ae1ded1b77db40757ad37243"
+    },
+    {
+      "source_id": "slurm/run_shallow1_hash13mer_50M.sh",
+      "sha256": "15412983f95b68a9c8c239e98d10c1693ca874dcdb9ef54ab4a975c21912ed85"
+    },
+    {
+      "source_id": "slurm/run_shallow16_hash13mer_ext.sh",
+      "sha256": "23a224214bf19a86cc6c100ee5010566c5d9f98875c1ab0060d0483edc42b6a2"
+    },
+    {
+      "source_id": "scripts/train_ddp.py",
+      "sha256": "0cb92a276eb75c4fef96431a2a8dde96cb44da40d0db636e108c769b7e5da5ed"
+    },
+    {
+      "source_id": "scripts/dataset_lazy.py",
+      "sha256": "7c27c69bb1d5dc5075a179f2d1e4419396a251acc10d29c8bc3f251cbd5a94fd"
+    }
+  ],
+  "corrected_configs": [
+    "configs/13mer/hashed_d64_16L_50M.yaml",
+    "configs/13mer/hashed_d128_16L_50M.yaml",
+    "configs/13mer/hashed_d128_1L_50M.yaml",
+    "configs/extra/hashed_d128_16L_50M_ext25.yaml"
+  ],
+  "observations": [
+    "All four launch scripts invoke train_ddp.py",
+    "Archived trainer constructs LazyFASTADataset irrespective of config data.lazy",
+    "Archived LazyFASTADataset uses default_rng(seed).permutation(N), validation=first int(N*val_ratio) rows",
+    "Launch configs have seed 42, val_ratio 0.1"
+  ]
+}

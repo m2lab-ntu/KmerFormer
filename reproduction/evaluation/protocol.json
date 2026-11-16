@@ -1,0 +1,24 @@
+{
+  "scope": "Exploratory primary-pool comparison of specified classifier/abstention pipelines.",
+  "primary_n": 100000,
+  "validation_target_coverage": 0.99065,
+  "target_source": "Genus-aware Kraken2 coverage on primary test pool; test-informed target, validation-fitted temperature and cutoff.",
+  "kf_temperature": 0.7833955037492213,
+  "kf_tau": 0.7981959433621058,
+  "kf_rules": {
+    "cov_0.99065": 0.7981959433621058,
+    "cov_0.95": 0.9873933296850956,
+    "selacc_0.99": -Infinity,
+    "selacc_0.995": 0.7365332667861118
+  },
+  "mt_native_tau": 0.5,
+  "mt_ts_control_tau": 0.5530376673374071,
+  "policy_selection": "Native MetaTransformer was selected for the main comparison after inspection of the v7 results. Earlier TS-MT comparison remains a diagnostic.",
+  "kraken": "Genus-aware index; confidence 0, minimum-hit-groups 2; unclassified/root=-1.",
+  "selection": "Intersection of accepted reads (remove union of declines).",
+  "sampler_seed": 42,
+  "bootstrap_seed": 7,
+  "n_bootstrap": 1000,
+  "detection": "Redraw 200 sparse communities of 1000 reads with 60 of 120 genera selected, from retained pool. 98 partition communities for abundance.",
+  "bootstrap_scope": "Paired reads for accuracy, paired communities for detection. Fixed checkpoints; no training-variance inference."
+}

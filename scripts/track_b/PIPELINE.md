@@ -14,14 +14,12 @@ there. Track A's pipeline is the same shape, in `scripts/track_a/`.
 
 ## `--models` is a hardcoded list, and the steps now say what they skipped
 
-`tb_07`, `tb_09` and `tb_14` each take `--models` with a default naming the arms
-that existed when the step was written. Add an arm later and it is excluded from
+`tb_07`, `tb_09` and `tb_14` each take `--models` with a default naming the configurations
+that existed when the step was written. Add a configuration later and it is excluded from
 every level with no message — the only evidence is a row missing from the output.
 
-That cost a session. The manuscript cites the 29-layer KmerFormer at *r* = 0.522 on
-the L2_lognormal pool; no such row was in the stored summary, because `L29` was not
-in `tb_09`'s default while its predictions sat in `out/L2_lognormal/L29/` the whole
-time. Re-scoring with it added gives 0.522 exactly.
+For example, the 29-layer KmerFormer on the L2_lognormal pool (*r* = 0.522) is
+scored only when `L29` is in the `--models` list.
 
 Each step now lists what is on disk against what it scored:
 
@@ -39,7 +37,7 @@ Against what is on disk today the defaults skip 10 of 17 model directories per l
 level in `tb_07`, 12 of 17 in `tb_09` and 13 of 17 in `tb_14`. Most of that is fine —
 the ladder figures in [`docs/RESULTS.md`](../../docs/RESULTS.md#the-ani-ladder-track-b)
 come from [`scripts/eval/track_b_retention.py`](../eval/track_b_retention.py), which
-discovers arms by listing the directory instead of naming them — but deliberate and
+discovers configurations by listing the directory instead of naming them — but deliberate and
 forgotten looked identical until now.
 
 ## Why ANI and not species names

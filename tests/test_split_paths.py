@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-"""The two train/validation split paths do not agree, and that is load-bearing.
+"""Preserve the two historical split algorithms and verified run mappings.
 
-`train.py` picks between them on `data.lazy`. A comment in that file used to
-claim both paths give the same split for a given (seed, val_ratio). They do not,
-and the claim is the kind someone relies on instead of reading both functions:
-it would license writing "identical training indices" into a manuscript for
-comparisons that do not have them.
-
-These tests reproduce both algorithms exactly as the two modules implement them
-and pin what actually holds -- deterministic within a path, independent across
-them -- so the wrong claim cannot come back unnoticed.
+Current entry points use an explicit split strategy. Earlier single-process
+loaders had separate eager/stratified and lazy/random paths; the recovered DDP
+trainer always used the latter. Missing data.lazy in a historical DDP config
+therefore did not imply an eager split. The hashed-run mapping is documented in
+reproduction/evaluation/historical_split_audit.json.
 """
 
 from pathlib import Path
@@ -106,8 +102,10 @@ def test_only_one_path_holds_the_class_balance():
     ("13mer/exact_1L_50M_meanpool.yaml", True),
     ("13mer/exact_1L_250M_meanpool.yaml", True),
     ("13mer/exact_16L_50M.yaml", True),
-    ("13mer/hashed_d128_1L_50M.yaml", False),
-    ("13mer/hashed_d64_16L_50M.yaml", False),
+    ("13mer/hashed_d128_1L_50M.yaml", True),
+    ("13mer/hashed_d64_16L_50M.yaml", True),
+    ("13mer/hashed_d128_16L_50M.yaml", True),
+    ("extra/hashed_d128_16L_50M_ext25.yaml", True),
     ("6mer/L29_50M.yaml", False),
     ("6mer/L1_50M.yaml", False),
     ("baselines/ntv2_lora_50M.yaml", False),

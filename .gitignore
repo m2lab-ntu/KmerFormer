@@ -89,10 +89,9 @@ Thumbs.db
 wandb/
 lightning_logs/
 
-# Operational handoff briefs for agents on the training machines. They name
-# internal cluster paths and an account name -- useful on those boxes, useless to
-# anyone else -- so they stay on disk and out of the repository.
-docs/agent_prompts/
+# Operational notes for the training machines. They name internal cluster
+# paths and an account name, so they stay on disk and out of the repository.
+docs/local_notes/
 
 # Downloaded inference bundles and derived training indexes
 models/
