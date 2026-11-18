@@ -11,9 +11,9 @@ license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [
     { name = "Ming-Ju Yang", email = "r13945009@ntu.edu.tw" },
-    { name = "Ting-Yu Yen" },
-    { name = "Chien-Yu Chen" },
     { name = "Joyce Tzu-Yu Liu", email = "joyliu@ntu.edu.tw" },
+    { name = "Chien-Yu Chen", email = "chienyuchen@ntu.edu.tw" },
+    { name = "Ting-Yu Yen" },
 ]
 keywords = [
     "metagenomics", "taxonomic classification", "short-read sequencing",

@@ -29,16 +29,6 @@ authors:
     affiliation: >-
       Graduate Institute of Biomedical Electronics and Bioinformatics,
       National Taiwan University
-  - family-names: Yen
-    given-names: Ting-Yu
-    orcid: "https://orcid.org/0000-0002-1439-9644"
-    affiliation: >-
-      Department of Pediatrics, National Taiwan University Hospital, National Taiwan University
-  - family-names: Chen
-    given-names: Chien-Yu
-    orcid: "https://orcid.org/0000-0002-6940-6389"
-    affiliation: >-
-      Department of Biomechatronics Engineering, National Taiwan University
   - family-names: Liu
     given-names: Joyce Tzu-Yu
     email: joyliu@ntu.edu.tw
@@ -46,6 +36,17 @@ authors:
     affiliation: >-
       Graduate Institute of Biomedical Electronics and Bioinformatics,
       National Taiwan University
+  - family-names: Chen
+    given-names: Chien-Yu
+    email: chienyuchen@ntu.edu.tw
+    orcid: "https://orcid.org/0000-0002-6940-6389"
+    affiliation: >-
+      Department of Biomechatronics Engineering, National Taiwan University
+  - family-names: Yen
+    given-names: Ting-Yu
+    orcid: "https://orcid.org/0000-0002-1439-9644"
+    affiliation: >-
+      Department of Pediatrics, National Taiwan University Hospital, National Taiwan University
 preferred-citation:
   type: unpublished
   title: >-
@@ -54,11 +55,11 @@ preferred-citation:
   authors:
     - family-names: Yang
       given-names: Ming-Ju
-    - family-names: Yen
-      given-names: Ting-Yu
-    - family-names: Chen
-      given-names: Chien-Yu
     - family-names: Liu
       given-names: Joyce Tzu-Yu
+    - family-names: Chen
+      given-names: Chien-Yu
+    - family-names: Yen
+      given-names: Ting-Yu
   year: 2026
   notes: Manuscript in preparation

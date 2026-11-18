@@ -63,9 +63,9 @@ their real DOIs. Their manifests retain the compatible source commit.
 ## Metadata and publication state
 
 The generated manifest describes software, trained model bundles and recorded
-evidence. It copies creator metadata from `CITATION.cff`. The authors confirmed
-the latest manuscript order on 2026-09-18: Ming-Ju Yang, Ting-Yu Yen, Chien-Yu
-Chen and Joyce Tzu-Yu Liu. Only supplied affiliations and identifiers are included.
+evidence. It copies creator metadata from `CITATION.cff`, which follows the
+manuscript's author order: Ming-Ju Yang, Joyce Tzu-Yu Liu, Chien-Yu Chen and
+Ting-Yu Yen. Only supplied affiliations and identifiers are included.
 No grant identifier, Zenodo DOI, record number or publication date is invented.
 The code record's `CITATION.cff` retains MIT for software; the weights record's
 copy identifies the trained model collection and its Apache-2.0 weight terms.
