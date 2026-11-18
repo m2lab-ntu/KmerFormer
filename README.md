@@ -46,7 +46,7 @@ foundation-model adapters use the optional `baselines` extra.
 ## Classify reads with a trained model
 
 The four trained models are public at
-[huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights).
+[huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights).
 `kmerformer-model download` fetches one archive, checks its SHA-256 and unpacks
 it; `kmerformer-model list --check` asks the host whether each archive is
 reachable. Sizes, checksums and licences are in

@@ -25,7 +25,7 @@ REPO = Path(__file__).resolve().parent.parent
 REGISTRY = json.loads(
     (REPO / "kmerformer" / "assets" / "models.json").read_text())
 GH = {"download": {"parts": [{"url": "https://api.github.com/repos/o/r/releases/assets/1"}]}}
-HOSTED = "https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights"
+HOSTED = "https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights"
 
 
 @pytest.mark.parametrize("model_id", sorted(REGISTRY["models"]))
@@ -72,7 +72,7 @@ def test_github_asset_state_depends_on_credentials():
 
 
 @pytest.mark.parametrize("url", [
-    "https://huggingface.co/datasets/someone/private-weights/resolve/main/a.tar",
+    "https://huggingface.co/someone/private-weights/resolve/main/a.tar",
     "https://zenodo.org/records/1/files/a.tar"])
 def test_other_hosts_are_unverified_not_open(url):
     """A URL cannot tell a private dataset from a public one; only --check can."""

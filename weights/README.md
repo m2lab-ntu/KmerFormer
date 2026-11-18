@@ -13,7 +13,7 @@ download is registered at all, and whether your credentials can use it.
 HTTP status rather than inferring.
 
 The four trained models are public as one TAR archive each in the Hugging Face
-dataset [ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights).
+model repository [ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights).
 The registry records each archive's address, size and SHA-256, and
 `kmerformer-model download` checks the SHA-256 before unpacking. A URL alone
 does not show whether a host serves a file, so `list` reports these entries as

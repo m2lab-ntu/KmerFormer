@@ -234,8 +234,8 @@ def describe_availability(entry, *, token=None):
     distinction; `--check` probes.
 
     Only GitHub release assets are classified from the URL. Any other host is
-    reported "unverified" rather than "open": a Hugging Face dataset URL looks
-    the same whether the dataset is public or private, and calling it open
+    reported "unverified" rather than "open": a Hugging Face URL looks the
+    same whether the repository is public or private, and calling it open
     would repeat the misreport this function exists to prevent.
     """
     download = entry.get("download")

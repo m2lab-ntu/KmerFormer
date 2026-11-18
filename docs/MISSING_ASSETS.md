@@ -24,12 +24,14 @@ these later additions.
 
 ## 2. Model bundles and external data
 
-The four portable model bundles are public in the Hugging Face dataset
-[ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights).
+The four portable model bundles are public in the Hugging Face model repository
+[ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights).
 [The registry](../kmerformer/assets/models.json) records each archive's address,
 size, SHA-256 and licences and sets each model to `publicly_released`. There is
-no public GitHub release. The same archives were first public on Hugging Face
-from 2026-09-21 to 2026-09-25. The
+no public GitHub release. The same archives were earlier distributed from a
+Hugging Face dataset repository of the same name (public from 2026-09-21 to
+2026-09-25 and again from 2026-11-17), which now points to the model
+repository. The
 [Zenodo inventory](../weights/ZENODO.md) describes a prepared deposit and does
 not assign a DOI. Current access is in [weights/README.md](../weights/README.md).
 

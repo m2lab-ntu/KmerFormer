@@ -22,7 +22,7 @@
             "filename": "kmerformer-6mer-l29-50m.tar",
             "sha256": "e29e8c95de258ec550666fc5c21ad2775b66cbd99805227eb14ddb1a8e339231",
             "size_bytes": 25968640,
-            "url": "https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-6mer-l29-50m.tar"
+            "url": "https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-6mer-l29-50m.tar"
           }
         ]
       },
@@ -49,7 +49,7 @@
             "filename": "kmerformer-exact13-1l-250m.tar",
             "sha256": "61d29dca968078acaa419fb6f0ad0bba77b86ea52f2eb2550125ce784baf588d",
             "size_bytes": 9057986560,
-            "url": "https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-exact13-1l-250m.tar"
+            "url": "https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-exact13-1l-250m.tar"
           }
         ]
       },
@@ -76,7 +76,7 @@
             "filename": "kmerformer-exact13-1l-50m.tar",
             "sha256": "0557006e291a454e33d89319c64410cd3deb2f345971f50e0fe0543116837208",
             "size_bytes": 9057986560,
-            "url": "https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-exact13-1l-50m.tar"
+            "url": "https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-exact13-1l-50m.tar"
           }
         ]
       },
@@ -103,7 +103,7 @@
             "filename": "kmerformer-hashed13-d128-1l-50m.tar",
             "sha256": "816a46df15e0fb5e672bcfb9737fea62c95e1ca9de7b91729b7008d7887fe0c0",
             "size_bytes": 2149038080,
-            "url": "https://huggingface.co/datasets/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-hashed13-d128-1l-50m.tar"
+            "url": "https://huggingface.co/ymj1123/kmerformer-0.2.0rc1-weights/resolve/main/kmerformer-hashed13-d128-1l-50m.tar"
           }
         ]
       },
