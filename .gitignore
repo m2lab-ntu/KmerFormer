@@ -31,6 +31,8 @@ vocab_*.txt
 *.fastq.gz
 *.fq.gz
 *.tsv
+# kmerformer-predict writes <output>.json beside each prediction TSV.
+*.tsv.json
 *.npz
 !docs/**/*.tsv
 # The prediction arrays behind docs/RESULTS.md's abundance-vs-detection

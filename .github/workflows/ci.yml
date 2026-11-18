@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        torch: ['2.13.0', '2.14.0']
+        torch: ['2.13.0', '2.14.0', '2.15.0']
     env:
       OMP_NUM_THREADS: '2'
       MKL_NUM_THREADS: '2'
