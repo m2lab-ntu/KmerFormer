@@ -275,6 +275,30 @@ def check_reachable(entry, *, token=None, timeout=20):
         return {"reachable": False, "detail": f"{type(error).__name__}: {error}"}
 
 
+
+def probe_availability(entry, *, token=None, timeout=20):
+    """`describe_availability` after asking the host (`list --check`).
+
+    The probe's answer replaces the state and detail. Merging it into the
+    unprobed report left "unverified ... run `list --check` to confirm" in the
+    output of `list --check` itself, next to a successful probe.
+    """
+    report = describe_availability(entry, token=token)
+    if not entry.get("download", {}).get("parts"):
+        return report
+    probe = check_reachable(entry, token=token, timeout=timeout)
+    if probe["reachable"]:
+        host = urlparse(entry["download"]["parts"][0]["url"]).hostname
+        report["state"] = "reachable"
+        report["detail"] = f"{host} answered the download request for the first part"
+    else:
+        report["state"] = "unreachable"
+        report["detail"] = probe["detail"]
+    report["reachable"] = probe["reachable"]
+    if "http_status" in probe:
+        report["http_status"] = probe["http_status"]
+    return report
+
 def _access_hint(status, host="api.github.com"):
     if host != "api.github.com":
         # The GitHub wording below names credentials this host never asked for.
@@ -377,9 +401,10 @@ def main():
             (Path(__file__).parent / "assets" / "models.json").read_text())
         token = _github_token()
         for model_id, entry in registry["models"].items():
-            entry["availability"] = describe_availability(entry, token=token)
-            if args.check and entry.get("download", {}).get("parts"):
-                entry["availability"].update(check_reachable(entry, token=token))
+            if args.check:
+                entry["availability"] = probe_availability(entry, token=token)
+            else:
+                entry["availability"] = describe_availability(entry, token=token)
         print(json.dumps(registry, indent=2))
     elif args.command == "verify":
         print(json.dumps(verify_bundle(args.bundle), indent=2))

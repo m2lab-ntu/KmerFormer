@@ -17,7 +17,8 @@ dataset [ymj1123/kmerformer-0.2.0rc1-weights](https://huggingface.co/datasets/ym
 The registry records each archive's address, size and SHA-256, and
 `kmerformer-model download` checks the SHA-256 before unpacking. A URL alone
 does not show whether a host serves a file, so `list` reports these entries as
-`unverified` and `list --check` reports what the host answered.
+`unverified`; `list --check` replaces that with `reachable` or `unreachable`
+according to what the host answered.
 
 | Archive | Size (bytes) | SHA-256 |
 |---|---:|---|
@@ -62,7 +63,7 @@ passed to `kmerformer-model verify`.
 For a GitHub asset that requires access, the downloader can use
 `GH_TOKEN`/`GITHUB_TOKEN` or the existing GitHub CLI login; credentials are never
 written into the registry or forwarded to redirected storage hosts. Other hosts
-are reported as `unverified` until `list --check` confirms them.
+are reported as `unverified` until `list --check` asks the host.
 A missing download entry is reported explicitly. Inference from a local bundle
 uses no network access.
 

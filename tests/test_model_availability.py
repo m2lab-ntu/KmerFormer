@@ -9,14 +9,17 @@ Face dataset looks identical to a public one from its URL alone, so `list`
 says "unverified" and `list --check` asks the host.
 """
 
+import copy
 import json
+import sys
 import urllib.error
 from pathlib import Path
 
 import pytest
 
 from kmerformer.bundle import (ModelUnavailable, _access_hint,
-                               describe_availability, download_model)
+                               describe_availability, download_model,
+                               probe_availability)
 
 REPO = Path(__file__).resolve().parent.parent
 REGISTRY = json.loads(
@@ -130,6 +133,80 @@ def test_readmes_say_where_the_weights_are():
         assert HOSTED in text, doc
         assert "not currently available for public download" not in text, doc
         assert "private repository" not in text, f"{doc} still calls the repository private"
+
+
+class _Answered:
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+def _hosted_entry():
+    return copy.deepcopy(next(iter(REGISTRY["models"].values())))
+
+
+def test_a_successful_probe_replaces_unverified(monkeypatch):
+    """`list --check` must not tell the caller to run `list --check`."""
+    import kmerformer.bundle as bundle
+    monkeypatch.setattr(bundle.urllib.request, "urlopen",
+                        lambda request, timeout=None: _Answered())
+    report = probe_availability(_hosted_entry(), token=None)
+    assert report["state"] == "reachable"
+    assert report["reachable"] is True
+    assert "huggingface.co" in report["detail"]
+    assert "--check" not in report["detail"]
+
+
+@pytest.mark.parametrize("status", [401, 403, 404])
+def test_a_refused_probe_reports_unreachable(monkeypatch, status):
+    import kmerformer.bundle as bundle
+
+    def refuse(request, timeout=None):
+        raise urllib.error.HTTPError(request.full_url, status, "refused", {}, None)
+
+    monkeypatch.setattr(bundle.urllib.request, "urlopen", refuse)
+    report = probe_availability(_hosted_entry(), token=None)
+    assert report["state"] == "unreachable"
+    assert report["reachable"] is False
+    assert report["http_status"] == status
+    assert "huggingface.co" in report["detail"]
+
+
+def test_a_network_failure_reports_unreachable(monkeypatch):
+    import kmerformer.bundle as bundle
+
+    def offline(request, timeout=None):
+        raise urllib.error.URLError("no route to host")
+
+    monkeypatch.setattr(bundle.urllib.request, "urlopen", offline)
+    report = probe_availability(_hosted_entry(), token=None)
+    assert report["state"] == "unreachable"
+    assert "URLError" in report["detail"]
+    assert "http_status" not in report
+
+
+def test_a_probe_without_a_download_stays_unregistered(monkeypatch):
+    import kmerformer.bundle as bundle
+
+    def must_not_call(request, timeout=None):
+        raise AssertionError("no download is registered, so nothing to probe")
+
+    monkeypatch.setattr(bundle.urllib.request, "urlopen", must_not_call)
+    assert probe_availability({"model_id": "m"}, token=None)["state"] == "unregistered"
+
+
+def test_list_check_prints_the_probed_state(monkeypatch, capsys):
+    import kmerformer.bundle as bundle
+    monkeypatch.setattr(bundle.urllib.request, "urlopen",
+                        lambda request, timeout=None: _Answered())
+    monkeypatch.setattr(bundle, "_github_token", lambda: None)
+    monkeypatch.setattr(sys, "argv", ["kmerformer-model", "list", "--check"])
+    bundle.main()
+    listed = json.loads(capsys.readouterr().out)["models"]
+    states = {entry["availability"]["state"] for entry in listed.values()}
+    assert states == {"reachable"}
 
 
 if __name__ == "__main__":
